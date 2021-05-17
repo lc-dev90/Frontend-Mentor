@@ -3,6 +3,7 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  transform: translateY(80px);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -42,7 +43,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1000px;
+  width: 1000px;
+  max-width: 90%;
   min-height: 70%;
 }
 
@@ -80,7 +82,7 @@ body {
 
 .rating {
   background-color: var(--light-grayish-magenta);
-  max-width: 80%;
+  max-width: 400px;
   display: flex;
   padding: 15px;
   font-size: 12.5px;
@@ -90,11 +92,19 @@ body {
   color: var(--very-dark-magenta);
 }
 
+.rating img {
+  padding-left: 5px;
+}
+
+.rating span {
+  transform: translateY(2px);
+}
+
 .rating.second {
-  transform: translateX(15%);
+  transform: translateX(12%);
 }
 .rating.third {
-  transform: translateX(100px);
+  transform: translateX(24%);
 }
 
 .stars {
@@ -104,10 +114,93 @@ body {
 .cards {
   display: flex;
   height: 50%;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: var(--very-dark-magenta);
+  height: 80%;
+  width: 31%;
+  color: var(--light-grayish-magenta);
+  font-size: 0.7rem;
+  padding: 40px 25px;
+  border-radius: 7px;
+}
+
+.card p {
+  font-size: 0.75rem;
+}
+
+.card .header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.card .header .img-profile {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.card .header img {
+  width: 100%;
+  border-radius: 50px;
+}
+
+.card .header .title-profile span {
+  display: block;
+}
+
+.card .header .title-profile .name {
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.card .header .title-profile .job {
+  color: var(--soft-pink);
+}
+
+.card.irene {
+  transform: translateY(20px);
+}
+
+.card.anne {
+  transform: translateY(40px);
 }
 
 p {
   font-size: 13px;
   font-weight: 500;
   line-height: 1.5;
+}
+
+@media (max-width: 1110px) {
+  .rating.second {
+    transform: translateX(5%);
+  }
+
+  .rating.third {
+    transform: translateX(10%);
+  }
+}
+
+@media (max-width: 970px) {
+  .main-information h1 {
+    font-size: 2.3rem;
+  }
+  .rating.second {
+    transform: translateX(1%);
+  }
+
+  .rating.third {
+    transform: translateX(2%);
+  }
+
+  .card {
+    height: 90%;
+  }
+}
+
+@media (max-width: 830px) {
 }
