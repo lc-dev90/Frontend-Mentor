@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+  --main-background: hsl(233, 47%, 7%); /*- Very dark blue (main background): */
+  --card-background: hsl(
+    244,
+    38%,
+    16%
+  ); /*- Dark desaturated blue (card background):  */
+  --accent: rgb(170, 92, 219); /*  Soft violet (accent):  */
+  --accent2: rgb(255, 255, 255); /*  Soft violet (accent):  */
+
+  /*  ### Neutral */
+  --main-heading-stats: hsl(
+    0,
+    0%,
+    100%
+  ); /* White (main heading, stats): hsl(0, 0%, 100%) */
+  --slightly-transparent-white-main-paragraph: hsla(
+    0,
+    0%,
+    100%,
+    0.75
+  ); /* Slightly transparent white (main paragraph) */
+  --slightly-transparent-white-stat-headings: hsla(
+    0,
+    0%,
+    100%,
+    0.6
+  ); /* Slightly transparent white (stat headings): */
+
+  /* Typography */
+
+  --font-size-default: 15px;
+  --font-inter: "Inter", sans-serif;
+  --font-lexend-deca: "Lexend Deca", sans-serif;
+  --weight-inter: 700;
+}
+
+body {
+  background-color: var(--main-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.card {
+  font-family: "Inter", sans-serif;
+  color: var(--main-heading-stats);
+  height: 58%; /* TEMPORARIO */
+  width: 75%;
+  border-radius: 7px;
+  overflow: hidden;
+  display: flex;
+}
+
+.card-information {
+  width: 50%;
+  background-color: var(--card-background);
+  height: 100%;
+  padding: 5% 7% 4% 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.95rem;
+  line-height: 40px;
+}
+
+.title span {
+  color: var(--accent);
+}
+
+.description {
+  flex-grow: 1;
+  font-size: 0.85rem;
+  color: var(--slightly-transparent-white-main-paragraph);
+  line-height: 22px;
+  padding-right: 30px;
+  transform: translateY(35px);
+}
+
+.info {
+  display: flex;
+}
+
+.info label {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+}
+
+.info span {
+  color: var(--slightly-transparent-white-stat-headings);
+  text-transform: uppercase;
+  font-size: 0.73rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.infos {
+  margin-right: 10%;
+  margin-bottom: 10px;
+}
+
+.companies {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+.templates {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+
+.queries {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+.image {
+  width: 50%;
+  height: 100%;
+  background: url(./images/image-header-desktop.jpg) no-repeat center center /
+    cover var(--accent);
+  background-blend-mode: multiply;
+
+  position: relative;
+}
+
+.image::after {
+  content: "";
+  background: rgba(170, 92, 219, 0.192);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.image > * {
+  z-index: 10;
+}
+
+.attribution {
+  transform: translateY(30px);
+  font-size: 0.9rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.attribution a {
+  color: var(--accent);
+}
+
+@media (max-width: 1220px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .card-information {
+    padding: 5% 5% 4% 7%;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    transform: translateY(35px);
+  }
+}
+
+@media (max-width: 1070px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 945px) {
+  .description {
+    font-size: 0.8rem;
+    transform: translateY(30px);
+  }
+}
+
+@media (max-width: 840px) {
+  .card {
+    width: 375px;
+    height: 95%;
+    max-width: 95%;
+    flex-direction: column-reverse;
+  }
+
+  .card-information {
+    width: 100%;
+    text-align: center;
+    padding: 10%;
+  }
+
+  .description {
+    padding: 0;
+    transform: translateY(20px);
+  }
+
+  .info {
+    flex-direction: column;
+    transform: translateY(35px);
+  }
+
+  .infos {
+    margin: 0;
+    padding-bottom: 15px;
+  }
+
+  .image {
+    width: 100%;
+    height: 70%;
+  }
+
+  .attribution {
+    transform: translateY(5px);
+    font-size: 0.6rem;
+  }
+}
