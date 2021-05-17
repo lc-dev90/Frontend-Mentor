@@ -50,17 +50,64 @@ body {
   display: flex;
   width: 100%;
   height: 50%;
+  padding-bottom: 40px;
 }
 
 .main-information {
   width: 50%;
+  padding-right: 10%;
+}
+
+.main-information h1 {
+  font-size: 2.7rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+  color: var(--very-dark-magenta);
+}
+
+.main-information p {
+  color: var(--dark-grayish-magenta);
 }
 
 .rating-information {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.rating {
+  background-color: var(--light-grayish-magenta);
+  max-width: 80%;
+  display: flex;
+  padding: 15px;
+  font-size: 12.5px;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: 700;
+  color: var(--very-dark-magenta);
+}
+
+.rating.second {
+  transform: translateX(15%);
+}
+.rating.third {
+  transform: translateX(100px);
+}
+
+.stars {
+  margin-right: 5%;
 }
 
 .cards {
   display: flex;
   height: 50%;
+}
+
+p {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
 }
