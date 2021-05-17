@@ -203,4 +203,68 @@ p {
 }
 
 @media (max-width: 830px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    max-width: 95%;
+    height: 100%;
+    margin: 50px 0;
+  }
+
+  .top-card-information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .main-information {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .main-information h1 {
+    font-size: 2.3rem;
+  }
+
+  .main-information p {
+    font-size: 0.9rem;
+  }
+
+  .rating-information {
+    width: 100%;
+  }
+
+  .rating {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .rating .stars {
+    margin-bottom: 10px;
+  }
+
+  .rating.second {
+    transform: translateX(0);
+  }
+
+  .rating.third {
+    transform: translateX(0);
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .attribution {
+    transform: translateY(580px);
+    padding-bottom: 40px;
+  }
 }
