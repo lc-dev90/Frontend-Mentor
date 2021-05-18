@@ -223,6 +223,10 @@ p {
 }
 
 @media (max-width: 830px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -284,7 +288,7 @@ p {
   }
 
   .attribution {
-    transform: translateY(580px);
-    padding-bottom: 40px;
+    transform: translateY(680px);
+    padding-bottom: 30px;
   }
 }
