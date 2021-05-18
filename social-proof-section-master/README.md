@@ -23,9 +23,10 @@ Frontend Mentor Challenge
 
 ## Screenshots
 
-`![Writing](https://unsplash.com/photos/VBPzRgd7gfc)`
-
-Picture by [Kelly Sikkema](https://unsplash.com/@kellysikkema)
+`![Writing](https://github.com/lc-dev90/Frontend-Mentor/blob/master/social-proof-section-master/screenshots/Captura%20de%20tela_2021-05-17_21-07-49.png?raw=true)`
+`![Writing](https://github.com/lc-dev90/Frontend-Mentor/blob/master/social-proof-section-master/screenshots/Captura%20de%20tela_2021-05-17_21-08-03.png?raw=true)`
+`![Writing](https://github.com/lc-dev90/Frontend-Mentor/blob/master/social-proof-section-master/screenshots/Captura%20de%20tela_2021-05-17_21-08-14.png?raw=true)`
+`![Writing](https://github.com/lc-dev90/Frontend-Mentor/blob/master/social-proof-section-master/screenshots/Captura%20de%20tela_2021-05-17_21-13-49.png?raw=true)`
 
 ## Technologies
 
