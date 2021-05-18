@@ -4,7 +4,7 @@ Frontend Mentor | Social proof section
 
 ## Demo link:
 
-Access my site at [google.com](https://google.com)
+Access the demo link: (https://quizzical-poincare-e8eb53.netlify.app/)
 
 ## Table of Content:
 
