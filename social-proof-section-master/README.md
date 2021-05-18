@@ -24,9 +24,9 @@ Frontend Mentor Challenge
 ## Screenshots
 
 ![](https://github.com/lc-dev90/Frontend-Mentor/blob/master/social-proof-section-master/screenshots/Captura%20de%20tela_2021-05-17_21-07-49.png?raw=true)
-`![Writing](https://github.com/lc-dev90/Frontend-Mentor/blob/master/social-proof-section-master/screenshots/Captura%20de%20tela_2021-05-17_21-08-03.png?raw=true)`
-`![Writing](https://github.com/lc-dev90/Frontend-Mentor/blob/master/social-proof-section-master/screenshots/Captura%20de%20tela_2021-05-17_21-08-14.png?raw=true)`
-`![Writing](https://github.com/lc-dev90/Frontend-Mentor/blob/master/social-proof-section-master/screenshots/Captura%20de%20tela_2021-05-17_21-13-49.png?raw=true)`
+![](https://github.com/lc-dev90/Frontend-Mentor/blob/master/social-proof-section-master/screenshots/Captura%20de%20tela_2021-05-17_21-08-03.png?raw=true)
+![](https://github.com/lc-dev90/Frontend-Mentor/blob/master/social-proof-section-master/screenshots/Captura%20de%20tela_2021-05-17_21-08-14.png?raw=true)
+![](https://github.com/lc-dev90/Frontend-Mentor/blob/master/social-proof-section-master/screenshots/Captura%20de%20tela_2021-05-17_21-13-49.png?raw=true)
 
 ## Technologies
 
