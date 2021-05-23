@@ -66,6 +66,7 @@ main {
   justify-content: center;
   height: 100vh;
   color: white;
+  width: 95%;
 }
 
 .title {
@@ -85,7 +86,7 @@ main {
   width: 96.8%;
   background-color: var(--clr-blue);
   color: white;
-  padding: 17.5px 60px;
+  padding: 17.5px;
   border-radius: 10px;
   margin-bottom: 2em;
   text-align: center;
@@ -147,4 +148,58 @@ button[type="submit"] {
 
 .agree span {
   color: var(--clr-red);
+}
+
+@media (max-width: 1072px) {
+  .title,
+  .description {
+    text-align: center;
+  }
+  .card-try {
+    padding: 17.5px 60px;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  .main-info {
+    width: 95%;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-top: min(10vh, 100px);
+  }
+  .main-form {
+    width: 95%;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+  .content {
+    height: initial;
+    margin: 0 auto;
+  }
+
+  .main-form {
+    height: initial;
+  }
+  .title {
+    font-size: 1.85rem;
+  }
+
+  .description {
+    margin-bottom: min(10vh, 66px);
+  }
+
+  .form-container {
+    padding: 25px;
+  }
+
+  button[type="submit"] {
+    padding: 16px 0;
+    font-size: 1rem;
+  }
+  .card-try {
+    padding: 17.5px 30px;
+  }
 }
