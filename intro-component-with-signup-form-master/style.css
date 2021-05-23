@@ -120,6 +120,11 @@ main {
   height: 24px;
   background: url(./images/icon-error.svg);
 }
+.form-control.success::after {
+  color: var(--clr-green);
+  display: block;
+  background: url(./images/check.svg);
+}
 
 .form-control input {
   border-radius: 5px;
@@ -141,6 +146,11 @@ label {
   border-color: var(--clr-red);
 }
 
+.form-control.success input {
+  border-color: var(--clr-green);
+  color: var(--clr-green);
+}
+
 .form-control input::placeholder {
   color: var(--clr-dark-blue2);
   font-weight: var(--fw-600);
@@ -148,6 +158,10 @@ label {
 
 .form-control.error input::placeholder {
   color: var(--clr-red);
+}
+
+small {
+  display: none;
 }
 
 .form-control.error small {
