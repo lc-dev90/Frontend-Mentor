@@ -23,6 +23,23 @@ formElement.addEventListener("submit", (e) => {
   } else {
     showSuccess(firstNameElement);
   }
+  if (lastName === "") {
+    showError(lastNameElement, arrError[1]);
+  } else {
+    showSuccess(lastNameElement);
+  }
+  if (email === "") {
+    showError(emailElement, arrError[2]);
+  } else if (!isValid(email)) {
+    showError(emailElement, arrError[3]);
+  } else {
+    showSuccess(emailElement);
+  }
+  if (password === "") {
+    showError(passwordElement, arrError[4]);
+  } else {
+    showSuccess(passwordElement);
+  }
 });
 
 function showError(input, msg) {
@@ -35,4 +52,10 @@ function showError(input, msg) {
 function showSuccess(input) {
   const formControl = input.parentElement.parentElement;
   formControl.className = "form-control success";
+}
+
+function isValid(email) {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
 }

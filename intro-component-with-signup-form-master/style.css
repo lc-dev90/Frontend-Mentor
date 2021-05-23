@@ -6,6 +6,7 @@
   /* ### Primary */
   --clr-red: hsl(0, 100%, 74%);
   --clr-green: hsl(154, 59%, 51%);
+  --clr-green1: hsl(154, 58%, 46%);
   --clr-green2: hsl(154, 54%, 42%);
 
   /* ### Accent */
@@ -121,7 +122,7 @@ main {
   background: url(./images/icon-error.svg);
 }
 .form-control.success::after {
-  color: var(--clr-green);
+  color: var(--clr-green1);
   display: block;
   background: url(./images/check.svg);
 }
@@ -147,8 +148,8 @@ label {
 }
 
 .form-control.success input {
-  border-color: var(--clr-green);
-  color: var(--clr-green);
+  border-color: var(--clr-green1);
+  color: var(--clr-green1);
 }
 
 .form-control input::placeholder {
