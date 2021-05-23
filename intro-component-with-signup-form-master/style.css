@@ -203,3 +203,14 @@ button[type="submit"] {
     padding: 17.5px 30px;
   }
 }
+
+@media (max-width: 750px) and (min-width: 520px) {
+  .description,
+  .agree {
+    max-width: 80%;
+  }
+
+  .agree {
+    margin: 0 auto;
+  }
+}
