@@ -65,6 +65,34 @@ ul {
   color: var(--clr-cyan);
   font-size: 1.52rem;
   margin-bottom: 28px;
+  animation: shake-animation 4.72s ease infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes shake-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  1.78571% {
+    transform: translate(5px, 0);
+  }
+  3.57143% {
+    transform: translate(0, 0);
+  }
+  5.35714% {
+    transform: translate(5px, 0);
+  }
+  7.14286% {
+    transform: translate(0, 0);
+  }
+  8.92857% {
+    transform: translate(5px, 0);
+  }
+  10.71429% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .header h2 {
@@ -128,6 +156,16 @@ ul {
   outline: none;
   width: 100%;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.price button:hover {
+  transform: scale(1.04);
+}
+
+.price button:active {
+  transform: translateY(5px);
+  box-shadow: 0 12px 28px -5px hsl(0deg 0% 0% / 70%);
 }
 
 .footer {
