@@ -50,6 +50,7 @@ main {
     12px 0 28px -5px hsl(0deg 0% 0% / 10%),
     -12px 0 28px -5px hsl(0deg 0% 0% / 10%);
 }
+
 @keyframes smooth-entry {
   0% {
     opacity: 0;
