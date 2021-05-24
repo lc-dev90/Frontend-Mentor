@@ -23,3 +23,67 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--clr-light-gray);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 640px;
+  max-height: 480px;
+}
+
+h1,
+h2,
+p {
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  background-color: white;
+  padding: 40px;
+}
+
+.header h1 {
+  color: var(--clr-cyan);
+}
+
+.cheader h2 {
+  color: var(--clr-yellow);
+}
+
+.header p {
+  color: var(--clr-grayish-blue);
+}
+
+.card-footer {
+  display: flex;
+  width: 100%;
+  color: var(--clr-light-gray);
+}
+
+.price {
+  padding: 40px;
+  width: 100%;
+  background-color: #4fb1b1;
+}
+
+.footer {
+  width: 100%;
+  padding: 40px;
+  background-color: #63bcbd;
+}
