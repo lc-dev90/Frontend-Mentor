@@ -44,6 +44,19 @@ main {
   max-height: 480px;
   border-radius: 10px;
   overflow: hidden;
+  animation-name: smooth-entry;
+  animation-duration: 1s;
+  box-shadow: 0 12px 28px -5px hsl(0deg 0% 0% / 10%),
+    12px 0 28px -5px hsl(0deg 0% 0% / 10%),
+    -12px 0 28px -5px hsl(0deg 0% 0% / 10%);
+}
+@keyframes smooth-entry {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 h1,
@@ -192,6 +205,17 @@ ul {
     width: 313px;
     max-width: 95%;
     max-height: initial;
+    animation-name: smooth-entry2;
+    animation-duration: 1s;
+  }
+  @keyframes smooth-entry2 {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
   }
 
   .header {
