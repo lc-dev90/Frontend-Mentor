@@ -301,6 +301,14 @@ main {
   position: relative;
 }
 
+.form-control input:focus {
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.548);
+}
+
+.form-control input:active {
+  transform: translateY(1px);
+}
+
 label {
   position: relative;
 }
