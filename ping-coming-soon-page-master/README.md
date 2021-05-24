@@ -4,7 +4,7 @@ Ping Coming Soon Page - Frontendmentor.io
 
 ## Demo link:
 
-https://nervous-poincare-83799d.netlify.app/
+https://quizzical-golick-db2910.netlify.app/ping-coming-soon-page-master/
 
 ## Table of Content:
 
@@ -21,8 +21,8 @@ Challenge from fronendmentor.io
 
 ## Screenshots
 
-![]()
-![]()
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/ping-coming-soon-page-master/ss/Captura%20de%20tela%20de%202021-05-24%2016-07-03.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/ping-coming-soon-page-master/ss/Captura%20de%20tela%20de%202021-05-24%2016-07-11.png)
 
 ## Technologies
 
