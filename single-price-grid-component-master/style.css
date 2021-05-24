@@ -39,8 +39,11 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  max-width: 640px;
+  width: 640px;
+  max-width: 95%;
   max-height: 480px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 h1,
@@ -60,30 +63,87 @@ ul {
 
 .header h1 {
   color: var(--clr-cyan);
+  font-size: 1.52rem;
+  margin-bottom: 28px;
 }
 
-.cheader h2 {
-  color: var(--clr-yellow);
+.header h2 {
+  font-size: 1.14rem;
+  background: linear-gradient(0deg, #d9d585, #c2c063);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 9px;
 }
 
 .header p {
   color: var(--clr-grayish-blue);
+  line-height: 1.6;
 }
 
 .card-footer {
   display: flex;
   width: 100%;
-  color: var(--clr-light-gray);
 }
 
 .price {
   padding: 40px;
   width: 100%;
+  color: white;
   background-color: #4fb1b1;
+}
+
+.price h1 {
+  font-size: 2rem;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.price h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.price small {
+  transform: translateY(-5px);
+  display: inline-block;
+  color: var(--clr-light-gray);
+  font-size: 1rem;
+}
+
+.price p {
+  font-size: 1rem;
+  margin-bottom: 27px;
+  margin-top: 6px;
+}
+
+.price button {
+  padding: 1rem 20px;
+  font-size: 1rem;
+  box-shadow: 0 12px 28px -5px hsl(0deg 0% 0% / 30%);
+  color: white;
+  font-weight: var(--fw-bold);
+  background-color: #c8cc3b;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 100%;
+  cursor: pointer;
 }
 
 .footer {
   width: 100%;
   padding: 40px;
   background-color: #63bcbd;
+}
+
+.footer h2 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.footer ul li {
+  color: var(--clr-light-gray);
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
