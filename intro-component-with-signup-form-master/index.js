@@ -38,36 +38,28 @@ formElement.addEventListener("submit", (e) => {
   const email = emailElement.value;
   if (firstName === "") {
     showError(firstNameElement, arrError[0]);
-    loginStatus = false;
   } else {
     showSuccess(firstNameElement);
-    loginStatus = true;
   }
   if (lastName === "") {
     showError(lastNameElement, arrError[1]);
-    loginStatus = false;
   } else {
     showSuccess(lastNameElement);
-    loginStatus = true;
   }
   if (email === "") {
     showError(emailElement, arrError[2]);
     loginStatus = false;
   } else if (!isValid(email)) {
     showError(emailElement, arrError[3]);
-    loginStatus = false;
   } else {
     showSuccess(emailElement);
-    loginStatus = true;
   }
   if (password === "") {
     showError(passwordElement, arrError[4]);
-    loginStatus = false;
   } else {
     showSuccess(passwordElement);
-    loginStatus = true;
   }
-  if (loginStatus) {
+  if (firstName && lastName && isValid(email) && password) {
     geraModal();
   }
 });
