@@ -147,3 +147,48 @@ ul {
   font-size: 0.9rem;
   line-height: 1.4;
 }
+
+@media (max-width: 670px) {
+  main {
+    margin: 60px 0;
+    width: 313px;
+    max-width: 95%;
+    max-height: initial;
+  }
+
+  .header {
+    padding: 24px;
+  }
+
+  .header h1 {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+  }
+
+  .header h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .header p {
+    line-height: 1.8;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+  }
+
+  .price {
+    padding: 24px;
+  }
+
+  .price button {
+    margin: 5px 0;
+  }
+
+  .footer {
+    padding: 24px;
+  }
+  .card-footer {
+    flex-direction: column;
+  }
+}
