@@ -46,8 +46,35 @@ main {
   margin-bottom: 50px;
 }
 
+.logo img {
+  animation-name: opacity;
+  animation-duration: 2s;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 .content {
   margin-bottom: 90px;
+  animation-name: smooth-entry;
+  animation-duration: 0.9s;
+}
+
+@keyframes smooth-entry {
+  0% {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .content h1 {
@@ -147,6 +174,20 @@ small {
 .dashboard {
   content: url(./images/illustration-dashboard.png);
   margin-bottom: 80px;
+  animation-name: smooth-entry2;
+  animation-duration: 0.9s;
+}
+
+@keyframes smooth-entry2 {
+  0% {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .links i {
