@@ -4,6 +4,8 @@ Single Price grid component - Frontendmentor.io
 
 ## Demo link:
 
+https://quizzical-golick-db2910.netlify.app/single-price-grid-component-master/
+
 ## Table of Content:
 
 - [About The App](#about-the-app)
@@ -19,9 +21,8 @@ Challenge from fronendmentor.io
 
 ## Screenshots
 
-![]()
-![]()
-![]()
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/single-price-grid-component-master/screenshots/Captura%20de%20tela%20de%202021-05-24%2011-08-13.png)
+![](https://github.com/lc-dev90/Frontend-Mentor/blob/master/single-price-grid-component-master/screenshots/Captura%20de%20tela%20de%202021-05-24%2011-08-39.png?raw=true)
 
 ## Technologies
 
