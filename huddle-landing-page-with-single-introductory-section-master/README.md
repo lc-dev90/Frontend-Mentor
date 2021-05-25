@@ -21,8 +21,13 @@ Challenge from fronendmentor.io
 
 ## Screenshots
 
-![]()
-![]()
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-27-02.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-27-22.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-27-28.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-27-55.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-28-00.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-28-29.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-28-17.png)
 
 ## Technologies
 
