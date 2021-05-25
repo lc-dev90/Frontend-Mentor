@@ -21,6 +21,16 @@ body {
   background: url(./images/bg-desktop.svg);
   background-repeat: no-repeat;
   background-color: var(--clr-violet);
+  animation-name: smooth;
+  animation-duration: 1s;
+}
+@keyframes smooth {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 main {
@@ -34,6 +44,20 @@ nav {
 
 .nav-logo img {
   width: 200px;
+  animation: jump 1.2s infinite;
+}
+
+@keyframes jump {
+  0% {
+    transform: scale(1.05, 0.95);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(1.05, 0.95);
+  }
 }
 
 section {
@@ -47,11 +71,33 @@ section {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
+  animation-name: left;
+  animation-duration: 0.7s;
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 .content-section {
   margin-left: 52px;
   width: 44.5%;
+  animation-name: roght;
+  animation-duration: 0.7s;
+}
+
+@keyframes roght {
+  0% {
+    transform: translateX(400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 .content-section h1 {
@@ -82,10 +128,31 @@ section {
   cursor: pointer;
   box-shadow: 0 25px 32px -2px rgb(0 0 0 / 18%),
     12px 0 26px -2px rgb(0 0 0 / 18%), -9px 0 21px -2px rgb(0 0 0 / 18%);
+  animation-name: rught;
+  animation-duration: 1s;
 }
+
+@keyframes rught {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .content-section button:hover {
   background-color: var(--clr-soft-magenta);
   color: white;
+}
+
+.content-section button:active {
+  transform: translateY(3px);
+  box-shadow: 0 25px 20px -2px rgb(0 0 0 / 30%),
+    12px 0 26px -2px rgb(0 0 0 / 30%), -9px 0 21px -2px rgb(0 0 0 / 30%);
 }
 
 footer {
@@ -93,9 +160,22 @@ footer {
   display: flex;
   justify-content: flex-end;
 }
+
 footer ul {
   display: flex;
   list-style: none;
+  animation-name: bottom;
+  animation-duration: 0.6s;
+}
+@keyframes bottom {
+  0% {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 footer ul li {
@@ -127,6 +207,16 @@ footer ul li i:hover {
   body {
     background: url(./images/bg-desktop.svg);
     background-color: var(--clr-violet);
+    animation-name: smooth1;
+    animation-duration: 1s;
+  }
+  @keyframes smooth1 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   nav {
@@ -178,6 +268,18 @@ footer ul li i:hover {
 }
 
 @media (max-width: 768px) {
+  body {
+    animation-name: smooth2;
+    animation-duration: 1s;
+  }
+  @keyframes smooth2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   .content-section h1 {
     margin-bottom: 1rem;
   }
