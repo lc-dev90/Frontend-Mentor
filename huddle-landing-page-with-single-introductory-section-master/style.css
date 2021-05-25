@@ -24,6 +24,7 @@ body {
   background-color: var(--clr-violet);
   animation-name: smooth;
   animation-duration: 1s;
+  overflow: hidden;
 }
 @keyframes smooth {
   0% {
@@ -438,6 +439,7 @@ footer ul li i:hover {
     background-color: var(--clr-violet);
     animation-name: smooth1;
     animation-duration: 1s;
+    overflow-y: auto;
   }
   @keyframes smooth1 {
     0% {
@@ -499,6 +501,7 @@ footer ul li i:hover {
 
 @media (max-width: 768px) {
   body {
+    overflow-y: auto;
     animation-name: smooth2;
     animation-duration: 1s;
   }
@@ -534,6 +537,9 @@ footer ul li i:hover {
 }
 
 @media (max-width: 600px) {
+  body {
+    overflow-y: auto;
+  }
   .content p {
     width: 100%;
   }
