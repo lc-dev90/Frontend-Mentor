@@ -1,55 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <title>
-      Frontend Mentor | Huddle landing page with single introductory section
-    </title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main>
-      <nav>
-        <div class="nav-logo">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>
+    Frontend Mentor | Huddle landing page with single introductory section
+  </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <nav>
+      <div class="nav-logo">
+        <img src="./images/logo.svg" alt="Logo Huddle" />
+      </div>
+    </nav>
+    <section>
+      <div class="img-section"></div>
+      <div class="content-section">
+        <h1>Build The Community Your Fans Will Love</h1>
+        <div class="content">
+          <p>
+            Huddle re-imagines the way we build communities. You have a voice,
+            but so does your audience. Create connections with your users as you
+            engage in genuine discussion.
+          </p>
+          <button id="register">Register</button>
+        </div>
+
+      </div>
+    </section>
+    <footer>
+      <ul>
+        <li><i class="fab fa-facebook-f"></i></li>
+        <li><i class="fab fa-twitter"></i></i></li>
+        <li><i class="fab fa-instagram"></i></li>
+      </ul>
+    </footer>
+  </main>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+        <div class="nav-logo-form">
           <img src="./images/logo.svg" alt="Logo Huddle" />
         </div>
-      </nav>
-      <section>
-        <div class="img-section"></div>
-        <div class="content-section">
-          <h1>Build The Community Your Fans Will Love</h1>
-          <div class="content">
-            <p>
-              Huddle re-imagines the way we build communities. You have a voice,
-              but so does your audience. Create connections with your users as you
-              engage in genuine discussion.
-            </p>
-            <button>Register</button>
-          </div>
 
+        <div class="form-container">
+          <h2>Register</h2>
+          <form action="/" id="form" class="form">
+            <div class="form-control">
+              <label for="name">First name:</label>
+              <input type="text" placeholder="Name" id="name">
+              <i class="fas fa-exclamation"></i>
+              <i class="fas fa-check-circle"></i>
+              <small></small>
+            </div>
+            <div class="form-control">
+              <label for="lastName">Last name:</label>
+              <input type="text" placeholder="Last Name" id="lastName">
+              <i class="fas fa-exclamation"></i>
+              <i class="fas fa-check-circle"></i>
+              <small></small>
+            </div>
+            <div class="form-control">
+              <label for="email">Email:</label>
+              <input type="text" placeholder="Email" id="email">
+              
+              <i class="fas fa-exclamation"></i>
+              <i class="fas fa-check-circle"></i>
+              <small></small>
+            </div>
+            <div class="form-control">
+              <label for="password">Password:</label>
+              <input type="password" placeholder="Password" id="password">
+              <i class="fas fa-exclamation"></i>
+              <i class="fas fa-check-circle"></i>
+              <small></small>
+            </div>
+            <div class="form-control">
+              <label for="password2">Repeat your password:</label>
+              <input type="password" placeholder="Repeat password" id="password2">
+              <i class="fas fa-exclamation"></i>
+              <i class="fas fa-check-circle"></i>
+              <small></small>
+            </div>  
+            <!-- <a href="#" type="submit"></a> -->
+            <button type="submit">Submit</button>
+          </form>
         </div>
-      </section>
-      <footer>
-        <ul>
-          <li><i class="fab fa-facebook-f"></i></li>
-          <li><i class="fab fa-twitter"></i></i></li>
-          <li><i class="fab fa-instagram"></i></li>  
-        </ul>
-      </footer>
-    </main>
-  </body>
+      
+    </div>
+
+  </div>
+  <script src="index.js"></script>
+</body>
+
 </html>

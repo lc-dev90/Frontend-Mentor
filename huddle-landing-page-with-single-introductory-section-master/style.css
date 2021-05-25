@@ -197,10 +197,137 @@ footer ul li i {
   text-align: center;
 }
 
+footer ul li:active {
+  transform: translateY(3px);
+  box-shadow: 0 5px 10px -2px rgb(0 0 0 / 50%);
+}
+
 footer ul li:hover,
 footer ul li i:hover {
   color: var(--clr-soft-magenta);
   border-color: var(--clr-soft-magenta);
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background: url(./images/bg-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--clr-violet);
+  margin: 7% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid transparent;
+  width: 450px; /* Could be more or less, depending on screen size */
+  max-width: 95%;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 25px 32px -2px rgb(0 0 0 / 18%),
+    12px 0 26px -2px rgb(0 0 0 / 18%), -9px 0 21px -2px rgb(0 0 0 / 18%);
+}
+
+.nav-logo-form img {
+  width: 100px;
+}
+
+.modal-content h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.form-container {
+  margin: 0 auto;
+  max-width: 330px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+}
+
+.form-control input {
+  margin-top: 4px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  position: relative;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-control input:focus {
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.692);
+}
+
+.form-control input::placeholder {
+  color: rgba(88, 88, 88, 0.308);
+}
+
+.form-control i {
+  position: absolute;
+  right: 15px;
+  top: 37px;
+  color: red;
+}
+
+.form-control small {
+  position: absolute;
+  display: none;
+}
+
+/* .form-control a {
+  margin-bottom: 25px;
+} */
+.form-container button {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: rgb(53, 158, 53);
+  color: white;
+  font-weight: var(--fw-600);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: rgb(43, 184, 43);
+}
+
+.form-container button:active {
+  transform: translateY(4px);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -247,7 +374,8 @@ footer ul li i:hover {
   }
 
   .content p {
-    width: 50%;
+    width: 60%;
+    text-align: left;
   }
 
   .content button {
@@ -315,5 +443,10 @@ footer ul li i:hover {
   }
   .content-section h1 {
     font-size: 26px;
+  }
+
+  .modal-content {
+    margin: 25% auto; /* 15% from the top and centered */
+    padding: 10px;
   }
 }
