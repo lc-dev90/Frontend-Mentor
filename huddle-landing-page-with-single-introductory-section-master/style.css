@@ -2,6 +2,7 @@
 
 :root {
   --clr-violet: hsl(257, 40%, 49%);
+  --clr-violet2: rgb(184, 173, 214);
   --clr-soft-magenta: hsl(300, 69%, 71%);
 
   --fw-400: 400;
@@ -225,7 +226,7 @@ footer ul li i:hover {
   background: url(./images/bg-mobile.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--clr-violet);
+  background-color: black;
   margin: 7% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid transparent;
@@ -263,15 +264,40 @@ footer ul li i:hover {
   margin-top: 4px;
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 8px;
+  font-size: 1.1rem;
   position: relative;
   outline: none;
-  border: none;
+  border: 3px solid transparent;
   border-radius: 5px;
+  background-color: rgb(247, 241, 241);
+  font-weight: var(--fw-400);
+}
+
+.form-control label {
+  font-size: 0.9rem;
+  color: white;
+  font-weight: var(--fw-600);
+}
+
+.form-control.error input {
+  border-color: rgb(233, 50, 50);
+}
+
+.form-control.success input {
+  border-color: rgb(44, 187, 44);
+}
+
+.form-control.error label {
+  color: rgb(233, 50, 50);
+}
+
+.form-control.success label {
+  color: gb(44, 187, 44);
 }
 
 .form-control input:focus {
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.692);
+  box-shadow: 0px 1px 10px rgba(250, 250, 250, 0.692);
 }
 
 .form-control input::placeholder {
@@ -282,23 +308,28 @@ footer ul li i:hover {
   position: absolute;
   right: 15px;
   top: 37px;
-  color: red;
+}
+
+.form-control .fa-exclamation {
+  color: rgb(233, 50, 50);
+}
+
+.form-control.success .fa-check-circle {
+  color: rgb(44, 187, 44);
 }
 
 .form-control small {
   position: absolute;
   display: none;
+  color: rgb(233, 50, 50);
 }
 
-/* .form-control a {
-  margin-bottom: 25px;
-} */
 .form-container button {
   margin-top: 15px;
   padding: 12px;
   width: 100%;
   margin-bottom: 15px;
-  border-radius: 5px;
+  border-radius: 50px;
   outline: none;
   border: none;
   background-color: rgb(53, 158, 53);
@@ -306,6 +337,7 @@ footer ul li i:hover {
   font-weight: var(--fw-600);
   font-size: 1rem;
   cursor: pointer;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.692);
 }
 
 .form-container button:hover {
@@ -313,7 +345,7 @@ footer ul li i:hover {
 }
 
 .form-container button:active {
-  transform: translateY(4px);
+  transform: translateY(3px);
 }
 
 .close {

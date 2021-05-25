@@ -1,11 +1,12 @@
-// Get the modal
 const modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
 const btn = document.getElementById("register");
-
-// Get the <span> element that closes the modal
 const span = document.getElementsByClassName("close")[0];
+const formElement = document.getElementById("form");
+const emailElement = document.getElementById("email");
+const emailElement = document.getElementById("name");
+const emailElement = document.getElementById("lastName");
+const emailElement = document.getElementById("password");
+const emailElement = document.getElementById("password2");
 
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
