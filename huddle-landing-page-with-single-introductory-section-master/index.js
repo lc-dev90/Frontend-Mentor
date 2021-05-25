@@ -67,7 +67,14 @@ formElement.addEventListener("submit", (e) => {
     throwSuccess(password2Element);
   }
 
-  if (name && lastName && validateEmail(email) && password === password2) {
+  if (
+    name &&
+    lastName &&
+    validateEmail(email) &&
+    password === password2 &&
+    password &&
+    password2
+  ) {
     const loader = "<div class='loader' id='loader'></div>";
     const title = "Verify your email!";
     const text = `We have sent an e-mail to <span>${email}</span>. You need to verify your e-mail to continue.`;
