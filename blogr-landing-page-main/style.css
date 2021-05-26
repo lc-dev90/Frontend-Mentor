@@ -326,13 +326,18 @@ header::after {
   top: -54%;
   background-repeat: no-repeat;
 }
-
+/* 
 .state {
   border-top-right-radius: 100px;
   color: white;
   background-color: #2a3142;
   height: 400px;
   position: relative;
+}
+
+.state .content {
+  position: absolute;
+  top: 0;
 }
 
 .state h3 {
@@ -354,25 +359,27 @@ header::after {
 .state .container {
   display: flex;
   flex-direction: row-reverse;
+  height: 400px;
 }
 
 .state .img-content {
-  position: absolute;
+
   height: 552px;
   width: 579px;
   background-image: url(./images/illustration-phones.svg);
-  z-index: 1;
-  left: 9%;
+  z-index: 2;
   top: -19%;
   background-repeat: no-repeat;
 }
 
 .bg-img {
-  position: absolute;
+  position: relative;
   overflow: hidden;
   height: 400px;
   z-index: 1;
   width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .bg-img::before {
@@ -386,6 +393,62 @@ header::after {
   transform: scale(0.99);
   z-index: 1;
 }
+ */
+.state {
+  border-top-right-radius: 100px;
+  color: white;
+  background-color: #2a3142;
+  height: 400px;
+  position: relative;
+}
+
+.state .container {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 400px;
+  position: relative;
+}
+
+.state h3 {
+  color: white;
+  font-size: 2.3rem;
+  font-weight: var(--fw-overpass-300);
+  margin-top: 116px;
+}
+
+.state p {
+  margin-top: 30px;
+  line-height: 1.7;
+  font-size: 1.02rem;
+  max-width: 503px;
+  font-family: var(--ff-overpass);
+  font-weight: var(--fw-overpass-300);
+}
+
+.state .img-content {
+  height: 552px;
+  width: 579px;
+  background-image: url(./images/illustration-phones.svg);
+  z-index: 2;
+  top: -19%;
+  background-repeat: no-repeat;
+  left: -23px;
+}
+
+.bg-img {
+  position: absolute;
+  overflow: hidden;
+  height: 400px;
+  z-index: 0;
+  width: 100%;
+  display: block;
+  left: -393px;
+  background: url(./images/bg-pattern-circles.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/* Description */
 
 .description-section {
   height: 1026px;
