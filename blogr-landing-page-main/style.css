@@ -318,8 +318,8 @@ header::after {
 
 .img-content {
   position: absolute;
-  height: 925px;
-  width: 882px;
+  height: 882px;
+  width: 925px;
   background-image: url(./images/illustration-editor-desktop.svg);
   z-index: 1;
   left: 56%;
