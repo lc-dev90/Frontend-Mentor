@@ -13,10 +13,18 @@
   --clr-neutral-light-grayish-blue: hsl(240, 2%, 79%); /* (footer text) */
   --clr-neutral-grayish-blue: hsl(207, 13%, 34%); /* (body copy) */
   --clr-neutral-blue-darker: hsl(240, 10%, 16%); /* (footer background) */
+
+  --fw-ubuntu-400: 400;
+  --fw-ubuntu-500: 500;
+  --fw-ubuntu-700: 700;
+  --fw-overpass-300: 300;
+  --fw-overpass-600: 600;
+
+  --ff-ubuntu: "Ubuntu", sans-serif;
+  --ff-overpass: "Overpass", sans-serif;
 }
 
-/* font-family: 'Overpass', sans-serif;
-font-family: 'Ubuntu', sans-serif; */
+/* ############## Global */
 
 *,
 *::after,
@@ -28,4 +36,144 @@ font-family: 'Ubuntu', sans-serif; */
 
 body {
   font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  padding: 13px;
+  border-radius: 50px;
+  display: inline-block;
+  width: 138px;
+  text-align: center;
+  font-weight: var(--fw-ubuntu-500);
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--clr-white);
+  color: var(--clr-medium-red);
+}
+.btn-secondary {
+  background-color: transparent;
+  border-color: var(--clr-white);
+}
+
+.btn-link {
+  width: 80px;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* . */
+
+/* ############## Header */
+
+/* header {
+  background: url(./images/bg-pattern-intro.svg);
+  background-position: center;
+  background-size: cover;
+  background-color: var(--clr-light-red);
+  color: var(--clr-white);
+} */
+
+header {
+  color: var(--clr-white);
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  top: 0;
+  right: 0;
+  background: url(./images/bg-pattern-intro.svg);
+  background-color: var(--clr-light-red);
+  background-position: 25% 50%;
+  background-size: 205%;
+  z-index: -1;
+}
+
+.navbar {
+  display: flex;
+  padding-top: 60px;
+  font-weight: var(--fw-ubuntu-500);
+}
+
+.nav-logo {
+  margin-right: 12px;
+}
+
+.nav-menu {
+  flex: 1;
+}
+
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-menu li {
+  margin-left: 48px;
+  position: relative;
+}
+
+.nav-menu li::after {
+  content: url(./images/icon-arrow-light.svg);
+  position: absolute;
+  top: 0;
+  right: -15px;
+}
+
+.nav-login ul {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  list-style: none;
+}
+
+.nav-login ul:nth-child(1) {
+  margin-right: 20px;
+}
+
+.dropdown-content {
+  display: none;
+}
+
+.intro {
+  padding: 128px 0 154px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro h1 {
+  margin-bottom: 26px;
+  font-size: 3.5rem;
+  font-weight: var(--fw-ubuntu-500);
+}
+
+.intro h4 {
+  margin-bottom: 50px;
+  font-weight: var(--fw-overpass-300);
+  font-size: 1.25rem;
+  font-family: var(--ff-overpass);
+}
+
+.intro-buttons a {
+  margin: 0 10px;
 }
