@@ -62,15 +62,29 @@ ul {
   background-color: var(--clr-white);
   color: var(--clr-medium-red);
 }
+
+.btn-primary:hover {
+  color: white;
+  background-color: var(--clr-light-red);
+}
 .btn-secondary {
   background-color: transparent;
   border-color: var(--clr-white);
 }
 
+.btn-secondary:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-medium-red);
+}
+
 .btn-link {
   width: 80px;
 }
-
+.btn-link:hover {
+  position: relative;
+  text-shadow: 0 0 0.95px rgb(255, 255, 255), 0 0 0.95px rgb(255, 255, 255);
+  transform: scale(1.05);
+}
 .container {
   max-width: 1120px;
   margin: 0 auto;
@@ -144,10 +158,6 @@ header::after {
   list-style: none;
 }
 
-.nav-login ul:nth-child(1) {
-  margin-right: 20px;
-}
-
 .dropdown {
   position: relative;
   cursor: pointer;
@@ -159,15 +169,17 @@ header::after {
   width: 25px;
   right: -16px;
   cursor: pointer;
+  top: 12px;
 }
 
-.dropdown .dropdown:hover .drop-btn {
-  text-decoration: underline;
+.dropdown:hover .drop-btn {
   text-shadow: 0 0 0.95px rgb(255, 255, 255), 0 0 0.95px rgb(255, 255, 255);
+  transform: scale(1.05);
+  border-bottom: 2px solid white;
 }
 
 .dropdown:hover::after {
-  transform: rotate(180deg) translate(51%, -3px);
+  transform: rotate(180deg) translate(55%, -3px);
   animation-name: entry;
   animation-duration: 0.5s;
 }
@@ -215,6 +227,7 @@ header::after {
 
 .drop-btn {
   cursor: pointer;
+  border-bottom: 2px solid transparent;
 }
 
 @keyframes smooth-entry {
@@ -250,4 +263,65 @@ header::after {
 
 .intro-buttons a {
   margin: 0 10px;
+}
+
+/* Design Section */
+
+.container h2 {
+  font-size: 2.3rem;
+  font-weight: var(--fw-overpass-600);
+  text-align: center;
+  margin-top: 154px;
+  margin-bottom: 120px;
+  color: var(--clr-dark-blue);
+}
+
+.design-section {
+  color: var(--clr-dark-blue);
+  font-family: var(--ff-overpass);
+  position: relative;
+  display: flex;
+}
+
+.content {
+  width: 50%;
+  position: relative;
+}
+
+.design-section h3 {
+  font-weight: var(--fw-overpass-600);
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.design-section h3:nth-of-type(2) {
+  margin-top: 80px;
+}
+
+.design-section p {
+  line-height: 1.7;
+  font-size: 1rem;
+  max-width: 503px;
+  font-weight: var(--fw-overpass-300);
+}
+
+.design-section p:nth-child(3) {
+  display: inline-block;
+  margin-bottom: 100px;
+}
+.teste {
+  overflow: hidden;
+  height: 1008px;
+}
+
+.img-content {
+  position: absolute;
+  height: 925px;
+  width: 882px;
+  background-image: url(./images/illustration-editor-desktop.svg);
+  z-index: 1;
+  left: 56%;
+  top: -54%;
+  /* transform: scale(1.05); */
+  background-repeat: no-repeat;
 }
