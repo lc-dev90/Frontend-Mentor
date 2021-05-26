@@ -86,8 +86,9 @@ ul {
   transform: scale(1.05);
 }
 .container {
-  max-width: 1120px;
+  max-width: 1150px;
   margin: 0 auto;
+  padding: 0 30px;
 }
 
 .open {
@@ -253,6 +254,8 @@ header::after {
   margin-bottom: 26px;
   font-size: 3.5rem;
   font-weight: var(--fw-ubuntu-500);
+  animation-name: smoothy-entry2;
+  animation-duration: 1s;
 }
 
 .intro h4 {
@@ -316,7 +319,7 @@ header::after {
   height: 1008px;
 }
 
-.img-content {
+.design-section .img-content {
   position: absolute;
   height: 882px;
   width: 925px;
@@ -349,6 +352,8 @@ header::after {
   font-size: 2.3rem;
   font-weight: var(--fw-overpass-300);
   margin-top: 116px;
+  animation-name: smoothy-entry2;
+  animation-duration: 1s;
 }
 
 .state p {
@@ -362,12 +367,15 @@ header::after {
 
 .state .img-content {
   height: 552px;
+  position: absolute;
   width: 579px;
   background-image: url(./images/illustration-phones.svg);
   z-index: 2;
   top: -19%;
   background-repeat: no-repeat;
   left: -23px;
+  animation-name: smoothy-entry2;
+  animation-duration: 1s;
 }
 
 .bg-img {
@@ -419,12 +427,15 @@ header::after {
 
 .description-section .img-content {
   position: absolute;
-  height: 974px;
+  height: 786px;
+  width: 986px;
   background-image: url(./images/illustration-laptop-desktop.svg);
   z-index: 1;
   left: -41%;
   top: 13%;
   background-repeat: no-repeat;
+  animation-name: smoothy-entry2;
+  animation-duration: 1s;
 }
 
 footer {
@@ -454,3 +465,64 @@ footer .container {
 .footer-section ul li:hover {
   text-decoration: underline;
 }
+
+@keyframes smoothy-entry2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1078px) {
+  .intro h1 {
+    font-size: 3rem;
+    animation-name: smoothy-entry;
+    animation-duration: 1s;
+  }
+  .state h3 {
+    font-size: 1.8rem;
+    animation-name: smoothy-entry;
+    animation-duration: 1s;
+  }
+  .design-section .img-content {
+    background-size: 75vw;
+    background-position: center left;
+  }
+
+  .description-section .img-content {
+    left: -48%;
+    background-size: 91vw;
+    background-position: center left;
+  }
+
+  .state .img-content {
+    left: -44px;
+    background-size: 53vw;
+    background-position: center left;
+  }
+
+  @keyframes smoothy-entry {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+/* @media (max-width: 956px) {
+  .description-section {
+    height: 700px;
+  }
+
+  .description-section h3 {
+    margin-top: 120px;
+  }
+
+  .description-section .img-content {
+    transform: scale(0.6);
+    top: 9%;
+  } */
