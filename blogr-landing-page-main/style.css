@@ -276,8 +276,8 @@ header::after {
   font-family: var(--ff-overpass);
   font-weight: var(--fw-overpass-600);
   text-align: center;
-  margin-top: 154px;
-  margin-bottom: 120px;
+  margin-top: min(152px, 15vw);
+  margin-bottom: min(11vw, 120px);
   color: var(--clr-dark-blue);
 }
 
@@ -476,6 +476,9 @@ footer .container {
 }
 
 @media (max-width: 1078px) {
+  .bg-img {
+    background-size: 95vw;
+  }
   .intro h1 {
     font-size: 3rem;
     animation-name: smoothy-entry;
@@ -488,19 +491,47 @@ footer .container {
   }
   .design-section .img-content {
     background-size: 75vw;
-    background-position: center left;
+    background-position: 1% 110%;
+  }
+
+  .description-section {
+    height: max(95vw, 800px);
   }
 
   .description-section .img-content {
     left: -48%;
     background-size: 91vw;
     background-position: center left;
+    top: 5%;
+  }
+
+  .description-section .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .description-section h3 {
+    margin-top: unset;
   }
 
   .state .img-content {
     left: -44px;
     background-size: 53vw;
     background-position: center left;
+  }
+
+  .state h3 {
+    margin-top: unset;
+  }
+
+  .state .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
   }
 
   @keyframes smoothy-entry {
