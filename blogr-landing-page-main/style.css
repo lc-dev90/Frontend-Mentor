@@ -388,6 +388,7 @@ header::after {
 }
 
 .description-section {
+  height: 1026px;
   color: var(--clr-dark-blue);
   font-family: var(--ff-overpass);
   position: relative;
@@ -424,6 +425,34 @@ header::after {
   background-image: url(./images/illustration-laptop-desktop.svg);
   z-index: 1;
   left: -41%;
-  top: 21%;
+  top: 13%;
   background-repeat: no-repeat;
+}
+
+footer {
+  height: 360px;
+  background-color: #1e2027;
+  border-top-right-radius: 100px;
+}
+
+footer .container {
+  padding-top: 68px;
+  color: var(--clr-white);
+  display: flex;
+}
+
+.footer-section {
+  width: 25%;
+}
+
+.footer-section ul li:nth-of-type(1) {
+  font-weight: var(--fw-ubuntu-700);
+  margin-bottom: 40px;
+}
+
+.footer-section ul li {
+  margin-bottom: 16px;
+}
+.footer-section ul li:hover {
+  text-decoration: underline;
 }
