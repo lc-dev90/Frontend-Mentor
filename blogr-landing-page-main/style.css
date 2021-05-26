@@ -76,17 +76,11 @@ ul {
   margin: 0 auto;
 }
 
-/* . */
+.open {
+  display: block;
+}
 
 /* ############## Header */
-
-/* header {
-  background: url(./images/bg-pattern-intro.svg);
-  background-position: center;
-  background-size: cover;
-  background-color: var(--clr-light-red);
-  color: var(--clr-white);
-} */
 
 header {
   color: var(--clr-white);
@@ -110,7 +104,6 @@ header::after {
 .navbar {
   display: flex;
   padding-top: 60px;
-  font-weight: var(--fw-ubuntu-500);
 }
 
 .nav-logo {
@@ -123,20 +116,25 @@ header::after {
 
 .nav-menu ul {
   display: flex;
-  align-items: center;
   height: 100%;
 }
 
 .nav-menu li {
-  margin-left: 48px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin-left: 40px;
   position: relative;
 }
 
-.nav-menu li::after {
-  content: url(./images/icon-arrow-light.svg);
-  position: absolute;
-  top: 0;
-  right: -15px;
+.nav-menu li:nth-of-type(1) {
+  width: 72px;
+}
+.nav-menu li:nth-of-type(2) {
+  width: 82px;
+}
+.nav-menu li:nth-of-type(3) {
+  width: 75px;
 }
 
 .nav-login ul {
@@ -150,9 +148,85 @@ header::after {
   margin-right: 20px;
 }
 
-.dropdown-content {
-  display: none;
+.dropdown {
+  position: relative;
+  cursor: pointer;
 }
+
+.dropdown::after {
+  content: url(./images/icon-arrow-light.svg);
+  position: absolute;
+  width: 25px;
+  right: -16px;
+  cursor: pointer;
+}
+
+.dropdown .dropdown:hover .drop-btn {
+  text-decoration: underline;
+  text-shadow: 0 0 0.95px rgb(255, 255, 255), 0 0 0.95px rgb(255, 255, 255);
+}
+
+.dropdown:hover::after {
+  transform: rotate(180deg) translate(51%, -3px);
+  animation-name: entry;
+  animation-duration: 0.5s;
+}
+
+@keyframes entry {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  font-weight: var(--fw-ubuntu-700);
+}
+
+.dropdown-content {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 45px;
+  background-color: var(--clr-white);
+  color: var(--clr-dark-blue);
+  width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0px 12px 33px 0px rgb(0 0 0 / 30%);
+  animation-name: smooth-entry;
+  animation-duration: 0.5s;
+  font-weight: var(--fw-ubuntu-400);
+  padding: 30px;
+}
+
+.dropdown-content a {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  padding: 10px 0;
+}
+
+.drop-btn {
+  cursor: pointer;
+}
+
+@keyframes smooth-entry {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Intro Section */
 
 .intro {
   padding: 128px 0 154px;
