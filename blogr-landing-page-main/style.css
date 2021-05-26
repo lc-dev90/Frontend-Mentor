@@ -102,6 +102,7 @@ header {
 }
 
 header::after {
+  border-bottom-left-radius: 100px;
   content: "";
   position: absolute;
   width: 100%;
