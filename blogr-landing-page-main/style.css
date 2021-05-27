@@ -584,6 +584,8 @@ footer .container {
     display: block;
     transform: translate(0, 9px);
     height: 100%;
+    position: relative;
+    z-index: 4;
   }
 
   .nav-mobile {
