@@ -87,7 +87,7 @@
                   </div>
                 </li>
 
-                <li class="dropdown">
+                <li class="dropdown open">
                   <a class="drop-btn" href="#">Connect</a>
                   <div class="dropdown-content">
                     <a href="#">Contact</a>
@@ -226,6 +226,18 @@
           x.style.display = "block";
         }
       }
+      const navMobile = document.getElementById("nav-mobile");
+      const dropdownList = navMobile.querySelectorAll(".dropdown");
+      dropdownList.forEach((dropdownItem, key) =>{
+        dropdownItem.addEventListener("click", (e) =>{
+        if( e.target.className === "dropdown") {
+          e.target.className = "dropdown open"
+        } else if (e.target.className === "dropdown open"){
+          e.target.className = "dropdown"
+        }
+        
+      })
+    })
     </script>
   </body>
 </html>
