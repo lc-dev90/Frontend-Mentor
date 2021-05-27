@@ -597,6 +597,17 @@ footer .container {
     color: var(--clr-dark-blue);
     text-align: center;
     z-index: 2;
+    animation-name: smooth-nav-mobile;
+    animation-duration: 0.7s;
+  }
+
+  @keyframes smooth-nav-mobile {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .dropdown {
@@ -660,6 +671,10 @@ footer .container {
     border-top: 1px solid #eff0f1;
     width: 90%;
     margin: 0 auto;
+  }
+
+  .nav-login-mobile ul li {
+    margin: 10px 0;
   }
 
   .nav-login-mobile .btn-primary {
