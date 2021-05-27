@@ -231,6 +231,9 @@
       dropdownList.forEach((dropdownItem, key) =>{
         dropdownItem.addEventListener("click", (e) =>{
         if( e.target.className === "dropdown") {
+          dropdownList.forEach((dropdownItem) =>{
+            dropdownItem.className = "dropdown";
+          })
           e.target.className = "dropdown open"
         } else if (e.target.className === "dropdown open"){
           e.target.className = "dropdown"
