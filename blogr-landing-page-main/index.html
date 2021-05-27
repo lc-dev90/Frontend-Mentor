@@ -58,6 +58,52 @@
               <li><a href="#" class="btn btn-primary">Sign Up</a></li>
             </ul>
           </div>
+          <div class="nav-hamburguer" id="nav-haburguer">
+            <a href="javascript:void(0);" onclick="myFunction()"
+              ><img src="./images/icon-hamburger.svg" alt=""
+            /></a>
+          </div>
+          <div class="nav-mobile" id="nav-mobile">
+            <div class="nav-menu-mobile">
+              <ul>
+                <li class="dropdown">
+                  <a class="drop-btn" href="#">Product</a>
+                  <div class="dropdown-content">
+                    <a href="#">Overview</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Marketplace</a>
+                    <a href="#">Features</a>
+                    <a href="#">Integrations</a>
+                  </div>
+                </li>
+
+                <li class="dropdown">
+                  <a class="drop-btn" href="#">Company</a>
+                  <div class="dropdown-content">
+                    <a href="#">About</a>
+                    <a href="#">Team</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                  </div>
+                </li>
+
+                <li class="dropdown">
+                  <a class="drop-btn" href="#">Connect</a>
+                  <div class="dropdown-content">
+                    <a href="#">Contact</a>
+                    <a href="#">Newsletter</a>
+                    <a href="#">LinkedIn</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-login-mobile">
+              <ul>
+                <li><a href="#" class="btn btn-link">Login</a></li>
+                <li><a href="#" class="btn btn-primary">Sign Up</a></li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </div>
       <div class="container">
@@ -128,10 +174,14 @@
             <h3>Powerful tooling</h3>
             <p>
               Batteries included. We built a simple and straightforward CLI tool
-              that makes customization and deployment a breeze, but capable of
-              producing even the most complicated sites.
-            </p>
-          </div>
+              that makes customization and deployment a breeze,function myFunction() {
+                var x = document.getElementById("myLinks");
+                if (x.style.display === "block") {
+                  x.style.display = "none";
+                } else {
+                  x.style.display = "block";
+                }
+              }
           <div class="img-content"></div>
         </div>
       </div>
@@ -167,5 +217,15 @@
         </div>
       </div>
     </footer>
+    <script text="/javascript">
+      function myFunction() {
+        var x = document.getElementById("nav-mobile");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
   </body>
 </html>
