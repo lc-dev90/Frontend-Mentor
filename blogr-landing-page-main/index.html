@@ -104,6 +104,7 @@
               </ul>
             </div>
           </div>
+          <div id="modal-mobile" class="modal-mobile"></div>
         </nav>
       </div>
       <div class="container">
@@ -217,30 +218,6 @@
         </div>
       </div>
     </footer>
-    <script text="/javascript">
-      function myFunction() {
-        var x = document.getElementById("nav-mobile");
-        if (x.style.display === "block") {
-          x.style.display = "none";
-        } else {
-          x.style.display = "block";
-        }
-      }
-      const navMobile = document.getElementById("nav-mobile");
-      const dropdownList = navMobile.querySelectorAll(".dropdown");
-      dropdownList.forEach((dropdownItem, key) =>{
-        dropdownItem.addEventListener("click", (e) =>{
-        if( e.target.className === "dropdown") {
-          dropdownList.forEach((dropdownItem) =>{
-            dropdownItem.className = "dropdown";
-          })
-          e.target.className = "dropdown open"
-        } else if (e.target.className === "dropdown open"){
-          e.target.className = "dropdown"
-        }
-        
-      })
-    })
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
