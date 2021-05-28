@@ -50,6 +50,7 @@ projects.forEach(({ name }, i) => {
   list.appendChild(listItem);
 });
 
+const globalKey = projects.length;
 const otherProjects = [
   {
     name: "Base-Apparel-coming-soon-page",
@@ -77,7 +78,7 @@ const otherProjects = [
   },
 ];
 
-otherProjects.forEach(({ name, link, github }, i) => {
+otherProjects.forEach(({ name, link, github }, globalKey) => {
   const listItem = document.createElement("li");
 
   listItem.innerHTML = `
