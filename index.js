@@ -6,7 +6,7 @@ const projects = [
     name: "huddle-landing-page-with-single-introductory-section-master",
   },
   {
-    name: "3-column-preview-card-component-master/index.htm",
+    name: "3-column-preview-card-component-master",
   },
   {
     name: "Faq-accordion-card-main-master",
