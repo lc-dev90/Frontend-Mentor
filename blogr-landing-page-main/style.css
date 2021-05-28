@@ -346,6 +346,7 @@ header::after {
   position: absolute;
   height: 882px;
   width: 925px;
+  max-width: 90%;
   background-image: url(./images/illustration-editor-desktop.svg);
   z-index: 1;
   left: 56%;
@@ -392,6 +393,7 @@ header::after {
   height: 552px;
   position: absolute;
   width: 579px;
+  max-width: 90%;
   background-image: url(./images/illustration-phones.svg);
   z-index: 2;
   top: -19%;
@@ -407,6 +409,7 @@ header::after {
   height: 400px;
   z-index: 0;
   width: 100%;
+  max-width: 90%;
   display: block;
   left: -393px;
   background: url(./images/bg-pattern-circles.svg);
@@ -452,6 +455,7 @@ header::after {
   position: absolute;
   height: 786px;
   width: 986px;
+  max-width: 90%;
   background-image: url(./images/illustration-laptop-desktop.svg);
   z-index: 1;
   left: -41%;
@@ -699,5 +703,42 @@ footer .container {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0, 0, 0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  }
+
+  .design {
+    height: unset;
+  }
+  .design-section {
+    flex-direction: column-reverse;
+    display: flex;
+    align-items: center;
+  }
+
+  .design-section .img-content {
+    position: relative;
+    height: 331px;
+    width: 406px;
+    background: url(./images/illustration-editor-mobile.svg);
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    transform: scale(1.2);
+  }
+
+  .content {
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 330px;
+  }
+
+  .state {
+    height: 700px;
+  }
+
+  .state .img-content {
+    left: 33px;
+    top: -223px;
+    background-size: 80%;
   }
 }
