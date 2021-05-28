@@ -50,7 +50,6 @@ projects.forEach(({ name }, i) => {
   list.appendChild(listItem);
 });
 
-const globalKey = projects.length;
 const otherProjects = [
   {
     name: "Base-Apparel-coming-soon-page",
@@ -78,13 +77,13 @@ const otherProjects = [
   },
 ];
 
-otherProjects.forEach(({ name, link, github }, globalKey) => {
+otherProjects.forEach(({ name, link, github }, i) => {
   const listItem = document.createElement("li");
 
   listItem.innerHTML = `
     <a href="${link}">
 			<img src="${github}" alt="${name}" />
-			<p>${globalKey + 1}. ${formatProjectName(name)}</p>
+			<p>${i + projects.length + 1}. ${formatProjectName(name)}</p>
 		</a>
 		<div class="links-container">
 			<a href="${link}/index.html" class="blue">
