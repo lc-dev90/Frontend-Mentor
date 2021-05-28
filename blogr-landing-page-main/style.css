@@ -833,10 +833,6 @@ footer .container {
   .footer-section ul li:nth-of-type(1) {
     margin-top: 40px;
   }
-
-  footer img {
-    transform: translateX(-50%);
-  }
 }
 
 @media (max-width: 500px) {
@@ -846,5 +842,14 @@ footer .container {
 
   .content {
     margin-bottom: 230px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .intro-buttons {
+    display: flex;
+    justify-content: space-around;
   }
 }
