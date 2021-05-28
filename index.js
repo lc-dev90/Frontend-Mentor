@@ -84,7 +84,7 @@ otherProjects.forEach(({ name, link, github }, globalKey) => {
   listItem.innerHTML = `
     <a href="${link}">
 			<img src="${github}" alt="${name}" />
-			<p>${i + 1}. ${formatProjectName(name)}</p>
+			<p>${globalKey + 1}. ${formatProjectName(name)}</p>
 		</a>
 		<div class="links-container">
 			<a href="${link}/index.html" class="blue">
