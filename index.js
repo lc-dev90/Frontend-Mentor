@@ -55,25 +55,25 @@ const otherProjects = [
     name: "Base-Apparel-coming-soon-page",
     link: "https://nervous-poincare-83799d.netlify.app/",
     github:
-      "https://github.com/lc-dev90/Base-Apparel-coming-soon-page/blob/master/design/desktop-design.jpg",
+      "https://raw.githubusercontent.com/lc-dev90/Base-Apparel-coming-soon-page/master/design/desktop-design.jpg",
   },
   {
     name: "Four-card-feature-section",
     link: "https://silly-bartik-74813a.netlify.app/",
     github:
-      "https://github.com/lc-dev90/Four-card-feature-section/blob/master/design/desktop-design.jpg",
+      "https://raw.githubusercontent.com/lc-dev90/Four-card-feature-section/master/design/desktop-design.jpg",
   },
   {
     name: "coding-bootcamp-testimonials-slider-master",
     link: "https://angry-euclid-f18e38.netlify.app/",
     github:
-      "https://github.com/lc-dev90/coding-bootcamp-testimonials-slider-master/blob/master/design/desktop-design.jpg",
+      "https://raw.githubusercontent.com/lc-dev90/coding-bootcamp-testimonials-slider-master/master/design/desktop-design.jpg",
   },
   {
     name: "article-preview-component",
     link: "https://musing-beaver-285156.netlify.app/",
     github:
-      "https://github.com/lc-dev90/article-preview-component/blob/master/design/desktop-design.jpg",
+      "https://raw.githubusercontent.com/lc-dev90/article-preview-component/master/design/desktop-design.jpg",
   },
 ];
 
