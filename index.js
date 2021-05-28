@@ -31,7 +31,18 @@ const projects = [
   },
 ];
 
-const outro = "https://nervous-poincare-83799d.netlify.app/";
+/* https://nervous-poincare-83799d.netlify.app/
+Base-Apparel-coming-soon-page 
+
+https://silly-bartik-74813a.netlify.app/
+Four-card-feature-section
+
+https://angry-euclid-f18e38.netlify.app/
+coding-bootcamp-testimonials-slider-master
+
+https://musing-beaver-285156.netlify.app/
+article-preview-component
+ */
 
 const list = document.getElementById("list");
 
