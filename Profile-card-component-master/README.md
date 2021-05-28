@@ -4,7 +4,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Screenshot
 
-![Screenshot](https://github.com/lc-dev90/Profile-card-component/blob/master/screenshot.png?raw=true?raw=true)
+![Screenshot](https://github.com/lc-dev90/Profile-card-component/blob/master/screenshot.png?raw=true)
 
 ### Built with
 
