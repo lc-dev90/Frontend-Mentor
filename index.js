@@ -30,19 +30,24 @@ const projects = [
     name: "blogr-landing-page-main",
   },
 ];
-
-/* https://nervous-poincare-83799d.netlify.app/
-Base-Apparel-coming-soon-page 
-
-https://silly-bartik-74813a.netlify.app/
-Four-card-feature-section
-
-https://angry-euclid-f18e38.netlify.app/
-coding-bootcamp-testimonials-slider-master
-
-https://musing-beaver-285156.netlify.app/
-article-preview-component
- */
+const otherProjects [ 
+{
+  name: "Base-Apparel-coming-soon-page",
+  link: "https://nervous-poincare-83799d.netlify.app/"
+},
+{
+  name: "Four-card-feature-section",
+  link: "https://silly-bartik-74813a.netlify.app/"
+},
+{
+  name: "coding-bootcamp-testimonials-slider-master",
+  link: "https://angry-euclid-f18e38.netlify.app/"
+},
+{
+  name: "article-preview-component",
+  link: "https://musing-beaver-285156.netlify.app/"
+}
+];
 
 const list = document.getElementById("list");
 
@@ -63,6 +68,22 @@ projects.forEach(({ name }, i) => {
 
   list.appendChild(listItem);
 });
+otherProjects.forEach(({name, link} i) => {
+  const listItem = document.createElement("li");
+
+  listItem.innerHTML = `
+    <a href="/${link}/index.html">
+			<img src="/${name}/design/desktop-design.jpg" alt="${name}" />
+			<p>${i + 1}. ${formatProjectName(name)}</p>
+		</a>
+		<div class="links-container">
+			<a href="/${link}/index.html" class="blue">
+				<i class="fas fa-eye"></i>
+			</a>
+		</div>
+  `
+})
+
 
 function formatProjectName(name) {
   return name
