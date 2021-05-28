@@ -1,6 +1,6 @@
 # Project Title
 
-Huddle Landing Page With Single Introductory Section - Frontendmentor.io
+Blogr Landing Page - Frontendmentor.io
 
 ## Demo link:
 
@@ -21,13 +21,15 @@ Challenge from fronendmentor.io
 
 ## Screenshots
 
-![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-27-02.png)
-![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-27-22.png)
-![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-27-28.png)
-![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-27-55.png)
-![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-28-00.png)
-![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-28-29.png)
-![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/huddle-landing-page-with-single-introductory-section-master/ss/Captura%20de%20tela%20de%202021-05-25%2000-28-17.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/blogr-landing-page-main/ss/Captura%20de%20tela%20de%202021-05-28%2013-46-47.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/blogr-landing-page-main/ss/Captura%20de%20tela%20de%202021-05-28%2013-46-52.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/blogr-landing-page-main/ss/Captura%20de%20tela%20de%202021-05-28%2013-46-54.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/blogr-landing-page-main/ss/Captura%20de%20tela%20de%202021-05-28%2013-46-56.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/blogr-landing-page-main/ss/Captura%20de%20tela%20de%202021-05-28%2013-46-57.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/blogr-landing-page-main/ss/Captura%20de%20tela%20de%202021-05-28%2013-47-25.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/blogr-landing-page-main/ss/Captura%20de%20tela%20de%202021-05-28%2013-47-29.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/blogr-landing-page-main/ss/Captura%20de%20tela%20de%202021-05-28%2013-47-31.png)
+![](https://raw.githubusercontent.com/lc-dev90/Frontend-Mentor/master/blogr-landing-page-main/ss/Captura%20de%20tela%20de%202021-05-28%2013-47-46.png)
 
 ## Technologies
 
