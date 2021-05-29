@@ -1,0 +1,29 @@
+:root {
+  /* # Colors */
+
+  /* ### Primary */
+  --clr-light-cyan: hsl(176, 50%, 47%);
+  --clr-dark-cyan: hsl(176, 72%, 28%);
+
+  /* ### Neutral */
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-dark-gray: hsl(0, 0%, 48%);
+
+  /* Weights */
+  --fw-medium: 400;
+  --fw-bold: 500;
+  --fw-extra-bold: 700;
+
+  /* Font-family */
+  --ff-default: "Commissioner", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-default);
+  margin: 0;
+  padding: 0;
+}
