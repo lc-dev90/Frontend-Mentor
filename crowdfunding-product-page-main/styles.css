@@ -2,7 +2,7 @@
   /* # Colors */
 
   /* ### Primary */
-  --clr-light-cyan: hsl(176, 50%, 47%);
+  --clr-light-cyan: #3cb4ac;
   --clr-dark-cyan: hsl(176, 72%, 28%);
 
   /* ### Neutral */
@@ -193,10 +193,45 @@ input[type="number"] {
   width: 100%;
   height: 100%;
   left: 14%;
+  animation-name: smoothy-bookmark;
+  animation-duration: 0.3s;
+}
+
+@keyframes smoothy-bookmark {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bookmark.bookmarked::after {
+  content: "Bookmarked!";
+  animation-name: smoothy-bookmark1;
+  animation-duration: 0.3s;
+}
+
+@keyframes smoothy-bookmark1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .btn:hover {
   background-color: var(--clr-dark-cyan);
+}
+
+.bookmark.bookmarked::before {
+  background-image: url(./images/icon-bookmarked.svg);
+}
+
+.btn.bookmark.bookmarked:hover::before {
+  background-image: url(./images/icon-bookmarked-hover.svg);
+  background-repeat: no-repeat;
 }
 
 .card {
