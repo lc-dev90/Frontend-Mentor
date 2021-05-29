@@ -14,4 +14,5 @@ window.onclick = function (event) {
 
 bookmark.addEventListener("click", () => {
   bookmark.classList.toggle("bookmarked");
+  bookmark;
 });

@@ -435,8 +435,8 @@ section {
   cursor: pointer;
 }
 
-.modal-content .close:hover img {
-  filter: brightness(150%);
+.close:hover img {
+  filter: contrast(0.1);
 }
 
 .modal-content .close img {
