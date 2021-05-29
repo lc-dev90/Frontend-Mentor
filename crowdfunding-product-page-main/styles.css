@@ -8,6 +8,7 @@
   /* ### Neutral */
   --clr-black: hsl(0, 0%, 0%);
   --clr-dark-gray: hsl(0, 0%, 48%);
+  --clr-bg-white: #fafafa;
 
   /* Weights */
   --fw-medium: 400;
@@ -26,4 +27,160 @@ body {
   font-family: var(--ff-default);
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  background-color: var(--clr-bg-white);
+}
+
+.nav-container {
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 730px;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0 2.9375rem;
+  padding-bottom: 3.0625rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-black);
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.mt-4 {
+  margin-top: 2.5rem; /* 40px */
+}
+
+.btn {
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background-color: var(--clr-light-cyan);
+  color: white;
+  font-weight: var(--fw-extra-bold);
+  cursor: pointer;
+}
+
+.bookmark {
+  background-color: #f4f4f4;
+  color: var(--clr-dark-gray);
+  position: relative;
+  width: 10.8125rem;
+}
+
+.bookmark::before {
+  content: "";
+  background-image: url(./images/icon-bookmark.svg);
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 0;
+  pointer-events: none;
+}
+
+.btn.bookmark:hover {
+  background-color: #f4f4f4;
+}
+.btn.bookmark:hover::before {
+  width: 53px;
+  border-radius: 50px;
+  height: 53px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(216, 216, 216, 0.322),
+      rgba(192, 192, 192, 0.329)
+    ),
+    url(./images/icon-bookmark.svg);
+}
+
+.bookmark::after {
+  content: "Bookmark";
+  position: absolute;
+  top: 37%;
+
+  height: 0;
+  width: 100%;
+  height: 100%;
+  left: 14%;
+}
+
+.btn:hover {
+  background-color: var(--clr-dark-cyan);
+}
+
+nav {
+  background-image: url(./images/image-hero-desktop.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  padding-top: 2.9375rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: var(--fw-bold);
+}
+
+header {
+  margin-top: -5.625rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 0.78125rem;
+}
+
+header .logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header h1 {
+  padding-top: 3.5rem;
+}
+
+header p {
+  padding-top: 1.5625rem;
+  color: var(--clr-dark-gray);
+}
+
+main {
+}
+
+section {
 }
