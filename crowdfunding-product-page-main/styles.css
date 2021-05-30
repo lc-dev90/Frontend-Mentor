@@ -687,4 +687,45 @@ body.modal-open {
     width: 100px;
     height: 100%;
   }
+
+  .bookmark {
+    width: unset;
+    background-color: white;
+  }
+
+  .btn.bookmark:hover {
+    background-color: white;
+  }
+
+  .bookmark::after {
+    content: "";
+  }
+
+  .bookmark.bookmarked::after {
+    content: "";
+    animation-name: smoothy-bookmark1;
+    animation-duration: 0.3s;
+    color: var(--clr-light-cyan);
+  }
+
+  .container {
+    max-width: 380px;
+  }
+
+  .mobile-space-around {
+    justify-content: space-around;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .mobile-padding-container {
+    padding: 1.5375rem;
+    padding-bottom: 3.0625rem;
+  }
+  section h3 {
+    padding-top: 1.2rem;
+    padding-bottom: 1.9375rem;
+  }
 }
