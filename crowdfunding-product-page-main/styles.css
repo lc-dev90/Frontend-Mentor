@@ -110,6 +110,10 @@ p {
   justify-content: flex-end;
 }
 
+.ps-relative {
+  position: relative;
+}
+
 .btn {
   padding: 1.2rem 2.5rem;
   border-radius: 50px;
@@ -135,12 +139,16 @@ p {
   margin-right: 1rem;
   font-weight: var(--fw-extra-bold);
   position: relative;
-  cursor: pointer;
+  cursor: auto;
 }
 .input-number::-webkit-outer-spin-button,
 .input-number::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.input-number:focus {
+  border-color: var(--clr-light-cyan);
 }
 
 /* Firefox */
@@ -401,7 +409,7 @@ section {
 
 .modal,
 .modal2 {
-  display: block; /* Hidden by default */
+  display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -427,6 +435,26 @@ section {
   max-width: 730px;
   border-radius: 10px;
   padding: 0 3.1875rem;
+}
+.modal-content2 {
+  margin: 35% auto;
+  text-align: center;
+  position: relative;
+  background-color: #fefefe;
+  padding: 1.25rem;
+  border: 1px solid #888;
+  width: 500px; /* Could be more or less, depending on screen size */
+  max-width: 90%;
+  border-radius: 10px;
+  padding: 2rem 3.1875rem;
+}
+
+.modal-content2 img {
+  width: 90px;
+}
+
+.modal-content2 h2 {
+  margin-top: 2.5rem;
 }
 
 .modal-content .close {
@@ -530,6 +558,16 @@ body.modal-open {
   margin: 0 -30px;
   padding: 1.5625rem 1.875rem;
   align-items: center;
+}
+
+.enter-pledge small {
+  display: none;
+  color: red;
+  align-items: center;
+  margin-right: 20px;
+  position: absolute;
+  top: 34%;
+  left: -26%;
 }
 
 .enter-pledge span {
