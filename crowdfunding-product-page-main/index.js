@@ -117,6 +117,13 @@ bookmark.addEventListener("click", () => {
 
 backButton.onclick = function () {
   modal.style.display = "block";
+  document.querySelectorAll("input[type=radio]").forEach((input) => {
+    input.checked = false;
+  });
+  cards.forEach((card) => {
+    card.classList.remove("selected");
+    card.querySelector(".enter-pledge").style.display = "none";
+  });
 };
 
 bambooButton.addEventListener("click", function () {
