@@ -34,7 +34,7 @@ body {
 
 .nav-container {
   max-width: 1120px;
-  width: 100%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -567,7 +567,7 @@ body.modal-open {
   margin-right: 20px;
   position: absolute;
   top: 34%;
-  left: -26%;
+  left: -34%;
 }
 
 .enter-pledge span {
@@ -590,4 +590,49 @@ body.modal-open {
   z-index: 1;
   color: var(--clr-dark-gray);
   font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-flex-column label {
+    margin-bottom: 7px;
+  }
+
+  .mobile-disabled {
+    display: none;
+  }
+
+  .mobile-p {
+    margin-left: -50px;
+  }
+
+  .mobile-radio {
+    margin-top: 20px;
+  }
+
+  .mobile-quantity {
+    margin-bottom: 40px;
+    margin-left: -50px;
+  }
+
+  .span-cyan {
+    margin-left: unset;
+  }
+
+  .enter-pledge {
+    flex-direction: column;
+  }
+
+  .enter-pledge span {
+    margin-bottom: 30px;
+  }
+
+  .enter-pledge small {
+    top: -44%;
+    left: 22%;
+  }
 }
