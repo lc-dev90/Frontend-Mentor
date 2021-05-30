@@ -12,7 +12,7 @@ const bambooSubmit = document.getElementById("bamboo-submit");
 const blackSubmit = document.getElementById("black-submit");
 const modalContent = document.getElementById("modal-content");
 const cards = modalContent.querySelectorAll(".card");
-
+const completedBar = document.getElementById("completed-bar");
 const bambooInputElement = document.getElementById("bamboo");
 const blackInputElement = document.getElementById("black");
 const backedElement = document.getElementById("backed");
@@ -24,6 +24,27 @@ let quantityBamboo = 101;
 let quantityBlack = 64;
 let backed = 89914;
 let backers = 5007;
+
+/* Bar Percentage */
+
+let total = 100000;
+let percentage = (backed * 100) / total;
+if (percentage > 100) {
+  percentage = 100;
+}
+
+function move() {
+  var width = 0;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= percentage) {
+      clearInterval(id);
+    } else {
+      width++;
+      completedBar.style.width = `${width}%`;
+    }
+  }
+}
 
 reloadBackers();
 
@@ -174,8 +195,6 @@ blackButton.addEventListener("click", function () {
 
 function removeClass() {
   cards.forEach((card) => {
-    /*     card.querySelector(".enter-pledge").querySelector("small").style.display =
-      "none"; */
     if (card.querySelector(".enter-pledge")) {
       card.querySelector(".enter-pledge").style.display = "none";
     }
@@ -203,12 +222,3 @@ function reloadBackers() {
       style: "decimal",
     }).format(backed);
 }
-
-/* Bar Percentage */
-const completedBar = document.getElementById("completed-bar");
-let total = 100000;
-let percentage = (backed * 100) / total;
-if (percentage > 100) {
-  percentage = 100;
-}
-completedBar.style.width = `${percentage}%`;

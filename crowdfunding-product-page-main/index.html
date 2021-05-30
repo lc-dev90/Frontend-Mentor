@@ -19,7 +19,7 @@
     <script src="index.js" defer></script>
     <title>Frontend Mentor | Crowdfunding product page</title>
   </head>
-  <body class="modal-opena">
+  <body class="modal-opena" onload="move()">
     <nav>
       <div class="nav-container flex space-between">
         <div class="logo">
@@ -54,11 +54,11 @@
       <div class="container flex flex-column pt-4">
         <div class="flex">
           <div>
-            <h2 id="backed">$89,914</h2>
+            <h2 id="backed"></h2>
             <p>of $100,000 backed</p>
           </div>
           <div>
-            <h2 id="total">5,007</h2>
+            <h2 id="total"></h2>
             <p>total backers</p>
           </div>
           <div>
@@ -68,11 +68,7 @@
         </div>
 
         <div class="bar">
-          <div
-            id="completed-bar"
-            class="completed-bar"
-            style="width: 50%"
-          ></div>
+          <div id="completed-bar" class="completed-bar" style="width: 0%"></div>
         </div>
       </div>
     </main>
@@ -104,7 +100,7 @@
           </p>
           <div class="flex space-between pd-2">
             <div class="flex">
-              <h2 id="quantity-bamboo-main">101</h2>
+              <h2 id="quantity-bamboo-main"></h2>
               <small>left</small>
             </div>
             <button class="btn" id="bamboo-select">Select Reward</button>
@@ -123,7 +119,7 @@
           </p>
           <div class="flex space-between pd-2">
             <div class="flex">
-              <h2 id="quantity-black-main">64</h2>
+              <h2 id="quantity-black-main"></h2>
               <small>left</small>
             </div>
             <button class="btn" id="back-select">Select Reward</button>
@@ -208,7 +204,7 @@
                     <span class="span-cyan">Pledge $25 or more</span>
                   </div>
                   <div class="quantity flex flex-default">
-                    <h2 id="quantity-bamboo">101</h2>
+                    <h2 id="quantity-bamboo"></h2>
                     <small>left</small>
                   </div>
                 </div>
@@ -266,7 +262,7 @@
                     <span class="span-cyan">Pledge $75 or more</span>
                   </div>
                   <div class="quantity flex flex-default">
-                    <h2 id="quantity-black">64</h2>
+                    <h2 id="quantity-black"></h2>
                     <small>left</small>
                   </div>
                 </div>
