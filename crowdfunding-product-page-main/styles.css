@@ -210,6 +210,7 @@ input[type="number"] {
   content: "Bookmarked!";
   animation-name: smoothy-bookmark1;
   animation-duration: 0.3s;
+  color: var(--clr-light-cyan);
 }
 
 @keyframes smoothy-bookmark1 {
@@ -232,6 +233,7 @@ input[type="number"] {
 .btn.bookmark.bookmarked:hover::before {
   background-image: url(./images/icon-bookmarked-hover.svg);
   background-repeat: no-repeat;
+  color: var(--clr-dark-cyan);
 }
 
 .card {
@@ -462,6 +464,14 @@ section {
   font-size: 0.95rem;
 }
 
+.modal-content .card.selected {
+  border: 1px solid var(--clr-light-cyan);
+}
+
+.modal-content .card.selected.enter-pledge {
+  display: block;
+}
+
 .modal-content input[type="radio"] {
   width: 1.5rem;
   height: 1.5rem;
@@ -515,11 +525,13 @@ body.modal-open {
 }
 
 .enter-pledge {
+  display: none;
   border-top: 1px solid #dbdbdb;
   margin: 0 -30px;
   padding: 1.5625rem 1.875rem;
   align-items: center;
 }
+
 .enter-pledge span {
   display: inline-block;
   color: var(--clr-dark-gray);
