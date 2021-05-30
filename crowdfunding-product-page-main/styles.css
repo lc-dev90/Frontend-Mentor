@@ -593,13 +593,34 @@ body.modal-open {
 }
 
 @media screen and (max-width: 768px) {
+  .btn {
+    padding: 1.2rem 2rem;
+  }
   .mobile-flex-column {
     display: flex;
     flex-direction: column;
   }
 
+  .mobile-flex-column h3 {
+    padding-bottom: 0.7rem;
+  }
+
+  .mobile-flex-column h4 {
+    padding-top: 0rem;
+    font-size: 1.2rem;
+  }
+
   .mobile-flex-column label {
     margin-bottom: 7px;
+  }
+
+  section small {
+    transform: translateY(2px);
+  }
+
+  .mobile-flex-column button {
+    margin-top: 30px;
+    max-width: 160px;
   }
 
   .mobile-disabled {
@@ -634,5 +655,36 @@ body.modal-open {
   .enter-pledge small {
     top: -44%;
     left: 22%;
+  }
+
+  main .container {
+    text-align: center;
+  }
+
+  main .container div:first-child div:first-child {
+    margin-right: 0;
+    border-right: none;
+  }
+
+  main .container div:first-child div:nth-child(2) {
+    margin-right: 0;
+    border-right: none;
+  }
+
+  .margin-bottom-mobile {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .margin-bottom-mobile::after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid var(--clr-border-gray);
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    padding-top: 30px;
+    width: 100px;
+    height: 100%;
   }
 }
