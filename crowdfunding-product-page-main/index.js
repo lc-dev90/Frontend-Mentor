@@ -203,3 +203,12 @@ function reloadBackers() {
       style: "decimal",
     }).format(backed);
 }
+
+/* Bar Percentage */
+const completedBar = document.getElementById("completed-bar");
+let total = 100000;
+let percentage = (backed * 100) / total;
+if (percentage > 100) {
+  percentage = 100;
+}
+completedBar.style.width = `${percentage}%`;
