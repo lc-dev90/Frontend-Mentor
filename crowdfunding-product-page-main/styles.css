@@ -34,7 +34,7 @@ body {
 
 .nav-container {
   max-width: 1120px;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -299,10 +299,27 @@ nav {
 nav ul {
   list-style: none;
   margin: 0;
+  animation-name: entry-nav-menu;
+  animation-duration: 0.7s;
+}
+
+@keyframes entry-nav-menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 nav ul li {
   margin-left: 2rem;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav ul li:hover {
+  border-color: white;
 }
 
 nav ul li a {
@@ -592,6 +609,36 @@ body.modal-open {
   font-size: 0.9rem;
 }
 
+.mobile-quantity {
+  display: none;
+}
+
+header,
+main,
+section {
+  animation-name: entry-breakpoint-desktop;
+  animation-duration: 0.8s;
+}
+
+@keyframes entry-breakpoint-desktop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hamburguer {
+  flex: 0 1 auto !important;
+  width: 35px;
+  display: none;
+}
+
+.hamburguer img {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .btn {
     padding: 1.2rem 2rem;
@@ -636,6 +683,7 @@ body.modal-open {
   }
 
   .mobile-quantity {
+    display: flex;
     margin-bottom: 40px;
     margin-left: -50px;
   }
@@ -709,7 +757,7 @@ body.modal-open {
   }
 
   .container {
-    max-width: 380px;
+    max-width: 400px;
   }
 
   .mobile-space-around {
@@ -727,5 +775,53 @@ body.modal-open {
   section h3 {
     padding-top: 1.2rem;
     padding-bottom: 1.9375rem;
+  }
+
+  .modal-content {
+    max-width: 400px;
+    padding: 0 1.7875rem;
+  }
+
+  .modal-content .close {
+    top: 2.5%;
+    right: 9%;
+  }
+
+  header,
+  main,
+  section {
+    animation-name: entry-breakpoint;
+    animation-duration: 0.8s;
+  }
+
+  @keyframes entry-breakpoint {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .hamburguer {
+    display: block;
+    transform: translateY(-5px);
+    animation-name: entry-hamburguer;
+    animation-duration: 0.7s;
+  }
+
+  @keyframes entry-hamburguer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .nav-menu {
+    display: none;
   }
 }
