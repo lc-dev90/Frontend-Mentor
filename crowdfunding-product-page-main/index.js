@@ -54,8 +54,8 @@ blackSubmit.onclick = function (e) {
   e.preventDefault();
   if (blackInputElement.value === "") {
     throwError(blackInputElement, "Please, enter a value!");
-  } else if (bambooInputElement.value < 25) {
-    throwError(bambooInputElement, "Please, only 25 more!");
+  } else if (blackInputElement.value < 75) {
+    throwError(blackInputElement, "Please, only 75 more!");
   } else {
     disableErrorMesage(blackInputElement);
     backed += parseInt(blackInputElement.value);
@@ -92,6 +92,13 @@ noRewardInput.addEventListener("click", () => {
       .querySelector(".enter-pledge")
       .querySelector("small").style.display = "none";
   }
+  if (cards[2].querySelector(".enter-pledge").querySelector("small")) {
+    cards[2]
+      .querySelector(".enter-pledge")
+      .querySelector("small").style.display = "none";
+  }
+  bambooInputElement.value = "";
+  blackInputElement.value = "";
 });
 bambooInput.addEventListener("click", () => {
   removeClass();
@@ -102,6 +109,8 @@ bambooInput.addEventListener("click", () => {
       .querySelector(".enter-pledge")
       .querySelector("small").style.display = "none";
   }
+  bambooInputElement.value = "";
+  blackInputElement.value = "";
 });
 blackInput.addEventListener("click", () => {
   removeClass();
@@ -112,6 +121,8 @@ blackInput.addEventListener("click", () => {
       .querySelector(".enter-pledge")
       .querySelector("small").style.display = "none";
   }
+  bambooInputElement.value = "";
+  blackInputElement.value = "";
 });
 
 span.onclick = function () {
@@ -183,6 +194,12 @@ function reloadBackers() {
     quantityBlack.toString();
   document.getElementById("quantity-black-main").textContent =
     quantityBlack.toString();
-  totalBackersElement.textContent = backers;
-  backedElement.textContent = backed;
+  totalBackersElement.textContent = new Intl.NumberFormat("en-US", {
+    style: "decimal",
+  }).format(backers);
+  backedElement.textContent =
+    "$" +
+    new Intl.NumberFormat("en-US", {
+      style: "decimal",
+    }).format(backed);
 }
