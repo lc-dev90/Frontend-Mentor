@@ -31,6 +31,8 @@ bambooSubmit.onclick = function (e) {
   e.preventDefault();
   if (bambooInputElement.value === "") {
     throwError(bambooInputElement, "Please, enter a value!");
+  } else if (bambooInputElement.value < 25) {
+    throwError(bambooInputElement, "Please, only 25 more!");
   } else {
     disableErrorMesage(bambooInputElement);
     backed += parseInt(bambooInputElement.value);
@@ -52,6 +54,8 @@ blackSubmit.onclick = function (e) {
   e.preventDefault();
   if (blackInputElement.value === "") {
     throwError(blackInputElement, "Please, enter a value!");
+  } else if (bambooInputElement.value < 25) {
+    throwError(bambooInputElement, "Please, only 25 more!");
   } else {
     disableErrorMesage(blackInputElement);
     backed += parseInt(blackInputElement.value);
@@ -83,16 +87,31 @@ noRewardInput.addEventListener("click", () => {
   removeClass();
   cards[0].classList.add("selected");
   cards[0].querySelector(".enter-pledge").style.display = "flex";
+  if (cards[1].querySelector(".enter-pledge").querySelector("small")) {
+    cards[1]
+      .querySelector(".enter-pledge")
+      .querySelector("small").style.display = "none";
+  }
 });
 bambooInput.addEventListener("click", () => {
   removeClass();
   cards[1].classList.add("selected");
   cards[1].querySelector(".enter-pledge").style.display = "flex";
+  if (cards[2].querySelector(".enter-pledge").querySelector("small")) {
+    cards[2]
+      .querySelector(".enter-pledge")
+      .querySelector("small").style.display = "none";
+  }
 });
 blackInput.addEventListener("click", () => {
   removeClass();
   cards[2].classList.add("selected");
   cards[2].querySelector(".enter-pledge").style.display = "flex";
+  if (cards[1].querySelector(".enter-pledge").querySelector("small")) {
+    cards[1]
+      .querySelector(".enter-pledge")
+      .querySelector("small").style.display = "none";
+  }
 });
 
 span.onclick = function () {
@@ -122,7 +141,9 @@ backButton.onclick = function () {
   });
   cards.forEach((card) => {
     card.classList.remove("selected");
-    card.querySelector(".enter-pledge").style.display = "none";
+    if (card.querySelector(".enter-pledge")) {
+      card.querySelector(".enter-pledge").style.display = "none";
+    }
   });
 };
 
@@ -142,6 +163,8 @@ blackButton.addEventListener("click", function () {
 
 function removeClass() {
   cards.forEach((card) => {
+    /*     card.querySelector(".enter-pledge").querySelector("small").style.display =
+      "none"; */
     if (card.querySelector(".enter-pledge")) {
       card.querySelector(".enter-pledge").style.display = "none";
     }
