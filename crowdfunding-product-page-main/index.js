@@ -221,7 +221,7 @@ span.onclick = function () {
   document.body.classList.remove("modal-open");
 };
 
-window.onclick = function (event) {
+window.addEventListener("click", function (event) {
   if (event.target == modal) {
     disableErrorMesage(blackInputElement);
     disableErrorMesage(bambooInputElement);
@@ -229,7 +229,7 @@ window.onclick = function (event) {
     modal.style.display = "none";
     document.body.classList.remove("modal-open");
   }
-};
+});
 
 bookmark.addEventListener("click", () => {
   bookmark.classList.toggle("bookmarked");
