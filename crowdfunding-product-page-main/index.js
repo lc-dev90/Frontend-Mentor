@@ -83,6 +83,16 @@ noRewardSubmit.onclick = function (e) {
     modal.style.display = "none";
     document.body.classList.remove("modal-open");
   };
+  window.onclick = function (event) {
+    if (event.target == modal2) {
+      disableErrorMesage(blackInputElement);
+      disableErrorMesage(bambooInputElement);
+      removeClass();
+      modal2.style.display = "none";
+      modal.style.display = "none";
+      document.body.classList.remove("modal-open");
+    }
+  };
 };
 
 bambooSubmit.onclick = function (e) {
@@ -103,6 +113,16 @@ bambooSubmit.onclick = function (e) {
       modal2.style.display = "none";
       modal.style.display = "none";
       document.body.classList.remove("modal-open");
+    };
+    window.onclick = function (event) {
+      if (event.target == modal2) {
+        disableErrorMesage(blackInputElement);
+        disableErrorMesage(bambooInputElement);
+        removeClass();
+        modal2.style.display = "none";
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+      }
     };
   }
 };
@@ -127,6 +147,16 @@ blackSubmit.onclick = function (e) {
       modal2.style.display = "none";
       modal.style.display = "none";
       document.body.classList.remove("modal-open");
+    };
+    window.onclick = function (event) {
+      if (event.target == modal2) {
+        disableErrorMesage(blackInputElement);
+        disableErrorMesage(bambooInputElement);
+        removeClass();
+        modal2.style.display = "none";
+        modal.style.display = "none";
+        document.body.classList.remove("modal-open");
+      }
     };
   }
 };
@@ -264,7 +294,3 @@ function reloadBackers() {
       style: "decimal",
     }).format(backed);
 }
-
-var confettiSettings = { target: "my-canvas" };
-var confetti = new ConfettiGenerator(confettiSettings);
-confetti.render();
