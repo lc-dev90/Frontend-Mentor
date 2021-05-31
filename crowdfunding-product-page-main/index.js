@@ -73,6 +73,7 @@ function move() {
 reloadBackers();
 
 noRewardSubmit.onclick = function (e) {
+  document.body.classList.add("modal-open");
   e.preventDefault();
   backers += 1;
   reloadBackers();
@@ -80,6 +81,7 @@ noRewardSubmit.onclick = function (e) {
   gotit.onclick = function () {
     modal2.style.display = "none";
     modal.style.display = "none";
+    document.body.classList.remove("modal-open");
   };
 };
 
@@ -100,6 +102,7 @@ bambooSubmit.onclick = function (e) {
     gotit.onclick = function () {
       modal2.style.display = "none";
       modal.style.display = "none";
+      document.body.classList.remove("modal-open");
     };
   }
 };
@@ -123,6 +126,7 @@ blackSubmit.onclick = function (e) {
     gotit.onclick = function () {
       modal2.style.display = "none";
       modal.style.display = "none";
+      document.body.classList.remove("modal-open");
     };
   }
 };
@@ -184,6 +188,7 @@ span.onclick = function () {
   disableErrorMesage(blackInputElement);
   disableErrorMesage(bambooInputElement);
   modal.style.display = "none";
+  document.body.classList.remove("modal-open");
 };
 
 window.onclick = function (event) {
@@ -192,6 +197,7 @@ window.onclick = function (event) {
     disableErrorMesage(bambooInputElement);
     removeClass();
     modal.style.display = "none";
+    document.body.classList.remove("modal-open");
   }
 };
 
@@ -200,6 +206,7 @@ bookmark.addEventListener("click", () => {
 });
 
 backButton.onclick = function () {
+  document.body.classList.add("modal-open");
   modal.style.display = "block";
   document.querySelectorAll("input[type=radio]").forEach((input) => {
     input.checked = false;
@@ -213,6 +220,7 @@ backButton.onclick = function () {
 };
 
 bambooButton.addEventListener("click", function () {
+  document.body.classList.add("modal-open");
   modal.style.display = "block";
   bambooInput.checked = true;
   cards[1].classList.add("selected");
@@ -220,6 +228,7 @@ bambooButton.addEventListener("click", function () {
 });
 
 blackButton.addEventListener("click", function () {
+  document.body.classList.add("modal-open");
   modal.style.display = "block";
   blackInput.checked = true;
   cards[2].classList.add("selected");
@@ -255,3 +264,7 @@ function reloadBackers() {
       style: "decimal",
     }).format(backed);
 }
+
+var confettiSettings = { target: "my-canvas" };
+var confetti = new ConfettiGenerator(confettiSettings);
+confetti.render();

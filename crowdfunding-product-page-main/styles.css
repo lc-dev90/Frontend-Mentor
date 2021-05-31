@@ -30,6 +30,7 @@ body {
   padding: 0;
   font-size: 16px;
   background-color: var(--clr-bg-white);
+  position: relative;
 }
 
 .nav-container {
@@ -454,7 +455,8 @@ section {
   padding: 0 3.1875rem;
 }
 .modal-content2 {
-  margin: 35% auto;
+  margin: 15% auto;
+  overflow: hidden;
   text-align: center;
   position: relative;
   background-color: #fefefe;
