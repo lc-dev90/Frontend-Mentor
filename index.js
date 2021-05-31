@@ -29,6 +29,9 @@ const projects = [
   {
     name: "blogr-landing-page-main",
   },
+  {
+    name: "crowdfunding-product-page-main",
+  },
 ];
 const list = document.getElementById("list");
 
