@@ -8,6 +8,7 @@ const blackButton = document.getElementById("back-select");
 const bambooInput = document.getElementById("bamboo-input");
 const blackInput = document.getElementById("black-input");
 const noRewardInput = document.getElementById("no-reward-input");
+const noRewardSubmit = document.getElementById("no-reward-submit");
 const bambooSubmit = document.getElementById("bamboo-submit");
 const blackSubmit = document.getElementById("black-submit");
 const modalContent = document.getElementById("modal-content");
@@ -71,6 +72,17 @@ function move() {
 
 reloadBackers();
 
+noRewardSubmit.onclick = function (e) {
+  e.preventDefault();
+  backers += 1;
+  reloadBackers();
+  modal2.style.display = "block";
+  gotit.onclick = function () {
+    modal2.style.display = "none";
+    modal.style.display = "none";
+  };
+};
+
 bambooSubmit.onclick = function (e) {
   e.preventDefault();
   if (bambooInputElement.value === "") {
@@ -80,13 +92,11 @@ bambooSubmit.onclick = function (e) {
   } else {
     disableErrorMesage(bambooInputElement);
     backed += parseInt(bambooInputElement.value);
-    console.log(parseInt(bambooInputElement.value));
     quantityBamboo -= 1;
     backers += 1;
     bambooInputElement.value = "";
     reloadBackers();
     modal2.style.display = "block";
-    console.log(backed, quantityBamboo);
     gotit.onclick = function () {
       modal2.style.display = "none";
       modal.style.display = "none";

@@ -899,4 +899,8 @@ section {
     cursor: pointer;
     pointer-events: all;
   }
+
+  .close-hamburguer:hover {
+    opacity: 0.7;
+  }
 }
