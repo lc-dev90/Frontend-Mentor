@@ -2,7 +2,7 @@
   /* ## Colors  */
   /* ## Primary  */
   --clr-primary-light-cyan: hsl(174, 77%, 80%);
-  --clr-strong-cyan: hsl(174, 86%, 45%);
+  --clr-strong-cyan: #10d5c2;
   --clr-primary-light-red: hsl(14, 92%, 95%);
   -clr-primary-light-red: hsl(15, 100%, 70%);
   --clr-primary-pale-blue: hsl(226, 100%, 87%);
@@ -10,7 +10,7 @@
   /* ## Neutral  */
   --clr-neutral-white: white;
   --clr-neutral-very-pale-blue: hsl(230, 100%, 99%); /*  (Main Background) */
-  --clr-light-grayish-blue: hsl(224, 65%, 95%); /* (Empty Slider Bar) */
+  --clr-light-grayish-blue: #eaeefb; /* (Empty Slider Bar) */
   --clr-light-grayish-blue: hsl(223, 50%, 87%); /* (Toggle Background) */
   --clr-grayish-blue: hsl(225, 20%, 60%); /* (Text) */
   --clr-dark-desaturated-blue: hsl(227, 35%, 25%); /* (Text & CTA Background) */
@@ -20,6 +20,7 @@
   --fw-bolder-extreme: 800;
 }
 
+/* ##################Root styles  */
 *,
 *::after,
 *::before {
@@ -50,6 +51,18 @@ a {
 ul {
   list-style: none;
 }
+
+.flex {
+  display: flex;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.ai-center {
+  align-items: center;
+}
+
+/* ####################Header */
 
 header {
   text-align: center;
@@ -87,6 +100,7 @@ header::after {
   height: 100%;
   position: absolute;
   background-repeat: no-repeat;
+  z-index: -1;
 }
 main {
   width: 540px;
@@ -94,4 +108,69 @@ main {
   margin: 0 auto;
   background-color: var(--clr-neutral-white);
   border-radius: 10px;
+  padding: 2.9375rem;
+}
+
+main h3 {
+  text-transform: uppercase;
+  color: var(--clr-grayish-blue);
+  letter-spacing: 3px;
+  font-size: 0.95rem;
+}
+
+.price-month h2 {
+  color: var(--clr-dark-desaturated-blue);
+  font-size: 2.5rem;
+  margin-right: 6px;
+}
+
+.price-month small {
+  color: var(--clr-grayish-blue);
+  letter-spacing: 3px;
+  font-size: 0.95rem;
+}
+
+.slidecontainer {
+  padding-top: 28px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: none;
+
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+  background-color: var(--clr-strong-cyan);
+  background-image: url(./images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 55%;
+  background-size: 65%;
+  box-shadow: 1px 0px 5px var(--clr-primary-light-cyan),
+    0px 2px 15px var(--clr-primary-light-cyan);
+}
+
+/*  */
+input[type="range"]:active::-webkit-slider-thumb {
+  background-color: #4ba8a1;
+}
+
+#myInput {
+  background: linear-gradient(
+    to right,
+    var(--clr-strong-cyan) 0%,
+    var(--clr-strong-cyan) 50%,
+    #eaeefb 50%,
+    #eaeefb 100%
+  );
+  border: solid 1px transparent;
+  border-radius: 8px;
+  height: 8px;
+  width: 100%;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
 }

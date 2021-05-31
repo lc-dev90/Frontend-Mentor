@@ -26,23 +26,23 @@
     </header>
     <main>
       <div>
-        <div>
+        <div class="flex jc-sb ai-center">
           <div>
             <h3>100k pageviews</h3>
           </div>
-          <div>
+          <div class="price-month flex ai-center">
             <h2>$16.00</h2>
             <small>/month</small>
           </div>
         </div>
         <div class="slidecontainer">
-          <input
+          <input 
             type="range"
             min="1"
             max="100"
             value="50"
             class="slider"
-            id="myRange"
+            id="myInput"
           />
           <p>Value: <span id="demo"></span></p>
         </div>
@@ -65,5 +65,11 @@
         </div>
       </div>
     </main>
+    <script>
+      document.getElementById("myInput").oninput = function() {
+  var value = (this.value-this.min)/(this.max-this.min)*100
+  this.style.background = 'linear-gradient(to right, #10d5c2 0%, #10d5c2 ' + value + '%, #eaeefb ' + value + '%, #eaeefb 100.5%)'
+};
+    </script>
   </body>
 </html>
