@@ -20,34 +20,46 @@
     <script src="index.js" defer></script>
     <title>Frontend Mentor | Crowdfunding product page</title>
   </head>
-  <body class="modal-open" onload="move()">
+  <body onload="move()">
     <nav>
       <div class="nav-container flex space-between ps-relative">
         <div class="logo">
-          <a href="#"><img src="./images/logo.svg" alt="Logo" /></a>
+          <a href="#" aria-label="Logo"
+            ><img src="./images/logo.svg" alt="Logo"
+          /></a>
         </div>
 
         <ul class="flex nav-menu">
-          <li><a href="#" onclick="startConfetti();">About</a></li>
-          <li><a href="#">Discover</a></li>
-          <li><a href="#">Get Started</a></li>
+          <li>
+            <a href="#" aria-label="About" onclick="startConfetti();">About</a>
+          </li>
+          <li><a href="#" aria-label="Discover">Discover</a></li>
+          <li><a href="#" aria-label="Get Started">Get Started</a></li>
         </ul>
 
         <div class="hamburguer" id="hamburguer">
-          <a href="#"><img src="./images/icon-hamburger.svg" alt="Menu" /></a>
+          <a href="#"
+            ><img
+              src="./images/icon-hamburger.svg"
+              alt="Menu"
+              aria-label="Menu"
+          /></a>
         </div>
         <div class="close-hamburguer" id="close-hamburguer">
           <a href="#"
-            ><img src="./images/icon-close-menu.svg" alt="Close Menu"
+            ><img
+              src="./images/icon-close-menu.svg"
+              alt="Close Menu"
+              aria-label="Close Menu"
           /></a>
         </div>
 
         <div class="modal-mobile" id="modal-mobile">
           <div class="dropdown-menu">
             <ul class="flex nav-menu">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Discover</a></li>
-              <li><a href="#">Get Started</a></li>
+              <li><a href="#" aria-label="About">About</a></li>
+              <li><a href="#" aria-label="Discover">Discover</a></li>
+              <li><a href="#" aria-label="Get Started">Get Started</a></li>
             </ul>
           </div>
         </div>
@@ -58,7 +70,10 @@
       <div class="container">
         <div class="logo">
           <a href="#"
-            ><img src="./images/logo-mastercraft.svg" alt="Logo Mastercraft"
+            ><img
+              src="./images/logo-mastercraft.svg"
+              alt="Logo Mastercraft"
+              aria-label="Logo Mastercraft"
           /></a>
         </div>
         <h1>Mastercraft Bamboo Monitor Riser</h1>
@@ -66,8 +81,14 @@
           A beautiful & handcrafted monitor stand to reduce neck and eye strain.
         </p>
         <div class="flex space-between mt-4 mobile-space-around">
-          <button class="btn" id="back-button">Back this project</button>
-          <button class="btn bookmark" id="bookmark"></button>
+          <button class="btn" id="back-button" aria-label="Back this project">
+            Back this project
+          </button>
+          <button
+            class="btn bookmark"
+            id="bookmark"
+            aria-label="Bookmark Button"
+          ></button>
         </div>
       </div>
     </header>
@@ -124,7 +145,13 @@
               <h2 id="quantity-bamboo-main"></h2>
               <small>left</small>
             </div>
-            <button class="btn" id="bamboo-select">Select Reward</button>
+            <button
+              class="btn"
+              id="bamboo-select"
+              aria-label="Select Bamboo Reward"
+            >
+              Select Reward
+            </button>
           </div>
         </div>
 
@@ -143,7 +170,13 @@
               <h2 id="quantity-black-main"></h2>
               <small>left</small>
             </div>
-            <button class="btn" id="back-select">Select Reward</button>
+            <button
+              class="btn"
+              id="back-select"
+              aria-label="Select Black Reward"
+            >
+              Select Reward
+            </button>
           </div>
         </div>
 
@@ -162,7 +195,7 @@
               <h2 class="mobile-align">0</h2>
               <small>left</small>
             </div>
-            <button class="btn">Out of Stock</button>
+            <button class="btn" aria-label="Out of Stock">Out of Stock</button>
           </div>
         </div>
       </div>
@@ -171,7 +204,11 @@
     <div class="modal" id="myModal">
       <div class="modal-content" id="modal-content">
         <div class="close">
-          <img src="./images/icon-close-modal.svg" alt="close" />
+          <img
+            src="./images/icon-close-modal.svg"
+            alt="close"
+            aria-label="close modal"
+          />
         </div>
         <h3>Back this project</h3>
         <p>
@@ -187,6 +224,7 @@
                   id="no-reward-input"
                   name="choose"
                   value="no-reward"
+                  aria-label="no-reward-input"
                 />
               </div>
 
@@ -206,6 +244,7 @@
                   id="no-reward-submit"
                   name="continue"
                   class="btn btn-card"
+                  aria-label="No reward button"
                 >
                   Continue
                 </button>
@@ -222,6 +261,7 @@
                   id="bamboo-input"
                   name="choose"
                   value="25-more"
+                  aria-label="bamboo input"
                 />
               </div>
               <div class="flex flex-column">
@@ -262,12 +302,14 @@
                       type="number"
                       name="pledge"
                       id="bamboo"
+                      aria-label="bamboo input"
                   /></label>
                   <button
                     type="submit"
                     id="bamboo-submit"
                     name="continue"
                     class="btn btn-card"
+                    aria-label="bamboo button"
                   >
                     Continue
                   </button>
@@ -285,6 +327,7 @@
                   id="black-input"
                   name="choose"
                   value="75-more"
+                  aria-label="black input"
                 />
               </div>
               <div class="flex flex-column">
@@ -324,12 +367,14 @@
                       name="pledge"
                       id="black"
                       min="75"
+                      aria-label="input black"
                   /></label>
                   <button
                     type="submit"
                     name="continue"
                     id="black-submit"
                     class="btn btn-card"
+                    aria-label="black button submit"
                   >
                     Continue
                   </button>
@@ -348,6 +393,7 @@
                   name="choose"
                   value="200-more"
                   disabled
+                  aria-label="mahogany input disabled"
                 />
               </div>
               <div class="flex flex-column">
@@ -386,7 +432,9 @@
               Bamboo Monitor Riser worldwide. You will get an email once our
               campaign is completed.
             </p>
-            <button type="submit" id="gotit" class="btn">Got it!</button>
+            <button type="submit" id="gotit" class="btn" aria-label="Got it!">
+              Got it!
+            </button>
           </div>
         </div>
       </div>
