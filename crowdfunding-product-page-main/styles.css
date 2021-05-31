@@ -808,6 +808,10 @@ section {
   }
 }
 
+.modal-mobile {
+  display: none;
+}
+
 @media screen and (max-width: 570px) {
   .hamburguer {
     display: block;
@@ -828,11 +832,23 @@ section {
     display: none;
   }
 
+  .modal-mobile {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.001));
+  }
+
   .dropdown-menu {
     position: absolute;
-    top: 52px;
-    left: 9%;
-    width: 80%;
+    top: 110px;
+    left: 12%;
+    width: 75%;
     overflow: hidden;
     z-index: 1;
     background-color: white;
