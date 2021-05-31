@@ -3,8 +3,8 @@
   /* ## Primary  */
   --clr-primary-light-cyan: hsl(174, 77%, 80%);
   --clr-strong-cyan: #10d5c2;
-  --clr-primary-light-red: hsl(14, 92%, 95%);
-  -clr-primary-light-red: hsl(15, 100%, 70%);
+  --clr-primary-light-red: #feece7;
+  -clr-primary-light-red: #ff8c66;
   --clr-primary-pale-blue: hsl(226, 100%, 87%);
 
   /* ## Neutral  */
@@ -55,11 +55,20 @@ ul {
 .flex {
   display: flex;
 }
+
+.flex > div {
+  flex: 1;
+}
+
 .jc-sb {
   justify-content: space-between;
 }
 .ai-center {
   align-items: center;
+}
+
+.ps-relative {
+  position: relative;
 }
 
 /* ####################Header */
@@ -157,6 +166,9 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]:active::-webkit-slider-thumb {
   background-color: #4ba8a1;
 }
+input[type="range"]:focus::-webkit-slider-thumb {
+  background-color: #4ba8a1;
+}
 
 #myInput {
   background: linear-gradient(
@@ -173,4 +185,97 @@ input[type="range"]:active::-webkit-slider-thumb {
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
+}
+
+.toggle-container {
+  position: relative;
+  margin-top: 50px;
+  transform: translateX(-0.8rem);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+  margin: 0 1rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider-toggle:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.toggle:checked + .slider-toggle {
+  background-color: #2196f3;
+}
+
+.toggle:focus + .slider-toggle {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.toggle:checked + .slider-toggle:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider-toggle.round {
+  border-radius: 34px;
+}
+
+.slider-toggle.round:before {
+  border-radius: 50%;
+}
+
+.toggle-container {
+  margin-top: 40px;
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-container h4 {
+  font-weight: normal;
+  font-size: 0.95rem;
+  color: var(--clr-grayish-blue);
+}
+
+.toggle-container h4:nth-of-type(2)::after {
+  content: "25% discount";
+  position: absolute;
+  width: 137%;
+  padding: 1px 1px;
+  border-radius: 50px;
+  background: #feece7;
+  left: 112%;
+  font-size: 0.85rem;
+  color: #ff8c66;
 }
