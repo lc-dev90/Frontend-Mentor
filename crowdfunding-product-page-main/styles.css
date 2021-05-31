@@ -643,6 +643,21 @@ section {
   display: none;
 }
 
+.modal-mobile {
+  display: none;
+}
+
+.close-hamburguer {
+  flex: 0 1 auto !important;
+  width: 25px;
+  display: none;
+  z-index: 10;
+}
+
+.close-hamburguer img {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .btn {
     padding: 1.2rem 2rem;
@@ -808,10 +823,6 @@ section {
   }
 }
 
-.modal-mobile {
-  display: none;
-}
-
 @media screen and (max-width: 570px) {
   .hamburguer {
     display: block;
@@ -833,7 +844,6 @@ section {
   }
 
   .modal-mobile {
-    display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -883,5 +893,10 @@ section {
   .dropdown-menu ul li a {
     color: black;
     font-size: 1.25rem;
+  }
+
+  .hamburguer {
+    cursor: pointer;
+    pointer-events: all;
   }
 }

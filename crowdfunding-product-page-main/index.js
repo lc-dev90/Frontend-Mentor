@@ -19,6 +19,29 @@ const backedElement = document.getElementById("backed");
 const totalBackersElement = document.getElementById("total");
 const form = document.getElementById("form");
 const gotit = document.getElementById("gotit");
+const hamburguer = document.getElementById("hamburguer");
+const modalMobile = document.getElementById("modal-mobile");
+const closeHamburguer = document.getElementById("close-hamburguer");
+
+hamburguer.onclick = function () {
+  modalMobile.style.display = "block";
+  hamburguer.style.display = "none";
+  closeHamburguer.style.display = "block";
+};
+
+window.addEventListener("click", (e) => {
+  if (e.target == modalMobile) {
+    modalMobile.style.display = "none";
+    closeHamburguer.style.display = "none";
+    hamburguer.style.display = "block";
+  }
+});
+
+closeHamburguer.onclick = function () {
+  modalMobile.style.display = "none";
+  closeHamburguer.style.display = "none";
+  hamburguer.style.display = "block";
+};
 
 let quantityBamboo = 101;
 let quantityBlack = 64;
