@@ -43,3 +43,41 @@ a {
   text-decoration: none;
   color: black;
 }
+
+header {
+  background-image: url(./images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  height: 449px;
+}
+
+header h1 {
+  padding-top: 110px;
+  padding-bottom: 10px;
+  font-size: 2rem;
+  color: var(--clr-dark-desaturated-blue);
+}
+
+header p {
+  color: var(--clr-grayish-blue);
+  font-size: 0.9375rem;
+}
+
+header div {
+  text-align: center;
+  margin: 0 auto;
+  width: 540px;
+  max-width: 95%;
+  position: relative;
+}
+
+header div::after {
+  content: "";
+  background-image: url(./images/pattern-circles.svg);
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 146px;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
