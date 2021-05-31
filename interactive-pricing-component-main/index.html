@@ -13,8 +13,52 @@
     <title>Frontend Mentor | Interactive pricing component</title>
   </head>
   <body>
-    Simple, traffic-based pricing Sign-up for our 30-day trial. No credit card
-    required. Pageviews $ /month Monthly Billing Yearly Billing 25% discount
-    Unlimited websites 100% data ownership Email reports Start my trial
+    <header>
+      <div>
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
+    </header>
+    <main>
+      <div>
+        <div>
+          <div>
+            <h3>100k pageviews</h3>
+          </div>
+          <div>
+            <h2>$16.00</h2>
+            <small>/month</small>
+          </div>
+        </div>
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="slider"
+            id="myRange"
+          />
+          <p>Value: <span id="demo"></span></p>
+        </div>
+        <div>
+          <h4>Monthly Billing</h4>
+          <button></button>
+          <h4>Monthly Billing <span>25% discount</span></h4>
+        </div>
+      </div>
+      <div>
+        <div>
+          <ul>
+            <li><a href="">Unlimited websites</a></li>
+            <li><a href="">100% data ownership</a></li>
+            <li><a href="">Email reports</a></li>
+          </ul>
+        </div>
+        <div>
+          <button>Start my trial</button>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
