@@ -4,6 +4,17 @@
     grid-template-rows: 1fr 270px 250px;
     max-width: 95%;
     width: 827px;
+    animation-name: smooth2;
+    animation-duration: 0.9s;
+  }
+
+  @keyframes smooth2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
   }
 
   .card {
@@ -36,6 +47,17 @@
     width: 541px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 285px 270px 290px;
+    animation-name: smooth3;
+    animation-duration: 0.9s;
+  }
+
+  @keyframes smooth3 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
   }
   .card {
     &:nth-of-type(1) {
@@ -67,6 +89,17 @@
     grid-template-rows: 1fr;
     max-width: 95%;
     width: 330px;
+    animation-name: smooth2;
+    animation-duration: 0.9s;
+  }
+
+  @keyframes smooth2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
   }
   .card {
     &:nth-of-type(1) {

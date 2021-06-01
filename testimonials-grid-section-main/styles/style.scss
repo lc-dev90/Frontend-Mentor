@@ -27,6 +27,17 @@ main {
   grid-template-rows: 284px 267px;
   width: 1111px;
   max-width: 95%;
+  animation-name: smooth;
+  animation-duration: 0.9s;
+}
+
+@keyframes smooth {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }
 
 .card {
