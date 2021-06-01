@@ -4,7 +4,7 @@ Testimonials grid section - Frontendmentor.io
 
 ## Demo link:
 
-https://quizzical-golick-db2910.netlify.app/crowdfunding-product-page-main/index.html
+https://quizzical-golick-db2910.netlify.app/testimonials-grid-section-main/index.html
 
 ## Table of Content:
 
