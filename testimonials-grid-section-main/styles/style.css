@@ -3,6 +3,81 @@
 /* ### Neutral */
 /* ## Font-weights */
 /* ## Font*/
+/* ## Mixins */
+/* ## Colors */
+/* ### Primary */
+/* ### Neutral */
+/* ## Font-weights */
+/* ## Font*/
+/* ## Mixins */
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: white;
+  padding: 1.5rem 2rem 2rem;
+  border-radius: 10px;
+}
+
+.card .card-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.card .card-header div:nth-of-type(1) {
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+}
+
+.card .card-header div:nth-of-type(1) img {
+  width: 100%;
+}
+
+.card .card-header div:nth-of-type(2) h3, .card .card-header div:nth-of-type(2) h4 {
+  font-size: 0.8rem;
+}
+
+.card .card-header div:nth-of-type(2) h4 {
+  opacity: 0.5;
+}
+
+.card .card-body p:nth-of-type(1) {
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+}
+
+.card .card-body p:nth-of-type(2) {
+  opacity: 0.7;
+  font-size: 0.8125rem;
+}
+
 *,
 *::after,
 *::before {
@@ -14,5 +89,77 @@
 
 body {
   font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 16px;
+  background-color: #ecf2f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.875rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+.card:nth-of-type(1) {
+  background-color: #7541c8;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+.card:nth-of-type(2) {
+  background-color: #48556a;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.card:nth-of-type(3), .card:nth-of-type(4) {
+  background-color: white;
+  color: #48556a;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+}
+
+.card:nth-of-type(4) {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+}
+
+.card:nth-of-type(5) {
+  background-color: #19212e;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
 }
 /*# sourceMappingURL=style.css.map */

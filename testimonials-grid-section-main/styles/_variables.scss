@@ -7,7 +7,7 @@ $clr-grayish-blue: hsl(219, 29%, 14%);
 $clr-white: hsl(0, 0%, 100%);
 
 /* ### Neutral */
-$clr-gray: hsl(0, 0%, 81%);
+$clr-gray: hsl(0%, 0%, 81%);
 $clr-light-gray: hsl(210, 46%, 95%);
 
 /* ## Font-weights */
@@ -16,3 +16,11 @@ $fw-bold: 600;
 
 /* ## Font*/
 $ff-default: "Barlow Semi Condensed", sans-serif;
+
+/* ## Mixins */
+@mixin flexCenter($direction, $alig, $justify) {
+  display: flex;
+  align-items: $alig;
+  justify-content: $justify;
+  flex-direction: $direction;
+}
