@@ -32,6 +32,9 @@ const projects = [
   {
     name: "crowdfunding-product-page-main",
   },
+  {
+    name: "interactive-pricing-component-main",
+  },
 ];
 const list = document.getElementById("list");
 
