@@ -28,10 +28,10 @@
       <div class="card-header">
         <div class="flex jc-sb ai-center jc-center-mobile">
           <div>
-            <h3>100k pageviews</h3>
+            <h3 id="pageviews">100k pageviews</h3>
           </div>
           <div class="price-month flex ai-center ">
-            <h2>$16.00</h2>
+            <h2 id="desktop-price">$16.00</h2>
             <small>/month</small>
           </div>
         </div>
@@ -46,13 +46,13 @@
           />
         </div>
         <div class="price-month flex ai-center jc-center mobile-price ">
-          <h2>$16.00</h2>
+          <h2 id="mobile-price">$16.00</h2>
           <small>/month</small>
         </div>
-        <div class="flex toggle-container">
+        <div class="flex toggle-container" >
           <h4>Monthly Billing</h4>
           <label class="switch">
-            <input type="checkbox" class="toggle">
+            <input type="checkbox" class="toggle" id="toggle">
             <span class="slider-toggle round"></span>
           </label>
           <h4 class="ps-relative">Year Billing</h4>
@@ -72,10 +72,102 @@
       </div>
     </main>
     <script>
-      document.getElementById("myInput").oninput = function() {
+      const pageviews = document.getElementById("pageviews");
+      const desktopPrice = document.getElementById("desktop-price");
+      const mobilePrice = document.getElementById("mobile-price");
+      const toggle = document.getElementById("toggle");
+      const inputbar = document.getElementById("myInput")
+
+      toggle.oninput = function (e){
+        if(e.target.checked){
+          if (inputbar.value == 1){
+            desktopPrice.textContent = "$6.00"
+            mobilePrice.textContent = "$6.00"
+          }else if (inputbar.value > 1 && inputbar.value < 32){
+            desktopPrice.textContent = "$9.00"
+            mobilePrice.textContent = "$9.00"
+          }else if (inputbar.value >= 32 && inputbar.value < 65){
+            desktopPrice.textContent = "$12.00"
+            mobilePrice.textContent = "$12.00"
+          }else if (inputbar.value >= 66 && inputbar.value < 99){
+            desktopPrice.textContent = "$18.00"
+            mobilePrice.textContent = "$18.00"
+          }else if (inputbar.value == 100){
+            desktopPrice.textContent = "$27.00"
+            mobilePrice.textContent = "$27.00"
+          }
+        } else {
+          if (inputbar.value == 1 ){
+            desktopPrice.textContent = "$8.00"
+            mobilePrice.textContent = "$8.00"
+          } else if (inputbar.value > 1 && inputbar.value < 32){
+            desktopPrice.textContent = "$12.00"
+            mobilePrice.textContent = "$12.00"
+          }else if (inputbar.value >= 32 && inputbar.value < 65){
+            desktopPrice.textContent = "$16.00"
+            mobilePrice.textContent = "$16.00"
+          }else if (inputbar.value >= 66 && inputbar.value < 99){
+            desktopPrice.textContent = "$24.00"
+            mobilePrice.textContent = "$24.00"
+          }else if (inputbar.value == 100){
+            desktopPrice.textContent = "$36.00"
+            mobilePrice.textContent = "$36.00"
+          }
+        }
+      }
+
+        inputbar.oninput = function(e) {
+          console.log(e.target.value)
+        if (e.target.value == 1){
+          pageviews.textContent = "10k pageviews";
+          if (toggle.checked == true){
+            desktopPrice.textContent = "$6.00"
+            mobilePrice.textContent = "$6.00"
+          } else {
+            desktopPrice.textContent = "$8.00"
+            mobilePrice.textContent = "$8.00"
+          }
+        } else if (e.target.value > 1 && e.target.value < 32){
+          pageviews.textContent = "50k pageviews";
+          if (toggle.checked == true){
+            desktopPrice.textContent = "$9.00"
+            mobilePrice.textContent = "$9.00"
+          } else {
+            desktopPrice.textContent = "$12.00"
+            mobilePrice.textContent = "$12.00"
+          } 
+        } else if (e.target.value >= 32 && e.target.value < 65){
+          pageviews.textContent = "100k pageviews";
+          if (toggle.checked == true){
+            desktopPrice.textContent = "$12.00"
+            mobilePrice.textContent = "$12.00"
+          } else {
+            desktopPrice.textContent = "$16.00"
+            mobilePrice.textContent = "$16.00"
+          }
+        } else if (e.target.value >= 66 && e.target.value <= 99){
+          pageviews.textContent = "500k pageviews";
+          if (toggle.checked == true){
+            desktopPrice.textContent = "$18.00"
+            mobilePrice.textContent = "$18.00"
+          } else {
+            desktopPrice.textContent = "$24.00"
+            mobilePrice.textContent = "$24.00"
+          }
+        } else if (e.target.value == 100){
+          pageviews.textContent = "1m pageviews";
+          if (toggle.checked == true){
+            desktopPrice.textContent = "$27.00"
+            mobilePrice.textContent = "$27.00"
+          } else {
+            desktopPrice.textContent = "$36.00"
+            mobilePrice.textContent = "$36.00"
+          }
+        }  
   var value = (this.value-this.min)/(this.max-this.min)*100
   this.style.background = 'linear-gradient(to right, #10d5c2 0%, #10d5c2 ' + value + '%, #eaeefb ' + value + '%, #eaeefb 100.5%)'
 };
+
     </script>
   </body>
 </html>
