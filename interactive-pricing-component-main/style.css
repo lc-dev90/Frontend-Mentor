@@ -179,6 +179,26 @@ input[type="range"]::-webkit-slider-thumb {
     0px 2px 15px var(--clr-primary-light-cyan);
 }
 
+input[type="range"]::-moz-range-thumb {
+  box-shadow: none;
+
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -5px;
+  background-color: var(--clr-strong-cyan);
+  background-image: url(./images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 55%;
+  background-size: 65%;
+  box-shadow: 1px 0px 15px var(--clr-primary-light-cyan),
+    0px 2px 15px var(--clr-primary-light-cyan);
+}
+
 input[type="range"]:active::-webkit-slider-thumb {
   background-color: #4ba8a1;
 }
