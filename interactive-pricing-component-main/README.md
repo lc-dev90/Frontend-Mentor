@@ -22,6 +22,9 @@ Challenge from fronendmentor.io
 ## Screenshots
 
 ![](./design/desktop-preview.jpg)
+![](./design/mobile-design.jpg)
+![](./design/desktop-preview.jpg)
+![](./design/desktop-design.jpg)
 
 ## Technologies
 
