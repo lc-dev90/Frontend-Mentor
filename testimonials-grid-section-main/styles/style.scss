@@ -21,9 +21,12 @@ body {
 
 main {
   display: grid;
-  gap: 1.875rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 284px 267px;
+  width: 1111px;
+  max-width: 95%;
 }
 
 .card {

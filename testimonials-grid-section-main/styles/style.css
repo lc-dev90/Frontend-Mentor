@@ -17,9 +17,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -61,7 +61,8 @@
 }
 
 .card .card-header div:nth-of-type(2) h3, .card .card-header div:nth-of-type(2) h4 {
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
 }
 
 .card .card-header div:nth-of-type(2) h4 {
@@ -69,13 +70,15 @@
 }
 
 .card .card-body p:nth-of-type(1) {
-  font-size: 1.2rem;
+  font-size: 1.26rem;
   margin-bottom: 1.25rem;
+  font-weight: 600;
 }
 
 .card .card-body p:nth-of-type(2) {
   opacity: 0.7;
   font-size: 0.8125rem;
+  line-height: 1.44;
 }
 
 *,
@@ -106,11 +109,15 @@ body {
 main {
   display: -ms-grid;
   display: grid;
-  gap: 1.875rem;
+  gap: 1.5rem;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
+  -ms-grid-rows: 284px 267px;
+      grid-template-rows: 284px 267px;
+  width: 1111px;
+  max-width: 95%;
 }
 
 .card:nth-of-type(1) {
