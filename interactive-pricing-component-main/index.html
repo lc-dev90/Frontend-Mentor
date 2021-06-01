@@ -36,14 +36,16 @@
           </div>
         </div>
         <div class="slidecontainer">
+          <label for="myInput">
           <input 
+          aria-label="Input to select your plan"
             type="range"
             min="1"
             max="100"
             value="50"
             class="slider"
             id="myInput"
-          />
+          /></label>
         </div>
         <div class="price-month flex ai-center jc-center mobile-price ">
           <h2 id="mobile-price">$16.00</h2>
@@ -52,7 +54,8 @@
         <div class="flex toggle-container" >
           <h4>Monthly Billing</h4>
           <label class="switch">
-            <input type="checkbox" class="toggle" id="toggle">
+            <label for="toggle"></label>
+            <input type="checkbox" class="toggle" id="toggle" aria-label="Toggle your payment">
             <span class="slider-toggle round"></span>
           </label>
           <h4 class="ps-relative">Year Billing</h4>
@@ -61,113 +64,16 @@
       <div class="card-footer flex jc-sb ai-center">
         <div>
           <ul>
-            <li><a href="">Unlimited websites</a></li>
-            <li><a href="">100% data ownership</a></li>
-            <li><a href="">Email reports</a></li>
+            <li><a aria-label="Unlimited websites" href="#">Unlimited websites</a></li>
+            <li><a aria-label="100% data ownership" href="#">100% data ownership</a></li>
+            <li><a aria-label="Email reports" href="#">Email reports</a></li>
           </ul>
         </div>
         <div>
-          <button>Start my trial</button>
+          <button aria-label="Start your trial">Start my trial</button>
         </div>
       </div>
     </main>
-    <script>
-      const pageviews = document.getElementById("pageviews");
-      const desktopPrice = document.getElementById("desktop-price");
-      const mobilePrice = document.getElementById("mobile-price");
-      const toggle = document.getElementById("toggle");
-      const inputbar = document.getElementById("myInput")
-
-      toggle.oninput = function (e){
-        if(e.target.checked){
-          if (inputbar.value == 1){
-            desktopPrice.textContent = "$6.00"
-            mobilePrice.textContent = "$6.00"
-          }else if (inputbar.value > 1 && inputbar.value < 32){
-            desktopPrice.textContent = "$9.00"
-            mobilePrice.textContent = "$9.00"
-          }else if (inputbar.value >= 32 && inputbar.value < 65){
-            desktopPrice.textContent = "$12.00"
-            mobilePrice.textContent = "$12.00"
-          }else if (inputbar.value >= 66 && inputbar.value < 99){
-            desktopPrice.textContent = "$18.00"
-            mobilePrice.textContent = "$18.00"
-          }else if (inputbar.value == 100){
-            desktopPrice.textContent = "$27.00"
-            mobilePrice.textContent = "$27.00"
-          }
-        } else {
-          if (inputbar.value == 1 ){
-            desktopPrice.textContent = "$8.00"
-            mobilePrice.textContent = "$8.00"
-          } else if (inputbar.value > 1 && inputbar.value < 32){
-            desktopPrice.textContent = "$12.00"
-            mobilePrice.textContent = "$12.00"
-          }else if (inputbar.value >= 32 && inputbar.value < 65){
-            desktopPrice.textContent = "$16.00"
-            mobilePrice.textContent = "$16.00"
-          }else if (inputbar.value >= 66 && inputbar.value < 99){
-            desktopPrice.textContent = "$24.00"
-            mobilePrice.textContent = "$24.00"
-          }else if (inputbar.value == 100){
-            desktopPrice.textContent = "$36.00"
-            mobilePrice.textContent = "$36.00"
-          }
-        }
-      }
-
-        inputbar.oninput = function(e) {
-          console.log(e.target.value)
-        if (e.target.value == 1){
-          pageviews.textContent = "10k pageviews";
-          if (toggle.checked == true){
-            desktopPrice.textContent = "$6.00"
-            mobilePrice.textContent = "$6.00"
-          } else {
-            desktopPrice.textContent = "$8.00"
-            mobilePrice.textContent = "$8.00"
-          }
-        } else if (e.target.value > 1 && e.target.value < 32){
-          pageviews.textContent = "50k pageviews";
-          if (toggle.checked == true){
-            desktopPrice.textContent = "$9.00"
-            mobilePrice.textContent = "$9.00"
-          } else {
-            desktopPrice.textContent = "$12.00"
-            mobilePrice.textContent = "$12.00"
-          } 
-        } else if (e.target.value >= 32 && e.target.value < 65){
-          pageviews.textContent = "100k pageviews";
-          if (toggle.checked == true){
-            desktopPrice.textContent = "$12.00"
-            mobilePrice.textContent = "$12.00"
-          } else {
-            desktopPrice.textContent = "$16.00"
-            mobilePrice.textContent = "$16.00"
-          }
-        } else if (e.target.value >= 66 && e.target.value <= 99){
-          pageviews.textContent = "500k pageviews";
-          if (toggle.checked == true){
-            desktopPrice.textContent = "$18.00"
-            mobilePrice.textContent = "$18.00"
-          } else {
-            desktopPrice.textContent = "$24.00"
-            mobilePrice.textContent = "$24.00"
-          }
-        } else if (e.target.value == 100){
-          pageviews.textContent = "1m pageviews";
-          if (toggle.checked == true){
-            desktopPrice.textContent = "$27.00"
-            mobilePrice.textContent = "$27.00"
-          } else {
-            desktopPrice.textContent = "$36.00"
-            mobilePrice.textContent = "$36.00"
-          }
-        }  
-  var value = (this.value-this.min)/(this.max-this.min)*100
-  this.style.background = 'linear-gradient(to right, #10d5c2 0%, #10d5c2 ' + value + '%, #eaeefb ' + value + '%, #eaeefb 100.5%)'
-};
-
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
