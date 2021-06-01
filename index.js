@@ -35,6 +35,9 @@ const projects = [
   {
     name: "interactive-pricing-component-main",
   },
+  {
+    name: "testimonials-grid-section-main",
+  },
 ];
 const list = document.getElementById("list");
 
