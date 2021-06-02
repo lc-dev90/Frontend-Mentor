@@ -1,0 +1,18 @@
+@import "../abstracts/variables";
+
+.navbar {
+  ul {
+    @include flexContainer(center, center, row);
+    li {
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+      a {
+        font-family: $alata;
+        color: $white;
+        font-weight: $alata-weight;
+        font-size: 0.9375rem;
+      }
+    }
+  }
+}

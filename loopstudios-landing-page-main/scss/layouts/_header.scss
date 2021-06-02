@@ -1,0 +1,19 @@
+header {
+  height: 650px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    background-image: url("../../images/desktop/image-hero.jpg");
+    filter: brightness(55%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}

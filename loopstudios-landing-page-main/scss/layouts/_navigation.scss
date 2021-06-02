@@ -1,0 +1,8 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+nav {
+  @include containerDesktop();
+  @include flexContainer(center, space-between, row);
+  padding-top: $padding-top-navigation;
+}
