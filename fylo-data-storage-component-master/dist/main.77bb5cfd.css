@@ -154,13 +154,24 @@ ul liaimg {
 .form-control input {
   width: 100%;
   background: linear-gradient(to right, #ffa399 0%, #ff4d97 50%) #0c122c;
-  border: solid 1px #0c122c;
+  border: solid 2px #0c122c;
   border-radius: 8px;
-  height: 8px;
+  height: 18px;
   width: 100%;
   outline: none;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
+}
+.form-control input::-webkit-slider-thumb {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  margin-right: -5px;
+  margin-top: 1px;
+  -webkit-appearance: none;
+  box-shadow: 0 0 0 2px #ff4d97;
+  position: relative;
 }
 
 body {
