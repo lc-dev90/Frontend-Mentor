@@ -1,3 +1,22 @@
+@import "./base/typography";
+@import "./abstracts/variables";
+@import "./base/reset";
+@import "./abstracts/mixins";
+@import "./layout/flex";
+
 body {
-  background-color: red;
+  background-color: $dark-blue;
+  font-family: $default;
+  font-size: 0.875rem;
+  @include flexCenter(row);
+  min-height: 100vh;
+  color: $pale-blue;
+}
+
+main {
+  @include flexCenter(row);
+}
+
+.icons {
+  @include flexCenter(row);
 }

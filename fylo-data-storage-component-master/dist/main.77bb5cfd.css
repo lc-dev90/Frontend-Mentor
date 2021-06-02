@@ -1,5 +1,56 @@
+/* Colors */
+/* ## Gradient */
+/* ### Neutral */
+/* Font-weights */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+}
+
 body {
-  background-color: red;
+  background-color: #0c122c;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+  min-height: 100vh;
+  color: #dddbff;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-align: center;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

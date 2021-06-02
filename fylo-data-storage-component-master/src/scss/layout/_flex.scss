@@ -1,0 +1,5 @@
+@import "../abstracts/mixins";
+
+.flex {
+  @include flexCenter(row);
+}
