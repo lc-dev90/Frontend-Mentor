@@ -1,0 +1,50 @@
+@import "../abstracts/mixins";
+
+.info-left {
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+  color: $dark-blue;
+  top: -3.0625rem;
+  right: 2.625rem;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  width: 180px;
+  height: 72px;
+  @include flexCenter(row);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: white;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+  }
+
+  & span:nth-of-type(1) {
+    color: $dark-blue;
+    font-size: 2.4rem;
+    font-weight: $bold;
+    margin-right: 10px;
+  }
+
+  & span:nth-of-type(2) {
+    color: $grayish-blue;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: $bold;
+    letter-spacing: 2px;
+  }
+}
+
+/* <div class="info-left">
+<div><span id="left">185</span></div>
+<div><span>GB Left</span></div>
+</div> */

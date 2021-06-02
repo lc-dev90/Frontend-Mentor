@@ -6,4 +6,14 @@
     border-top-right-radius: 100px;
     width: 350px;
   }
+
+  &:nth-of-type(2) {
+    position: relative;
+    width: 540px;
+    p {
+      span {
+        font-weight: $bold;
+      }
+    }
+  }
 }
