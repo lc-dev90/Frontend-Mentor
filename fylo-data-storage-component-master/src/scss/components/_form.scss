@@ -12,7 +12,7 @@
       rgb(12, 18, 44) 50%,
       rgb(12, 18, 44) 100%
     );
-
+    cursor: pointer;
     border: solid 2px #0c122c;
     border-radius: 8px;
     height: 18px;
@@ -20,7 +20,9 @@
     outline: none;
     transition: background 450ms ease-in;
     -webkit-appearance: none;
-
+    &:focus {
+      box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.596);
+    }
     &::-webkit-slider-thumb {
       background-color: white;
       width: 10px;

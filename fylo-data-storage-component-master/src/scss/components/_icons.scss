@@ -6,6 +6,14 @@ ul {
     height: 48px;
     border-radius: 5px;
     background-color: $dark-blue;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    &:hover {
+      background-color: $pale-blue;
+    }
+    &:focus-within {
+      background-color: $pale-blue;
+    }
     &:not(:nth-of-type(3)) {
       margin-right: 1rem;
     }
