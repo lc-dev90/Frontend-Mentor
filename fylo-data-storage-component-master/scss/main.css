@@ -222,10 +222,11 @@ ul liaimg {
 @media screen and (max-width: 990px) {
   .container:nth-of-type(1) {
     margin-right: 0;
-    width: 540px;
+    width: 440px;
     margin-bottom: 20px;
   }
   .container:nth-of-type(2) {
+    width: 440px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
