@@ -2,6 +2,7 @@
 /* ## Gradient */
 /* ### Neutral */
 /* Font-weights */
+/* Breakpoins */
 *,
 *::after,
 *::before {
@@ -83,11 +84,13 @@ ul liaimg {
 .container:nth-of-type(1) {
   border-top-right-radius: 100px;
   width: 350px;
+  max-width: 90%;
   margin-right: 30px;
 }
 .container:nth-of-type(2) {
   position: relative;
   width: 540px;
+  max-width: 90%;
   align-self: flex-end;
 }
 .container:nth-of-type(2) p span {
@@ -98,6 +101,11 @@ ul liaimg {
   margin-bottom: 30px;
 }
 
+/* Colors */
+/* ## Gradient */
+/* ### Neutral */
+/* Font-weights */
+/* Breakpoins */
 .info-left {
   position: absolute;
   z-index: 2;
@@ -142,6 +150,17 @@ ul liaimg {
   letter-spacing: 2px;
 }
 
+@media screen and (max-width: 990px) {
+  .info-left {
+    border-radius: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: unset;
+  }
+  .info-left::after {
+    content: none;
+  }
+}
 /* <div class="info-left">
 <div><span id="left">185</span></div>
 <div><span>GB Left</span></div>
@@ -153,7 +172,7 @@ ul liaimg {
 }
 .form-control input {
   width: 100%;
-  background: linear-gradient(to right, #ffa399 0%, #ff4d97 50%) #0c122c;
+  background: linear-gradient(to right, #ffa399 0%, #ff4d97 50%, #0c122c 50%, #0c122c 100%);
   border: solid 2px #0c122c;
   border-radius: 8px;
   height: 18px;
@@ -167,8 +186,7 @@ ul liaimg {
   width: 10px;
   height: 10px;
   border-radius: 50px;
-  margin-right: -5px;
-  margin-top: 1px;
+  margin-top: 0;
   -webkit-appearance: none;
   box-shadow: 0 0 0 2px #ff4d97;
   position: relative;
@@ -196,6 +214,15 @@ main {
 
 main div {
   background-color: #1d2c67;
+}
+
+@media screen and (max-width: 990px) {
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

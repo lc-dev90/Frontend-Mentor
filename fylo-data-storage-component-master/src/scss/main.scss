@@ -29,3 +29,9 @@ main {
     background-color: $medium-blue;
   }
 }
+
+@media screen and (max-width: $small-desktops) {
+  main {
+    @include flexCenter(column);
+  }
+}

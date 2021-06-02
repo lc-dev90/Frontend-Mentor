@@ -5,12 +5,14 @@
   &:nth-of-type(1) {
     border-top-right-radius: 100px;
     width: 350px;
+    max-width: 90%;
     margin-right: 30px;
   }
 
   &:nth-of-type(2) {
     position: relative;
     width: 540px;
+    max-width: 90%;
     align-self: flex-end;
     p {
       span {

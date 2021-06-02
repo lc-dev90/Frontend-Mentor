@@ -5,8 +5,14 @@
 
   & input {
     width: 100%;
-    background: linear-gradient(to right, #ffa399 0%, #ff4d97 50%)
-      rgb(12, 18, 44);
+    background: linear-gradient(
+      to right,
+      #ffa399 0%,
+      #ff4d97 50%,
+      rgb(12, 18, 44) 50%,
+      rgb(12, 18, 44) 100%
+    );
+
     border: solid 2px #0c122c;
     border-radius: 8px;
     height: 18px;
@@ -14,13 +20,13 @@
     outline: none;
     transition: background 450ms ease-in;
     -webkit-appearance: none;
+
     &::-webkit-slider-thumb {
       background-color: white;
       width: 10px;
       height: 10px;
       border-radius: 50px;
-      margin-right: -5px;
-      margin-top: 1px;
+      margin-top: 0;
       -webkit-appearance: none;
       box-shadow: 0 0 0 2px #ff4d97;
       position: relative;
