@@ -9,6 +9,17 @@ body::after {
   width: 100%;
   z-index: -1;
   bottom: 0;
+  animation-name: smothy;
+  animation-duration: 0.7s;
+}
+
+@keyframes smothy {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: $small-desktops) {
@@ -19,5 +30,15 @@ body::after {
     background-size: 100% 100%;
     height: 100vh;
     width: 100%;
+    animation: smoothy;
+    animation-duration: 0.7s;
+  }
+  @keyframes smoothy {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 }
