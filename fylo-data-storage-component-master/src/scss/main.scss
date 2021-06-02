@@ -33,5 +33,6 @@ main {
 @media screen and (max-width: $small-desktops) {
   main {
     @include flexCenter(column);
+    max-width: 95%;
   }
 }

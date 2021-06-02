@@ -1,3 +1,5 @@
+@import "../abstracts/variables";
+
 .container {
   padding: 2.5rem;
   border-radius: 10px;
@@ -17,6 +19,20 @@
     p {
       span {
         font-weight: $bold;
+      }
+    }
+  }
+}
+@media screen and (max-width: $small-desktops) {
+  .container {
+    &:nth-of-type(1) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    &:nth-of-type(2) {
+      align-self: center;
+      p {
+        text-align: center;
       }
     }
   }

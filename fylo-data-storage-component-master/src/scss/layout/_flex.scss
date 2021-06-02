@@ -1,4 +1,5 @@
 @import "../abstracts/mixins";
+@import "../abstracts/variables";
 
 .flex {
   @include flexCenter(row);
@@ -14,5 +15,11 @@
   justify-content: space-between;
   span {
     font-weight: $bold;
+  }
+}
+
+@media screen and (max-width: $small-desktops) {
+  .flex-space-between {
+    margin-bottom: 20px;
   }
 }
