@@ -1,0 +1,22 @@
+ul {
+  justify-content: flex-start !important;
+  li {
+    padding: 10px;
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+    background-color: $dark-blue;
+    &:not(:nth-of-type(3)) {
+      margin-right: 1rem;
+    }
+    &a {
+      &img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.icons {
+  @include flexCenter(row);
+}

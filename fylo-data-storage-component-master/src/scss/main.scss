@@ -3,6 +3,10 @@
 @import "./base/reset";
 @import "./abstracts/mixins";
 @import "./layout/flex";
+@import "./components/backgroundBody";
+@import "./components/icons";
+@import "./components/container";
+@import "./components/logo";
 
 body {
   background-color: $dark-blue;
@@ -14,23 +18,12 @@ body {
   position: relative;
 }
 
-body::after {
-  content: "";
-  position: absolute;
-  background-image: url("../images/bg-desktop.png");
-  background-repeat: no-repeat;
-  background-position: 0% 0%;
-  background-size: cover;
-  height: 50vh;
-  width: 100%;
-  z-index: -1;
-  bottom: 0;
-}
-
 main {
   @include flexCenter(row);
 }
 
-.icons {
-  @include flexCenter(row);
+main {
+  & div {
+    background-color: $medium-blue;
+  }
 }
