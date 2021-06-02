@@ -11,6 +11,20 @@ body {
   @include flexCenter(row);
   min-height: 100vh;
   color: $pale-blue;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-size: cover;
+  height: 50vh;
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
 }
 
 main {
