@@ -38,6 +38,9 @@ const projects = [
   {
     name: "testimonials-grid-section-main",
   },
+  {
+    name: "fylo-data-storage-component-master",
+  },
 ];
 const list = document.getElementById("list");
 
