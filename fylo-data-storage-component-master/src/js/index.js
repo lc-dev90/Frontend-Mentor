@@ -1,4 +1,7 @@
 const range = document.getElementById("used-storage");
+const usedElement = document.getElementById("used");
+const leftElement = document.getElementById("left");
+
 range.oninput = function (e) {
   var value = ((this.value - this.min) / (this.max - this.min)) * 100;
   this.style.background =
@@ -8,4 +11,10 @@ range.oninput = function (e) {
     value +
     "%, #0c122c 100%)";
 };
-// bar
+
+const total = 1000;
+
+range.addEventListener("input", (e) => {
+  used.textContent = Math.floor(e.target.value);
+  leftElement.textContent = Math.floor(total - e.target.value);
+});
