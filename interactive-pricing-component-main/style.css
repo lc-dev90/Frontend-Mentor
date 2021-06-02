@@ -34,6 +34,7 @@ body {
   background-color: var(--clr-neutral-very-pale-blue);
   background-image: url(./images/bg-pattern.svg);
   background-repeat: no-repeat;
+  background-size: 100% 50%;
 }
 
 h1,
