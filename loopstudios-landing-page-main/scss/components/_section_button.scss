@@ -11,9 +11,25 @@ section {
     cursor: pointer;
     border: 1px solid $dark-gray;
     font-weight: bold;
+    position: relative;
+    &::after {
+      @include backgroundImg();
+      height: 0px;
+      width: 0px;
+      top: 50%;
+      left: 50%;
+      background-color: black;
+      transition: all 0.2s ease;
+    }
     &:hover,
     &:focus {
-      background-color: black;
+      &::after {
+        @include backgroundImg();
+        height: 100%;
+        width: 100%;
+        background-color: black;
+      }
+      /* background-color: black; */
       animation-name: button-entry;
       animation-duration: 0.8s;
       a {
