@@ -10,6 +10,13 @@ section {
     height: 43px;
     cursor: pointer;
     border: 1px solid $dark-gray;
+    &:hover,
+    &:focus {
+      background-color: black;
+      a {
+        color: white;
+      }
+    }
     a {
       @include fontTitle();
       font-size: 0.82rem;

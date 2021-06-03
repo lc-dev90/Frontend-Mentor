@@ -184,6 +184,8 @@ section div h2 {
   height: 450px;
   width: 256px;
   position: relative;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .cards .card h3 {
@@ -199,6 +201,28 @@ section div h2 {
   color: white;
 }
 
+.cards .card h3::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  top: 200%;
+  -webkit-clip-path: circle(11px);
+          clip-path: circle(11px);
+  z-index: 0;
+  background-color: rgba(255, 255, 255, 0.712);
+  -webkit-transition: -webkit-transform 0.35s ease;
+  transition: -webkit-transform 0.35s ease;
+  transition: transform 0.35s ease;
+  transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+}
+
 .cards .card:nth-of-type(1)::after {
   position: absolute;
   content: "";
@@ -210,7 +234,6 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   background-image: url("../../images/desktop/image-deep-earth.jpg");
 }
 
@@ -225,10 +248,35 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   z-index: initial;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.363)));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+}
+
+.cards .card:nth-of-type(1):hover h3, .cards .card:nth-of-type(1):focus h3 {
+  color: black;
+  z-index: 1;
+}
+
+.cards .card:nth-of-type(1):hover h3::after, .cards .card:nth-of-type(1):focus h3::after {
+  -webkit-transform: scale(60);
+          transform: scale(60);
+  z-index: -1;
+}
+
+.cards .card:nth-of-type(1):hover::before, .cards .card:nth-of-type(1):focus::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.568)), to(rgba(255, 255, 255, 0.555)));
+  background: linear-gradient(rgba(255, 255, 255, 0.568), rgba(255, 255, 255, 0.555));
 }
 
 .cards .card:nth-of-type(2)::after {
@@ -242,7 +290,6 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   background-image: url("../../images/desktop/image-night-arcade.jpg");
 }
 
@@ -257,10 +304,35 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   z-index: initial;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.596)));
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.596));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.363)));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+}
+
+.cards .card:nth-of-type(2):hover h3, .cards .card:nth-of-type(2):focus h3 {
+  color: black;
+  z-index: 1;
+}
+
+.cards .card:nth-of-type(2):hover h3::after, .cards .card:nth-of-type(2):focus h3::after {
+  -webkit-transform: scale(60);
+          transform: scale(60);
+  z-index: -1;
+}
+
+.cards .card:nth-of-type(2):hover::before, .cards .card:nth-of-type(2):focus::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.568)), to(rgba(255, 255, 255, 0.555)));
+  background: linear-gradient(rgba(255, 255, 255, 0.568), rgba(255, 255, 255, 0.555));
 }
 
 .cards .card:nth-of-type(3)::after {
@@ -274,7 +346,6 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   background-image: url("../../images/desktop/image-soccer-team.jpg");
 }
 
@@ -289,10 +360,35 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   z-index: initial;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.363)));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+}
+
+.cards .card:nth-of-type(3):hover h3, .cards .card:nth-of-type(3):focus h3 {
+  color: black;
+  z-index: 1;
+}
+
+.cards .card:nth-of-type(3):hover h3::after, .cards .card:nth-of-type(3):focus h3::after {
+  -webkit-transform: scale(60);
+          transform: scale(60);
+  z-index: -1;
+}
+
+.cards .card:nth-of-type(3):hover::before, .cards .card:nth-of-type(3):focus::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.568)), to(rgba(255, 255, 255, 0.555)));
+  background: linear-gradient(rgba(255, 255, 255, 0.568), rgba(255, 255, 255, 0.555));
 }
 
 .cards .card:nth-of-type(4)::after {
@@ -306,7 +402,6 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   background-image: url("../../images/desktop/image-grid.jpg");
 }
 
@@ -321,10 +416,35 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   z-index: initial;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.363)));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+}
+
+.cards .card:nth-of-type(4):hover h3, .cards .card:nth-of-type(4):focus h3 {
+  color: black;
+  z-index: 1;
+}
+
+.cards .card:nth-of-type(4):hover h3::after, .cards .card:nth-of-type(4):focus h3::after {
+  -webkit-transform: scale(60);
+          transform: scale(60);
+  z-index: -1;
+}
+
+.cards .card:nth-of-type(4):hover::before, .cards .card:nth-of-type(4):focus::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.568)), to(rgba(255, 255, 255, 0.555)));
+  background: linear-gradient(rgba(255, 255, 255, 0.568), rgba(255, 255, 255, 0.555));
 }
 
 .cards .card:nth-of-type(5)::after {
@@ -338,7 +458,6 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   background-image: url("../../images/desktop/image-from-above.jpg");
 }
 
@@ -353,10 +472,35 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   z-index: initial;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.363)));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+}
+
+.cards .card:nth-of-type(5):hover h3, .cards .card:nth-of-type(5):focus h3 {
+  color: black;
+  z-index: 1;
+}
+
+.cards .card:nth-of-type(5):hover h3::after, .cards .card:nth-of-type(5):focus h3::after {
+  -webkit-transform: scale(60);
+          transform: scale(60);
+  z-index: -1;
+}
+
+.cards .card:nth-of-type(5):hover::before, .cards .card:nth-of-type(5):focus::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.568)), to(rgba(255, 255, 255, 0.555)));
+  background: linear-gradient(rgba(255, 255, 255, 0.568), rgba(255, 255, 255, 0.555));
 }
 
 .cards .card:nth-of-type(6)::after {
@@ -370,7 +514,6 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   background-image: url("../../images/desktop/image-pocket-borealis.jpg");
 }
 
@@ -385,10 +528,35 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   z-index: initial;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.363)));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+}
+
+.cards .card:nth-of-type(6):hover h3, .cards .card:nth-of-type(6):focus h3 {
+  color: black;
+  z-index: 1;
+}
+
+.cards .card:nth-of-type(6):hover h3::after, .cards .card:nth-of-type(6):focus h3::after {
+  -webkit-transform: scale(60);
+          transform: scale(60);
+  z-index: -1;
+}
+
+.cards .card:nth-of-type(6):hover::before, .cards .card:nth-of-type(6):focus::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.568)), to(rgba(255, 255, 255, 0.555)));
+  background: linear-gradient(rgba(255, 255, 255, 0.568), rgba(255, 255, 255, 0.555));
 }
 
 .cards .card:nth-of-type(7)::after {
@@ -402,7 +570,6 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   background-image: url("../../images/desktop/image-curiosity.jpg");
 }
 
@@ -417,10 +584,35 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   z-index: initial;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.363)));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+}
+
+.cards .card:nth-of-type(7):hover h3, .cards .card:nth-of-type(7):focus h3 {
+  color: black;
+  z-index: 1;
+}
+
+.cards .card:nth-of-type(7):hover h3::after, .cards .card:nth-of-type(7):focus h3::after {
+  -webkit-transform: scale(60);
+          transform: scale(60);
+  z-index: -1;
+}
+
+.cards .card:nth-of-type(7):hover::before, .cards .card:nth-of-type(7):focus::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.568)), to(rgba(255, 255, 255, 0.555)));
+  background: linear-gradient(rgba(255, 255, 255, 0.568), rgba(255, 255, 255, 0.555));
 }
 
 .cards .card:nth-of-type(8)::after {
@@ -434,7 +626,6 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   background-image: url("../../images/desktop/image-fisheye.jpg");
 }
 
@@ -449,10 +640,35 @@ section div h2 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  /* filter: brightness(90%); */
   z-index: initial;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.363)));
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+}
+
+.cards .card:nth-of-type(8):hover h3, .cards .card:nth-of-type(8):focus h3 {
+  color: black;
+  z-index: 1;
+}
+
+.cards .card:nth-of-type(8):hover h3::after, .cards .card:nth-of-type(8):focus h3::after {
+  -webkit-transform: scale(60);
+          transform: scale(60);
+  z-index: -1;
+}
+
+.cards .card:nth-of-type(8):hover::before, .cards .card:nth-of-type(8):focus::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.568)), to(rgba(255, 255, 255, 0.555)));
+  background: linear-gradient(rgba(255, 255, 255, 0.568), rgba(255, 255, 255, 0.555));
 }
 
 /* ## Colors */
@@ -565,6 +781,14 @@ section .desktop-button, section .mobile-button {
   height: 43px;
   cursor: pointer;
   border: 1px solid dimgray;
+}
+
+section .desktop-button:hover, section .mobile-button:hover, section .desktop-button:focus, section .mobile-button:focus {
+  background-color: black;
+}
+
+section .desktop-button:hover a, section .mobile-button:hover a, section .desktop-button:focus a, section .mobile-button:focus a {
+  color: white;
 }
 
 section .desktop-button a, section .mobile-button a {
