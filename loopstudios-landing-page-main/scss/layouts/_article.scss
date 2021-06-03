@@ -3,6 +3,7 @@
 
 article {
   position: relative;
+  margin-bottom: 11.25rem;
   div {
     height: 500px;
   }
@@ -16,9 +17,9 @@ article {
 
     h2 {
       @include fontTitle();
-      max-width: 447px;
       font-size: 3.2rem;
       text-transform: uppercase;
+      max-width: 447px;
       padding-bottom: 2.5rem;
     }
 

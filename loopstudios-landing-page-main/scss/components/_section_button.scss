@@ -1,0 +1,27 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+section {
+  .desktop-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 43px;
+    cursor: pointer;
+    border: 1px solid $dark-gray;
+    a {
+      @include fontTitle();
+      font-size: 0.865rem;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      transform: translate(3px, 3px);
+    }
+  }
+  .mobile-button {
+    @extend .desktop-button;
+    display: none;
+  }
+}

@@ -1,0 +1,6 @@
+@import "../abstracts/mixins";
+
+.section-header {
+  @include flexContainer(center, space-between, row);
+  margin-bottom: 5.625rem;
+}

@@ -1,0 +1,11 @@
+@import "../abstracts/mixins";
+
+section {
+  div {
+    h2 {
+      @include fontTitle();
+      font-size: 3.2rem;
+      text-transform: uppercase;
+    }
+  }
+}

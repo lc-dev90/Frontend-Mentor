@@ -1,0 +1,12 @@
+.cards {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+  .card {
+    height: 450px;
+    width: 256px;
+    border: 1px solid black;
+  }
+}

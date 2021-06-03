@@ -118,6 +118,7 @@ nav {
 /* Navigation */
 article {
   position: relative;
+  margin-bottom: 11.25rem;
 }
 
 article div {
@@ -136,9 +137,9 @@ article aside {
 article aside h2 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
-  max-width: 447px;
   font-size: 3.2rem;
   text-transform: uppercase;
+  max-width: 447px;
   padding-bottom: 2.5rem;
 }
 
@@ -148,6 +149,33 @@ article aside p {
   max-width: 447px;
   color: dimgray;
   font-size: 0.9375rem;
+}
+
+/* ## Colors */
+/* ## Fonts / Weight */
+/* Paddings */
+/* Navigation */
+section div h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  gap: 30px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+}
+
+.cards .card {
+  height: 450px;
+  width: 256px;
+  border: 1px solid black;
 }
 
 /* ## Colors */
@@ -214,6 +242,67 @@ article aside p {
 }
 
 .hamburguer {
+  display: none;
+}
+
+/* ## Colors */
+/* ## Fonts / Weight */
+/* Paddings */
+/* Navigation */
+.section-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 5.625rem;
+}
+
+/* ## Colors */
+/* ## Fonts / Weight */
+/* Paddings */
+/* Navigation */
+/* ## Colors */
+/* ## Fonts / Weight */
+/* Paddings */
+/* Navigation */
+section .desktop-button, section .mobile-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 160px;
+  height: 43px;
+  cursor: pointer;
+  border: 1px solid dimgray;
+}
+
+section .desktop-button a, section .mobile-button a {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 0.865rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  -webkit-transform: translate(3px, 3px);
+          transform: translate(3px, 3px);
+}
+
+section .mobile-button {
   display: none;
 }
 /*# sourceMappingURL=main.css.map */
