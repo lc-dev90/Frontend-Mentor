@@ -160,6 +160,62 @@ article aside p {
   font-size: 0.9375rem;
 }
 
+@media screen and (max-width: 1280px) {
+  article div {
+    /* width: 70%; */
+  }
+  article aside {
+    padding: calc(min(5vw, 5.875rem));
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  article div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    height: unset;
+  }
+  article aside {
+    padding: 5.875rem;
+    padding-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    right: unset;
+  }
+  article aside h2 {
+    text-align: center;
+  }
+  article aside p {
+    text-align: center;
+  }
+}
+
 /* ## Colors */
 /* ## Fonts / Weight */
 /* Paddings */

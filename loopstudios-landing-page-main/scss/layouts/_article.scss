@@ -37,4 +37,37 @@ article {
 }
 
 @media screen and (max-width: 1280px) {
+  article {
+    div {
+      /* width: 70%; */
+    }
+    aside {
+      padding: calc(min(5vw, 5.875rem));
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  article {
+    div {
+      @include flexContainer(center, center, row);
+      width: 80%;
+      margin: 0 auto;
+      height: unset;
+    }
+    aside {
+      padding: 5.875rem;
+      padding-bottom: 0;
+      @include flexContainer(center, center, column);
+      position: relative;
+      right: unset;
+      h2 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+    }
+  }
 }
