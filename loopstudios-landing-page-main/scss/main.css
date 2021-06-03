@@ -24,9 +24,31 @@ img {
 /* ## Fonts / Weight */
 /* Paddings */
 /* Navigation */
+/* ## Colors */
+/* ## Fonts / Weight */
+/* Paddings */
+/* Navigation */
 header {
   height: 650px;
   position: relative;
+  color: white;
+}
+
+header div:nth-of-type(1):not(:first-child) {
+  max-width: 1116px;
+  margin: 0 auto;
+  margin-top: 138px;
+}
+
+header div:nth-of-type(1):not(:first-child) h1 {
+  font-size: 4.4rem;
+  border: 2px solid white;
+  max-width: 650px;
+  height: 280px;
+  padding: 2.625rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 header::after {
@@ -45,6 +67,10 @@ header::after {
   background-position: center center;
 }
 
+/* ## Colors */
+/* ## Fonts / Weight */
+/* Paddings */
+/* Navigation */
 /* ## Colors */
 /* ## Fonts / Weight */
 /* Paddings */
@@ -93,8 +119,8 @@ nav {
 }
 
 .navbar ul li a {
-  font-family: "Alata", sans-serif;
   color: white;
+  font-family: "Alata", sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
 }

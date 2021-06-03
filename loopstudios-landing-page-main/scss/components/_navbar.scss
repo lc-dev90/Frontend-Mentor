@@ -8,9 +8,8 @@
         margin-right: 2rem;
       }
       a {
-        font-family: $alata;
         color: $white;
-        font-weight: $alata-weight;
+        @include fontSubTitle();
         font-size: 0.9375rem;
       }
     }

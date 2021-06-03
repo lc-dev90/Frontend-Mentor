@@ -1,3 +1,4 @@
+@import "./variables";
 @mixin containerDesktop {
   max-width: 1116px;
   margin: 0 auto;
@@ -8,4 +9,14 @@
   align-items: $ai;
   justify-content: $jc;
   flex-direction: $direction;
+}
+
+@mixin fontTitle() {
+  font-family: $josefin;
+  font-weight: $josefin-weight;
+}
+
+@mixin fontSubTitle() {
+  font-family: $alata;
+  font-weight: $alata-weight;
 }

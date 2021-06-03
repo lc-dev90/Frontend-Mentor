@@ -1,6 +1,27 @@
+@import "../abstracts/mixins";
 header {
   height: 650px;
   position: relative;
+  color: $white;
+
+  div {
+    &:nth-of-type(1) {
+      &:not(:first-child) {
+        @include containerDesktop();
+        margin-top: 138px;
+
+        h1 {
+          font-size: 4.4rem;
+          border: 2px solid white;
+          max-width: 650px;
+          height: 280px;
+          padding: 2.625rem;
+          @include fontTitle();
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 
   &::after {
     position: absolute;
