@@ -4,8 +4,12 @@
 article {
   position: relative;
   margin-bottom: 11.25rem;
+  overflow: hidden;
   div {
     height: 500px;
+    img {
+      max-width: 100%;
+    }
   }
   aside {
     position: absolute;
@@ -30,4 +34,7 @@ article {
       @include sizeFontDefault();
     }
   }
+}
+
+@media screen and (max-width: 1280px) {
 }

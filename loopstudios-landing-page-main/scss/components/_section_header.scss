@@ -4,3 +4,12 @@
   @include flexContainer(center, space-between, row);
   margin-bottom: 5.625rem;
 }
+
+@media screen and (max-width: 980px) {
+  .section-header {
+    @include flexContainer(center, center, row);
+    h2 {
+      text-align: center;
+    }
+  }
+}

@@ -52,3 +52,19 @@ section {
     display: none;
   }
 }
+
+@media screen and (max-width: 980px) {
+  section {
+    .desktop-button {
+      display: none;
+    }
+    .mobile-button {
+      margin: 0 auto;
+      margin-top: 68px;
+      @include flexContainer(center, center, row);
+      a {
+        display: inline-block;
+      }
+    }
+  }
+}

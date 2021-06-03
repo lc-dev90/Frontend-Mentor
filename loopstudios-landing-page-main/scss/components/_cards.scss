@@ -6,10 +6,12 @@
   gap: 30px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-
+  animation-name: smooth-cards1;
+  animation-duration: 1.2s;
   .card {
     height: 450px;
-    width: 256px;
+    max-width: 256px;
+    width: 100%;
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -97,6 +99,82 @@
       }
       @include backgroundShadowEffect();
       @include cardHoverBackground();
+    }
+  }
+  @keyframes smooth-cards1 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    animation-name: smooth-cards;
+    animation-duration: 1.2s;
+    .card {
+      justify-self: center;
+      height: 520px;
+
+      max-width: 336px;
+      h3 {
+        max-width: 60%;
+      }
+      &:nth-of-type(7) {
+        transform: translateX(57%);
+      }
+
+      &:nth-of-type(8) {
+        transform: translateX(57%);
+      }
+    }
+  }
+  @keyframes smooth-cards {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    .card {
+      &:nth-of-type(1) {
+        justify-self: end;
+      }
+      &:nth-of-type(2) {
+        justify-self: start;
+      }
+      &:nth-of-type(3) {
+        justify-self: end;
+      }
+      &:nth-of-type(4) {
+        justify-self: start;
+      }
+      &:nth-of-type(5) {
+        justify-self: end;
+      }
+      &:nth-of-type(6) {
+        justify-self: start;
+      }
+      &:nth-of-type(7) {
+        justify-self: end;
+        transform: translateX(0);
+      }
+      &:nth-of-type(8) {
+        justify-self: start;
+        transform: translateX(0);
+      }
     }
   }
 }
