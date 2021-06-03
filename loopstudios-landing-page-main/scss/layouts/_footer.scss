@@ -91,3 +91,46 @@ footer {
     }
   }
 }
+
+@media screen and (max-width: 980px) {
+  footer {
+    padding: 5rem 0;
+    .container {
+      flex-direction: column;
+      .logo {
+        margin-bottom: 2.5rem;
+      }
+      span {
+        display: inline-block;
+        text-align: center;
+        font-size: 1.25rem;
+      }
+      .footer-nav {
+        ul {
+          flex-direction: column;
+          li {
+            margin-right: 0 !important;
+            margin-bottom: 1rem;
+            a {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+      .footer-links {
+        ul {
+          justify-content: center;
+          margin-top: 36px;
+          li {
+            margin: 12px !important;
+            a {
+              img {
+                width: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

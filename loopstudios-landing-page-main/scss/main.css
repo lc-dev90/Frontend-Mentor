@@ -185,13 +185,12 @@ article aside p {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     height: unset;
   }
   article aside {
-    padding: 5.875rem;
-    padding-bottom: 0;
+    padding: 5.875rem 0 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -213,6 +212,8 @@ article aside p {
   }
   article aside p {
     text-align: center;
+    line-height: 1.9;
+    font-size: 1.2407rem;
   }
 }
 
@@ -379,6 +380,51 @@ footer .container .footer-nav ul li a {
   font-family: "Alata", sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
+}
+
+@media screen and (max-width: 980px) {
+  footer {
+    padding: 5rem 0;
+  }
+  footer .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .container .logo {
+    margin-bottom: 2.5rem;
+  }
+  footer .container span {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  footer .container .footer-nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .container .footer-nav ul li {
+    margin-right: 0 !important;
+    margin-bottom: 1rem;
+  }
+  footer .container .footer-nav ul li a {
+    font-size: 1.2rem;
+  }
+  footer .container .footer-links ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 36px;
+  }
+  footer .container .footer-links ul li {
+    margin: 12px !important;
+  }
+  footer .container .footer-links ul li a img {
+    width: 2rem;
+  }
 }
 
 /* ## Colors */

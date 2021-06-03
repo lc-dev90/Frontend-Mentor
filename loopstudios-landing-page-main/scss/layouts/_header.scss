@@ -38,3 +38,14 @@ header {
     background-position: center center;
   }
 }
+
+@media screen and (max-width: 980px) {
+  header {
+    div {
+      &:nth-of-type(1) {
+        &:not(:first-child) {
+        }
+      }
+    }
+  }
+}

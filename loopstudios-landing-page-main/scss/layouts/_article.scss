@@ -52,13 +52,12 @@ article {
   article {
     div {
       @include flexContainer(center, center, row);
-      width: 80%;
+      width: 100%;
       margin: 0 auto;
       height: unset;
     }
     aside {
-      padding: 5.875rem;
-      padding-bottom: 0;
+      padding: 5.875rem 0 0;
       @include flexContainer(center, center, column);
       position: relative;
       right: unset;
@@ -67,6 +66,8 @@ article {
       }
       p {
         text-align: center;
+        line-height: 1.9;
+        font-size: 1.2407rem;
       }
     }
   }
