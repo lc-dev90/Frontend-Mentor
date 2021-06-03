@@ -170,6 +170,159 @@ section div h2 {
 /* ## Fonts / Weight */
 /* Paddings */
 /* Navigation */
+footer {
+  background-color: black;
+  padding-top: 43px;
+  padding-bottom: 2rem;
+}
+
+footer .container {
+  max-width: 1116px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .container span {
+  color: #8c8c8c;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+footer .container .logo {
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+footer .container .footer-links {
+  padding-bottom: 2rem;
+}
+
+footer .container .footer-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .container .footer-links ul li {
+  position: relative;
+}
+
+footer .container .footer-links ul li:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+footer .container .footer-links ul li::after {
+  content: "";
+  height: 2px;
+  width: 1%;
+  background-color: transparent;
+  bottom: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+footer .container .footer-links ul li:hover {
+  text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
+}
+
+footer .container .footer-links ul li:hover::after {
+  background-color: white;
+  width: 120%;
+}
+
+footer .container .footer-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .container .footer-nav ul li {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  position: relative;
+}
+
+footer .container .footer-nav ul li::after {
+  content: "";
+  height: 2px;
+  width: 1%;
+  background-color: transparent;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+footer .container .footer-nav ul li:hover {
+  text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
+}
+
+footer .container .footer-nav ul li:hover::after {
+  background-color: white;
+  width: 120%;
+}
+
+footer .container .footer-nav ul li:not(:last-of-type) {
+  margin-right: 2rem;
+}
+
+footer .container .footer-nav ul li a {
+  color: white;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+}
+
+/* ## Colors */
+/* ## Fonts / Weight */
+/* Paddings */
+/* Navigation */
+/* ## Colors */
+/* ## Fonts / Weight */
+/* Paddings */
+/* Navigation */
 .cards {
   display: -ms-grid;
   display: grid;
@@ -217,10 +370,10 @@ section div h2 {
           clip-path: circle(11px);
   z-index: 0;
   background-color: rgba(255, 255, 255, 0.712);
-  -webkit-transition: -webkit-transform 0.35s ease;
-  transition: -webkit-transform 0.35s ease;
-  transition: transform 0.35s ease;
-  transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+  -webkit-transition: -webkit-transform 0.45s ease;
+  transition: -webkit-transform 0.45s ease;
+  transition: transform 0.45s ease;
+  transition: transform 0.45s ease, -webkit-transform 0.45s ease;
 }
 
 .cards .card:nth-of-type(1)::after {
@@ -781,14 +934,20 @@ section .desktop-button, section .mobile-button {
   height: 43px;
   cursor: pointer;
   border: 1px solid dimgray;
+  font-weight: bold;
 }
 
 section .desktop-button:hover, section .mobile-button:hover, section .desktop-button:focus, section .mobile-button:focus {
   background-color: black;
+  -webkit-animation-name: button-entry;
+          animation-name: button-entry;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
 }
 
 section .desktop-button:hover a, section .mobile-button:hover a, section .desktop-button:focus a, section .mobile-button:focus a {
   color: white;
+  font-weight: bold;
 }
 
 section .desktop-button a, section .mobile-button a {

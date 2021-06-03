@@ -1,0 +1,93 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+footer {
+  background-color: black;
+  padding-top: 43px;
+  padding-bottom: 2rem;
+  .container {
+    span {
+      color: $gray;
+      @include fontSubTitle();
+    }
+    @include containerDesktop();
+    @include flexContainer(center, space-between, row);
+    .logo {
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+    .footer-links {
+      padding-bottom: 2rem;
+      ul {
+        @include flexContainer(center, flex-end, row);
+        li {
+          position: relative;
+          &:not(:last-of-type) {
+            margin-right: 1rem;
+          }
+          &::after {
+            content: "";
+            height: 2px;
+            width: 1%;
+            background-color: transparent;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            transition: all 0.4s ease;
+          }
+
+          &:hover {
+            text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
+            &::after {
+              background-color: white;
+              width: 120%;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-nav {
+      ul {
+        @include flexContainer(center, center, row);
+        li {
+          border-bottom: 2px solid transparent;
+          padding-bottom: 10px;
+          cursor: pointer;
+          transition: all 1s ease;
+          position: relative;
+
+          &::after {
+            content: "";
+            height: 2px;
+            width: 1%;
+            background-color: transparent;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            transition: all 0.4s ease;
+          }
+
+          &:hover {
+            text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
+            &::after {
+              background-color: white;
+              width: 120%;
+            }
+          }
+
+          &:not(:last-of-type) {
+            margin-right: 2rem;
+          }
+          a {
+            color: $white;
+            @include fontSubTitle();
+            font-size: 0.9375rem;
+          }
+        }
+      }
+    }
+  }
+}

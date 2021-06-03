@@ -10,11 +10,15 @@ section {
     height: 43px;
     cursor: pointer;
     border: 1px solid $dark-gray;
+    font-weight: bold;
     &:hover,
     &:focus {
       background-color: black;
+      animation-name: button-entry;
+      animation-duration: 0.8s;
       a {
         color: white;
+        font-weight: bold;
       }
     }
     a {
