@@ -1,3 +1,6 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
 .cards {
   display: grid;
   gap: 30px;
@@ -7,6 +10,105 @@
   .card {
     height: 450px;
     width: 256px;
-    border: 1px solid black;
+    position: relative;
+    h3 {
+      position: absolute;
+      @include fontTitle();
+      text-transform: uppercase;
+      font-size: 2.1rem;
+      max-width: 75%;
+      color: white;
+      bottom: 5%;
+      left: 15%;
+      color: $white;
+    }
+    &:nth-of-type(1) {
+      &::after {
+        @include backgroundImg();
+        background-image: url("../../images/desktop/image-deep-earth.jpg");
+      }
+      &::before {
+        @include backgroundImg();
+        z-index: initial;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+      }
+    }
+    &:nth-of-type(2) {
+      &::after {
+        @include backgroundImg();
+        background-image: url("../../images/desktop/image-night-arcade.jpg");
+      }
+      &::before {
+        @include backgroundImg();
+        z-index: initial;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.596));
+      }
+    }
+    &:nth-of-type(3) {
+      &::after {
+        @include backgroundImg();
+        background-image: url("../../images/desktop/image-soccer-team.jpg");
+      }
+      &::before {
+        @include backgroundImg();
+        z-index: initial;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+      }
+    }
+    &:nth-of-type(4) {
+      &::after {
+        @include backgroundImg();
+        background-image: url("../../images/desktop/image-grid.jpg");
+      }
+      &::before {
+        @include backgroundImg();
+        z-index: initial;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+      }
+    }
+    &:nth-of-type(5) {
+      &::after {
+        @include backgroundImg();
+        background-image: url("../../images/desktop/image-from-above.jpg");
+      }
+      &::before {
+        @include backgroundImg();
+        z-index: initial;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+      }
+    }
+    &:nth-of-type(6) {
+      &::after {
+        @include backgroundImg();
+        background-image: url("../../images/desktop/image-pocket-borealis.jpg");
+      }
+      &::before {
+        @include backgroundImg();
+        z-index: initial;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+      }
+    }
+    &:nth-of-type(7) {
+      &::after {
+        @include backgroundImg();
+        background-image: url("../../images/desktop/image-curiosity.jpg");
+      }
+      &::before {
+        @include backgroundImg();
+        z-index: initial;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+      }
+    }
+    &:nth-of-type(8) {
+      &::after {
+        @include backgroundImg();
+        background-image: url("../../images/desktop/image-fisheye.jpg");
+      }
+      &::before {
+        @include backgroundImg();
+        z-index: initial;
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.363));
+      }
+    }
   }
 }

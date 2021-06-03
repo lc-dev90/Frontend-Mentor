@@ -24,3 +24,17 @@
 @mixin sizeFontDefault() {
   font-size: 0.9375rem;
 }
+
+@mixin backgroundImg() {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  /* filter: brightness(90%); */
+}

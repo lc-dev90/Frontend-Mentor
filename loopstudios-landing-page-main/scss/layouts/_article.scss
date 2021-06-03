@@ -26,7 +26,7 @@ article {
     p {
       @include fontSubTitle();
       max-width: 447px;
-      color: $dark-gray;
+      color: $gray;
       @include sizeFontDefault();
     }
   }
