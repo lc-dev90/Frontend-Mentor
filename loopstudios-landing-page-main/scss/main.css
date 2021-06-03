@@ -1253,6 +1253,9 @@ section .mobile-button {
     display: none;
   }
   section .mobile-button {
+    width: 220px;
+    height: 63px;
+    border: 3px solid dimgray;
     margin: 0 auto;
     margin-top: 68px;
     display: -webkit-box;
@@ -1271,6 +1274,16 @@ section .mobile-button {
   }
   section .mobile-button a {
     display: inline-block;
+    font-size: 1.1rem;
+  }
+  section .mobile-button:hover, section .mobile-button:focus {
+    border: 3px solid black;
+  }
+  section .mobile-button:hover::after, section .mobile-button:focus::after {
+    -webkit-transform: translateY(-1px) scaleY(1.04);
+            transform: translateY(-1px) scaleY(1.04);
+    height: 101%;
+    width: 101%;
   }
 }
 /*# sourceMappingURL=main.css.map */

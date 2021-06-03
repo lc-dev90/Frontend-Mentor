@@ -59,11 +59,25 @@ section {
       display: none;
     }
     .mobile-button {
+      width: 220px;
+      height: 63px;
+      border: 3px solid $dark-gray;
+
       margin: 0 auto;
       margin-top: 68px;
       @include flexContainer(center, center, row);
       a {
         display: inline-block;
+        font-size: 1.1rem;
+      }
+      &:hover,
+      &:focus {
+        border: 3px solid black;
+        &::after {
+          transform: translateY(-1px) scaleY(1.04);
+          height: 101%;
+          width: 101%;
+        }
       }
     }
   }
