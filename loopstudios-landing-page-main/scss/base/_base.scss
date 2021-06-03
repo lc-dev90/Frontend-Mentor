@@ -1,3 +1,10 @@
+@import "..//abstracts/mixins";
+
 body {
   font-size: 16px;
+}
+
+main {
+  padding: 9.9375rem 0;
+  @include containerDesktop();
 }

@@ -24,6 +24,20 @@ img {
 /* ## Fonts / Weight */
 /* Paddings */
 /* Navigation */
+body {
+  font-size: 16px;
+}
+
+main {
+  padding: 9.9375rem 0;
+  max-width: 1116px;
+  margin: 0 auto;
+}
+
+/* ## Colors */
+/* ## Fonts / Weight */
+/* Paddings */
+/* Navigation */
 /* ## Colors */
 /* ## Fonts / Weight */
 /* Paddings */
@@ -92,6 +106,48 @@ nav {
       -ms-flex-direction: row;
           flex-direction: row;
   padding-top: 3.9375rem;
+}
+
+/* ## Colors */
+/* ## Fonts / Weight */
+/* Paddings */
+/* Navigation */
+/* ## Colors */
+/* ## Fonts / Weight */
+/* Paddings */
+/* Navigation */
+article {
+  position: relative;
+}
+
+article div {
+  height: 500px;
+}
+
+article aside {
+  position: absolute;
+  background-color: white;
+  padding: 0 5.875rem;
+  padding-top: 5.875rem;
+  bottom: -1px;
+  right: -8%;
+}
+
+article aside h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  max-width: 447px;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  padding-bottom: 2.5rem;
+}
+
+article aside p {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  max-width: 447px;
+  color: dimgray;
+  font-size: 0.9375rem;
 }
 
 /* ## Colors */

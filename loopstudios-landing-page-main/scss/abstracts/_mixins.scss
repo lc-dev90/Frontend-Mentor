@@ -20,3 +20,7 @@
   font-family: $alata;
   font-weight: $alata-weight;
 }
+
+@mixin sizeFontDefault() {
+  font-size: 0.9375rem;
+}
