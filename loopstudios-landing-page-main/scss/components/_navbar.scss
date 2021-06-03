@@ -4,6 +4,32 @@
   ul {
     @include flexContainer(center, center, row);
     li {
+      border-bottom: 2px solid transparent;
+      padding-bottom: 10px;
+      cursor: pointer;
+      transition: all 1s ease;
+      position: relative;
+
+      &::after {
+        content: "";
+        height: 2px;
+        width: 1%;
+        background-color: transparent;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        transition: all 0.4s ease;
+      }
+
+      &:hover {
+        text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
+        &::after {
+          background-color: white;
+          width: 120%;
+        }
+      }
+
       &:not(:last-of-type) {
         margin-right: 2rem;
       }

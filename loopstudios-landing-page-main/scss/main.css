@@ -114,6 +114,38 @@ nav {
           flex-direction: row;
 }
 
+.navbar ul li {
+  border-bottom: 2px solid transparent;
+  padding-bottom: 10px;
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  position: relative;
+}
+
+.navbar ul li::after {
+  content: "";
+  height: 2px;
+  width: 1%;
+  background-color: transparent;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.navbar ul li:hover {
+  text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
+}
+
+.navbar ul li:hover::after {
+  background-color: white;
+  width: 120%;
+}
+
 .navbar ul li:not(:last-of-type) {
   margin-right: 2rem;
 }
