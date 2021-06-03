@@ -3,7 +3,8 @@ header {
   height: 650px;
   position: relative;
   color: $white;
-
+  animation-name: smooth3;
+  animation-duration: 0.7s;
   div {
     &:nth-of-type(1) {
       &:not(:first-child) {
@@ -39,13 +40,67 @@ header {
   }
 }
 
+@keyframes smooth3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 980px) {
   header {
     div {
       &:nth-of-type(1) {
         &:not(:first-child) {
+          h1 {
+            margin: 0 auto;
+          }
         }
       }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    height: 100vh;
+    animation-name: smooth2;
+    animation-duration: 0.7s;
+    div {
+      &:nth-of-type(1) {
+        &:not(:first-child) {
+          margin-top: 238px;
+          h1 {
+            margin: 0 auto;
+            font-size: 3.75rem;
+            height: unset;
+            padding-top: 3.5rem;
+          }
+        }
+      }
+    }
+    &::after {
+      background-image: url("../../images/mobile/image-hero.jpg");
+      filter: brightness(90%);
+      animation-name: smooth1;
+      animation-duration: 0.7s;
+    }
+    @keyframes smooth1 {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+  @keyframes smooth2 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }

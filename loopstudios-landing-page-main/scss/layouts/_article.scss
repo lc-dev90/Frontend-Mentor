@@ -44,6 +44,16 @@ article {
     aside {
       padding: calc(min(5vw, 5.875rem));
       padding-bottom: 0;
+      animation-name: smooth5;
+      animation-duration: 0.7s;
+    }
+    @keyframes smooth5 {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 }
@@ -61,6 +71,8 @@ article {
       @include flexContainer(center, center, column);
       position: relative;
       right: unset;
+      animation-name: smooth4; /* How to use scss with keyframes? */
+      animation-duration: 0.7s;
       h2 {
         text-align: center;
       }
@@ -68,6 +80,14 @@ article {
         text-align: center;
         line-height: 1.9;
         font-size: 1.2407rem;
+      }
+    }
+    @keyframes smooth4 {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
       }
     }
   }
