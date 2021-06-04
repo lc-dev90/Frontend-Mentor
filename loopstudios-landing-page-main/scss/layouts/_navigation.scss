@@ -6,3 +6,9 @@ nav {
   @include flexContainer(center, space-between, row);
   padding-top: $padding-top-navigation;
 }
+
+@media screen and (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+}
