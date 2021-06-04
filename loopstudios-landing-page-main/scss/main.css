@@ -130,8 +130,7 @@ header::after {
     font-size: calc(min(3.75rem, 11vw));
     height: unset;
     padding-top: 3.5rem;
-    max-width: 550px;
-    min-height: 288px;
+    max-width: 100%;
   }
   header::after {
     background-image: url("../../images/mobile/image-hero.jpg");
@@ -219,6 +218,11 @@ nav {
       -ms-flex-direction: row;
           flex-direction: row;
   padding-top: 3.9375rem;
+}
+
+nav .logo:focus-within, nav .logo:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 @media screen and (max-width: 768px) {
@@ -440,6 +444,11 @@ footer .container .logo {
   cursor: pointer;
 }
 
+footer .container .logo:hover, footer .container .logo:focus-within {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 footer .container .footer-links {
   padding-bottom: 2rem;
 }
@@ -482,11 +491,11 @@ footer .container .footer-links ul li::after {
   transition: all 0.4s ease;
 }
 
-footer .container .footer-links ul li:hover {
+footer .container .footer-links ul li:hover, footer .container .footer-links ul li:focus-within {
   text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
 }
 
-footer .container .footer-links ul li:hover::after {
+footer .container .footer-links ul li:hover::after, footer .container .footer-links ul li:focus-within::after {
   background-color: white;
   width: 120%;
 }
@@ -530,11 +539,11 @@ footer .container .footer-nav ul li::after {
   transition: all 0.4s ease;
 }
 
-footer .container .footer-nav ul li:hover {
+footer .container .footer-nav ul li:hover, footer .container .footer-nav ul li:focus-within {
   text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
 }
 
-footer .container .footer-nav ul li:hover::after {
+footer .container .footer-nav ul li:hover::after, footer .container .footer-nav ul li:focus-within::after {
   background-color: white;
   width: 120%;
 }
@@ -615,15 +624,6 @@ footer .container .footer-nav ul li a {
           animation-name: smooth-cards1;
   -webkit-animation-duration: 1.2s;
           animation-duration: 1.2s;
-  /* }
-    @keyframes smooth-cards1 {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    } */
 }
 
 .cards .card {
@@ -1118,6 +1118,24 @@ footer .container .footer-nav ul li a {
   transition: transform 0.45s ease, -webkit-transform 0.45s ease;
 }
 
+@-webkit-keyframes smooth-cards1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes smooth-cards1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .cards {
     -ms-grid-columns: (1fr)[3];
@@ -1344,11 +1362,11 @@ footer .container .footer-nav ul li a {
   transition: all 0.4s ease;
 }
 
-.navbar ul li:hover {
+.navbar ul li:hover, .navbar ul li:focus-within {
   text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
 }
 
-.navbar ul li:hover::after {
+.navbar ul li:hover::after, .navbar ul li:focus-within::after {
   background-color: white;
   width: 120%;
 }
@@ -1394,7 +1412,8 @@ footer .container .footer-nav ul li a {
             flex-direction: column;
     height: 100vh;
     align-items: baseline;
-    margin-left: 100px;
+    margin-left: 60px;
+    margin-top: 60px;
   }
   .nav-mobile.open ul li {
     padding-bottom: 10px;
@@ -1414,10 +1433,10 @@ footer .container .footer-nav ul li a {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
   }
-  .nav-mobile.open ul li:hover {
+  .nav-mobile.open ul li:hover, .nav-mobile.open ul li:focus-within {
     text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
   }
-  .nav-mobile.open ul li:hover::after {
+  .nav-mobile.open ul li:hover::after, .nav-mobile.open ul li:focus-within::after {
     background-color: white;
     width: 100%;
   }
@@ -1437,16 +1456,10 @@ footer .container .footer-nav ul li a {
 @media screen and (max-width: 768px) {
   .hamburguer {
     display: block;
-    -webkit-transform: scale(0.6) translate(-50px, -10px);
-            transform: scale(0.6) translate(-50px, -10px);
+    -webkit-transform: scale(0.5) translate(-50px, -5px);
+            transform: scale(0.5) translate(-50px, -5px);
     cursor: pointer;
     z-index: 1;
-  }
-  .hamburguer:focus img, .hamburguer:hover img {
-    -webkit-box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.3);
-            box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.3);
-    -webkit-filter: brightness(120%);
-            filter: brightness(120%);
   }
   .hamburguer .box {
     border-radius: 2px;
@@ -1455,12 +1468,16 @@ footer .container .footer-nav ul li a {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     -webkit-transition: -webkit-transform 0.7s ease;
     transition: -webkit-transform 0.7s ease;
     transition: transform 0.7s ease;
     transition: transform 0.7s ease, -webkit-transform 0.7s ease;
+  }
+  .hamburguer .box:hover .btn span, .hamburguer .box:focus .btn span {
+    height: 11px;
+    width: 110%;
   }
   .hamburguer .btn {
     position: absolute;
@@ -1796,7 +1813,7 @@ section .desktop-button::after, section .mobile-button::after {
   transition: all 0.2s ease;
 }
 
-section .desktop-button:hover, section .mobile-button:hover, section .desktop-button:focus, section .mobile-button:focus {
+section .desktop-button:hover, section .mobile-button:hover, section .desktop-button:focus-within, section .mobile-button:focus-within {
   /* background-color: black; */
   -webkit-animation-name: button-entry;
           animation-name: button-entry;
@@ -1804,7 +1821,7 @@ section .desktop-button:hover, section .mobile-button:hover, section .desktop-bu
           animation-duration: 0.8s;
 }
 
-section .desktop-button:hover::after, section .mobile-button:hover::after, section .desktop-button:focus::after, section .mobile-button:focus::after {
+section .desktop-button:hover::after, section .mobile-button:hover::after, section .desktop-button:focus-within::after, section .mobile-button:focus-within::after {
   position: absolute;
   content: "";
   top: 0;
@@ -1820,7 +1837,7 @@ section .desktop-button:hover::after, section .mobile-button:hover::after, secti
   background-color: black;
 }
 
-section .desktop-button:hover a, section .mobile-button:hover a, section .desktop-button:focus a, section .mobile-button:focus a {
+section .desktop-button:hover a, section .mobile-button:hover a, section .desktop-button:focus-within a, section .mobile-button:focus-within a {
   color: white;
   font-weight: bold;
 }

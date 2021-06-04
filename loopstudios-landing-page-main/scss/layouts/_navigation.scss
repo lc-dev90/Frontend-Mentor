@@ -5,6 +5,12 @@ nav {
   @include containerDesktop();
   @include flexContainer(center, space-between, row);
   padding-top: $padding-top-navigation;
+  .logo {
+    &:focus-within,
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {

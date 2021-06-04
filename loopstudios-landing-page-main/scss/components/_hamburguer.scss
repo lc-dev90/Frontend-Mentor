@@ -5,26 +5,28 @@
 @media screen and (max-width: 768px) {
   .hamburguer {
     display: block;
-    transform: scale(0.6) translate(-50px, -10px);
+    transform: scale(0.5) translate(-50px, -5px);
 
     cursor: pointer;
     z-index: 1;
-    &:focus,
-    &:hover {
-      img {
-        box-shadow: 1px 1px 20px 10px rgba(0, 0, 0, 0.3);
-        filter: brightness(120%);
-      }
-    }
     .box {
       border-radius: 2px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       transition: transform 0.7s ease;
+      &:hover,
+      &:focus {
+        .btn {
+          span {
+            height: 11px;
+            width: 110%;
+          }
+        }
+      }
     }
 
     .btn {

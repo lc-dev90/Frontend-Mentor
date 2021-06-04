@@ -26,7 +26,8 @@
         transition: all 0.4s ease;
       }
 
-      &:hover {
+      &:hover,
+      &:focus-within {
         text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
         &::after {
           background-color: white;
@@ -64,7 +65,8 @@
       @include flexContainer(baseline, center, column);
       height: 100vh;
       align-items: baseline;
-      margin-left: 100px;
+      margin-left: 60px;
+      margin-top: 60px;
 
       li {
         padding-bottom: 10px;
@@ -82,7 +84,8 @@
           transition: all 0.4s ease;
         }
 
-        &:hover {
+        &:hover,
+        &:focus-within {
           text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
           &::after {
             background-color: white;

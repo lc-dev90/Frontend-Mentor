@@ -15,6 +15,10 @@ footer {
     .logo {
       margin-bottom: 2rem;
       cursor: pointer;
+      &:hover,
+      &:focus-within {
+        transform: scale(1.05);
+      }
     }
     .footer-links {
       padding-bottom: 2rem;
@@ -37,7 +41,8 @@ footer {
             transition: all 0.4s ease;
           }
 
-          &:hover {
+          &:hover,
+          &:focus-within {
             text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
             &::after {
               background-color: white;
@@ -70,7 +75,8 @@ footer {
             transition: all 0.4s ease;
           }
 
-          &:hover {
+          &:hover,
+          &:focus-within {
             text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
             &::after {
               background-color: white;

@@ -11,9 +11,8 @@ window.addEventListener("resize", () => {
       window.innerWidth < 980 ? "mobile" : "desktop"
     }/image-interactive.jpg`
   );
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 768 || window.innerHeight > 1000) {
     document.querySelector("header").classList.remove("height");
-    document.body.classList.remove("height");
     navmobile.classList.remove("open");
     btn.classList.remove("active");
   }
@@ -41,7 +40,6 @@ box.addEventListener("click", function (e) {
   }
   MyFadeFunction();
   document.querySelector("header").classList.toggle("height");
-  document.body.classList.toggle("height");
 });
 
 var i = 0;

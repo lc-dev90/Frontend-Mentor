@@ -100,16 +100,14 @@
       }
     }
   }
-
-  /* }
-    @keyframes smooth-cards1 {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    } */
+}
+@keyframes smooth-cards1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -122,6 +120,7 @@
       justify-self: center;
       height: 520px;
       max-width: 336px;
+
       h3 {
         max-width: 60%;
       }
