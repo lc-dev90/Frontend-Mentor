@@ -1,5 +1,9 @@
 @import "../abstracts/variables";
 
+.nav-mobile {
+  display: none;
+}
+
 .navbar {
   ul {
     @include flexContainer(center, center, row);
@@ -43,7 +47,81 @@
 }
 
 @media screen and (max-width: 768px) {
-  .navbar {
-    display: none;
+  nav {
+    .navbar {
+      display: none;
+    }
   }
+
+  .nav-mobile.open {
+    display: flex;
+    position: absolute;
+    top: 0%;
+    background: black;
+    width: 100%;
+    height: 100%;
+    ul {
+      @include flexContainer(baseline, center, column);
+      height: 100vh;
+      align-items: baseline;
+      margin-left: 100px;
+
+      li {
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        &::after {
+          content: "";
+          height: 2px;
+          width: 1%;
+          background-color: transparent;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          position: absolute;
+          transition: all 0.4s ease;
+        }
+
+        &:hover {
+          text-shadow: 1px -1px 1px rgba(255, 255, 255, 0.486);
+          &::after {
+            background-color: white;
+            width: 100%;
+          }
+        }
+        a {
+          @include fontTitle();
+          text-transform: uppercase;
+          font-size: 2.5rem;
+          color: white;
+        }
+      }
+    }
+  }
+
+  /*   .navbar.open {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black; */
+  /* 
+    ul {
+      flex-direction: column;
+      height: 100vh;
+      align-items: baseline;
+      margin-left: 100px;
+
+      text-transform: uppercase;
+      li {
+        margin-bottom: 30px;
+        a {
+          @include fontTitle();
+          font-size: 2.5rem;
+        }
+      }
+    } */
 }
