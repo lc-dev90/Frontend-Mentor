@@ -25,16 +25,15 @@
         </div>
         <div class="navbar">
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Support</a></li>
+            <li><a aria-label="About" href="#">About</a></li>
+            <li><a aria-label="Carrers" href="#">Careers</a></li>
+            <li><a aria-label="Events" href="#">Events</a></li>
+            <li><a aria-label="Products" href="#">Products</a></li>
+            <li><a aria-label="Support" href="#">Support</a></li>
           </ul>
         </div>
-        <div class="hamburguer">
-          <!-- <img src="./images/icon-hamburger.svg" alt="Menu" /> -->
-          <div class="box">
+        <div class="hamburguer" aria-label="Menu">
+          <div class="box" tabindex="0">
             <div class="btn not-active">
               <span></span>
               <span></span>
@@ -44,15 +43,15 @@
         </div>
       </nav>
       <div>
-        <h1>Immersive experiences that deliver</h1>
+        <h1 id="type"></h1>
       </div>
       <div class="nav-mobile">
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Support</a></li>
+          <li><a aria-label="About" href="#">About</a></li>
+          <li><a aria-label="Carrers" href="#">Careers</a></li>
+          <li><a aria-label="Events" href="#">Events</a></li>
+          <li><a aria-label="Products" href="#">Products</a></li>
+          <li><a aria-label="Support" href="#">Support</a></li>
         </ul>
       </div>
     </header>
@@ -75,38 +74,47 @@
         <div class="section-header">
           <h2>Our creations</h2>
           <div class="desktop-button">
-            <a href="#" type="submit">see all</a>
+            <a href="#" type="submit" aria-label="See all" tabindex="0"
+              >see all</a
+            >
           </div>
         </div>
 
         <div class="cards">
-          <div class="card">
+          <div class="card" aria-label="Deep earth">
             <h3>Deep earth</h3>
           </div>
-          <div class="card">
+
+          <div class="card" aria-label="Night arcade">
             <h3>Night arcade</h3>
           </div>
-          <div class="card">
+
+          <div class="card" aria-label="Soccer team VR">
             <h3>Soccer team VR</h3>
           </div>
-          <div class="card">
+
+          <div class="card" aria-label="The grid">
             <h3>The grid</h3>
           </div>
-          <div class="card">
+
+          <div class="card" aria-label="From up abovr VR">
             <h3>From up above VR</h3>
           </div>
-          <div class="card">
+
+          <div class="card" aria-label="Pocket borealis">
             <h3>Pocket borealis</h3>
           </div>
-          <div class="card">
+
+          <div class="card" aria-label="The curiosity">
             <h3>The curiosity</h3>
           </div>
-          <div class="card">
+
+          <div class="card" aria-label="Make it fisheye">
             <h3>Make it fisheye</h3>
           </div>
         </div>
         <div class="mobile-button">
-          <a>See all</a>
+          <a href="#" aria-label="See all">See all</a>
         </div>
       </section>
     </main>
@@ -114,7 +122,9 @@
       <div class="container">
         <div>
           <div class="logo">
-            <img src="./images/logo.svg" alt="Loopstudios Logo" />
+            <a href="#"
+              ><img src="./images/logo.svg" alt="Loopstudios Logo"
+            /></a>
           </div>
           <div class="footer-nav">
             <ul>
@@ -155,11 +165,7 @@
         </div>
       </div>
     </footer>
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
+
     <script src="index.js"></script>
   </body>
 </html>

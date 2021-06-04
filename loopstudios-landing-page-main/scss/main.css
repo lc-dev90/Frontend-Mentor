@@ -36,7 +36,8 @@ main {
   margin: 0 auto;
 }
 
-.overflow-hidden {
+.height {
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -130,6 +131,7 @@ header::after {
     height: unset;
     padding-top: 3.5rem;
     max-width: 550px;
+    min-height: 288px;
   }
   header::after {
     background-image: url("../../images/mobile/image-hero.jpg");
@@ -613,6 +615,15 @@ footer .container .footer-nav ul li a {
           animation-name: smooth-cards1;
   -webkit-animation-duration: 1.2s;
           animation-duration: 1.2s;
+  /* }
+    @keyframes smooth-cards1 {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    } */
 }
 
 .cards .card {
@@ -622,41 +633,6 @@ footer .container .footer-nav ul li a {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-}
-
-.cards .card h3 {
-  position: absolute;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 2.1rem;
-  max-width: 75%;
-  color: white;
-  bottom: 5%;
-  left: 15%;
-  color: white;
-}
-
-.cards .card h3::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  top: 200%;
-  -webkit-clip-path: circle(11px);
-          clip-path: circle(11px);
-  z-index: 0;
-  background-color: rgba(255, 255, 255, 0.712);
-  -webkit-transition: -webkit-transform 0.45s ease;
-  transition: -webkit-transform 0.45s ease;
-  transition: transform 0.45s ease;
-  transition: transform 0.45s ease, -webkit-transform 0.45s ease;
 }
 
 .cards .card:nth-of-type(1)::after {
@@ -1107,22 +1083,39 @@ footer .container .footer-nav ul li a {
   background: linear-gradient(rgba(255, 255, 255, 0.568), rgba(255, 255, 255, 0.555));
 }
 
-@-webkit-keyframes smooth-cards1 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.cards .card h3 {
+  position: absolute;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  max-width: 75%;
+  color: white;
+  bottom: 5%;
+  left: 15%;
+  color: white;
 }
 
-@keyframes smooth-cards1 {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.cards .card h3::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  top: 200%;
+  -webkit-clip-path: circle(11px);
+          clip-path: circle(11px);
+  z-index: 0;
+  background-color: rgba(255, 255, 255, 0.712);
+  -webkit-transition: -webkit-transform 0.45s ease;
+  transition: -webkit-transform 0.45s ease;
+  transition: transform 0.45s ease;
+  transition: transform 0.45s ease, -webkit-transform 0.45s ease;
 }
 
 @media screen and (max-width: 1280px) {
@@ -1176,10 +1169,6 @@ footer .container .footer-nav ul li a {
         grid-template-columns: repeat(2, 1fr);
     gap: 50px;
   }
-  .cards .card {
-    height: 240px;
-    max-width: 654px;
-  }
   .cards .card:nth-of-type(1) {
     -ms-grid-column-align: end;
         justify-self: end;
@@ -1231,6 +1220,10 @@ footer .container .footer-nav ul li a {
             animation-name: smooth-cards1;
     -webkit-animation-duration: 1.2s;
             animation-duration: 1.2s;
+  }
+  .cards .card {
+    height: 240px;
+    max-width: 654px;
   }
   .cards .card h3 {
     bottom: 15%;
@@ -1300,7 +1293,7 @@ footer .container .footer-nav ul li a {
 
 @media screen and (max-width: 550px) {
   .cards .card h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 

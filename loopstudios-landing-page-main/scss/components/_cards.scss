@@ -8,6 +8,7 @@
   grid-template-rows: repeat(2, 1fr);
   animation-name: smooth-cards1;
   animation-duration: 1.2s;
+
   .card {
     height: 450px;
     max-width: 256px;
@@ -15,26 +16,6 @@
     position: relative;
     cursor: pointer;
     overflow: hidden;
-    h3 {
-      position: absolute;
-      @include fontTitle();
-      text-transform: uppercase;
-      font-size: 2.1rem;
-      max-width: 75%;
-      color: white;
-      bottom: 5%;
-      left: 15%;
-      color: $white;
-      &::after {
-        @include backgroundImg();
-        top: 200%;
-        clip-path: circle(11px);
-        z-index: 0;
-        background-color: rgba(255, 255, 255, 0.712);
-        transition: transform 0.45s ease;
-      }
-    }
-
     &:nth-of-type(1) {
       &::after {
         @include backgroundImg();
@@ -91,7 +72,6 @@
       @include backgroundShadowEffect();
       @include cardHoverBackground();
     }
-
     &:nth-of-type(8) {
       &::after {
         @include backgroundImg();
@@ -100,15 +80,36 @@
       @include backgroundShadowEffect();
       @include cardHoverBackground();
     }
-  }
-  @keyframes smooth-cards1 {
-    0% {
-      opacity: 0;
+    h3 {
+      position: absolute;
+      @include fontTitle();
+      text-transform: uppercase;
+      font-size: 2.1rem;
+      max-width: 75%;
+      color: white;
+      bottom: 5%;
+      left: 15%;
+      color: $white;
+      &::after {
+        @include backgroundImg();
+        top: 200%;
+        clip-path: circle(11px);
+        z-index: 0;
+        background-color: rgba(255, 255, 255, 0.712);
+        transition: transform 0.45s ease;
+      }
     }
-    100% {
-      opacity: 1;
-    }
   }
+
+  /* }
+    @keyframes smooth-cards1 {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    } */
 }
 
 @media screen and (max-width: 1280px) {
@@ -120,7 +121,6 @@
     .card {
       justify-self: center;
       height: 520px;
-
       max-width: 336px;
       h3 {
         max-width: 60%;
@@ -149,8 +149,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     .card {
-      height: 240px;
-      max-width: 654px;
       &:nth-of-type(1) {
         justify-self: end;
       }
@@ -190,6 +188,8 @@
     animation-name: smooth-cards1;
     animation-duration: 1.2s;
     .card {
+      height: 240px;
+      max-width: 654px;
       h3 {
         bottom: 15%;
         max-width: 40%;
@@ -254,7 +254,7 @@
   .cards {
     .card {
       h3 {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
     }
   }

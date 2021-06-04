@@ -9,6 +9,7 @@ main {
   @include containerDesktop();
 }
 
-.overflow-hidden {
+.height {
+  height: 100vh;
   overflow: hidden;
 }
