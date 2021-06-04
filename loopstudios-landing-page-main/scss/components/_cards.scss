@@ -149,6 +149,8 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     .card {
+      height: 240px;
+      max-width: 654px;
       &:nth-of-type(1) {
         justify-self: end;
       }
@@ -173,6 +175,75 @@
       }
       &:nth-of-type(8) {
         justify-self: start;
+        transform: translateX(0);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    animation-name: smooth-cards1;
+    animation-duration: 1.2s;
+    .card {
+      h3 {
+        bottom: 15%;
+        max-width: 40%;
+        left: 7%;
+        font-size: 2.45rem;
+      }
+      &:nth-of-type(1) {
+        &::after {
+          background-image: url("../../images/mobile/image-deep-earth.jpg");
+          justify-self: unset;
+        }
+      }
+      &:nth-of-type(2) {
+        &::after {
+          background-image: url("../../images/mobile/image-night-arcade.jpg");
+        }
+        justify-self: unset;
+      }
+      &:nth-of-type(3) {
+        justify-self: unset;
+        &::after {
+          background-image: url("../../images/mobile/image-soccer-team.jpg");
+        }
+      }
+      &:nth-of-type(4) {
+        &::after {
+          background-image: url("../../images/mobile/image-grid.jpg");
+        }
+        justify-self: unset;
+      }
+      &:nth-of-type(5) {
+        justify-self: unset;
+        &::after {
+          background-image: url("../../images/mobile/image-from-above.jpg");
+        }
+      }
+      &:nth-of-type(6) {
+        &::after {
+          background-image: url("../../images/mobile/image-pocket-borealis.jpg");
+        }
+        justify-self: unset;
+      }
+      &:nth-of-type(7) {
+        justify-self: unset;
+        &::after {
+          background-image: url("../../images/mobile/image-curiosity.jpg");
+        }
+        transform: translateX(0);
+      }
+      &:nth-of-type(8) {
+        &::after {
+          background-image: url("../../images/mobile/image-fisheye.jpg");
+        }
+        justify-self: unset;
         transform: translateX(0);
       }
     }

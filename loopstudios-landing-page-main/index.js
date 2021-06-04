@@ -1,4 +1,5 @@
 const imgGuyElement = document.querySelector("article div img");
+const cards = document.querySelectorAll(".card");
 
 window.addEventListener("resize", () => {
   console.log(window.innerWidth);

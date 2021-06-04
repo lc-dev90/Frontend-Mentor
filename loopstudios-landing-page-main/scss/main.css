@@ -1154,6 +1154,10 @@ footer .container .footer-nav ul li a {
         grid-template-columns: repeat(2, 1fr);
     gap: 50px;
   }
+  .cards .card {
+    height: 240px;
+    max-width: 654px;
+  }
   .cards .card:nth-of-type(1) {
     -ms-grid-column-align: end;
         justify-self: end;
@@ -1189,6 +1193,86 @@ footer .container .footer-nav ul li a {
         justify-self: start;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    display: -ms-grid;
+    display: grid;
+    gap: 30px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[8];
+        grid-template-rows: repeat(8, 1fr);
+    -webkit-animation-name: smooth-cards1;
+            animation-name: smooth-cards1;
+    -webkit-animation-duration: 1.2s;
+            animation-duration: 1.2s;
+  }
+  .cards .card h3 {
+    bottom: 15%;
+    max-width: 40%;
+    left: 7%;
+    font-size: 2.45rem;
+  }
+  .cards .card:nth-of-type(1)::after {
+    background-image: url("../../images/mobile/image-deep-earth.jpg");
+    -ms-grid-column-align: unset;
+        justify-self: unset;
+  }
+  .cards .card:nth-of-type(2) {
+    -ms-grid-column-align: unset;
+        justify-self: unset;
+  }
+  .cards .card:nth-of-type(2)::after {
+    background-image: url("../../images/mobile/image-night-arcade.jpg");
+  }
+  .cards .card:nth-of-type(3) {
+    -ms-grid-column-align: unset;
+        justify-self: unset;
+  }
+  .cards .card:nth-of-type(3)::after {
+    background-image: url("../../images/mobile/image-soccer-team.jpg");
+  }
+  .cards .card:nth-of-type(4) {
+    -ms-grid-column-align: unset;
+        justify-self: unset;
+  }
+  .cards .card:nth-of-type(4)::after {
+    background-image: url("../../images/mobile/image-grid.jpg");
+  }
+  .cards .card:nth-of-type(5) {
+    -ms-grid-column-align: unset;
+        justify-self: unset;
+  }
+  .cards .card:nth-of-type(5)::after {
+    background-image: url("../../images/mobile/image-from-above.jpg");
+  }
+  .cards .card:nth-of-type(6) {
+    -ms-grid-column-align: unset;
+        justify-self: unset;
+  }
+  .cards .card:nth-of-type(6)::after {
+    background-image: url("../../images/mobile/image-pocket-borealis.jpg");
+  }
+  .cards .card:nth-of-type(7) {
+    -ms-grid-column-align: unset;
+        justify-self: unset;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .cards .card:nth-of-type(7)::after {
+    background-image: url("../../images/mobile/image-curiosity.jpg");
+  }
+  .cards .card:nth-of-type(8) {
+    -ms-grid-column-align: unset;
+        justify-self: unset;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .cards .card:nth-of-type(8)::after {
+    background-image: url("../../images/mobile/image-fisheye.jpg");
   }
 }
 
