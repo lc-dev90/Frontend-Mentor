@@ -23,6 +23,7 @@
       transform: translate(-50%, -50%);
       width: 100px;
       height: 100px;
+      transition: transform 0.7s ease;
     }
 
     .btn {

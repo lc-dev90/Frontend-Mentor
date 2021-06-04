@@ -1461,6 +1461,10 @@ footer .container .footer-nav ul li a {
             transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
+    -webkit-transition: -webkit-transform 0.7s ease;
+    transition: -webkit-transform 0.7s ease;
+    transition: transform 0.7s ease;
+    transition: transform 0.7s ease, -webkit-transform 0.7s ease;
   }
   .hamburguer .btn {
     position: absolute;

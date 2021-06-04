@@ -27,8 +27,9 @@ box.addEventListener("click", function (e) {
       opacity += 0.1;
       setTimeout(function () {
         MyFadeFunction();
-      }, 50);
+      }, 20);
     }
+    document.querySelector(".nav-mobile").style.opacity = opacity;
     document.querySelector("nav .logo").style.opacity = opacity;
   }
   MyFadeFunction();
