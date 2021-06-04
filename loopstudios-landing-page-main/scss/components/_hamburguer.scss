@@ -5,7 +5,8 @@
 @media screen and (max-width: 768px) {
   .hamburguer {
     display: block;
-    transform: scale(0.6) translateX(-65px);
+    transform: scale(0.6) translate(-50px, -10px);
+
     cursor: pointer;
     z-index: 1;
     &:focus,

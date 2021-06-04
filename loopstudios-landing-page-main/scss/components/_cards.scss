@@ -249,3 +249,13 @@
     }
   }
 }
+
+@media screen and (max-width: 550px) {
+  .cards {
+    .card {
+      h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+}

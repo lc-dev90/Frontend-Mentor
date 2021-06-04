@@ -118,19 +118,15 @@ header::after {
 
 @media screen and (max-width: 768px) {
   header {
-    height: 100vh;
     position: relative;
     -webkit-animation-name: smooth2;
             animation-name: smooth2;
     -webkit-animation-duration: 0.5s;
             animation-duration: 0.5s;
   }
-  header div:nth-of-type(1):not(:first-child) {
-    margin-top: 238px;
-  }
   header div:nth-of-type(1):not(:first-child) h1 {
     margin: 0 auto;
-    font-size: 3.75rem;
+    font-size: calc(min(3.75rem, 11vw));
     height: unset;
     padding-top: 3.5rem;
     max-width: 550px;
@@ -175,6 +171,23 @@ header::after {
     100% {
       opacity: 1;
     }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header {
+    position: relative;
+    -webkit-animation-name: smooth2;
+            animation-name: smooth2;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+  }
+  header .logo img {
+    max-width: 80%;
+  }
+  header div:nth-of-type(1):not(:first-child) h1 {
+    padding: 1.5rem;
+    padding-top: 1.8rem;
   }
 }
 
@@ -358,6 +371,15 @@ article aside p {
     100% {
       opacity: 1;
     }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  article aside h2 {
+    font-size: 2rem;
+  }
+  article aside p {
+    font-size: 1rem;
   }
 }
 
@@ -1276,6 +1298,12 @@ footer .container .footer-nav ul li a {
   }
 }
 
+@media screen and (max-width: 550px) {
+  .cards .card h3 {
+    font-size: 2rem;
+  }
+}
+
 /* ## Colors */
 /* ## Fonts / Weight */
 /* Paddings */
@@ -1407,31 +1435,6 @@ footer .container .footer-nav ul li a {
     font-size: 2.5rem;
     color: white;
   }
-  /*   .navbar.open {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: black; */
-  /* 
-    ul {
-      flex-direction: column;
-      height: 100vh;
-      align-items: baseline;
-      margin-left: 100px;
-
-      text-transform: uppercase;
-      li {
-        margin-bottom: 30px;
-        a {
-          @include fontTitle();
-          font-size: 2.5rem;
-        }
-      }
-    } */
 }
 
 .hamburguer {
@@ -1441,8 +1444,8 @@ footer .container .footer-nav ul li a {
 @media screen and (max-width: 768px) {
   .hamburguer {
     display: block;
-    -webkit-transform: scale(0.6) translateX(-65px);
-            transform: scale(0.6) translateX(-65px);
+    -webkit-transform: scale(0.6) translate(-50px, -10px);
+            transform: scale(0.6) translate(-50px, -10px);
     cursor: pointer;
     z-index: 1;
   }
@@ -1745,6 +1748,12 @@ green: #3FAF82
   }
   .section-header h2 {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .section-header h2 {
+    font-size: 2rem;
   }
 }
 
