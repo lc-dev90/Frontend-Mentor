@@ -85,7 +85,7 @@ header::after {
   left: 0;
   z-index: -1;
   content: "";
-  background-image: url("/../images/desktop/image-hero.jpg");
+  background-image: url("../images/desktop/image-hero.jpg");
   -webkit-filter: brightness(55%);
           filter: brightness(55%);
   background-repeat: no-repeat;
@@ -133,7 +133,7 @@ header::after {
     max-width: 100%;
   }
   header::after {
-    background-image: url("/../images/mobile/image-hero.jpg");
+    background-image: url("../images/mobile/image-hero.jpg");
     -webkit-filter: brightness(90%);
             filter: brightness(90%);
     -webkit-animation-name: smooth1;
