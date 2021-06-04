@@ -19,7 +19,7 @@
     &:nth-of-type(1) {
       &::after {
         @include backgroundImg();
-        background-image: url("../../images/desktop/image-deep-earth.jpg");
+        background-image: url("/../images/desktop/image-deep-earth.jpg");
       }
       @include backgroundShadowEffect();
       @include cardHoverBackground();
@@ -27,7 +27,7 @@
     &:nth-of-type(2) {
       &::after {
         @include backgroundImg();
-        background-image: url("../../images/desktop/image-night-arcade.jpg");
+        background-image: url("/../images/desktop/image-night-arcade.jpg");
       }
       @include backgroundShadowEffect();
       @include cardHoverBackground();
@@ -35,7 +35,7 @@
     &:nth-of-type(3) {
       &::after {
         @include backgroundImg();
-        background-image: url("../../images/desktop/image-soccer-team.jpg");
+        background-image: url("/../images/desktop/image-soccer-team.jpg");
       }
       @include backgroundShadowEffect();
       @include cardHoverBackground();
@@ -43,7 +43,7 @@
     &:nth-of-type(4) {
       &::after {
         @include backgroundImg();
-        background-image: url("../../images/desktop/image-grid.jpg");
+        background-image: url("/../images/desktop/image-grid.jpg");
       }
       @include backgroundShadowEffect();
       @include cardHoverBackground();
@@ -51,7 +51,7 @@
     &:nth-of-type(5) {
       &::after {
         @include backgroundImg();
-        background-image: url("../../images/desktop/image-from-above.jpg");
+        background-image: url("/../images/desktop/image-from-above.jpg");
       }
       @include backgroundShadowEffect();
       @include cardHoverBackground();
@@ -59,7 +59,7 @@
     &:nth-of-type(6) {
       &::after {
         @include backgroundImg();
-        background-image: url("../../images/desktop/image-pocket-borealis.jpg");
+        background-image: url("/../images/desktop/image-pocket-borealis.jpg");
       }
       @include backgroundShadowEffect();
       @include cardHoverBackground();
@@ -67,7 +67,7 @@
     &:nth-of-type(7) {
       &::after {
         @include backgroundImg();
-        background-image: url("../../images/desktop/image-curiosity.jpg");
+        background-image: url("/../images/desktop/image-curiosity.jpg");
       }
       @include backgroundShadowEffect();
       @include cardHoverBackground();
@@ -75,7 +75,7 @@
     &:nth-of-type(8) {
       &::after {
         @include backgroundImg();
-        background-image: url("../../images/desktop/image-fisheye.jpg");
+        background-image: url("/../images/desktop/image-fisheye.jpg");
       }
       @include backgroundShadowEffect();
       @include cardHoverBackground();
@@ -197,50 +197,50 @@
       }
       &:nth-of-type(1) {
         &::after {
-          background-image: url("../../images/mobile/image-deep-earth.jpg");
+          background-image: url("/../images/mobile/image-deep-earth.jpg");
           justify-self: unset;
         }
       }
       &:nth-of-type(2) {
         &::after {
-          background-image: url("../../images/mobile/image-night-arcade.jpg");
+          background-image: url("/../images/mobile/image-night-arcade.jpg");
         }
         justify-self: unset;
       }
       &:nth-of-type(3) {
         justify-self: unset;
         &::after {
-          background-image: url("../../images/mobile/image-soccer-team.jpg");
+          background-image: url("/../images/mobile/image-soccer-team.jpg");
         }
       }
       &:nth-of-type(4) {
         &::after {
-          background-image: url("../../images/mobile/image-grid.jpg");
+          background-image: url("/../images/mobile/image-grid.jpg");
         }
         justify-self: unset;
       }
       &:nth-of-type(5) {
         justify-self: unset;
         &::after {
-          background-image: url("../../images/mobile/image-from-above.jpg");
+          background-image: url("/../images/mobile/image-from-above.jpg");
         }
       }
       &:nth-of-type(6) {
         &::after {
-          background-image: url("../../images/mobile/image-pocket-borealis.jpg");
+          background-image: url("/../images/mobile/image-pocket-borealis.jpg");
         }
         justify-self: unset;
       }
       &:nth-of-type(7) {
         justify-self: unset;
         &::after {
-          background-image: url("../../images/mobile/image-curiosity.jpg");
+          background-image: url("/../images/mobile/image-curiosity.jpg");
         }
         transform: translateX(0);
       }
       &:nth-of-type(8) {
         &::after {
-          background-image: url("../../images/mobile/image-fisheye.jpg");
+          background-image: url("/../images/mobile/image-fisheye.jpg");
         }
         justify-self: unset;
         transform: translateX(0);
