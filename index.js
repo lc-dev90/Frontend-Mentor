@@ -41,6 +41,9 @@ const projects = [
   {
     name: "fylo-data-storage-component-master",
   },
+  {
+    name: "loopstudios-landing-page-main",
+  },
 ];
 const list = document.getElementById("list");
 
