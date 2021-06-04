@@ -66,7 +66,7 @@ header {
   header {
     height: 100vh;
     animation-name: smooth2;
-    animation-duration: 0.7s;
+    animation-duration: 0.5s;
     div {
       &:nth-of-type(1) {
         &:not(:first-child) {
@@ -76,6 +76,7 @@ header {
             font-size: 3.75rem;
             height: unset;
             padding-top: 3.5rem;
+            max-width: 550px;
           }
         }
       }
@@ -84,7 +85,7 @@ header {
       background-image: url("../../images/mobile/image-hero.jpg");
       filter: brightness(90%);
       animation-name: smooth1;
-      animation-duration: 0.7s;
+      animation-duration: 0.5s;
     }
     @keyframes smooth1 {
       0% {

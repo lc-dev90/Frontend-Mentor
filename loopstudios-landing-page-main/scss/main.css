@@ -117,8 +117,8 @@ header::after {
     height: 100vh;
     -webkit-animation-name: smooth2;
             animation-name: smooth2;
-    -webkit-animation-duration: 0.7s;
-            animation-duration: 0.7s;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
   }
   header div:nth-of-type(1):not(:first-child) {
     margin-top: 238px;
@@ -128,6 +128,7 @@ header::after {
     font-size: 3.75rem;
     height: unset;
     padding-top: 3.5rem;
+    max-width: 550px;
   }
   header::after {
     background-image: url("../../images/mobile/image-hero.jpg");
@@ -135,8 +136,8 @@ header::after {
             filter: brightness(90%);
     -webkit-animation-name: smooth1;
             animation-name: smooth1;
-    -webkit-animation-duration: 0.7s;
-            animation-duration: 0.7s;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
   }
   @-webkit-keyframes smooth1 {
     0% {
