@@ -646,7 +646,7 @@ footer .container .footer-nav ul li a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url("/../images/desktop/image-deep-earth.jpg");
+  background-image: url("../images/desktop/image-deep-earth.jpg");
 }
 
 .cards .card:nth-of-type(1)::before {
@@ -702,7 +702,7 @@ footer .container .footer-nav ul li a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url("/../images/desktop/image-night-arcade.jpg");
+  background-image: url("../images/desktop/image-night-arcade.jpg");
 }
 
 .cards .card:nth-of-type(2)::before {
@@ -758,7 +758,7 @@ footer .container .footer-nav ul li a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url("/../images/desktop/image-soccer-team.jpg");
+  background-image: url("../images/desktop/image-soccer-team.jpg");
 }
 
 .cards .card:nth-of-type(3)::before {
@@ -814,7 +814,7 @@ footer .container .footer-nav ul li a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url("/../images/desktop/image-grid.jpg");
+  background-image: url("../images/desktop/image-grid.jpg");
 }
 
 .cards .card:nth-of-type(4)::before {
@@ -870,7 +870,7 @@ footer .container .footer-nav ul li a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url("/../images/desktop/image-from-above.jpg");
+  background-image: url("../images/desktop/image-from-above.jpg");
 }
 
 .cards .card:nth-of-type(5)::before {
@@ -926,7 +926,7 @@ footer .container .footer-nav ul li a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url("/../images/desktop/image-pocket-borealis.jpg");
+  background-image: url("../images/desktop/image-pocket-borealis.jpg");
 }
 
 .cards .card:nth-of-type(6)::before {
@@ -982,7 +982,7 @@ footer .container .footer-nav ul li a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url("/../images/desktop/image-curiosity.jpg");
+  background-image: url("../images/desktop/image-curiosity.jpg");
 }
 
 .cards .card:nth-of-type(7)::before {
@@ -1038,7 +1038,7 @@ footer .container .footer-nav ul li a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-image: url("/../images/desktop/image-fisheye.jpg");
+  background-image: url("../images/desktop/image-fisheye.jpg");
 }
 
 .cards .card:nth-of-type(8)::before {
@@ -1250,7 +1250,7 @@ footer .container .footer-nav ul li a {
     font-size: 2.45rem;
   }
   .cards .card:nth-of-type(1)::after {
-    background-image: url("/../images/mobile/image-deep-earth.jpg");
+    background-image: url("../images/mobile/image-deep-earth.jpg");
     -ms-grid-column-align: unset;
         justify-self: unset;
   }
@@ -1259,35 +1259,35 @@ footer .container .footer-nav ul li a {
         justify-self: unset;
   }
   .cards .card:nth-of-type(2)::after {
-    background-image: url("/../images/mobile/image-night-arcade.jpg");
+    background-image: url("../images/mobile/image-night-arcade.jpg");
   }
   .cards .card:nth-of-type(3) {
     -ms-grid-column-align: unset;
         justify-self: unset;
   }
   .cards .card:nth-of-type(3)::after {
-    background-image: url("/../images/mobile/image-soccer-team.jpg");
+    background-image: url("../images/mobile/image-soccer-team.jpg");
   }
   .cards .card:nth-of-type(4) {
     -ms-grid-column-align: unset;
         justify-self: unset;
   }
   .cards .card:nth-of-type(4)::after {
-    background-image: url("/../images/mobile/image-grid.jpg");
+    background-image: url("../images/mobile/image-grid.jpg");
   }
   .cards .card:nth-of-type(5) {
     -ms-grid-column-align: unset;
         justify-self: unset;
   }
   .cards .card:nth-of-type(5)::after {
-    background-image: url("/../images/mobile/image-from-above.jpg");
+    background-image: url("../images/mobile/image-from-above.jpg");
   }
   .cards .card:nth-of-type(6) {
     -ms-grid-column-align: unset;
         justify-self: unset;
   }
   .cards .card:nth-of-type(6)::after {
-    background-image: url("/../images/mobile/image-pocket-borealis.jpg");
+    background-image: url("../images/mobile/image-pocket-borealis.jpg");
   }
   .cards .card:nth-of-type(7) {
     -ms-grid-column-align: unset;
@@ -1296,7 +1296,7 @@ footer .container .footer-nav ul li a {
             transform: translateX(0);
   }
   .cards .card:nth-of-type(7)::after {
-    background-image: url("/../images/mobile/image-curiosity.jpg");
+    background-image: url("../images/mobile/image-curiosity.jpg");
   }
   .cards .card:nth-of-type(8) {
     -ms-grid-column-align: unset;
@@ -1305,7 +1305,7 @@ footer .container .footer-nav ul li a {
             transform: translateX(0);
   }
   .cards .card:nth-of-type(8)::after {
-    background-image: url("/../images/mobile/image-fisheye.jpg");
+    background-image: url("../images/mobile/image-fisheye.jpg");
   }
 }
 
