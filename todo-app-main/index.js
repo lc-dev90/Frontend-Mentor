@@ -6,6 +6,12 @@ const counterItem = document.getElementById("counter");
 const clear = document.getElementById("clear");
 const modal = document.getElementById("myModal");
 const closeModal = document.querySelector(".close-modal");
+const slider = document.getElementById("slider");
+
+slider.addEventListener("click", function (e) {
+  document.body.classList.toggle("dark");
+  console.log(e.target);
+});
 
 let counter = 1;
 
@@ -26,8 +32,7 @@ function insertTodo(e) {
   e.preventDefault();
   const todoText = todoInput.value;
   const todoItem = document.createElement("li");
-
-  todoItem.className = "todo animate__lightSpeedInRight";
+  todoItem.className = "todo animate__animated animate__fadeIn";
   todoItem.setAttribute("ondblclick", "test(this)");
   const check = document.createElement("div");
   check.innerHTML = `<i class="fas fa-check-circle"></i>`;
@@ -71,7 +76,7 @@ todoList.addEventListener("click", function (e) {
   ) {
     swal({
       title: "Are you sure?",
-      text: "Once deleted, you will not be able to recover this imaginary file!",
+      text: "Once deleted, you will not be able to recover this todo!",
       icon: "warning",
       buttons: ["Cancel", "Delete"],
       dangerMode: true,
