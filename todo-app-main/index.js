@@ -4,45 +4,23 @@ const todoList = document.getElementById("todo-list");
 const closes = document.querySelectorAll(".close");
 const counterItem = document.getElementById("counter");
 const clear = document.getElementById("clear");
-const modal = document.getElementById("myModal");
-const closeModal = document.querySelector(".close-modal");
 const slider = document.getElementById("slider");
+const formControl = document.querySelector(".form-control");
+const active = document.getElementById("active");
+const completed = document.getElementById("completed");
+const all = document.getElementById("all");
+const todoControl = document.querySelector(".todo-control");
+
 let counter = 1;
 
-// toggle dark mode
-slider.addEventListener("click", function (e) {
-  document.body.classList.toggle("dark");
-  console.log(e.target);
-});
-
-// Completed form
-const formControl = document.querySelector(".form-control");
-formControl.addEventListener("click", function (e) {
-  if (e.target.classList.contains("check")) {
-    e.target.classList.toggle("completed");
-    e.target.parentElement.classList.toggle("completed");
-  }
-});
-
-//  LOAD LOCAL STORAGE
-let todosListLocalStorage = JSON.parse(window.localStorage.getItem("todos"))
-  ? JSON.parse(window.localStorage.getItem("todos"))
-  : [];
-
-if (todosListLocalStorage) {
-  todosListLocalStorage.forEach((todo) => {
-    const li = document.createElement("li");
-    li.className = "todo animate__animated animate__fadeIn";
-    li.setAttribute("ondblclick", "test(this)");
-    li.innerHTML = todo;
-    todoList.appendChild(li);
-  });
-}
+form.addEventListener("submit", insertTodo);
+slider.addEventListener("click", toggleDarkMode);
+formControl.addEventListener("click", toggleCheckForm);
+clear.addEventListener("click", clearCompleted);
+todoList.addEventListener("click", controlTodo);
+todoControl.addEventListener("click", filterTodos);
 
 // INSERT TODO
-
-form.addEventListener("submit", insertTodo);
-
 function insertTodo(e) {
   e.preventDefault();
   const todoText = todoInput.value;
@@ -71,13 +49,23 @@ function insertTodo(e) {
     counterItem.textContent = counter;
   }
   todoList.appendChild(todoItem);
-  todosListLocalStorage.push(todoItem.innerHTML);
-  window.localStorage.setItem("todos", JSON.stringify(todosListLocalStorage));
+}
+
+// toggle dark mode
+function toggleDarkMode(e) {
+  document.body.classList.toggle("dark");
+}
+
+// toggle check form
+function toggleCheckForm(e) {
+  if (e.target.classList.contains("check")) {
+    e.target.classList.toggle("completed");
+    e.target.parentElement.classList.toggle("completed");
+  }
 }
 
 // clear button
-
-clear.addEventListener("click", function (e) {
+function clearCompleted(e) {
   const todos = document.querySelectorAll(".todo");
   const completed = [...todos].filter((todo) =>
     todo.classList.contains("completed")
@@ -106,10 +94,10 @@ clear.addEventListener("click", function (e) {
   } else {
     swal("This is not possible!", "You don't have any completed Todos");
   }
-});
+}
 
 //Counter and editable classes check completed
-todoList.addEventListener("click", function (e) {
+function controlTodo(e) {
   if (
     e.target.classList.contains("close") &&
     !e.target.parentElement.classList.contains("completed")
@@ -133,7 +121,6 @@ todoList.addEventListener("click", function (e) {
       }
     });
   }
-
   if (
     e.target.classList.contains("close") &&
     e.target.parentElement.classList.contains("completed")
@@ -155,7 +142,6 @@ todoList.addEventListener("click", function (e) {
       }
     });
   }
-
   if (e.target.classList.contains("check")) {
     if (e.target.classList.contains("completed")) {
       counter++;
@@ -168,23 +154,20 @@ todoList.addEventListener("click", function (e) {
     e.target.parentElement.classList.toggle("completed");
     e.target.parentElement.querySelector("p").classList.toggle("completed");
   }
-
   if (e.target.classList.contains("todo")) {
     var todoText = e.target.querySelector(".todo-text");
     todoText.contentEditable = true;
   }
-});
+}
 
 //DRAGBOX
-
 const dragBox = document.querySelector(".dragbox");
 new Sortable(dragBox, {
   animation: 400,
 });
 
 //EDITABLE CONTENT
-
-function test(e) {
+function edit(e) {
   const that = e;
   e.classList.add("editable");
   e.querySelector(".todo-text").contentEditable = true;
@@ -197,12 +180,7 @@ function test(e) {
 }
 
 //FILTER
-
-const active = document.getElementById("active");
-const completed = document.getElementById("completed");
-const all = document.getElementById("all");
-
-window.addEventListener("click", function (e) {
+function filterTodos(e) {
   const todos = document.querySelectorAll(".todo");
 
   if (e.target === all) {
@@ -230,4 +208,4 @@ window.addEventListener("click", function (e) {
       }
     });
   }
-});
+}
