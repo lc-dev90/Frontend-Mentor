@@ -92,7 +92,7 @@ function clearCompleted(e) {
       }
     });
   } else {
-    swal("This is not possible!", "You don't have any completed Todos");
+    swal("This is not possible!", "You don't have any completed todos");
   }
 }
 
@@ -127,18 +127,18 @@ function controlTodo(e) {
   ) {
     swal({
       title: "Are you sure?",
-      text: "Once deleted, you will not be able to recover this imaginary file!",
+      text: "Once deleted, you will not be able to recover this todo!",
       icon: "warning",
       buttons: ["Cancel", "Delete"],
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
         e.target.parentElement.remove();
-        swal("Poof! Your imaginary file has been deleted!", {
+        swal("Poof! Your todo has been deleted!", {
           icon: "success",
         });
       } else {
-        swal("Your imaginary file is safe!");
+        swal("Your todo is safe!");
       }
     });
   }
