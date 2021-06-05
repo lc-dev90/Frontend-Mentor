@@ -7,13 +7,13 @@ const clear = document.getElementById("clear");
 const modal = document.getElementById("myModal");
 const closeModal = document.querySelector(".close-modal");
 const slider = document.getElementById("slider");
+let counter = 1;
 
+// toggle dark mode
 slider.addEventListener("click", function (e) {
   document.body.classList.toggle("dark");
   console.log(e.target);
 });
-
-let counter = 1;
 
 // Completed form
 const formControl = document.querySelector(".form-control");
@@ -23,6 +23,21 @@ formControl.addEventListener("click", function (e) {
     e.target.parentElement.classList.toggle("completed");
   }
 });
+
+//  LOAD LOCAL STORAGE
+let todosListLocalStorage = JSON.parse(window.localStorage.getItem("todos"))
+  ? JSON.parse(window.localStorage.getItem("todos"))
+  : [];
+
+if (todosListLocalStorage) {
+  todosListLocalStorage.forEach((todo) => {
+    const li = document.createElement("li");
+    li.className = "todo animate__animated animate__fadeIn";
+    li.setAttribute("ondblclick", "test(this)");
+    li.innerHTML = todo;
+    todoList.appendChild(li);
+  });
+}
 
 // INSERT TODO
 
@@ -56,16 +71,41 @@ function insertTodo(e) {
     counterItem.textContent = counter;
   }
   todoList.appendChild(todoItem);
+  todosListLocalStorage.push(todoItem.innerHTML);
+  window.localStorage.setItem("todos", JSON.stringify(todosListLocalStorage));
 }
 
+// clear button
+
 clear.addEventListener("click", function (e) {
-  console.log("clicooo  ");
   const todos = document.querySelectorAll(".todo");
-  todos.forEach((todo) => {
-    if (todo.classList.contains("completed")) {
-      todo.remove();
-    }
-  });
+  const completed = [...todos].filter((todo) =>
+    todo.classList.contains("completed")
+  );
+  if (completed.length > 0) {
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this todo!",
+      icon: "warning",
+      buttons: ["Cancel", "Delete"],
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        todos.forEach((todo) => {
+          if (todo.classList.contains("completed")) {
+            todo.remove();
+          }
+        });
+        swal("Your todo list has been cleared!", {
+          icon: "success",
+        });
+      } else {
+        swal("Your todo is safe!");
+      }
+    });
+  } else {
+    swal("This is not possible!", "You don't have any completed Todos");
+  }
 });
 
 //Counter and editable classes check completed
