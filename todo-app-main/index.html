@@ -13,35 +13,29 @@
   </head>
   <body>
     <header>
-      <h1>todo</h1>
-      <button><img src="./images/icon-moon.svg" alt="toggle" /></button>
+      <div>
+        <h1>Todo</h1>
+      </div>
+      <div><img src="./images/icon-moon.svg" alt="Toggle Theme" /></div>
     </header>
     <main>
-      <form class="form" id="form">
+      <form>
         <div class="form-control">
-          <div>
-            <input type="radio" name="check" id="" />
-          </div>
-          <div>
-            <input type="text" />
-          </div>
+          <input type="radio" name="" id="input-todo" />
+          <input type="text" />
         </div>
       </form>
-      <div class="todo-list">
-        <ul>
+      <div class="todo-list-container">
+        <ul class="todo-list" id="todo-list">
           <li>
             <div>
-              <div class="form-control">
-                <div>
-                  <input type="radio" name="check" id="" />
-                </div>
-                <div>
-                  <p>This is a test todo etc and blabla</p>
-                </div>
-                <div>
-                  <span>X</span>
-                </div>
+              <div>
+                <input type="radio" name="" id="" />
               </div>
+              <div>
+                <p>This is a todo test etc and bla bla bla</p>
+              </div>
+              <span>X</span>
             </div>
           </li>
         </ul>
