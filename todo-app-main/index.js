@@ -19,6 +19,7 @@ formControl.addEventListener("click", toggleCheckForm);
 clear.addEventListener("click", clearCompleted);
 todoList.addEventListener("click", controlTodo);
 todoControl.addEventListener("click", filterTodos);
+document.addEventListener("DOMContentLoaded", getTodos);
 
 // INSERT TODO
 function insertTodo(e) {
@@ -48,7 +49,36 @@ function insertTodo(e) {
     counter++;
     counterItem.textContent = counter;
   }
+  saveLocalTodos(todoItem.innerHTML);
   todoList.appendChild(todoItem);
+}
+
+// saveLocalStorage
+function saveLocalTodos(todo) {
+  let todos;
+  if (!localStorage.getItem("todos")) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  todos.push([todo]);
+  localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+function getTodos() {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  todos.forEach((todo) => {
+    const todoItem = document.createElement("li");
+    todoItem.className = "todo animate__animated animate__fadeIn";
+    todoItem.setAttribute("ondblclick", "test(this)");
+    todoItem.innerHTML = todo[0];
+    todoList.appendChild(todoItem);
+  });
 }
 
 // toggle dark mode
