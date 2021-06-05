@@ -2,6 +2,11 @@ const todoInput = document.getElementById("todoInput");
 const form = document.getElementById("form");
 const todoList = document.getElementById("todo-list");
 const closes = document.querySelectorAll(".close");
+const counterItem = document.getElementById("counter");
+const clear = document.getElementById("clear");
+let counter = 1;
+
+// INSERT TODO
 
 form.addEventListener("submit", insertTodo);
 
@@ -24,26 +29,65 @@ function insertTodo(e) {
   span.className = "close";
   todoItem.appendChild(span);
   todoList.appendChild(todoItem);
+  counter++;
+  counterItem.textContent = counter;
 }
 
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("close")) {
+clear.addEventListener("click", function (e) {
+  console.log("clicooo  ");
+  const todos = document.querySelectorAll(".todo");
+  todos.forEach((todo) => {
+    if (todo.classList.contains("completed")) {
+      todo.remove();
+    }
+  });
+});
+
+//Counter and editable classes check completed
+todoList.addEventListener("click", function (e) {
+  if (
+    e.target.classList.contains("close") &&
+    !e.target.parentElement.classList.contains("completed")
+  ) {
+    counter--;
+    counterItem.textContent = counter;
     e.target.parentElement.remove();
   }
+
+  if (
+    e.target.classList.contains("close") &&
+    e.target.parentElement.classList.contains("completed")
+  ) {
+    e.target.parentElement.remove();
+  }
+
   if (e.target.classList.contains("check")) {
+    if (e.target.classList.contains("completed")) {
+      counter++;
+      counterItem.textContent = counter;
+    } else {
+      counter--;
+      counterItem.textContent = counter;
+    }
     e.target.classList.toggle("completed");
     e.target.parentElement.classList.toggle("completed");
     e.target.parentElement.querySelector("p").classList.toggle("completed");
   }
+
   if (e.target.classList.contains("todo")) {
     var todoText = e.target.querySelector(".todo-text");
     todoText.contentEditable = true;
   }
 });
+
+//DRAGBOX
+
 const dragBox = document.querySelector(".dragbox");
 new Sortable(dragBox, {
   animation: 400,
 });
+
+//EDITABLE CONTENT
 
 function test(e) {
   const that = e;
@@ -57,12 +101,20 @@ function test(e) {
   });
 }
 
+//FILTER
+
 const active = document.getElementById("active");
 const completed = document.getElementById("completed");
 const all = document.getElementById("all");
 
 window.addEventListener("click", function (e) {
   const todos = document.querySelectorAll(".todo");
+
+  if (e.target === all) {
+    todos.forEach((todo) => {
+      todo.style.display = "flex";
+    });
+  }
 
   if (e.target === completed) {
     todos.forEach((todo) => {
@@ -73,6 +125,7 @@ window.addEventListener("click", function (e) {
       }
     });
   }
+
   if (e.target === active) {
     todos.forEach((todo) => {
       if (todo.classList.contains("completed")) {
