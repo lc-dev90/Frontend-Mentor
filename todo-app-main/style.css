@@ -50,6 +50,7 @@ form {
   border-radius: 5px;
   height: 40px;
   display: flex;
+  align-items: center;
 }
 
 .form-control input[type="text"] {
@@ -193,4 +194,14 @@ form {
 
 .todo.disabled {
   display: none;
+}
+
+.form-control .check {
+  cursor: pointer;
+  width: 29px;
+}
+
+.form-control.completed input[type="text"] {
+  color: rgba(37, 37, 37, 0.534);
+  text-decoration: line-through;
 }

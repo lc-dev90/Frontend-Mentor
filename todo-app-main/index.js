@@ -6,6 +6,14 @@ const counterItem = document.getElementById("counter");
 const clear = document.getElementById("clear");
 let counter = 1;
 
+const formControl = document.querySelector(".form-control");
+formControl.addEventListener("click", function (e) {
+  if (e.target.classList.contains("check")) {
+    e.target.classList.toggle("completed");
+    e.target.parentElement.classList.toggle("completed");
+  }
+});
+
 // INSERT TODO
 
 form.addEventListener("submit", insertTodo);
@@ -28,9 +36,16 @@ function insertTodo(e) {
   todoItem.appendChild(paragraph);
   span.className = "close";
   todoItem.appendChild(span);
+  if (formControl.classList.contains("completed")) {
+    paragraph.classList.add("completed");
+    check.classList.add("completed");
+    todoItem.classList.add("completed");
+    counterItem.textContent = counter;
+  } else {
+    counter++;
+    counterItem.textContent = counter;
+  }
   todoList.appendChild(todoItem);
-  counter++;
-  counterItem.textContent = counter;
 }
 
 clear.addEventListener("click", function (e) {
