@@ -1,4 +1,4 @@
-const todoInput = document.getElementById("todo");
+const todoInput = document.getElementById("todoInput");
 const form = document.getElementById("form");
 const todoList = document.getElementById("todo-list");
 const closes = document.querySelectorAll(".close");
@@ -9,8 +9,8 @@ function insertTodo(e) {
   e.preventDefault();
   const todoText = todoInput.value;
   const todoItem = document.createElement("li");
-  todoItem.setAttribute("ondblclick", "test(this)");
   todoItem.className = "todo";
+  todoItem.setAttribute("ondblclick", "test(this)");
   const check = document.createElement("div");
   check.innerHTML = `<i class="fas fa-check-circle"></i>`;
   check.className = "check";
@@ -32,9 +32,8 @@ document.addEventListener("click", function (e) {
   }
   if (e.target.classList.contains("check")) {
     e.target.classList.toggle("completed");
-    console.log(e.target.parentElement);
+    e.target.parentElement.classList.toggle("completed");
     e.target.parentElement.querySelector("p").classList.toggle("completed");
-    /* e.target.childNodes[1].classList.toggle("completed"); */
   }
   if (e.target.classList.contains("todo")) {
     var todoText = e.target.querySelector(".todo-text");
@@ -48,7 +47,6 @@ new Sortable(dragBox, {
 
 function test(e) {
   const that = e;
-  console.log(that);
   e.classList.add("editable");
   e.querySelector(".todo-text").contentEditable = true;
   e.querySelector(".todo-text").addEventListener("keypress", (e) => {
@@ -58,3 +56,30 @@ function test(e) {
     }
   });
 }
+
+const active = document.getElementById("active");
+const completed = document.getElementById("completed");
+const all = document.getElementById("all");
+
+window.addEventListener("click", function (e) {
+  const todos = document.querySelectorAll(".todo");
+
+  if (e.target === completed) {
+    todos.forEach((todo) => {
+      if (todo.classList.contains("completed")) {
+        todo.style.display = "flex";
+      } else {
+        todo.style.display = "none";
+      }
+    });
+  }
+  if (e.target === active) {
+    todos.forEach((todo) => {
+      if (todo.classList.contains("completed")) {
+        todo.style.display = "none";
+      } else {
+        todo.style.display = "flex";
+      }
+    });
+  }
+});
