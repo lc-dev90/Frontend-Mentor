@@ -4,8 +4,12 @@ const todoList = document.getElementById("todo-list");
 const closes = document.querySelectorAll(".close");
 const counterItem = document.getElementById("counter");
 const clear = document.getElementById("clear");
+const modal = document.getElementById("myModal");
+const closeModal = document.querySelector(".close-modal");
+
 let counter = 1;
 
+// Completed form
 const formControl = document.querySelector(".form-control");
 formControl.addEventListener("click", function (e) {
   if (e.target.classList.contains("check")) {
@@ -66,14 +70,44 @@ todoList.addEventListener("click", function (e) {
   ) {
     counter--;
     counterItem.textContent = counter;
-    e.target.parentElement.remove();
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this imaginary file!",
+      icon: "warning",
+      buttons: ["Cancel", "Delete"],
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        e.target.parentElement.remove();
+        swal("Your todo has been deleted!", {
+          icon: "success",
+        });
+      } else {
+        swal("Your todo is safe!");
+      }
+    });
   }
 
   if (
     e.target.classList.contains("close") &&
     e.target.parentElement.classList.contains("completed")
   ) {
-    e.target.parentElement.remove();
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this imaginary file!",
+      icon: "warning",
+      buttons: ["Cancel", "Delete"],
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        e.target.parentElement.remove();
+        swal("Poof! Your imaginary file has been deleted!", {
+          icon: "success",
+        });
+      } else {
+        swal("Your imaginary file is safe!");
+      }
+    });
   }
 
   if (e.target.classList.contains("check")) {
