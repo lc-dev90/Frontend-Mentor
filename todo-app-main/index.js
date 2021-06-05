@@ -26,7 +26,8 @@ function insertTodo(e) {
   e.preventDefault();
   const todoText = todoInput.value;
   const todoItem = document.createElement("li");
-  todoItem.className = "todo";
+
+  todoItem.className = "todo animate__lightSpeedInRight";
   todoItem.setAttribute("ondblclick", "test(this)");
   const check = document.createElement("div");
   check.innerHTML = `<i class="fas fa-check-circle"></i>`;
@@ -68,8 +69,6 @@ todoList.addEventListener("click", function (e) {
     e.target.classList.contains("close") &&
     !e.target.parentElement.classList.contains("completed")
   ) {
-    counter--;
-    counterItem.textContent = counter;
     swal({
       title: "Are you sure?",
       text: "Once deleted, you will not be able to recover this imaginary file!",
@@ -78,6 +77,8 @@ todoList.addEventListener("click", function (e) {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
+        counter--;
+        counterItem.textContent = counter;
         e.target.parentElement.remove();
         swal("Your todo has been deleted!", {
           icon: "success",
