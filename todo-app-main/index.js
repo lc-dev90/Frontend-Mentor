@@ -31,3 +31,7 @@ document.addEventListener("click", function (e) {
     e.target.classList.toggle("completed");
   }
 });
+const dragBox = document.querySelector(".dragbox");
+new Sortable(dragBox, {
+  animation: 400,
+});

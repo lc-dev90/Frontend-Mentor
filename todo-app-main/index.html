@@ -9,6 +9,12 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.13.0/Sortable.min.js"
+      integrity="sha512-5x7t0fTAVo9dpfbp3WtE2N6bfipUwk7siViWncdDoSz2KwOqVC1N9fDxEOzk0vTThOua/mglfF8NO7uVDLRC8Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -33,7 +39,7 @@
         </div>
       </form>
       <div class="todo-list-container">
-        <ul class="todo-list" id="todo-list">
+        <ul class="todo-list dragbox" id="todo-list">
           <li class="todo">
             <p>This is a todo test etc and blaa todo</p>
             <span class="close"><i class="fas fa-times-circle"></i></span>
@@ -41,6 +47,7 @@
         </ul>
       </div>
     </main>
+
     <script src="index.js"></script>
   </body>
 </html>
