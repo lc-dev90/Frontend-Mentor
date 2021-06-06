@@ -69,14 +69,15 @@ function saveLocalTodos(todo) {
 //remove todos
 function removeLocalTodos(todo) {
   let todos;
+  let index;
   if (localStorage.getItem("todos") === null) {
     todos = [];
   } else {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
-  todos.forEach((todoLocal) => {
+  todos.forEach((todoLocal, i) => {
     if (todo == todoLocal) {
-      todos.pop(todo);
+      todos.splice(i, i);
     }
   });
 
@@ -187,6 +188,8 @@ function controlTodo(e) {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
+        const itemDeleted = e.target.parentElement.innerHTML;
+        removeLocalTodos(itemDeleted);
         e.target.parentElement.remove();
         swal("Poof! Your todo has been deleted!", {
           icon: "success",
@@ -199,6 +202,7 @@ function controlTodo(e) {
   if (e.target.classList.contains("check")) {
     if (e.target.classList.contains("completed")) {
       counter++;
+      /*  console.log(e.target.parentElement.innerHTML); */
       counterItem.textContent = counter;
     } else {
       counter--;
