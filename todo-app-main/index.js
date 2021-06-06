@@ -206,6 +206,9 @@ function controlTodo(e) {
 const dragBox = document.querySelector(".dragbox");
 new Sortable(dragBox, {
   animation: 400,
+  onChange: function (evt) {
+    reloadList();
+  },
 });
 
 //EDITABLE CONTENT
