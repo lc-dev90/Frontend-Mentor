@@ -40,8 +40,10 @@ function insertTodo(e) {
   const paragraph = document.createElement("p");
   paragraph.className = "todo-text";
   paragraph.innerText = todoText;
+
   const span = document.createElement("span");
-  span.innerHTML = `<i class="fas fa-times-circle"></i>`;
+  span.innerHTML = `<img src="./images/icon-cross.svg" alt="delete todo">`;
+
   todoItem.appendChild(check);
   todoItem.appendChild(paragraph);
   span.className = "close";
