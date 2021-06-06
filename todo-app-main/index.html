@@ -9,6 +9,11 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -31,20 +36,25 @@
   </head>
   <body>
     <header>
-      <div>
-        <h1>Todo List</h1>
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider round" id="slider"></span>
-        </label>
-      </div>
+      <h1>Todo</h1>
+      <label class="switch" id="switch">
+        <a href="#"><img src="./images/icon-sun.svg" alt="change theme" /></a>
+      </label>
     </header>
     <main>
       <form id="form">
         <div class="form-control">
-          <div class="check"><i class="fas fa-check-circle"></i></div>
-          <input type="text" id="todoInput" />
-          <input type="submit" value="Enter" />
+          <div class="check">
+            <i class="fas fa-check-circle fa-gradient"></i>
+          </div>
+          <input
+            type="text"
+            id="todoInput"
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+          />
         </div>
       </form>
       <div class="todo-list-container">

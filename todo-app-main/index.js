@@ -4,7 +4,7 @@ const todoList = document.getElementById("todo-list");
 const closes = document.querySelectorAll(".close");
 const counterItem = document.getElementById("counter");
 const clear = document.getElementById("clear");
-const slider = document.getElementById("slider");
+const toggle = document.getElementById("switch");
 const formControl = document.querySelector(".form-control");
 const active = document.getElementById("active");
 const completed = document.getElementById("completed");
@@ -14,7 +14,7 @@ const todoControl = document.querySelector(".todo-control");
 let counter = 0;
 
 form.addEventListener("submit", insertTodo);
-slider.addEventListener("click", toggleDarkMode);
+toggle.addEventListener("click", toggleDarkMode);
 formControl.addEventListener("click", toggleCheckForm);
 clear.addEventListener("click", clearCompleted);
 todoList.addEventListener("click", controlTodo);
