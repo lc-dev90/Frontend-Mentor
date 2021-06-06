@@ -11,7 +11,7 @@ const completed = document.getElementById("completed");
 const all = document.getElementById("all");
 const todoControl = document.querySelector(".todo-control");
 
-let counter = 1;
+let counter = 0;
 
 form.addEventListener("submit", insertTodo);
 slider.addEventListener("click", toggleDarkMode);
@@ -27,7 +27,7 @@ function insertTodo(e) {
   const todoText = todoInput.value;
   const todoItem = document.createElement("li");
   todoItem.className = "todo animate__animated animate__fadeIn";
-  todoItem.setAttribute("ondblclick", "test(this)");
+  todoItem.setAttribute("ondblclick", "edit(this)");
   const check = document.createElement("div");
   check.innerHTML = `<i class="fas fa-check-circle"></i>`;
   check.className = "check";
@@ -66,24 +66,6 @@ function saveLocalTodos(todo) {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-//remove todos
-function removeLocalTodos(todo) {
-  let todos;
-  let index;
-  if (localStorage.getItem("todos") === null) {
-    todos = [];
-  } else {
-    todos = JSON.parse(localStorage.getItem("todos"));
-  }
-  todos.forEach((todoLocal, i) => {
-    if (todo == todoLocal) {
-      todos.splice(i, i);
-    }
-  });
-
-  localStorage.setItem("todos", JSON.stringify(todos));
-}
-
 function getTodos() {
   let todos;
   if (localStorage.getItem("todos") === null) {
@@ -93,13 +75,17 @@ function getTodos() {
   }
   todos.forEach((todo) => {
     const todoItem = document.createElement("li");
-    todoItem.className = "todo animate__animated animate__fadeIn";
-    todoItem.setAttribute("ondblclick", "test(this)");
+    if (todo[0].match("completed")) {
+      todoItem.className = "todo completed animate__animated animate__fadeIn";
+    } else {
+      todoItem.className = "todo animate__animated animate__fadeIn";
+      counter++;
+      counterItem.textContent = counter;
+    }
+    todoItem.setAttribute("ondblclick", "edit(this)");
     todoItem.innerHTML = todo[0];
     todoList.appendChild(todoItem);
   });
-  counter += todos.length;
-  counterItem.textContent = counter;
 }
 
 // toggle dark mode
@@ -162,12 +148,9 @@ function controlTodo(e) {
     }).then((willDelete) => {
       if (willDelete) {
         counter--;
-        counterItem.textContent = counter;
-
-        const itemDeleted = e.target.parentElement.innerHTML;
-        removeLocalTodos(itemDeleted);
-
+        counterItem.textContent = counter < 1 ? 0 : counter;
         e.target.parentElement.remove();
+        reloadList();
         swal("Your todo has been deleted!", {
           icon: "success",
         });
@@ -188,9 +171,8 @@ function controlTodo(e) {
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
-        const itemDeleted = e.target.parentElement.innerHTML;
-        removeLocalTodos(itemDeleted);
         e.target.parentElement.remove();
+        reloadList();
         swal("Poof! Your todo has been deleted!", {
           icon: "success",
         });
@@ -202,15 +184,16 @@ function controlTodo(e) {
   if (e.target.classList.contains("check")) {
     if (e.target.classList.contains("completed")) {
       counter++;
-      /*  console.log(e.target.parentElement.innerHTML); */
       counterItem.textContent = counter;
+      reloadList();
     } else {
       counter--;
-      counterItem.textContent = counter;
+      counterItem.textContent = counter < 1 ? 0 : counter;
+      reloadList();
     }
     e.target.classList.toggle("completed");
     e.target.parentElement.classList.toggle("completed");
-    e.target.parentElement.querySelector("p").classList.toggle("completed");
+    reloadList();
   }
   if (e.target.classList.contains("todo")) {
     var todoText = e.target.querySelector(".todo-text");
@@ -266,4 +249,12 @@ function filterTodos(e) {
       }
     });
   }
+}
+
+function reloadList() {
+  const todos = document.querySelectorAll(".todo");
+  localStorage.removeItem("todos");
+  todos.forEach((todo) => {
+    saveLocalTodos(todo.innerHTML);
+  });
 }

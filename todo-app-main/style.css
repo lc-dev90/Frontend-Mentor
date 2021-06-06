@@ -159,6 +159,11 @@ form {
   display: block;
 }
 
+.todo-list li.completed .todo-text {
+  color: rgba(37, 37, 37, 0.534);
+  text-decoration: line-through;
+}
+
 .todo-list li.editable {
   cursor: text;
   color: rgba(0, 0, 0, 0.795);
@@ -167,11 +172,6 @@ form {
 
 .todo-list li.editable p {
   border: 1px solid rgba(143, 142, 142, 0.308);
-}
-
-.todo-text.completed {
-  color: rgba(37, 37, 37, 0.534);
-  text-decoration: line-through;
 }
 
 .todo-control {
