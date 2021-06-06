@@ -28,6 +28,12 @@ function insertTodo(e) {
   const todoItem = document.createElement("li");
   todoItem.className = "todo animate__animated animate__fadeIn";
   todoItem.setAttribute("ondblclick", "edit(this)");
+
+  todoItem.setAttribute("autocomplete", "off");
+  todoItem.setAttribute("autocorrect", "off");
+  todoItem.setAttribute("autocapitalize", "off");
+  todoItem.setAttribute("spellcheck", "false");
+
   const check = document.createElement("div");
   check.innerHTML = `<i class="fas fa-check-circle"></i>`;
   check.className = "check";
@@ -83,6 +89,10 @@ function getTodos() {
       counterItem.textContent = counter;
     }
     todoItem.setAttribute("ondblclick", "edit(this)");
+    todoItem.setAttribute("autocomplete", "off");
+    todoItem.setAttribute("autocorrect", "off");
+    todoItem.setAttribute("autocapitalize", "off");
+    todoItem.setAttribute("spellcheck", "false");
     todoItem.innerHTML = todo[0];
     todoList.appendChild(todoItem);
   });
