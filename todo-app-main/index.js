@@ -51,6 +51,7 @@ function insertTodo(e) {
   }
   saveLocalTodos(todoItem.innerHTML);
   todoList.appendChild(todoItem);
+  todoInput.value = "";
 }
 
 // saveLocalStorage
@@ -62,6 +63,23 @@ function saveLocalTodos(todo) {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
   todos.push([todo]);
+  localStorage.setItem("todos", JSON.stringify(todos));
+}
+
+//remove todos
+function removeLocalTodos(todo) {
+  let todos;
+  if (localStorage.getItem("todos") === null) {
+    todos = [];
+  } else {
+    todos = JSON.parse(localStorage.getItem("todos"));
+  }
+  todos.forEach((todoLocal) => {
+    if (todo == todoLocal) {
+      todos.pop(todo);
+    }
+  });
+
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
@@ -79,6 +97,8 @@ function getTodos() {
     todoItem.innerHTML = todo[0];
     todoList.appendChild(todoItem);
   });
+  counter += todos.length;
+  counterItem.textContent = counter;
 }
 
 // toggle dark mode
@@ -126,7 +146,7 @@ function clearCompleted(e) {
   }
 }
 
-//Counter and editable classes check completed
+//Counter, delete and check completed
 function controlTodo(e) {
   if (
     e.target.classList.contains("close") &&
@@ -142,6 +162,10 @@ function controlTodo(e) {
       if (willDelete) {
         counter--;
         counterItem.textContent = counter;
+
+        const itemDeleted = e.target.parentElement.innerHTML;
+        removeLocalTodos(itemDeleted);
+
         e.target.parentElement.remove();
         swal("Your todo has been deleted!", {
           icon: "success",
