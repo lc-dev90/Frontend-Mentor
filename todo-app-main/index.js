@@ -35,7 +35,7 @@ function insertTodo(e) {
   todoItem.setAttribute("spellcheck", "false");
 
   const check = document.createElement("div");
-  check.innerHTML = `<i class="fas fa-check-circle"></i>`;
+  /* check.innerHTML = `<i class="fas fa-check-circle"></i>`; */
   check.className = "check";
   const paragraph = document.createElement("p");
   paragraph.className = "todo-text";
