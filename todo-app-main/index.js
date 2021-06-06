@@ -119,6 +119,7 @@ function clearCompleted(e) {
         todos.forEach((todo) => {
           if (todo.classList.contains("completed")) {
             todo.remove();
+            reloadList();
           }
         });
         swal("Your todo list has been cleared!", {
