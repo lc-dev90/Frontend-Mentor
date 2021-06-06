@@ -35,6 +35,9 @@
 
 ul {
   list-style: none;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 body {
@@ -69,6 +72,7 @@ header {
   margin: 0 auto;
   margin-top: 80px;
   border-radius: 10px;
+  user-select: none;
 }
 
 header div {
@@ -132,8 +136,13 @@ main {
   min-height: 60px;
   cursor: pointer;
   user-select: none;
-  border: 1px solid rgba(128, 128, 128, 0.281);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.281);
 }
+
+/* .todo-list li:nth-of-type(1) {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+} */
 
 .todo-list li p {
   user-select: none;
@@ -165,6 +174,21 @@ main {
 
 .todo-list li:hover span img {
   display: block;
+  animation-name: smooth;
+  animation-duration: 0.7s;
+}
+.todo-list li:hover {
+  background-color: #1b2335;
+  color: var(--clr-light-very-Light-Grayish-Blue);
+}
+
+@keyframes smooth {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .check {
@@ -226,13 +250,26 @@ main {
 }
 
 .todo-control {
-  background-color: rgb(247, 239, 239);
+  background-color: #1f2739;
+
+  color: var(--clr-dark-Dar-Grayis-Blue);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
   font-size: 0.8rem;
   min-height: 40px;
+  padding: 0 25px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.todo-control .controls span:hover {
+  color: var(--clr-dark-Ligh-Grayis-Blue);
+}
+
+.todo-control .clear span:hover {
+  color: var(--clr-dark-Ligh-Grayis-Blue);
 }
 
 .todo-control div:nth-of-type(2) span {
@@ -241,6 +278,12 @@ main {
 
 .todo-control > * {
   cursor: pointer;
+  user-select: none;
+}
+
+.todo-control div:nth-of-type(1) {
+  cursor: default;
+  user-select: none;
 }
 
 .todo-control span {
@@ -262,6 +305,10 @@ main {
   text-decoration: line-through;
 }
 
+.form-control input[type="text"] {
+  caret-color: var(--clr-blue);
+}
+
 body.dark {
   color: white;
   background-color: black;
@@ -269,4 +316,10 @@ body.dark {
 
 body.dark main {
   color: black;
+}
+
+footer div {
+  margin: 52px 0;
+  color: var(--clr-dark-Dar-Grayis-Blue);
+  font-size: 0.85rem;
 }

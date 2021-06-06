@@ -224,6 +224,7 @@ new Sortable(dragBox, {
 });
 
 //EDITABLE CONTENT
+
 function edit(e) {
   const that = e;
   e.classList.add("editable");
