@@ -123,6 +123,7 @@ function insertTodo() {
   saveLocalTodos(todoItem.innerHTML);
   todoList.appendChild(todoItem);
   todoInput.value = "";
+  formControl.className = "form-control";
   document.querySelector(".check").className = "check";
 }
 
