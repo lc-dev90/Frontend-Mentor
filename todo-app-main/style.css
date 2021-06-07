@@ -102,6 +102,7 @@ header label a img {
 }
 
 main {
+  margin: 0 auto;
   margin-top: 47px;
   width: 540px;
   max-width: 95%;
