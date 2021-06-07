@@ -198,6 +198,38 @@ main {
   margin-left: 24px;
   cursor: pointer;
   background: linear-gradient(155deg, #7bc4f6 0%, #7bc4f6 30%, #bf58f38f);
+  background-color: #1b2335;
+}
+
+.check::before {
+  background-color: #1b2335;
+  content: "";
+  position: absolute;
+  border-radius: 50px;
+  width: 93%;
+  height: 93%;
+  top: 1px;
+  left: 1px;
+}
+
+.check.completed::before {
+  content: none;
+}
+
+.check.completed::after {
+  content: "";
+  position: absolute;
+  background-image: url(./images/icon-check.svg);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  top: 34%;
+  left: 30%;
+}
+
+.check.completed {
+  background: linear-gradient(155deg, #7bc4f6 0%, #7bc4f6 30%, #bf58f38f);
 }
 
 .check:hover {
