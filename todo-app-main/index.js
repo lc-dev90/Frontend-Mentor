@@ -12,6 +12,7 @@ const all = document.getElementById("all");
 const todoControl = document.querySelector(".todo-control");
 const counterElement = document.getElementById("counterChar");
 const msg = document.getElementById("msg");
+const deleteTodos = document.getElementById("delete");
 
 let counter = 0;
 
@@ -372,3 +373,36 @@ active.onclick = function () {
   }
   active.classList.toggle("selected");
 };
+
+/* Delete all todos */
+deleteTodos.addEventListener("click", deleteAll);
+
+function deleteAll() {
+  const todos = document.querySelectorAll(".todo");
+
+  if (todos.length > 0) {
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover your todos!",
+      icon: "warning",
+      buttons: ["Cancel", "Delete"],
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        todos.forEach((todo) => {
+          todo.remove();
+        });
+        counter = 0;
+        counterItem.textContent = counter < 1 ? 0 : counter;
+        reloadList();
+        swal("Your todo list has been cleared!", {
+          icon: "success",
+        });
+      } else {
+        swal("Your todo is safe!");
+      }
+    });
+  } else {
+    swal("This is not possible!", "You don't have any todos");
+  }
+}
