@@ -13,7 +13,6 @@ const todoControl = document.querySelector(".todo-control");
 const counterElement = document.getElementById("counterChar");
 const msg = document.getElementById("msg");
 const deleteTodos = document.getElementById("delete");
-const checks = document.querySelectorAll(".check");
 
 let counter = 0;
 window.onresize = function () {};
@@ -429,3 +428,48 @@ function deleteAll() {
     swal("This is not possible!", "You don't have any todos");
   }
 }
+
+document.body.onload = function () {
+  const checks = document.querySelectorAll(".check");
+  checks.forEach((check) => {
+    check.addEventListener(
+      "focusin",
+      function (e) {
+        e.target.addEventListener("keydown", function (e) {
+          if (e.key == " ") {
+            e.preventDefault();
+            if (e.target.classList.contains("completed")) {
+              e.target.classList.remove("completed");
+              e.target.parentElement.classList.remove("completed");
+            } else {
+              e.target.classList.add("completed");
+              e.target.parentElement.classList.add("completed");
+            }
+          }
+          this.onkeydown = null;
+        });
+      },
+      { once: true }
+    );
+  });
+};
+/* 
+
+document.querySelector("main").addEventListener("focusin", function (e) {
+  if (e.target.classList.contains("check")) {
+    e.target.addEventListener("keypress", function (e) {
+      console.log("oi");
+      e.preventDefault();
+      if (e.key == " ") {
+        if (e.target.classList.contains("completed")) {
+          e.target.classList.remove("completed");
+          e.target.parentElement.classList.remove("completed");
+        } else {
+          e.target.classList.add("completed");
+          e.target.parentElement.classList.add("completed");
+        }
+      }
+    });
+  }
+});
+ */
