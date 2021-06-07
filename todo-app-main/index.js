@@ -15,9 +15,7 @@ const msg = document.getElementById("msg");
 const deleteTodos = document.getElementById("delete");
 
 let counter = 0;
-window.onresize = function () {
-  console.log(window.innerWidth);
-};
+window.onresize = function () {};
 form.addEventListener("submit", checkTodoInputValue);
 toggle.addEventListener("click", toggleDarkMode);
 formControl.addEventListener("click", toggleCheckForm);
@@ -145,11 +143,19 @@ function saveLocalTodos(todo) {
 
 function getTodos() {
   let todos;
+  let stilux;
   if (localStorage.getItem("todos") === null) {
     todos = [];
   } else {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
+  stilux = localStorage.getItem("style").toString();
+  if (localStorage.getItem("style") === null) {
+    document.body.className = "";
+  } else {
+    document.body.className = stilux;
+  }
+
   todos.forEach((todo) => {
     const todoItem = document.createElement("li");
     if (todo[0].match("completed")) {
@@ -181,8 +187,12 @@ function toggleDarkMode(e) {
   } else {
     e.target.querySelector("img").setAttribute("src", sun);
   }
-
   document.body.classList.toggle("light");
+  if (document.body.classList.contains("light")) {
+    window.localStorage.setItem("style", "light");
+  } else {
+    window.localStorage.setItem("style", "dark");
+  }
 }
 
 // toggle check form
