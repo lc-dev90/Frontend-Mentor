@@ -23,10 +23,17 @@ todoList.addEventListener("click", controlTodo);
 todoControl.addEventListener("click", filterTodos);
 document.addEventListener("DOMContentLoaded", getTodos);
 
-/* function checkAlready(value, todos){
-  let checker = false;
-  todos.forEach((todo) =>{ todo === value ? true : false })
-} */
+function checkAlready(value) {
+  const todos = document.querySelectorAll(".todo");
+  let indicator = false;
+  todos.forEach((todo) => {
+    if (todo.querySelector("p").textContent === value) {
+      indicator = true;
+    }
+  });
+  return indicator;
+}
+
 // max character
 todoInput.onkeydown = function () {
   msg.style.display = "none";
@@ -45,6 +52,11 @@ function checkTodoInputValue(e) {
   } else if (todoInput.value === "") {
     formControl.className = "form-control error";
     msg.textContent = "Please, enter your todo!";
+    msg.style.display = "block";
+  } else if (checkAlready(todoInput.value)) {
+    console.log(checkAlready(todoInput.value));
+    formControl.className = "form-control error";
+    msg.textContent = "You already have this todo!";
     msg.style.display = "block";
   } else {
     msg.style.display = "none";
