@@ -99,6 +99,7 @@ main {
   border-radius: 5px;
   height: 64px;
   display: flex;
+  position: relative;
   align-items: center;
 }
 
@@ -125,6 +126,14 @@ main {
   list-style: none;
 }
 
+.counterChar {
+  color: var(--clr-dark-Ligh-Grayis-Blue);
+  position: absolute;
+  font-size: 0.7rem;
+  bottom: 2px;
+  right: 5px;
+}
+
 .todo-list li {
   position: relative;
   background-color: #1f2739;
@@ -138,11 +147,10 @@ main {
   user-select: none;
   border-bottom: 1px solid rgba(128, 128, 128, 0.281);
 }
-
-/* .todo-list li:nth-of-type(1) {
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-} */
+.todo-list li.completed .todo-text {
+  color: var(--clr-dark-Dar-Grayis-Blue);
+  text-decoration: line-through;
+}
 
 .todo-list li p {
   user-select: none;
@@ -151,6 +159,7 @@ main {
   margin-right: 40px;
   outline: none;
   margin-left: 24px;
+  min-width: 75%;
 }
 
 .todo-list li span {
@@ -191,18 +200,21 @@ main {
 }
 
 .check {
-  width: 24px;
+  width: 25px;
   position: relative;
   height: 24px;
   border-radius: 50px;
   margin-left: 24px;
   cursor: pointer;
   background: linear-gradient(155deg, #7bc4f6 0%, #7bc4f6 30%, #bf58f38f);
-  background-color: #1b2335;
+}
+
+.check:hover::before {
+  background-color: #171e2e;
 }
 
 .check::before {
-  background-color: #1b2335;
+  background-color: #1f2739;
   content: "";
   position: absolute;
   border-radius: 50px;

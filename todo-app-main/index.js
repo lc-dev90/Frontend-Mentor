@@ -10,6 +10,7 @@ const active = document.getElementById("active");
 const completed = document.getElementById("completed");
 const all = document.getElementById("all");
 const todoControl = document.querySelector(".todo-control");
+const counterElement = document.getElementById("counterChar");
 
 let counter = 0;
 
@@ -20,6 +21,11 @@ clear.addEventListener("click", clearCompleted);
 todoList.addEventListener("click", controlTodo);
 todoControl.addEventListener("click", filterTodos);
 document.addEventListener("DOMContentLoaded", getTodos);
+
+// max character
+todoInput.onkeyup = function () {
+  counterElement.innerHTML = 40 - this.value.length;
+};
 
 // INSERT TODO
 function insertTodo(e) {
