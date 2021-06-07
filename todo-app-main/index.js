@@ -151,7 +151,8 @@ function getTodos() {
   } else {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
-  stilux = localStorage.getItem("style").toString();
+  /* stilux = localStorage.getItem("style").toString(); */
+  stilux = localStorage.getItem("style");
   if (localStorage.getItem("style") === null) {
     document.body.className = "";
   } else {
