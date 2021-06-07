@@ -11,10 +11,11 @@ const completed = document.getElementById("completed");
 const all = document.getElementById("all");
 const todoControl = document.querySelector(".todo-control");
 const counterElement = document.getElementById("counterChar");
+const msg = document.getElementById("msg");
 
 let counter = 0;
 
-form.addEventListener("submit", insertTodo);
+form.addEventListener("submit", checkTodoInputValue);
 toggle.addEventListener("click", toggleDarkMode);
 formControl.addEventListener("click", toggleCheckForm);
 clear.addEventListener("click", clearCompleted);
@@ -22,14 +23,38 @@ todoList.addEventListener("click", controlTodo);
 todoControl.addEventListener("click", filterTodos);
 document.addEventListener("DOMContentLoaded", getTodos);
 
+/* function checkAlready(value, todos){
+  let checker = false;
+  todos.forEach((todo) =>{ todo === value ? true : false })
+} */
 // max character
-todoInput.onkeyup = function () {
+todoInput.onkeydown = function () {
+  msg.style.display = "none";
+  formControl.className = "form-control";
   counterElement.innerHTML = 40 - this.value.length;
 };
 
-// INSERT TODO
-function insertTodo(e) {
+// check todo before input
+function checkTodoInputValue(e) {
   e.preventDefault();
+  const todos = document.querySelectorAll(".todo");
+  if (todoInput.value.length > 40) {
+    formControl.className = "form-control error";
+    msg.textContent = "Please, max 40 characters!";
+    msg.style.display = "block";
+  } else if (todoInput.value === "") {
+    formControl.className = "form-control error";
+    msg.textContent = "Please, enter your todo!";
+    msg.style.display = "block";
+  } else {
+    msg.style.display = "none";
+    formControl.className = "form-control";
+    insertTodo();
+  }
+}
+
+// INSERT TODO
+function insertTodo() {
   const todoText = todoInput.value;
   const todoItem = document.createElement("li");
   todoItem.className = "todo animate__animated animate__fadeIn";

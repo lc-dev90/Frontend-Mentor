@@ -103,7 +103,11 @@ main {
   align-items: center;
 }
 
-.form-control input[type="text"] {
+.form-control.error .counterChar {
+  color: #c35f5f;
+}
+
+.form-control input {
   width: calc(100% - 40px);
   display: inline-block;
   outline: none;
@@ -310,11 +314,6 @@ main {
   display: none;
 }
 
-.form-control.completed input[type="text"] {
-  color: var(--clr-dark-Dar-Grayis-Blue);
-  text-decoration: line-through;
-}
-
 .form-control input[type="text"] {
   caret-color: var(--clr-blue);
 }
@@ -333,4 +332,12 @@ footer div {
   color: var(--clr-dark-Dar-Grayis-Blue);
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+.msg {
+  position: absolute;
+  font-size: 0.778rem;
+  color: #c35f5f;
+  top: 50px;
+  left: 14%;
 }
