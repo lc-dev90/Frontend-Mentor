@@ -20,7 +20,7 @@
   --clr-dark-Ver-Dar-Desaturated-Blue: hsl(235, 24%, 19%);
   --clr-dark-Ligh-Grayis-Blue: hsl(234, 39%, 85%);
   --clr-dark-Ligh-Grayis-Blue-hover: hsl(236, 33%, 92%);
-  --clr-dark-Dar-Grayis-Blue: hsl(234, 11%, 52%);
+  --clr-dark-Dar-Grayis-Blue: rgb(119, 122, 146);
   --clr-dark-Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
   --clr-dark-Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
 }
@@ -91,6 +91,11 @@ header h1 {
 header label a {
   height: 100%;
   display: inline-block;
+  outline: none;
+}
+
+header label a:focus {
+  transform: scale(1.5);
 }
 header label a img {
   pointer-events: none;
@@ -134,6 +139,10 @@ main {
   padding: 20px;
   background-color: #1f2739;
   color: var(--clr-dark-Ligh-Grayis-Blue);
+}
+
+::placeholder {
+  color: var(--clr-dark-Dar-Grayis-Blue);
 }
 
 .todo-list-container {
@@ -226,6 +235,7 @@ main {
 }
 
 .check {
+  outline: none;
   width: 23px;
   position: relative;
   height: 23px;
@@ -233,6 +243,10 @@ main {
   margin-left: 24px;
   cursor: pointer;
   background: linear-gradient(155deg, #7bc4f6 0%, #7bc4f6 30%, #bf58f38f);
+}
+
+.check:focus {
+  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.185);
 }
 
 .form-control .check {

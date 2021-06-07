@@ -13,6 +13,7 @@ const todoControl = document.querySelector(".todo-control");
 const counterElement = document.getElementById("counterChar");
 const msg = document.getElementById("msg");
 const deleteTodos = document.getElementById("delete");
+const checks = document.querySelectorAll(".check");
 
 let counter = 0;
 window.onresize = function () {};
@@ -100,7 +101,7 @@ function insertTodo() {
   todoItem.setAttribute("spellcheck", "false");
 
   const checkbox = document.createElement("div");
-  /* check.innerHTML = `<i class="fas fa-check-circle"></i>`; */
+  checkbox.setAttribute("tabindex", "0");
   checkbox.className = "check";
   const paragraph = document.createElement("p");
   paragraph.className = "todo-text";
