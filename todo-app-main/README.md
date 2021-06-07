@@ -42,6 +42,11 @@ I used `html`, `css` and `Js`
 
 I adopted Sortable.js to dragable todos, animate css for some animations, sweet alert to alerts on page. The app have counter character that show dinamically how many characters left.
 
+The todo app have Local Storage save persist, has a character counter, treatment of some errors on input, the todo list is draggable, and I need to make my app 100% functional with keyboard (actually is about 50%).
+
+The todos task can be editable with when user Double click this.
+You can press enter to save your edit.
+
 The use with keyboard will be implemented as soon as posible.
 
 ## Credits
