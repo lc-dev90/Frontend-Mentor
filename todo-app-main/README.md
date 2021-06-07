@@ -21,10 +21,10 @@ Challenge from fronendmentor.io
 
 ## Screenshots
 
-![]("./design/active-states-dark.jpg")
-![]("./design/active-states-light.jpg")
-![]("./design/desktop-design-dark.jpg")
-![]("./design/desktop-design-light.jpg")
+![](./design/active-states-dark.jpg)
+![](./design/active-states-light.jpg)
+![](./design/desktop-design-dark.jpg)
+![](./design/desktop-design-light.jpg)
 
 ## Technologies
 
