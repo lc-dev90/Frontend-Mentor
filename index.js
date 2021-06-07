@@ -1,5 +1,27 @@
 const projects = [
   {
+    name: "todo-app-main",
+  },
+  {
+    name: "loopstudios-landing-page-main",
+  },
+
+  {
+    name: "blogr-landing-page-main",
+  },
+  {
+    name: "crowdfunding-product-page-main",
+  },
+  {
+    name: "interactive-pricing-component-main",
+  },
+  {
+    name: "testimonials-grid-section-main",
+  },
+  {
+    name: "fylo-data-storage-component-master",
+  },
+  {
     name: "ping-coming-soon-page-master",
   },
   {
@@ -25,24 +47,6 @@ const projects = [
   },
   {
     name: "single-price-grid-component-master",
-  },
-  {
-    name: "blogr-landing-page-main",
-  },
-  {
-    name: "crowdfunding-product-page-main",
-  },
-  {
-    name: "interactive-pricing-component-main",
-  },
-  {
-    name: "testimonials-grid-section-main",
-  },
-  {
-    name: "fylo-data-storage-component-master",
-  },
-  {
-    name: "loopstudios-landing-page-main",
   },
 ];
 const list = document.getElementById("list");
