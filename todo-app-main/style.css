@@ -82,7 +82,7 @@ header div {
 header h1 {
   text-transform: uppercase;
   color: white;
-  letter-spacing: 10px;
+  letter-spacing: 13px;
   font-size: 2.5rem;
   transform: translateY(5px);
 }
@@ -91,6 +91,11 @@ main {
   margin-top: 47px;
   width: 540px;
   max-width: 95%;
+}
+
+.form-control.completed input[type="text"] {
+  color: var(--clr-dark-Dar-Grayis-Blue);
+  text-decoration: line-through;
 }
 
 .form-control {
@@ -339,9 +344,47 @@ footer div {
   font-size: 0.778rem;
   color: #c35f5f;
   top: 50px;
-  left: 14%;
+  left: 13%;
 }
 
 .selected {
   color: var(--clr-blue);
+}
+
+body.light {
+  background-color: var(--clr-light-very-light-gray);
+}
+
+body.light::after {
+  background-image: url(./images/bg-desktop-light.jpg);
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  top: 0;
+}
+
+body.light .form-control {
+  background-color: white;
+}
+
+body.light .form-control input {
+  background-color: white;
+  color: var(--clr-light-Very-Dark-Grayish-Blue);
+}
+
+body.light .counterChar {
+  color: var(--clr-light-Very-Dark-Grayish-Blue);
+}
+
+body.light .todo-list li {
+  background-color: white;
+  color: var(--clr-light-Very-Dark-Grayish-Blue);
+}
+
+body.light .todo-list li.completed .todo-text {
+  color: var(--clr-Light-Grayish-Blue);
+  text-decoration: line-through;
 }

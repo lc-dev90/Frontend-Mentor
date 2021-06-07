@@ -38,7 +38,11 @@ function checkAlready(value) {
 // max character
 todoInput.onkeydown = function () {
   msg.style.display = "none";
-  formControl.className = "form-control";
+  if (formControl.classList.contains("completed")) {
+    formControl.className = "form-control completed";
+  } else {
+    formControl.className = "form-control";
+  }
   counterElement.innerHTML = 40 - this.value.length;
 };
 
@@ -46,21 +50,38 @@ todoInput.onkeydown = function () {
 function checkTodoInputValue(e) {
   e.preventDefault();
   const todos = document.querySelectorAll(".todo");
+  let completedFormControl = formControl.classList.contains("completed");
   if (todoInput.value.length > 40) {
-    formControl.className = "form-control error";
+    if (completedFormControl) {
+      formControl.className = "form-control error completed";
+    } else {
+      formControl.className = "form-control error";
+    }
     msg.textContent = "Please, max 40 characters!";
     msg.style.display = "block";
   } else if (todoInput.value === "") {
-    formControl.className = "form-control error";
+    if (completedFormControl) {
+      formControl.className = "form-control error completed";
+    } else {
+      formControl.className = "form-control error";
+    }
     msg.textContent = "Please, enter your todo!";
     msg.style.display = "block";
   } else if (checkAlready(todoInput.value)) {
-    formControl.className = "form-control error";
+    if (completedFormControl) {
+      formControl.className = "form-control error completed";
+    } else {
+      formControl.className = "form-control error";
+    }
     msg.textContent = "You already have this todo!";
     msg.style.display = "block";
   } else {
     msg.style.display = "none";
-    formControl.className = "form-control";
+    if (completedFormControl) {
+      formControl.className = "form-control completed";
+    } else {
+      formControl.className = "form-control";
+    }
     insertTodo();
   }
 }
@@ -77,9 +98,9 @@ function insertTodo() {
   todoItem.setAttribute("autocapitalize", "off");
   todoItem.setAttribute("spellcheck", "false");
 
-  const check = document.createElement("div");
+  const checkbox = document.createElement("div");
   /* check.innerHTML = `<i class="fas fa-check-circle"></i>`; */
-  check.className = "check";
+  checkbox.className = "check";
   const paragraph = document.createElement("p");
   paragraph.className = "todo-text";
   paragraph.innerText = todoText;
@@ -87,13 +108,12 @@ function insertTodo() {
   const span = document.createElement("span");
   span.innerHTML = `<img src="./images/icon-cross.svg" alt="delete todo">`;
 
-  todoItem.appendChild(check);
+  todoItem.appendChild(checkbox);
   todoItem.appendChild(paragraph);
   span.className = "close";
   todoItem.appendChild(span);
   if (formControl.classList.contains("completed")) {
-    paragraph.classList.add("completed");
-    check.classList.add("completed");
+    checkbox.classList.add("completed");
     todoItem.classList.add("completed");
     counterItem.textContent = counter;
   } else {
@@ -103,6 +123,7 @@ function insertTodo() {
   saveLocalTodos(todoItem.innerHTML);
   todoList.appendChild(todoItem);
   todoInput.value = "";
+  document.querySelector(".check").className = "check";
 }
 
 // saveLocalStorage
@@ -145,14 +166,16 @@ function getTodos() {
 
 // toggle dark mode
 function toggleDarkMode(e) {
-  document.body.classList.toggle("dark");
+  document.body.classList.toggle("light");
 }
 
 // toggle check form
 function toggleCheckForm(e) {
   if (e.target.classList.contains("check")) {
     e.target.classList.toggle("completed");
+    console.log(e.target);
     e.target.parentElement.classList.toggle("completed");
+    console.log(e.target.parentElement);
   }
 }
 
