@@ -150,6 +150,7 @@ main {
   font-size: 0.7rem;
   bottom: 2px;
   right: 5px;
+  user-select: none;
 }
 
 .todo-list li {
@@ -177,7 +178,7 @@ main {
   margin-right: 40px;
   outline: none;
   margin-left: 24px;
-  min-width: 75%;
+  width: 75%;
 }
 
 .todo-list li span {
