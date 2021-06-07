@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+footer ul li:not(:nth-of-type(3)) {
+  margin-right: 30px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card:not(:nth-of-type(4)) {
+  margin-right: 40px;
+}
+
+.card span:nth-of-type(1) {
+  font-size: 6rem;
+}
+
+.card span:nth-of-type(2) {
+  font-size: 1.5rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 80px;
+}
+
+main {
+  margin-bottom: 180px;
+}
