@@ -334,12 +334,31 @@ body.light .todo-list li p:focus {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
+.todo-control .controls a {
+  color: var(--clr-dark-Dar-Grayis-Blue);
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 15px;
+}
 
-.todo-control .controls span:hover {
+.todo-control .clear a {
+  color: var(--clr-dark-Dar-Grayis-Blue);
+  outline: none;
+  text-decoration: none;
+}
+
+.todo-control .controls a.selected {
+  color: var(--clr-blue) !important;
+}
+
+.todo-control .controls a:hover,
+.todo-control .controls a:focus {
   color: var(--clr-dark-Ligh-Grayis-Blue);
 }
 
-.todo-control .clear span:hover {
+.todo-control .clear a:hover,
+.todo-control .clear a:focus {
   color: var(--clr-dark-Ligh-Grayis-Blue);
 }
 
@@ -352,14 +371,14 @@ body.light .todo-list li p:focus {
   user-select: none;
 }
 
+.todo-control a {
+  display: inline-block;
+  padding: 16px 0;
+}
+
 .todo-control div:nth-of-type(1) {
   cursor: default;
   user-select: none;
-}
-
-.todo-control span {
-  display: inline-block;
-  padding: 16px 0;
 }
 
 .todo.disabled {
@@ -390,18 +409,19 @@ footer a {
   color: rgb(133, 78, 78) !important;
   color: inherit;
   user-select: none;
+  outline: none;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #c94242 !important;
 }
 
 .msg {
   position: absolute;
   font-size: 0.778rem;
-  color: #c35f5f;
   top: 50px;
   left: 12.5%;
-}
-
-.selected {
-  color: var(--clr-blue);
 }
 
 body.light {

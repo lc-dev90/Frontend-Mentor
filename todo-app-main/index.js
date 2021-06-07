@@ -369,6 +369,7 @@ function reloadList() {
 }
 
 all.onclick = function () {
+  console.log("clico");
   if (completed.classList.contains("selected")) {
     completed.className = "";
   }
@@ -379,6 +380,7 @@ all.onclick = function () {
 };
 
 completed.onclick = function () {
+  console.log("clico");
   if (all.classList.contains("selected")) {
     all.className = "";
   }
@@ -389,6 +391,7 @@ completed.onclick = function () {
 };
 
 active.onclick = function () {
+  console.log("clico");
   if (all.classList.contains("selected")) {
     all.className = "";
   }
