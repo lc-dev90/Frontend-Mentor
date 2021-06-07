@@ -25,6 +25,10 @@ Challenge from fronendmentor.io
 ![](./design/active-states-light.jpg)
 ![](./design/desktop-design-dark.jpg)
 ![](./design/desktop-design-light.jpg)
+![](./design/desktop-design.jpg)
+![](./design/mobile-design-light.jpg)
+
+![](./design/mobile-design-dark.jpg)
 
 ## Technologies
 
