@@ -168,6 +168,16 @@ function getTodos() {
 
 // toggle dark mode
 function toggleDarkMode(e) {
+  const sun = "./images/icon-sun.svg";
+  const moon = "./images/icon-moon.svg";
+  if (
+    e.target.querySelector("img").getAttribute("src") ===
+    "./images/icon-sun.svg"
+  ) {
+    e.target.querySelector("img").setAttribute("src", moon);
+  } else {
+    e.target.querySelector("img").setAttribute("src", sun);
+  }
   document.body.classList.toggle("light");
 }
 
