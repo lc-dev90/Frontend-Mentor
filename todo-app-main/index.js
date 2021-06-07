@@ -1,7 +1,7 @@
 const todoInput = document.getElementById("todoInput");
 const form = document.getElementById("form");
 const todoList = document.getElementById("todo-list");
-const closes = document.querySelectorAll(".close");
+
 const counterItem = document.getElementById("counter");
 const clear = document.getElementById("clear");
 const toggle = document.getElementById("switch");
@@ -103,10 +103,12 @@ function insertTodo() {
   checkbox.setAttribute("tabindex", "0");
   checkbox.className = "check";
   const paragraph = document.createElement("p");
+  paragraph.setAttribute("tabindex", "0");
   paragraph.className = "todo-text";
   paragraph.innerText = todoText;
 
   const span = document.createElement("span");
+  span.setAttribute("tabindex", "0");
   span.innerHTML = `<img src="./images/icon-cross.svg" alt="delete todo">`;
 
   todoItem.appendChild(checkbox);
@@ -430,6 +432,7 @@ function deleteAll() {
 }
 
 document.body.onload = function () {
+  //check with keyboard
   const checks = document.querySelectorAll(".check");
   checks.forEach((check) => {
     check.addEventListener(
@@ -453,23 +456,3 @@ document.body.onload = function () {
     );
   });
 };
-/* 
-
-document.querySelector("main").addEventListener("focusin", function (e) {
-  if (e.target.classList.contains("check")) {
-    e.target.addEventListener("keypress", function (e) {
-      console.log("oi");
-      e.preventDefault();
-      if (e.key == " ") {
-        if (e.target.classList.contains("completed")) {
-          e.target.classList.remove("completed");
-          e.target.parentElement.classList.remove("completed");
-        } else {
-          e.target.classList.add("completed");
-          e.target.parentElement.classList.add("completed");
-        }
-      }
-    });
-  }
-});
- */

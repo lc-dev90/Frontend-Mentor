@@ -182,13 +182,6 @@ main {
 }
 
 .todo-list li p {
-  /*   user-select: none;
-  padding: 5px;
-  padding-top: 9px;
-  margin-right: 40px;
-  outline: none;
-  margin-left: 24px;
-  width: 75%; */
   user-select: none;
   padding: 5px;
   padding-top: 9px;
@@ -197,12 +190,25 @@ main {
   width: 70%;
 }
 
+.todo-list li p:focus {
+  color: white;
+}
+
+body.light .todo-list li p:focus {
+  color: rgb(151, 151, 151);
+}
+
 .todo-list li span {
   position: absolute;
   right: 0;
   height: 100%;
   width: 40px;
   cursor: pointer;
+  outline: none;
+}
+
+.todo-list li span:focus img {
+  display: block;
 }
 
 .todo-list li span img {
@@ -216,6 +222,12 @@ main {
 }
 
 .todo-list li:hover span img {
+  display: block;
+  animation-name: smooth;
+  animation-duration: 0.7s;
+}
+
+.todo-list li:focus span img {
   display: block;
   animation-name: smooth;
   animation-duration: 0.7s;
@@ -296,7 +308,6 @@ main {
 .todo-list li.editable {
   cursor: text;
   color: rgba(0, 0, 0, 0.795);
-  box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.247);
 }
 
 .todo-list li.editable p {
@@ -386,7 +397,7 @@ footer a {
   font-size: 0.778rem;
   color: #c35f5f;
   top: 50px;
-  left: 13%;
+  left: 12.5%;
 }
 
 .selected {
@@ -484,5 +495,9 @@ body.light .todo-list li.editable p {
     background-color: white;
     color: hsl(236, 9%, 61%);
     box-shadow: -1px 5px 40px 10px #00000021;
+  }
+
+  .msg {
+    left: 5%;
   }
 }
