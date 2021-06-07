@@ -23,6 +23,7 @@ todoList.addEventListener("click", controlTodo);
 todoControl.addEventListener("click", filterTodos);
 document.addEventListener("DOMContentLoaded", getTodos);
 
+// check if todo exists
 function checkAlready(value) {
   const todos = document.querySelectorAll(".todo");
   let indicator = false;
@@ -54,7 +55,6 @@ function checkTodoInputValue(e) {
     msg.textContent = "Please, enter your todo!";
     msg.style.display = "block";
   } else if (checkAlready(todoInput.value)) {
-    console.log(checkAlready(todoInput.value));
     formControl.className = "form-control error";
     msg.textContent = "You already have this todo!";
     msg.style.display = "block";
@@ -318,3 +318,33 @@ function reloadList() {
     saveLocalTodos(todo.innerHTML);
   });
 }
+
+all.onclick = function () {
+  if (completed.classList.contains("selected")) {
+    completed.className = "";
+  }
+  if (active.classList.contains("selected")) {
+    active.className = "";
+  }
+  all.classList.toggle("selected");
+};
+
+completed.onclick = function () {
+  if (all.classList.contains("selected")) {
+    all.className = "";
+  }
+  if (active.classList.contains("selected")) {
+    active.className = "";
+  }
+  completed.classList.toggle("selected");
+};
+
+active.onclick = function () {
+  if (all.classList.contains("selected")) {
+    all.className = "";
+  }
+  if (completed.classList.contains("selected")) {
+    completed.className = "";
+  }
+  active.classList.toggle("selected");
+};

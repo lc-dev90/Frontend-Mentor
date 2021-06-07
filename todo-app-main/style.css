@@ -341,3 +341,7 @@ footer div {
   top: 50px;
   left: 14%;
 }
+
+.selected {
+  color: var(--clr-blue);
+}
