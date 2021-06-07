@@ -15,7 +15,9 @@ const msg = document.getElementById("msg");
 const deleteTodos = document.getElementById("delete");
 
 let counter = 0;
-
+window.onresize = function () {
+  console.log(window.innerWidth);
+};
 form.addEventListener("submit", checkTodoInputValue);
 toggle.addEventListener("click", toggleDarkMode);
 formControl.addEventListener("click", toggleCheckForm);
@@ -179,6 +181,7 @@ function toggleDarkMode(e) {
   } else {
     e.target.querySelector("img").setAttribute("src", sun);
   }
+
   document.body.classList.toggle("light");
 }
 
@@ -186,9 +189,7 @@ function toggleDarkMode(e) {
 function toggleCheckForm(e) {
   if (e.target.classList.contains("check")) {
     e.target.classList.toggle("completed");
-    console.log(e.target);
     e.target.parentElement.classList.toggle("completed");
-    console.log(e.target.parentElement);
   }
 }
 

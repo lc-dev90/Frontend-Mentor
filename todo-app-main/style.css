@@ -172,13 +172,19 @@ main {
 }
 
 .todo-list li p {
-  user-select: none;
+  /*   user-select: none;
   padding: 5px;
   padding-top: 9px;
   margin-right: 40px;
   outline: none;
   margin-left: 24px;
-  width: 75%;
+  width: 75%; */
+  user-select: none;
+  padding: 5px;
+  padding-top: 9px;
+  outline: none;
+  margin-left: 20px;
+  width: 70%;
 }
 
 .todo-list li span {
@@ -242,7 +248,7 @@ main {
   content: "";
   position: absolute;
   border-radius: 50px;
-  width: 91%;
+  width: 92%;
   height: 91%;
   top: 1px;
   left: 1px;
@@ -429,6 +435,48 @@ body.light .check::before {
   background-color: white;
 }
 
-body.ligh .todo-list li {
+body.light .todo-list li {
   border-bottom: 1px solid rgba(128, 128, 128, 0.062);
+}
+
+body.light .todo-list li.editable p {
+  border-bottom: 1px solid rgba(143, 142, 142, 0.308);
+  color: rgb(94, 94, 94);
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    position: relative;
+  }
+  .todo-control {
+    position: relative;
+    bottom: 0;
+  }
+  .controls {
+    position: absolute;
+    background-color: #1f2739;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  footer {
+    position: absolute;
+    bottom: -200px;
+    padding-bottom: 30px;
+}
+  }
+  body.light header h1 {
+    font-size: 2rem;
+  }
+
+  body.light .controls {
+    background-color: white;
+    color: hsl(236, 9%, 61%);
+    box-shadow: -1px 5px 40px 10px #00000021;
+  }
 }
