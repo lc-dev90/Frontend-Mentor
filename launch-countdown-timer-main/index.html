@@ -9,6 +9,10 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | Launch countdown timer</title>
   </head>
@@ -17,10 +21,13 @@
       <h1>We're launching soon</h1>
     </header>
     <main>
-      <div class="card"><span>21</span><span>days</span></div>
-      <div class="card"><span>21</span><span>Hours</span></div>
-      <div class="card"><span>21</span><span>Minutes</span></div>
-      <div class="card"><span>21</span><span>Seconds</span></div>
+      <div class="card"><span id="days"></span><span>days</span></div>
+      <div class="card"><span id="hours"></span><span>Hours</span></div>
+      <div class="card"><span id="minutes"></span><span>Minutes</span></div>
+      <div class="card">
+        <span id="seconds" class="animate__animated animate__flipInX"></span
+        ><span>Seconds</span>
+      </div>
     </main>
     <footer>
       <ul>
@@ -41,5 +48,6 @@
         </li>
       </ul>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
