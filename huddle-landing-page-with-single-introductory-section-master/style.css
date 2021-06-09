@@ -24,7 +24,7 @@ body {
   background-color: var(--clr-violet);
   animation-name: smooth;
   animation-duration: 1s;
-  overflow: hidden;
+  
 }
 @keyframes smooth {
   0% {
