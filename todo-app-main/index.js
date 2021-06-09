@@ -460,3 +460,8 @@ document.body.onload = function () {
     );
   });
 };
+
+/* window.onresize = () => {
+  console.log(innerWidth);
+};
+ */
