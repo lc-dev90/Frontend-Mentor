@@ -3,8 +3,6 @@ const $inputLink = document.querySelector("#link");
 const $formControl = document.querySelector(".form-control");
 const $list = document.querySelector(".list");
 
-/* $list.addEventListener("click", copyLinkHandler); */
-
 const submitFormHandler = (event) => {
   event.preventDefault();
   if ($inputLink.value == "" || !isValidLink($inputLink.value)) {
@@ -26,6 +24,7 @@ const appenLinkToTheDom = async ({ original_link, full_short_link }) => {
   `;
   $list.appendChild($liItem);
 };
+
 const throwError = (msg) => {
   $formControl.classList.add("error");
   const small = $formControl.querySelector("small");
@@ -39,16 +38,19 @@ const isValidLink = (link) => {
   return link.match(regex);
 };
 
-/* function copyLinkHandler(e) {
-  const copyLink = e.target.parentElement.querySelector(
-    '[js-data="short-link"]'
-  );
-  const input = document.createElement("textarea");
-  input.value = copyLink.textContent;
-  input.select();
-  document.execCommand("copy");
-}
- */
+const copyLinkHandler = (event) => {
+  if (event.target.tagName === "BUTTON") {
+    const linkCoppied = event.target.parentElement
+      .querySelectorAll("a")[1]
+      .getAttribute("href");
+    const inputTemporary = document.createElement("input");
+    event.target.appendChild(inputTemporary);
+    inputTemporary.value = linkCoppied;
+    inputTemporary.select();
+    document.execCommand("copy");
+    inputTemporary.remove();
+  }
+};
 
 const createShortLink = async (link) => {
   const response = await fetch(`https://api.shrtco.de/v2/shorten?url=${link}`);
@@ -56,4 +58,5 @@ const createShortLink = async (link) => {
   appenLinkToTheDom(data.result);
 };
 
+$list.addEventListener("click", copyLinkHandler);
 $form.addEventListener("submit", submitFormHandler);
