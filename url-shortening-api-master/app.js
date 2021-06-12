@@ -3,6 +3,14 @@ const $inputLink = document.querySelector("#link");
 const $formControl = document.querySelector(".form-control");
 const $list = document.querySelector(".list");
 
+const localStorageLinks = JSON.parse(localStorage.getItem("links"));
+
+let links = localStorage.getItem("links") !== null ? localStorageLinks : [];
+
+const updateLocalStorage = () => {
+  localStorage.setItem("links", JSON.stringify(links));
+};
+
 const submitFormHandler = (event) => {
   event.preventDefault();
   if ($inputLink.value == "" || !isValidLink($inputLink.value)) {
@@ -55,8 +63,22 @@ const copyLinkHandler = (event) => {
 const createShortLink = async (link) => {
   const response = await fetch(`https://api.shrtco.de/v2/shorten?url=${link}`);
   const data = await response.json();
+  const linkShortened = {
+    id: data.result.code,
+    original_link: data.result.original_link,
+    full_short_link: data.result.full_short_link,
+  };
+  links.push(linkShortened);
   appenLinkToTheDom(data.result);
+  updateLocalStorage();
 };
 
 $list.addEventListener("click", copyLinkHandler);
 $form.addEventListener("submit", submitFormHandler);
+window.onload = () => {
+  if (links) {
+    links.forEach((link) => {
+      appenLinkToTheDom(link);
+    });
+  }
+};
