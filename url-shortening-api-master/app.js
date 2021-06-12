@@ -36,13 +36,23 @@ const appenLinkToTheDom = async ({ original_link, full_short_link }) => {
   const $liItem = document.createElement("li");
   $liItem.classList.add("list-item");
   $liItem.innerHTML = `
-    <a href="${original_link}" target="_blank"><span js-data="original-link">${original_link}</span></a>      
+    <span js-data="original-link">${original_link}</span>  
     <a href="${full_short_link}" target="_blank"><span js-data="short-link">${full_short_link}</span></a>
     <button js-data="button-copy">Copy</button>
+    <span class="close" onclick="removeLinkFromList(event)">
+      <i class="far fa-window-close"></i>
+    </span>
   `;
   removeAnimetedLoader();
 
   $list.appendChild($liItem);
+};
+
+const removeLinkFromList = (event) => {
+  const targetElement = event.target.parentElement.parentElement;
+  if (targetElement.tagName === "LI") {
+    console.log(targetElement);
+  }
 };
 
 const throwError = (msg) => {
@@ -62,7 +72,7 @@ const copyLinkHandler = (event) => {
   const targetElement = event.target;
   if (targetElement.tagName === "BUTTON") {
     const linkCoppied = event.target.parentElement
-      .querySelectorAll("a")[1]
+      .querySelectorAll("a")[0]
       .getAttribute("href");
     const inputTemporary = document.createElement("input");
     targetElement.appendChild(inputTemporary);
