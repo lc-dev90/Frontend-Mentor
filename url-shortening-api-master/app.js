@@ -2,6 +2,7 @@ const $form = document.querySelector("form");
 const $inputLink = document.querySelector("#link");
 const $formControl = document.querySelector(".form-control");
 const $list = document.querySelector(".list");
+const loader = document.querySelector(".loader");
 
 const localStorageLinks = JSON.parse(localStorage.getItem("links"));
 
@@ -22,6 +23,15 @@ const submitFormHandler = (event) => {
   $inputLink.value = "";
 };
 
+const displayAnimatedLoader = () => {
+  loader.classList.remove("hidden");
+  loader.style.display = "flex";
+};
+
+const removeAnimetedLoader = () => {
+  loader.classList.add("hidden");
+};
+
 const appenLinkToTheDom = async ({ original_link, full_short_link }) => {
   const $liItem = document.createElement("li");
   $liItem.classList.add("list-item");
@@ -30,6 +40,8 @@ const appenLinkToTheDom = async ({ original_link, full_short_link }) => {
     <a href="${full_short_link}" target="_blank"><span js-data="short-link">${full_short_link}</span></a>
     <button js-data="button-copy">Copy</button>
   `;
+  removeAnimetedLoader();
+
   $list.appendChild($liItem);
 };
 
@@ -61,20 +73,24 @@ const copyLinkHandler = (event) => {
 };
 
 const createShortLink = async (link) => {
+  displayAnimatedLoader();
   const response = await fetch(`https://api.shrtco.de/v2/shorten?url=${link}`);
   const data = await response.json();
+  // create objet link shortned to save local storage
   const linkShortened = {
     id: data.result.code,
     original_link: data.result.original_link,
     full_short_link: data.result.full_short_link,
   };
   links.push(linkShortened);
-  appenLinkToTheDom(data.result);
+  appenLinkToTheDom(linkShortened);
   updateLocalStorage();
 };
 
 $list.addEventListener("click", copyLinkHandler);
 $form.addEventListener("submit", submitFormHandler);
+
+// add links to dom if have local storage data persist
 window.onload = () => {
   if (links) {
     links.forEach((link) => {
