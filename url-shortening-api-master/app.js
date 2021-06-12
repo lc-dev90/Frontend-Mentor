@@ -44,14 +44,17 @@ const appenLinkToTheDom = async ({ original_link, full_short_link }) => {
     </span>
   `;
   removeAnimetedLoader();
-
   $list.appendChild($liItem);
 };
 
 const removeLinkFromList = (event) => {
   const targetElement = event.target.parentElement.parentElement;
   if (targetElement.tagName === "LI") {
-    console.log(targetElement);
+    const linkRemoved = targetElement.querySelector("a").getAttribute("href");
+    /* links = links.filter((link) => link.full_short_link != linkRemoved); */
+    links = links.filter((link) => link.full_short_link !== linkRemoved);
+    updateLocalStorage();
+    targetElement.remove();
   }
 };
 

@@ -147,6 +147,10 @@ ul li .close:hover {
   padding: 10px 20px;
 }
 
+ul li .close:hover {
+  color: red;
+}
+
 ul li a span {
   font-size: 1.1rem;
 }
