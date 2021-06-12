@@ -59,16 +59,18 @@ const isValidLink = (link) => {
 };
 
 const copyLinkHandler = (event) => {
-  if (event.target.tagName === "BUTTON") {
+  const targetElement = event.target;
+  if (targetElement.tagName === "BUTTON") {
     const linkCoppied = event.target.parentElement
       .querySelectorAll("a")[1]
       .getAttribute("href");
     const inputTemporary = document.createElement("input");
-    event.target.appendChild(inputTemporary);
+    targetElement.appendChild(inputTemporary);
     inputTemporary.value = linkCoppied;
     inputTemporary.select();
     document.execCommand("copy");
     inputTemporary.remove();
+    const small = targetElement.parentElement.querySelector("small");
   }
 };
 
@@ -76,7 +78,6 @@ const createShortLink = async (link) => {
   displayAnimatedLoader();
   const response = await fetch(`https://api.shrtco.de/v2/shorten?url=${link}`);
   const data = await response.json();
-  // create objet link shortned to save local storage
   const linkShortened = {
     id: data.result.code,
     original_link: data.result.original_link,

@@ -115,16 +115,40 @@ h1 {
 }
 
 ul li {
-  margin: 1.5rem 0;
-  display: flex;
+  padding: 0.8rem 2rem;
   justify-content: space-between;
   background-color: rgb(250, 243, 243);
+  display: flex;
+  margin: 1.5rem 0;
+  align-items: center;
+  position: relative;
 }
 
-ul li {
-  padding: 0.8rem 2rem;
-  display: flex;
-  align-items: center;
+ul li small {
+  position: absolute;
+  opacity: 0;
+  top: 6px;
+  right: 46px;
+  font-size: 0.7rem;
+}
+
+ul li .close {
+  display: none;
+  width: 50px;
+  text-align: right;
+  cursor: pointer;
+}
+
+ul li:hover .close,
+ul li .close:hover {
+  display: block;
+  font-size: 1.5rem;
+  color: rgba(49, 49, 49, 0.87);
+  position: absolute;
+
+  right: -35px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 ul li a span {
