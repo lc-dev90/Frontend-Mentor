@@ -1,4 +1,5 @@
 @import "../utilities/mixins";
+@import "../utilities/variables";
 
 nav .nav-logo {
   margin-right: 44px;
@@ -14,4 +15,16 @@ nav ul li:not(:last-of-type) {
 }
 
 nav ul li a {
+  @include link;
+}
+
+nav button:first-child {
+  @include link;
+  margin-right: 36px;
+  background-color: white;
+  font-weight: 700;
+}
+
+nav button:last-child {
+  @include button(50px);
 }

@@ -1,3 +1,5 @@
+@import "./variables";
+
 @mixin flexContainer($flexDirection, $alignItems, $justifyContent) {
   display: flex;
   flex-direction: $flexDirection;
@@ -8,4 +10,19 @@
 @mixin container {
   max-width: 1118px;
   margin: 0 auto;
+}
+
+@mixin link {
+  color: $clr-neutral-violet-gray;
+  font-weight: $fw-medium;
+  cursor: pointer;
+}
+
+@mixin button($border-radius) {
+  background-color: $clr-primary-cyan;
+  border-radius: $border-radius;
+  padding: 10px 27px;
+  font-weight: $fw-bold;
+  color: white;
+  cursor: pointer;
 }

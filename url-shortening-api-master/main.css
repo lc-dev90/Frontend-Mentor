@@ -25,6 +25,21 @@ input {
   border: none;
 }
 
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ## Colors */
+/* ### Primary */
+/* ### Secondary */
+/* ### Neutral */
+/* ### typography */
+/* ### Weights */
+/* ### Font-size */
 nav {
   max-width: 1118px;
   margin: 0 auto;
@@ -44,6 +59,20 @@ nav {
   padding-top: 52px;
 }
 
+/* ## Colors */
+/* ### Primary */
+/* ### Secondary */
+/* ### Neutral */
+/* ### typography */
+/* ### Weights */
+/* ### Font-size */
+/* ## Colors */
+/* ### Primary */
+/* ### Secondary */
+/* ### Neutral */
+/* ### typography */
+/* ### Weights */
+/* ### Font-size */
 nav .nav-logo {
   margin-right: 44px;
 }
@@ -69,5 +98,29 @@ nav ul {
 
 nav ul li:not(:last-of-type) {
   margin-right: 2rem;
+}
+
+nav ul li a {
+  color: #9e9aa7;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+nav button:first-child {
+  color: #9e9aa7;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 36px;
+  background-color: white;
+  font-weight: 700;
+}
+
+nav button:last-child {
+  background-color: #2acfcf;
+  border-radius: 50px;
+  padding: 10px 27px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */
