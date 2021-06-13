@@ -1,5 +1,7 @@
 @import "../utilities/mixins";
 
 nav {
-  @include flexContainer(row, center, center);
+  @include container;
+  @include flexContainer(row, center, space-between);
+  padding-top: 52px;
 }

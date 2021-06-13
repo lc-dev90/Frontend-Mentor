@@ -1,0 +1,17 @@
+@import "../utilities/mixins";
+
+nav .nav-logo {
+  margin-right: 44px;
+}
+
+nav ul {
+  @include flexContainer(row, center, flex-start);
+  flex: 1;
+}
+
+nav ul li:not(:last-of-type) {
+  margin-right: 2rem;
+}
+
+nav ul li a {
+}

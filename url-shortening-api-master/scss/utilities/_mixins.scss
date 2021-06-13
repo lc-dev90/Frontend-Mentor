@@ -4,3 +4,8 @@
   align-items: $alignItems;
   justify-content: $justifyContent;
 }
+
+@mixin container {
+  max-width: 1118px;
+  margin: 0 auto;
+}
