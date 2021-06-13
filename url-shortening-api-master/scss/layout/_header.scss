@@ -1,0 +1,43 @@
+@import "../utilities/mixins";
+
+header {
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
+  overflow: hidden;
+}
+
+header div {
+  @include container;
+  padding-top: 145px;
+  overflow: hidden;
+  margin-bottom: 140px;
+}
+
+header::after {
+  content: url(../../images/illustration-working.svg);
+  position: absolute;
+  top: 62px;
+  right: -117px;
+}
+
+header div h1 {
+  font-size: 4.85rem;
+  letter-spacing: -3px;
+  color: $clr-neutral-light-dark;
+  max-width: 560px;
+  line-height: 1.14;
+}
+
+header div p {
+  color: $clr-neutral-violet-gray;
+  font-size: $fs-default;
+  max-width: 500px;
+  font-size: 21px;
+  margin-bottom: 37px;
+}
+
+header div button {
+  @include button(50px);
+  font-size: 18px;
+}

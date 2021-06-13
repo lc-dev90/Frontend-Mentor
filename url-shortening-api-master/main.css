@@ -66,6 +66,61 @@ nav {
 /* ### typography */
 /* ### Weights */
 /* ### Font-size */
+header {
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
+  overflow: hidden;
+}
+
+header div {
+  max-width: 1118px;
+  margin: 0 auto;
+  padding-top: 145px;
+  overflow: hidden;
+  margin-bottom: 140px;
+}
+
+header::after {
+  content: url(../../images/illustration-working.svg);
+  position: absolute;
+  top: 62px;
+  right: -117px;
+}
+
+header div h1 {
+  font-size: 4.85rem;
+  letter-spacing: -3px;
+  color: #232127;
+  max-width: 560px;
+  line-height: 1.14;
+}
+
+header div p {
+  color: #9e9aa7;
+  font-size: 18px;
+  max-width: 500px;
+  font-size: 21px;
+  margin-bottom: 37px;
+}
+
+header div button {
+  background-color: #2acfcf;
+  border-radius: 50px;
+  padding: 10px 27px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* ## Colors */
+/* ### Primary */
+/* ### Secondary */
+/* ### Neutral */
+/* ### typography */
+/* ### Weights */
+/* ### Font-size */
 /* ## Colors */
 /* ### Primary */
 /* ### Secondary */
