@@ -22,9 +22,11 @@ nav button:first-child {
   @include link;
   margin-right: 36px;
   background-color: white;
-  font-weight: 700;
+  /* font-weight: 700; */
+  font-size: 16px;
 }
 
 nav button:last-child {
   @include button(50px);
+  font-size: 16px;
 }
