@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC;AACD,CAAC,AAAA,OAAO;AACR,CAAC,AAAA,QAAQ,CAAC;EACR,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;EACtB,OAAO,EAAE,IAAI;CACd;;AAED,AAAA,CAAC,CAAC;EACA,eAAe,EAAE,IAAI;EACrB,KAAK,EAAE,KAAK;CACb;;AAED,AAAA,EAAE,CAAC;EACD,UAAU,EAAE,IAAI;CACjB;;AAED,AAAA,MAAM,CAAC;EACL,MAAM,EAAE,IAAI;CACb;;AAED,AAAA,KAAK,CAAC;EACJ,MAAM,EAAE,IAAI;CACb;;ACtBD,AAAA,GAAG,CAAC;ECDF,OAAO,EAAE,IAAI;EACb,cAAc,EDCS,GAAG;ECA1B,WAAW,EDAiB,MAAM;ECClC,eAAe,EDDqB,MAAM;CAC3C",
+    "sources": [
+        "main.scss",
+        "scss/base/_reset.scss",
+        "scss/layout/_navigation.scss",
+        "scss/utilities/_mixins.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
