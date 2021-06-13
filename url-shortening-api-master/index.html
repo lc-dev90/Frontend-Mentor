@@ -2,96 +2,129 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <title>Document</title>
   </head>
   <body>
-    <h1>URL Shortener</h1>
+    <nav>
+      <div class="nav-logo">
+        <a href="#">
+          <img src="./images/logo.svg" alt="Logo" />
+        </a>
+      </div>
+      <ul>
+        <li><a href="#">Feaures</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Resources</a></li>
+      </ul>
+      <div class="nav-access">
+        <button>Login</button>
+        <button>Sign Up</button>
+      </div>
+      <div class="hamburguer"></div>
+    </nav>
     <main>
-      <div class="container">
-        <form>
-          <div class="form-control">
-            <label for="link">
-              <input
-                type="text"
-                id="link"
-                placeholder="Shorten a link here..."
-              />
-            </label>
-            <button type="submit">Shorten it!</button>
-            <small></small>
-          </div>
-        </form>
-        <div class="loader">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+      <header>
+        <div>
+          <h1>More than just shorter links</h1>
+          <p>
+            Build your brand's recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <button>Get Started</button>
         </div>
-
-        <ul class="list">
-          <li class="list-item">
-            <span js-data="original-link">http://www.youtube.com.br</span>
-            <a href="https://rel.link/gob3X9">
-              <span js-data="short-link">https://rel.link/xxxgob3X9</span>
-            </a>
-            <button>Copy</button>
-            <span class="close" onclick="removeLinkFromList(event)"
-              ><i class="far fa-window-close"></i
-            ></span>
+      </header>
+      <div>
+        <form>
+          <label for="input-link">
+            <input type="text" placeholder="Shorten a link here..." />
+          </label>
+          <button type="submit">Shorten it!</button>
+        </form>
+      </div>
+      <section>
+        <div>
+          <h2>Advanced Statistics</h2>
+          <p>
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
+        </div>
+        <div>
+          <div class="card">
+            <h3>Brand Recognition</h3>
+            <p>
+              Boost your brand recognition with each click. Generic links don't
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Detailed Records</h3>
+            <p>
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Fully Customizable</h3>
+            <p>
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Boost your links today</h2>
+        <button>Get Started</button>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <a href="#">
+          <img src="./images/logo.svg" alt="Logo" />
+        </a>
+      </div>
+      <div>
+        <ul>
+          <li><a href="">Features</a></li>
+          <li><a href="">Link Shortening</a></li>
+          <li><a href="">Branded Links</a></li>
+          <li><a href="">Analytics</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Resources</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Developers</a></li>
+          <li><a href="">Support</a></li>
+        </ul>
+        <ul>
+          <li><a href="">Company</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Out Team</a></li>
+          <li><a href="">Carrers</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>
+            <a href="#"><img src="./images/icon-facebook.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./images/icon-twitter.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./images/icon-pinterest.svg" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="./images/icon-instagram.svg" alt="" /></a>
           </li>
         </ul>
       </div>
-    </main>
-
-    <!-- 
-    Features Pricing Resources Login Sign Up More than just shorter links Build
-    your brand’s recognition and get detailed insights on how your links are
-    performing. Get Started Shorten a link here... Shorten It! Advanced
-    Statistics Track how your links are performing across the web with our
-    advanced statistics dashboard. Brand Recognition Boost your brand
-    recognition with each click. Generic links don’t mean a thing. Branded links
-    help instil confidence in your content. Detailed Records Gain insights into
-    who is clicking your links. Knowing when and where people engage with your
-    content helps inform better decisions. Fully Customizable Improve brand
-    awareness and content discoverability through customizable links,
-    supercharging audience engagement. Boost your links today Get Started
-    Features Link Shortening Branded Links Analytics Resources Blog Developers
-    Support Company About Our Team Careers Contact -->
-    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-    <!--     <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script> -->
-    <script src="app.js"></script>
+    </footer>
   </body>
 </html>
