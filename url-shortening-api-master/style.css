@@ -193,7 +193,7 @@ ul li button:active {
   display: none;
   justify-content: center;
   background: white;
-  padding: 70px;
+  padding: 30px 70px;
   animation: fadeIn 1.3s;
   animation-fill-mode: forwards;
   opacity: 1;
@@ -205,11 +205,11 @@ ul li button:active {
     padding: 0;
   }
   50% {
-    padding: 70px;
+    padding: 50px 70px;
   }
   100% {
     opacity: 1;
-    padding: 70px;
+    padding: 50px 70px;
   }
 }
 

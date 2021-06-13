@@ -50,28 +50,11 @@ const appenLinkToTheDom = async ({ original_link, full_short_link }) => {
 const removeLinkFromList = (event) => {
   const targetElement = event.target.parentElement.parentElement;
   if (targetElement.tagName === "LI") {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire("Deleted!", "Your link has been deleted.", "success");
-        const linkRemoved = targetElement
-          .querySelector("a")
-          .getAttribute("href");
-        /* links = links.filter((link) => link.full_short_link != linkRemoved); */
-        links = links.filter((link) => link.full_short_link !== linkRemoved);
-        updateLocalStorage();
-        targetElement.remove();
-      } else {
-        Swal.fire("Cancelled", "Your link is safe", "error");
-      }
-    });
+    const linkRemoved = targetElement.querySelector("a").getAttribute("href");
+    links = links.filter((link) => link.full_short_link !== linkRemoved);
+    updateLocalStorage();
+    targetElement.remove();
+    alertify.error("Removed!", 1.3);
   }
 };
 
