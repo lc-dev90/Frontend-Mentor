@@ -3,12 +3,25 @@
 
 .boost {
   @include flexContainer(column, center, center);
-  background-color: $clr-primary-violet;
+
   color: white;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: $clr-primary-violet;
+    background-image: url(../../images/bg-boost-desktop.svg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+  }
 
   h2 {
-    padding-top: 70px;
-    padding-bottom: 27px;
+    padding-top: 65px;
+    padding-bottom: 25px;
     font-size: 2.25rem;
   }
 
@@ -16,6 +29,6 @@
     @include button(50px);
     padding: 14px 38px;
     font-size: 19px;
-    margin-bottom: 57px;
+    margin-bottom: 54px;
   }
 }
