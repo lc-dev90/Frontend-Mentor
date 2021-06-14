@@ -25,4 +25,8 @@
   font-weight: $fw-bold;
   color: white;
   cursor: pointer;
+
+  &:hover {
+    background-color: $clr-primary-cyan-hover;
+  }
 }
