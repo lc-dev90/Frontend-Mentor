@@ -46,7 +46,7 @@ const appenLinkToTheDom = async ({ original_link, full_short_link }) => {
     <a href="${full_short_link}" target="_blank"><span js-data="short-link">${full_short_link}</span></a>
     <button js-data="button-copy">Copy</button>
     <span class="close" onclick="removeLinkFromList(event)">
-      <i class="far fa-window-close"></i>
+      <i class="fas fa-times"></i>
     </span>
   `;
   removeAnimetedLoader();
@@ -89,7 +89,6 @@ const copyLinkHandler = (event) => {
     inputTemporary.select();
     document.execCommand("copy");
     inputTemporary.remove();
-    alertify.success("Coppied!", 1.3);
   }
 };
 

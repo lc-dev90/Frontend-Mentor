@@ -40,20 +40,6 @@
   cursor: pointer;
 }
 
-.list li:hover .close,
-.list li .close:hover {
-  display: block;
-  font-size: 1.5rem;
-  color: rgba(49, 49, 49, 0.87);
-  position: absolute;
-  right: -60px;
-  padding: 10px 20px;
-}
-
-.list li .close:hover {
-  color: red;
-}
-
 .list li a span {
   font-size: 19.5px;
 }
@@ -88,4 +74,18 @@
 
 .list li button:active {
   transform: scale(0.95);
+}
+
+.list li:hover .close,
+.list li .close:hover {
+  display: block;
+  font-size: 1.1rem;
+  color: rgba(49, 49, 49, 0.87);
+  position: absolute;
+  right: 3px;
+  top: -3px;
+}
+
+.list li .close:hover {
+  color: red;
 }
