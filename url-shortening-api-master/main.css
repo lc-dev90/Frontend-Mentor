@@ -68,6 +68,7 @@ nav {
 /* ### Font-size */
 header {
   position: relative;
+  padding-bottom: 98px;
   max-width: 1440px;
   margin: auto;
   overflow: hidden;
@@ -121,6 +122,86 @@ header div button {
 /* ### typography */
 /* ### Weights */
 /* ### Font-size */
+section {
+  background-color: #eff1f5;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+/* ## Colors */
+/* ### Primary */
+/* ### Secondary */
+/* ### Neutral */
+/* ### typography */
+/* ### Weights */
+/* ### Font-size */
+/* ## Colors */
+/* ### Primary */
+/* ### Secondary */
+/* ### Neutral */
+/* ### typography */
+/* ### Weights */
+/* ### Font-size */
+nav .nav-logo {
+  margin-right: 44px;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+nav ul li:not(:last-of-type) {
+  margin-right: 2rem;
+}
+
+nav ul li a {
+  color: #9e9aa7;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+nav button:first-child {
+  color: #9e9aa7;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 36px;
+  background-color: white;
+  /* font-weight: 700; */
+  font-size: 16px;
+}
+
+nav button:last-child {
+  background-color: #2acfcf;
+  border-radius: 50px;
+  padding: 10px 27px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ## Colors */
+/* ### Primary */
+/* ### Secondary */
+/* ### Neutral */
+/* ### typography */
+/* ### Weights */
+/* ### Font-size */
 /* ## Colors */
 /* ### Primary */
 /* ### Secondary */
@@ -150,6 +231,8 @@ header div button {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  -webkit-transform: translateY(-93px);
+          transform: translateY(-93px);
 }
 
 .form-control::after {
@@ -238,56 +321,304 @@ header div button {
 /* ### typography */
 /* ### Weights */
 /* ### Font-size */
-nav .nav-logo {
-  margin-right: 44px;
+section div:nth-of-type(2) {
+  -webkit-transform: translateY(-93px);
+          transform: translateY(-93px);
 }
 
-nav ul {
+.list {
+  max-width: 1118px;
+  margin: 0 auto;
+}
+
+.list li {
+  padding: 0.8rem 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  color: #232127;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  margin: 1.5rem 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  position: relative;
+  font-size: 18px;
+}
+
+.list li small {
+  position: absolute;
+  opacity: 0;
+  top: 6px;
+  right: 46px;
+  font-size: 0.7rem;
+}
+
+.list li .close {
+  display: none;
+  text-align: right;
+  cursor: pointer;
+}
+
+.list li:hover .close,
+.list li .close:hover {
+  display: block;
+  font-size: 1.5rem;
+  color: rgba(49, 49, 49, 0.87);
+  position: absolute;
+  right: -60px;
+  padding: 10px 20px;
+}
+
+.list li .close:hover {
+  color: red;
+}
+
+.list li a span {
+  font-size: 1.1rem;
+}
+
+.list li span {
+  font-size: 18px;
+  font-weight: 500;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-nav ul li:not(:last-of-type) {
-  margin-right: 2rem;
+.list li a:nth-of-type(1) {
+  color: #2acfcf;
+  font-weight: bolder;
 }
 
-nav ul li a {
-  color: #9e9aa7;
-  font-weight: 500;
+.list li a:nth-of-type(1):hover,
+.list li a:nth-of-type(1):focus {
+  color: #2acfcf;
+  -webkit-transform: scale(1.009);
+          transform: scale(1.009);
+}
+
+.list li button {
+  padding: 10px 20px;
+  margin-left: 15px;
+  background-color: #a8dbdb;
   cursor: pointer;
 }
 
-nav button:first-child {
-  color: #9e9aa7;
-  font-weight: 500;
-  cursor: pointer;
-  margin-right: 36px;
-  background-color: white;
-  /* font-weight: 700; */
-  font-size: 16px;
+.list li button:focus,
+.list li button:hover {
+  -webkit-box-shadow: 1px 1px 10px rgba(212, 201, 201, 0.815);
+          box-shadow: 1px 1px 10px rgba(212, 201, 201, 0.815);
 }
 
-nav button:last-child {
-  background-color: #2acfcf;
-  border-radius: 50px;
-  padding: 10px 27px;
-  font-weight: 700;
-  color: white;
-  cursor: pointer;
-  font-size: 16px;
+.list li button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.loader {
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  padding: 30px 70px;
+  -webkit-animation: fadeIn 1.3s;
+          animation: fadeIn 1.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    padding: 0;
+  }
+  50% {
+    padding: 50px 70px;
+  }
+  100% {
+    opacity: 1;
+    padding: 50px 70px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    padding: 0;
+  }
+  50% {
+    padding: 50px 70px;
+  }
+  100% {
+    opacity: 1;
+    padding: 50px 70px;
+  }
+}
+
+.loader.hidden {
+  -webkit-animation: fadeOut 1.3s;
+          animation: fadeOut 1.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  50% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  50% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.loader span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #eee;
+  border-radius: 50%;
+  margin: 0 5px;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.loader span:nth-child(2) {
+  background: #f07e6e;
+}
+
+.loader span:nth-child(3) {
+  background: #84cdfa;
+}
+
+.loader span:nth-child(4) {
+  background: #5ad1cd;
+}
+
+.loader span:not(:last-child) {
+  -webkit-animation: animate 1.5s linear infinite;
+          animation: animate 1.5s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+}
+
+.loader span:last-child {
+  -webkit-animation: jump 1.5s ease-in-out infinite;
+          animation: jump 1.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(10px, -10px);
+            transform: translate(10px, -10px);
+  }
+  20% {
+    -webkit-transform: translate(20px, 10px);
+            transform: translate(20px, 10px);
+  }
+  30% {
+    -webkit-transform: translate(30px, -50px);
+            transform: translate(30px, -50px);
+  }
+  70% {
+    -webkit-transform: translate(-150px, -50px);
+            transform: translate(-150px, -50px);
+  }
+  80% {
+    -webkit-transform: translate(-140px, 10px);
+            transform: translate(-140px, 10px);
+  }
+  90% {
+    -webkit-transform: translate(-130px, -10px);
+            transform: translate(-130px, -10px);
+  }
+  100% {
+    -webkit-transform: translate(-120px, 0);
+            transform: translate(-120px, 0);
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  10% {
+    -webkit-transform: translate(10px, -10px);
+            transform: translate(10px, -10px);
+  }
+  20% {
+    -webkit-transform: translate(20px, 10px);
+            transform: translate(20px, 10px);
+  }
+  30% {
+    -webkit-transform: translate(30px, -50px);
+            transform: translate(30px, -50px);
+  }
+  70% {
+    -webkit-transform: translate(-150px, -50px);
+            transform: translate(-150px, -50px);
+  }
+  80% {
+    -webkit-transform: translate(-140px, 10px);
+            transform: translate(-140px, 10px);
+  }
+  90% {
+    -webkit-transform: translate(-130px, -10px);
+            transform: translate(-130px, -10px);
+  }
+  100% {
+    -webkit-transform: translate(-120px, 0);
+            transform: translate(-120px, 0);
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,86 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
+section div:nth-of-type(2) {
+  transform: translateY(-93px);
+}
+
+.list {
+  @include container;
+}
+
+.list li {
+  padding: 0.8rem 2rem;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  color: $clr-neutral-light-dark;
+  display: flex;
+  margin: 1.5rem 0;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+}
+
+.list li small {
+  position: absolute;
+  opacity: 0;
+  top: 6px;
+  right: 46px;
+  font-size: 0.7rem;
+}
+
+.list li .close {
+  display: none;
+  text-align: right;
+  cursor: pointer;
+}
+
+.list li:hover .close,
+.list li .close:hover {
+  display: block;
+  font-size: 1.5rem;
+  color: rgba(49, 49, 49, 0.87);
+  position: absolute;
+  right: -60px;
+  padding: 10px 20px;
+}
+
+.list li .close:hover {
+  color: red;
+}
+
+.list li a span {
+  font-size: 1.1rem;
+}
+
+.list li span {
+  font-size: 18px;
+  font-weight: $fw-medium;
+  flex: 1;
+}
+
+.list li a:nth-of-type(1) {
+  color: $clr-primary-cyan;
+  font-weight: bolder;
+}
+.list li a:nth-of-type(1):hover,
+.list li a:nth-of-type(1):focus {
+  color: $clr-primary-cyan;
+  transform: scale(1.009);
+}
+
+.list li button {
+  padding: 10px 20px;
+  margin-left: 15px;
+  background-color: rgb(168, 219, 219);
+  cursor: pointer;
+}
+
+.list li button:focus,
+.list li button:hover {
+  box-shadow: 1px 1px 10px rgba(212, 201, 201, 0.815);
+}
+
+.list li button:active {
+  transform: scale(0.95);
+}
