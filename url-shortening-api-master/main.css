@@ -840,4 +840,16 @@ nav button:last-child {
   padding-bottom: 27px;
   font-size: 2.25rem;
 }
+
+.boost button {
+  background-color: #2acfcf;
+  border-radius: 50px;
+  padding: 10px 27px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  padding: 14px 38px;
+  font-size: 19px;
+  margin-bottom: 57px;
+}
 /*# sourceMappingURL=main.css.map */

@@ -11,4 +11,11 @@
     padding-bottom: 27px;
     font-size: 2.25rem;
   }
+
+  button {
+    @include button(50px);
+    padding: 14px 38px;
+    font-size: 19px;
+    margin-bottom: 57px;
+  }
 }
