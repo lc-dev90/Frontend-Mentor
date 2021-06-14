@@ -12,6 +12,21 @@
   overflow: hidden;
   transform: translateY(-93px);
 
+  &.error {
+    small {
+      display: block;
+    }
+    label {
+      input {
+        border-color: $clr-secondary-red;
+        &::placeholder {
+          color: $clr-secondary-red;
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+
   &::after {
     content: "";
     background-image: url(../../images/bg-shorten-desktop.svg);
@@ -26,30 +41,40 @@
   form {
     @include flexContainer(row, center, center);
     width: 100%;
-  }
+    position: relative;
 
-  label {
-    flex: 1;
-  }
+    small {
+      position: absolute;
+      left: 0;
+      bottom: -31px;
+      font-style: italic;
+      font-size: 18px;
+      color: $clr-secondary-red;
+    }
 
-  button {
-    @include button(10px);
-    padding: 16px 41px;
-    font-size: 18px;
-    margin-left: 24px;
-  }
+    label {
+      flex: 1;
+    }
 
-  input {
-    width: 100%;
-    padding: 16px 32px;
-    font-size: 18px;
-    font-weight: 700;
-    border-radius: 10px;
-    height: 59px;
-    border: 1px solid transparent;
+    button {
+      @include button(10px);
+      padding: 16px 41px;
+      font-size: 18px;
+      margin-left: 24px;
+    }
 
-    &::placeholder {
-      color: $clr-neutral-violet-gray;
+    input {
+      width: 100%;
+      padding: 16px 32px;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 10px;
+      height: 59px;
+      border: 1px solid transparent;
+
+      &::placeholder {
+        color: $clr-neutral-violet-gray;
+      }
     }
   }
 }

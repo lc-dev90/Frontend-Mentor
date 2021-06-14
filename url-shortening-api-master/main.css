@@ -340,6 +340,34 @@ nav button:last-child {
           transform: translateY(-93px);
 }
 
+.form-control.error small {
+  display: block;
+}
+
+.form-control.error label input {
+  border-color: #f46262;
+}
+
+.form-control.error label input::-webkit-input-placeholder {
+  color: #f46262;
+  opacity: 0.4;
+}
+
+.form-control.error label input:-ms-input-placeholder {
+  color: #f46262;
+  opacity: 0.4;
+}
+
+.form-control.error label input::-ms-input-placeholder {
+  color: #f46262;
+  opacity: 0.4;
+}
+
+.form-control.error label input::placeholder {
+  color: #f46262;
+  opacity: 0.4;
+}
+
 .form-control::after {
   content: "";
   background-image: url(../../images/bg-shorten-desktop.svg);
@@ -366,15 +394,25 @@ nav button:last-child {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  position: relative;
 }
 
-.form-control label {
+.form-control form small {
+  position: absolute;
+  left: 0;
+  bottom: -31px;
+  font-style: italic;
+  font-size: 18px;
+  color: #f46262;
+}
+
+.form-control form label {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.form-control button {
+.form-control form button {
   background-color: #2acfcf;
   border-radius: 10px;
   padding: 10px 27px;
@@ -386,7 +424,7 @@ nav button:last-child {
   margin-left: 24px;
 }
 
-.form-control input {
+.form-control form input {
   width: 100%;
   padding: 16px 32px;
   font-size: 18px;
@@ -396,19 +434,19 @@ nav button:last-child {
   border: 1px solid transparent;
 }
 
-.form-control input::-webkit-input-placeholder {
+.form-control form input::-webkit-input-placeholder {
   color: #9e9aa7;
 }
 
-.form-control input:-ms-input-placeholder {
+.form-control form input:-ms-input-placeholder {
   color: #9e9aa7;
 }
 
-.form-control input::-ms-input-placeholder {
+.form-control form input::-ms-input-placeholder {
   color: #9e9aa7;
 }
 
-.form-control input::placeholder {
+.form-control form input::placeholder {
   color: #9e9aa7;
 }
 
