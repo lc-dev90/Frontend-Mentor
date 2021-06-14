@@ -1,14 +1,18 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
 .loader {
   text-align: center;
   vertical-align: middle;
   position: relative;
   display: none;
   justify-content: center;
-  background: white;
+  background: $clr-neutral-section;
   padding: 30px 70px;
   animation: fadeIn 1.3s;
   animation-fill-mode: forwards;
   opacity: 1;
+  transform: translateY(-90px);
 }
 
 @keyframes fadeIn {
@@ -47,7 +51,7 @@
   display: block;
   width: 20px;
   height: 20px;
-  background: #eee;
+  background: $clr-neutral-section;
   border-radius: 50%;
   margin: 0 5px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);

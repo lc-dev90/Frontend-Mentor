@@ -15,9 +15,11 @@ const updateLocalStorage = () => {
 const submitFormHandler = (event) => {
   event.preventDefault();
   if ($inputLink.value == "") {
+    $inputLink.value = "";
     throwError("Please, add a link!");
     return;
   } else if (!isValidLink($inputLink.value)) {
+    $inputLink.value = "";
     throwError("Please, enter valid a link!");
     return;
   }
