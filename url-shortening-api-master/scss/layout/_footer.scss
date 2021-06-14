@@ -1,0 +1,11 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
+footer {
+  background-color: $clr-neutral-light-dark;
+  color: white;
+
+  a {
+    color: white;
+  }
+}

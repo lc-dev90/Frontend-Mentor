@@ -141,6 +141,29 @@ section {
 /* ### typography */
 /* ### Weights */
 /* ### Font-size */
+footer {
+  background-color: #232127;
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+/* ## Colors */
+/* ### Primary */
+/* ### Secondary */
+/* ### Neutral */
+/* ### typography */
+/* ### Weights */
+/* ### Font-size */
+/* ## Colors */
+/* ### Primary */
+/* ### Secondary */
+/* ### Neutral */
+/* ### typography */
+/* ### Weights */
+/* ### Font-size */
 nav .nav-logo {
   margin-right: 44px;
 }
