@@ -2,43 +2,43 @@
 
 header {
   position: relative;
-  padding-bottom: 98px;
   max-width: 1440px;
   margin: auto;
   overflow: hidden;
-}
+  padding-bottom: 93px;
 
-header div {
-  @include container;
-  padding-top: 145px;
-  overflow: hidden;
-  margin-bottom: 140px;
-}
+  div {
+    @include container;
+    padding-top: 145px;
+    overflow: hidden;
+    margin-bottom: 140px;
 
-header::after {
-  content: url(../../images/illustration-working.svg);
-  position: absolute;
-  top: 62px;
-  right: -117px;
-}
+    h1 {
+      font-size: 4.85rem;
+      letter-spacing: -3px;
+      color: $clr-neutral-light-dark;
+      max-width: 560px;
+      line-height: 1.14;
+    }
 
-header div h1 {
-  font-size: 4.85rem;
-  letter-spacing: -3px;
-  color: $clr-neutral-light-dark;
-  max-width: 560px;
-  line-height: 1.14;
-}
+    p {
+      color: $clr-neutral-violet-gray;
+      font-size: $fs-default;
+      max-width: 500px;
+      font-size: 21px;
+      margin-bottom: 37px;
+    }
 
-header div p {
-  color: $clr-neutral-violet-gray;
-  font-size: $fs-default;
-  max-width: 500px;
-  font-size: 21px;
-  margin-bottom: 37px;
-}
+    button {
+      @include button(50px);
+      font-size: 18px;
+    }
+  }
 
-header div button {
-  @include button(50px);
-  font-size: 18px;
+  &::after {
+    content: url(../../images/illustration-working.svg);
+    position: absolute;
+    top: 62px;
+    right: -117px;
+  }
 }
