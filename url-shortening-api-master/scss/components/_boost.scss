@@ -1,0 +1,14 @@
+@import "../utilities/mixins";
+@import "../utilities/variables";
+
+.boost {
+  @include flexContainer(column, center, center);
+  background-color: $clr-primary-violet;
+  color: white;
+
+  h2 {
+    padding-top: 70px;
+    padding-bottom: 27px;
+    font-size: 2.25rem;
+  }
+}

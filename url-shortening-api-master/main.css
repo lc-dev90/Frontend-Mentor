@@ -773,6 +773,8 @@ nav button:last-child {
   height: 8px;
   right: -34px;
   z-index: 0;
+  -webkit-transform: translateY(-41px);
+          transform: translateY(-41px);
 }
 
 .cards .card:nth-of-type(3) {
@@ -799,5 +801,43 @@ nav button:last-child {
 
 .cards .card:not(:nth-of-type(3)) {
   margin-right: 30px;
+}
+
+/* ## Colors */
+/* ### Primary */
+/* ### Secondary */
+/* ### Neutral */
+/* ### typography */
+/* ### Weights */
+/* ### Font-size */
+/* ## Colors */
+/* ### Primary */
+/* ### Secondary */
+/* ### Neutral */
+/* ### typography */
+/* ### Weights */
+/* ### Font-size */
+.boost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #3b3054;
+  color: white;
+}
+
+.boost h2 {
+  padding-top: 70px;
+  padding-bottom: 27px;
+  font-size: 2.25rem;
 }
 /*# sourceMappingURL=main.css.map */
