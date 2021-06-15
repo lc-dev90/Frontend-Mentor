@@ -2,7 +2,7 @@
 
 header {
   position: relative;
-  width: 100vw;
+  max-width: 100vw;
   overflow: hidden;
   padding: 0 5%;
   margin: auto;
@@ -49,10 +49,44 @@ header {
   }
 }
 
-/* @media screen and (max-width: 1230px){
-  header{
-    &::after{
-
+@media screen and (max-width: 1230px) {
+  header {
+    div {
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 10px;
+      }
+      p {
+        max-width: 50%;
+      }
+      &::after {
+        top: 105px;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        right: -30%;
+      }
     }
   }
-} */
+}
+
+@media screen and (max-width: 1080px) {
+  header {
+    div {
+      padding-top: 125px;
+      margin-bottom: 160px;
+      h1 {
+        font-size: 4rem;
+        margin-bottom: 10px;
+      }
+      p {
+        max-width: 35vw;
+      }
+      &::after {
+        top: 105px;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        right: -40%;
+      }
+    }
+  }
+}
