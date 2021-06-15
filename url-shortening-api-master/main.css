@@ -508,6 +508,7 @@ nav button:last-child:hover {
   font-style: italic;
   font-size: 18px;
   color: #f46262;
+  display: none;
 }
 
 .form-control form label {
@@ -556,6 +557,35 @@ nav button:last-child:hover {
 
 .form-control form input::placeholder {
   color: #9e9aa7;
+}
+
+@media screen and (max-width: 990px) {
+  .form-control {
+    padding: 35px;
+    max-width: 500px;
+    margin-bottom: 27px;
+  }
+  .form-control form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .form-control form small {
+    position: absolute;
+    left: 5px;
+    top: 61px;
+    font-style: italic;
+    font-size: 16px;
+  }
+  .form-control form label {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .form-control form button {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 /* ## Colors */
