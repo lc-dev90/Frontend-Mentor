@@ -68,9 +68,9 @@ nav {
 /* ### Font-size */
 header {
   position: relative;
-  max-width: 1440px;
-  margin: auto;
+  width: 100vw;
   overflow: hidden;
+  margin: auto;
   padding-bottom: 93px;
 }
 
@@ -78,8 +78,20 @@ header div {
   max-width: 1118px;
   margin: 0 auto;
   padding-top: 145px;
-  overflow: hidden;
   margin-bottom: 140px;
+  position: relative;
+}
+
+header div::after {
+  content: "";
+  width: 733px;
+  height: 482px;
+  background-image: url(../../images/illustration-working.svg);
+  position: absolute;
+  top: 80px;
+  background-repeat: no-repeat;
+  background-size: 97%;
+  right: -23%;
 }
 
 header div h1 {
@@ -112,13 +124,13 @@ header div button:hover {
   background-color: #a8e1e1;
 }
 
-header::after {
-  content: url(../../images/illustration-working.svg);
-  position: absolute;
-  top: 62px;
-  right: -117px;
-}
+/* @media screen and (max-width: 1230px){
+  header{
+    &::after{
 
+    }
+  }
+} */
 /* ## Colors */
 /* ### Primary */
 /* ### Secondary */

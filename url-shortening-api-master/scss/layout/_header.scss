@@ -2,16 +2,28 @@
 
 header {
   position: relative;
-  max-width: 1440px;
-  margin: auto;
+  width: 100vw;
   overflow: hidden;
+  margin: auto;
   padding-bottom: 93px;
 
   div {
     @include container;
     padding-top: 145px;
-    overflow: hidden;
     margin-bottom: 140px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 733px;
+      height: 482px;
+      background-image: url(../../images/illustration-working.svg);
+      position: absolute;
+      top: 80px;
+      background-repeat: no-repeat;
+      background-size: 97%;
+      right: -23%;
+    }
 
     h1 {
       font-size: 4.85rem;
@@ -34,11 +46,12 @@ header {
       font-size: 18px;
     }
   }
-
-  &::after {
-    content: url(../../images/illustration-working.svg);
-    position: absolute;
-    top: 62px;
-    right: -117px;
-  }
 }
+
+/* @media screen and (max-width: 1230px){
+  header{
+    &::after{
+
+    }
+  }
+} */
