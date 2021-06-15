@@ -110,7 +110,7 @@
 @media screen and (max-width: 990px) {
   .list li {
     flex-direction: column;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     margin-bottom: 27px;
     position: relative;
@@ -140,7 +140,7 @@
         content: "";
         position: absolute;
         height: 1px;
-        width: 500px;
+        width: 600px;
         left: 0%;
         background-color: #00000024;
       }

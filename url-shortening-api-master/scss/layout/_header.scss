@@ -90,3 +90,40 @@ header {
     }
   }
 }
+
+@media screen and (max-width: 990px) {
+  header {
+    div {
+      padding-top: 500px;
+      h1 {
+        max-width: 560px;
+        line-height: 1.14;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 3.5rem;
+      }
+      p {
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 25px;
+        max-width: 490px;
+      }
+
+      button {
+        margin: 0 auto;
+        text-align: center;
+        display: inherit;
+        margin-top: 30px;
+        padding: 13px 45px;
+        margin-bottom: -30px;
+      }
+      &::after {
+        top: 48px;
+        background-repeat: no-repeat;
+        background-size: 80%;
+        left: 50%;
+        transform: translateX(-39%);
+      }
+    }
+  }
+}

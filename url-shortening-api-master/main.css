@@ -163,6 +163,41 @@ header div button:hover {
   }
 }
 
+@media screen and (max-width: 990px) {
+  header div {
+    padding-top: 500px;
+  }
+  header div h1 {
+    max-width: 560px;
+    line-height: 1.14;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  header div p {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 25px;
+    max-width: 490px;
+  }
+  header div button {
+    margin: 0 auto;
+    text-align: center;
+    display: inherit;
+    margin-top: 30px;
+    padding: 13px 45px;
+    margin-bottom: -30px;
+  }
+  header div::after {
+    top: 48px;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    left: 50%;
+    -webkit-transform: translateX(-39%);
+            transform: translateX(-39%);
+  }
+}
+
 /* ## Colors */
 /* ### Primary */
 /* ### Secondary */
@@ -562,7 +597,7 @@ nav button:last-child:hover {
 @media screen and (max-width: 990px) {
   .form-control {
     padding: 35px;
-    max-width: 500px;
+    max-width: 600px;
     margin-bottom: 27px;
   }
   .form-control form {
@@ -747,7 +782,7 @@ nav button:last-child:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
     margin-bottom: 27px;
     position: relative;
@@ -775,7 +810,7 @@ nav button:last-child:hover {
     content: "";
     position: absolute;
     height: 1px;
-    width: 500px;
+    width: 600px;
     left: 0%;
     background-color: #00000024;
   }
