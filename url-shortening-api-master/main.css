@@ -204,6 +204,10 @@ footer .container-footer div:nth-of-type(2) ul li a {
   color: #bfbfbf;
 }
 
+footer .container-footer div:nth-of-type(2) ul li a:hover {
+  color: #2acfcf;
+}
+
 footer .container-footer div:nth-of-type(2) ul li:nth-of-type(1) {
   margin-bottom: 20px;
 }
@@ -211,6 +215,10 @@ footer .container-footer div:nth-of-type(2) ul li:nth-of-type(1) {
 footer .container-footer div:nth-of-type(2) ul li:nth-of-type(1) a {
   color: white;
   font-weight: 700;
+}
+
+footer .container-footer div:nth-of-type(2) ul li:nth-of-type(1) a:hover {
+  color: #2acfcf;
 }
 
 footer .container-footer div:nth-of-type(3) ul {
@@ -229,12 +237,17 @@ footer .container-footer div:nth-of-type(3) ul {
           justify-content: space-between;
 }
 
-footer .container-footer div:nth-of-type(3) ul li:not(:nth-of-type(1)) {
-  margin-left: 23px;
+footer .container-footer div:nth-of-type(3) ul li a img {
+  max-width: 100%;
 }
 
-footer .container-footer a {
-  color: white;
+footer .container-footer div:nth-of-type(3) ul li:hover a img {
+  -webkit-filter: invert(68%) sepia(98%) saturate(337%) hue-rotate(124deg) brightness(256%) contrast(66%);
+          filter: invert(68%) sepia(98%) saturate(337%) hue-rotate(124deg) brightness(256%) contrast(66%);
+}
+
+footer .container-footer div:nth-of-type(3) ul li:not(:nth-of-type(1)) {
+  margin-left: 23px;
 }
 
 /* ## Colors */
@@ -280,18 +293,28 @@ nav ul li:not(:last-of-type) {
 
 nav ul li a {
   color: #9e9aa7;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  color: #35323e;
 }
 
 nav button:first-child {
   color: #9e9aa7;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
+  font-size: 1rem;
   margin-right: 36px;
   background-color: white;
   /* font-weight: 700; */
   font-size: 16px;
+}
+
+nav button:first-child:hover {
+  color: #35323e;
 }
 
 nav button:last-child {

@@ -22,12 +22,18 @@ footer {
             margin-bottom: 10px;
             a {
               color: $clr-neutral-gray;
+              &:hover {
+                color: $clr-primary-cyan;
+              }
             }
             &:nth-of-type(1) {
               margin-bottom: 20px;
               a {
                 color: white;
                 font-weight: 700;
+                &:hover {
+                  color: $clr-primary-cyan;
+                }
               }
             }
           }
@@ -37,16 +43,25 @@ footer {
         ul {
           @include flexContainer(row, flex-start, space-between);
           li {
+            a {
+              img {
+                max-width: 100%;
+              }
+            }
+            &:hover {
+              a {
+                img {
+                  filter: invert(68%) sepia(98%) saturate(337%)
+                    hue-rotate(124deg) brightness(256%) contrast(66%);
+                }
+              }
+            }
             &:not(:nth-of-type(1)) {
               margin-left: 23px;
             }
           }
         }
       }
-    }
-
-    a {
-      color: white;
     }
   }
 }

@@ -14,8 +14,13 @@
 
 @mixin link {
   color: $clr-neutral-violet-gray;
-  font-weight: $fw-medium;
+  font-weight: $fw-bold;
   cursor: pointer;
+  font-size: 1rem;
+
+  &:hover {
+    color: $clr-neutral-violet-dark;
+  }
 }
 
 @mixin button($border-radius) {
