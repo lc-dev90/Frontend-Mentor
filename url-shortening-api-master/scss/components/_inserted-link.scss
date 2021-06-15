@@ -67,6 +67,24 @@
   font-size: 1rem;
 }
 
+.list li button.copied {
+  background-color: hsl(257, 27%, 26%);
+  width: 97.34px;
+  padding: 10px 17px;
+  animation-name: smooth-copy-entry;
+  animation-duration: 0.7s;
+}
+
+@keyframes smooth-copy-entry {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .list li button:focus,
 .list li button:hover {
   box-shadow: 1px 1px 10px rgba(212, 201, 201, 0.815);

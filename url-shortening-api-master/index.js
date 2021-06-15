@@ -89,6 +89,8 @@ const copyLinkHandler = (event) => {
     inputTemporary.select();
     document.execCommand("copy");
     inputTemporary.remove();
+    event.target.classList.add("copied");
+    event.target.textContent = "Copied!";
   }
 };
 

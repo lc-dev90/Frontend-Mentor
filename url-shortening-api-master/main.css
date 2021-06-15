@@ -586,6 +586,34 @@ nav button:last-child:hover {
   background-color: #a8e1e1;
 }
 
+.list li button.copied {
+  background-color: #3b3054;
+  width: 97.34px;
+  padding: 10px 17px;
+  -webkit-animation-name: smooth-copy-entry;
+          animation-name: smooth-copy-entry;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+}
+
+@-webkit-keyframes smooth-copy-entry {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes smooth-copy-entry {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .list li button:focus,
 .list li button:hover {
   -webkit-box-shadow: 1px 1px 10px rgba(212, 201, 201, 0.815);
