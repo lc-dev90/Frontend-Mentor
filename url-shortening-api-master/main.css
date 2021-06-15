@@ -175,6 +175,12 @@ section {
   padding-bottom: 207px;
 }
 
+@media screen and (max-width: 990px) {
+  section {
+    padding-bottom: 116px;
+  }
+}
+
 /* ## Colors */
 /* ### Primary */
 /* ### Secondary */
@@ -634,8 +640,6 @@ nav button:last-child:hover {
 .list li a:nth-of-type(1):hover,
 .list li a:nth-of-type(1):focus {
   color: #2acfcf;
-  -webkit-transform: scale(1.009);
-          transform: scale(1.009);
 }
 
 .list li button {
@@ -705,6 +709,59 @@ nav button:last-child:hover {
 
 .list li .close:hover {
   color: red;
+}
+
+@media screen and (max-width: 990px) {
+  .list li {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 27px;
+    position: relative;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .list li:hover .close {
+    right: 6px;
+    top: 0px;
+  }
+  .list li button {
+    width: 100%;
+    margin-left: 0;
+  }
+  .list li button .coppied {
+    width: 100%;
+  }
+  .list li span {
+    margin-bottom: 15px;
+  }
+  .list li a::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 500px;
+    left: 0%;
+    background-color: #00000024;
+  }
+  .list li a span {
+    padding-top: 23px;
+    display: inline-block;
+  }
+  .list li button.copied {
+    background-color: #3b3054;
+    width: 100% !important;
+    padding: 10px 17px;
+    -webkit-animation-name: smooth-copy-entry;
+            animation-name: smooth-copy-entry;
+    -webkit-animation-duration: 0.7s;
+            animation-duration: 0.7s;
+  }
 }
 
 /* ## Colors */
@@ -973,6 +1030,17 @@ nav button:last-child:hover {
   max-width: 520px;
   text-align: center;
   line-height: 1.9;
+}
+
+@media screen and (max-width: 990px) {
+  .statistics h2 {
+    font-size: 2.12rem;
+    max-width: 500px;
+    text-align: center;
+  }
+  .statistics p {
+    max-width: 500px;
+  }
 }
 
 /* ## Colors */

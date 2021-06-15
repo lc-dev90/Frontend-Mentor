@@ -57,7 +57,6 @@
 .list li a:nth-of-type(1):hover,
 .list li a:nth-of-type(1):focus {
   color: $clr-primary-cyan;
-  transform: scale(1.009);
 }
 
 .list li button {
@@ -106,4 +105,57 @@
 
 .list li .close:hover {
   color: red;
+}
+
+@media screen and (max-width: 990px) {
+  .list li {
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 27px;
+    position: relative;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &:hover {
+      .close {
+        right: 6px;
+        top: 0px;
+      }
+    }
+    button {
+      width: 100%;
+      margin-left: 0;
+      .coppied {
+        width: 100%;
+      }
+    }
+
+    span {
+      margin-bottom: 15px;
+    }
+    a {
+      &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 500px;
+        left: 0%;
+        background-color: #00000024;
+      }
+      span {
+        padding-top: 23px;
+        display: inline-block;
+      }
+    }
+  }
+
+  .list li button.copied {
+    background-color: hsl(257, 27%, 26%);
+    width: 100% !important;
+    padding: 10px 17px;
+    animation-name: smooth-copy-entry;
+    animation-duration: 0.7s;
+  }
 }

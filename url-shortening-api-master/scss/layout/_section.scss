@@ -4,3 +4,9 @@ section {
   background-color: $clr-neutral-section;
   padding-bottom: 207px;
 }
+
+@media screen and (max-width: 990px) {
+  section {
+    padding-bottom: 116px;
+  }
+}
