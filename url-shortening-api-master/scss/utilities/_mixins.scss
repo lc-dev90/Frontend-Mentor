@@ -8,7 +8,8 @@
 }
 
 @mixin container {
-  max-width: 1118px;
+  width: 1118px;
+  max-width: 95%;
   margin: 0 auto;
 }
 

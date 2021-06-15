@@ -41,7 +41,8 @@ button {
 /* ### Weights */
 /* ### Font-size */
 nav {
-  max-width: 1118px;
+  width: 1118px;
+  max-width: 95%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,12 +71,14 @@ header {
   position: relative;
   width: 100vw;
   overflow: hidden;
+  padding: 0 5%;
   margin: auto;
   padding-bottom: 93px;
 }
 
 header div {
-  max-width: 1118px;
+  width: 1118px;
+  max-width: 95%;
   margin: 0 auto;
   padding-top: 145px;
   margin-bottom: 140px;
@@ -165,7 +168,8 @@ footer {
 
 footer .container-footer {
   color: white;
-  max-width: 1118px;
+  width: 1118px;
+  max-width: 95%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -358,7 +362,8 @@ nav button:last-child:hover {
 /* ### Weights */
 /* ### Font-size */
 .form-control {
-  max-width: 1118px;
+  width: 1118px;
+  max-width: 95%;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,7 +522,8 @@ nav button:last-child:hover {
 }
 
 .list {
-  max-width: 1118px;
+  width: 1118px;
+  max-width: 95%;
   margin: 0 auto;
 }
 
@@ -898,7 +904,8 @@ nav button:last-child:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 1118px;
+  width: 1118px;
+  max-width: 95%;
   margin: 0 auto;
   margin-top: 32px;
 }
@@ -946,7 +953,8 @@ nav button:last-child:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1118px;
+  width: 1118px;
+  max-width: 95%;
   margin: 0 auto;
 }
 
