@@ -83,7 +83,8 @@
 @media screen and (max-width: 990px) {
   .form-control {
     padding: 35px;
-    max-width: 600px;
+    width: 600px;
+    max-width: 95%;
     margin-bottom: 27px;
     form {
       small {

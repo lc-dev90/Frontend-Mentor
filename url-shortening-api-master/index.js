@@ -6,6 +6,7 @@ const loader = document.querySelector(".loader");
 const navlinks = document.querySelector("nav ul");
 const navaccess = document.querySelector(".nav-access");
 const nav = document.querySelector("nav");
+const hamburger = document.querySelector(".hamburger");
 
 const localStorageLinks = JSON.parse(localStorage.getItem("links"));
 
@@ -124,10 +125,15 @@ window.onload = () => {
 };
 
 window.addEventListener("resize", () => {
+  if (window.innerWidth > 768) {
+    hamburger.classList.remove("is-active");
+    navlinks.classList.remove("mobile");
+    navaccess.classList.remove("mobile");
+    nav.classList.remove("mobile");
+  }
   console.log(window.innerWidth);
 });
 
-const hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener("click", function () {
   this.classList.toggle("is-active");
   navlinks.classList.toggle("mobile");
