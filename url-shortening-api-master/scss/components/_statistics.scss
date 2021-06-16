@@ -33,3 +33,14 @@
     }
   }
 }
+
+@media screen and (max-width: 470px) {
+  .statistics {
+    h2 {
+      font-size: 1.74rem;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}

@@ -198,6 +198,36 @@ header div button:hover {
   }
 }
 
+@media screen and (max-width: 650px) {
+  header div::after {
+    top: 30px;
+    background-repeat: no-repeat;
+    background-size: 85%;
+    left: 74%;
+    -webkit-transform: translateX(-38%);
+    transform: translateX(-38%);
+  }
+}
+
+@media screen and (max-width: 470px) {
+  header div {
+    padding-top: calc(min(460px, 120vw));
+  }
+  header div h1 {
+    font-size: 2.75rem;
+  }
+  header div p {
+    font-size: 19px;
+  }
+  header div::after {
+    top: 81px;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    left: 74%;
+    max-width: 170vw;
+  }
+}
+
 /* ## Colors */
 /* ### Primary */
 /* ### Secondary */
@@ -927,6 +957,15 @@ nav button:last-child:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .form-control::after {
+    background-image: url(../../images/bg-shorten-mobile.svg);
+    width: 69%;
+    height: 100%;
+    right: 0;
+  }
+}
+
 /* ## Colors */
 /* ### Primary */
 /* ### Secondary */
@@ -1413,6 +1452,15 @@ nav button:last-child:hover {
   }
 }
 
+@media screen and (max-width: 470px) {
+  .statistics h2 {
+    font-size: 1.74rem;
+  }
+  .statistics p {
+    font-size: 16px;
+  }
+}
+
 /* ## Colors */
 /* ### Primary */
 /* ### Secondary */
@@ -1640,5 +1688,18 @@ nav button:last-child:hover {
 
 .boost button:hover {
   background-color: #a8e1e1;
+}
+
+@media screen and (max-width: 768px) {
+  .boost::after {
+    background-image: url(../../images/bg-boost-mobile.svg);
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .boost h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */
