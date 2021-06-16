@@ -17,7 +17,7 @@ https://quizzical-golick-db2910.netlify.app/url-shortening-api-master/index.html
 
 ## About The App
 
-Challenge from fronendmentor.io
+Challenge from frontendmentor.io
 
 ## Screenshots
 
@@ -41,7 +41,6 @@ I used `html`, `Sass` and `Js`
 I have used https://shrtco.de/docs/ Public APi that short URL.
 
 This page have Local Storage save persist,treatment of some errors on input.
-
 
 ## Credits
 
