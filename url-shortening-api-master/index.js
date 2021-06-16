@@ -74,6 +74,7 @@ const throwError = (msg) => {
   $formControl.classList.add("error");
   const small = $formControl.querySelector("small");
   small.textContent = msg;
+  $inputLink.focus();
 };
 
 const isValidLink = (link) => {
