@@ -24,6 +24,18 @@ header {
       background-repeat: no-repeat;
       background-size: 97%;
       right: -23%;
+      animation-name: header-div-after;
+      animation-duration: .7s;
+    }
+
+    @keyframes header-div-after{
+      0%{
+        transform: translateX(500px);
+      }
+      100%{
+        transform: translateX(0);
+      }
+    
     }
 
     h1 {

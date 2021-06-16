@@ -31,7 +31,6 @@
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
     />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="./main.css" />
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
@@ -59,18 +58,20 @@
       </div>
     </nav>
     <main>
-      <header>
+      <header data-aos="fade-left" id="header">
         <div>
           <h1>More than just shorter links</h1>
           <p>
             Build your brand's recognition and get detailed insights on how your
             links are performing.
           </p>
-          <button aria-label="Get Started">Get Started</button>
+          <button aria-label="Get Started" onclick="focusInput()">
+            Get Started
+          </button>
         </div>
       </header>
       <section>
-        <div class="form-control">
+        <div class="form-control" id="form-control">
           <form>
             <label for="link">
               <input
@@ -150,7 +151,7 @@
       </section>
       <div class="boost">
         <h2>Boost your links today</h2>
-        <button>Get Started</button>
+        <button onclick="focusHeader()">Get Started</button>
       </div>
     </main>
     <footer>
@@ -210,15 +211,24 @@
       </div>
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <script>
       ScrollReveal().reveal(".header", { reset: true });
       ScrollReveal().reveal(".cards", { reset: true });
       ScrollReveal().reveal(".form-control", { reset: true });
+      ScrollReveal().reveal(".links", { reset: true });
       ScrollReveal().reveal(".boost", { reset: true });
       ScrollReveal().reveal(".statistics", { reset: true });
       ScrollReveal().reveal("footer", { reset: true });
+
+      function focusHeader() {
+        window.location.href = "#header";
+        document.getElementById("link").focus();
+      }
+      function focusInput() {
+        window.location.href = "#link";
+        document.getElementById("link").focus();
+      }
     </script>
     <script src="index.js"></script>
   </body>

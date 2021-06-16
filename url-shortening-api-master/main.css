@@ -25,6 +25,10 @@ input {
   border: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -95,6 +99,32 @@ header div::after {
   background-repeat: no-repeat;
   background-size: 97%;
   right: -23%;
+  -webkit-animation-name: header-div-after;
+          animation-name: header-div-after;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+@-webkit-keyframes header-div-after {
+  0% {
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes header-div-after {
+  0% {
+    -webkit-transform: translateX(500px);
+            transform: translateX(500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 header div h1 {
