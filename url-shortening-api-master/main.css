@@ -772,6 +772,12 @@ nav button:last-child:hover {
   }
 }
 
+@media screen and (max-width: 470px) {
+  nav .nav-logo {
+    margin-right: 0;
+  }
+}
+
 /* ## Colors */
 /* ### Primary */
 /* ### Secondary */
@@ -1635,6 +1641,16 @@ nav button:last-child:hover {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .cards .card {
+    padding: 80px 22px 34px;
+    max-width: 95%;
+  }
+  .cards .card h3 {
+    text-align: center;
   }
 }
 
