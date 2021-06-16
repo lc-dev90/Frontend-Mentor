@@ -146,7 +146,6 @@ window.addEventListener("resize", () => {
     navaccess.classList.remove("mobile");
     nav.classList.remove("mobile");
   }
-  console.log(window.innerWidth);
 });
 
 hamburger.addEventListener("click", function () {
