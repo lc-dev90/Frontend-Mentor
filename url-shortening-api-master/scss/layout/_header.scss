@@ -32,6 +32,17 @@ header {
       color: $clr-neutral-light-dark;
       max-width: 560px;
       line-height: 1.14;
+      animation-name: header-div-h1;
+      animation-duration: .7s;
+    }
+
+    @keyframes header-div-h1{
+      0%{
+        transform: translateX(-500px);
+      }
+      100%{
+        transform: translateX(0);
+      }
     }
 
     p {

@@ -32,6 +32,7 @@
       href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="./main.css" />
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
   </head>
@@ -208,11 +209,17 @@
         </div>
       </div>
     </footer>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script>
+      ScrollReveal().reveal(".header", { reset: true });
+      ScrollReveal().reveal(".cards", { reset: true });
+      ScrollReveal().reveal(".form-control", { reset: true });
+      ScrollReveal().reveal(".boost", { reset: true });
+      ScrollReveal().reveal(".statistics", { reset: true });
+      ScrollReveal().reveal("footer", { reset: true });
+    </script>
     <script src="index.js"></script>
   </body>
 </html>

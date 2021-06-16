@@ -5,6 +5,7 @@
   @include flexContainer(column, center, center);
   @include container;
   margin-top: 32px;
+
   h2 {
     font-size: 2.4rem;
     color: $clr-neutral-light-dark;

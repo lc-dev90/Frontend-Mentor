@@ -103,6 +103,32 @@ header div h1 {
   color: #232127;
   max-width: 560px;
   line-height: 1.14;
+  -webkit-animation-name: header-div-h1;
+          animation-name: header-div-h1;
+  -webkit-animation-duration: .7s;
+          animation-duration: .7s;
+}
+
+@-webkit-keyframes header-div-h1 {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes header-div-h1 {
+  0% {
+    -webkit-transform: translateX(-500px);
+            transform: translateX(-500px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 header div p {
@@ -420,6 +446,31 @@ footer .container-footer div:nth-of-type(3) ul li:not(:nth-of-type(1)) {
 /* ### typography */
 /* ### Weights */
 /* ### Font-size */
+nav {
+  -webkit-animation-name: nav;
+          animation-name: nav;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes nav {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes nav {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 nav .nav-logo {
   margin-right: 44px;
 }
