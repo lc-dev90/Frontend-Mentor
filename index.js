@@ -1,5 +1,8 @@
 const projects = [
   {
+    name: "url-shortening-api-master",
+  },
+  {
     name: "todo-app-main",
   },
   {
