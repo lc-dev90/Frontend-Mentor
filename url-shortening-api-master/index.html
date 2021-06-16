@@ -96,25 +96,7 @@
         </div>
 
         <div class="links">
-          <ul class="list">
-            <li class="list-item">
-              <span js-data="original-link" class="truncate"
-                >https://www.frontendmentor.io/solutions</span
-              >
-              <a
-                class="truncate"
-                href="https://shrtco.de/vqKfxk"
-                target="_blank"
-                ><span class="truncate" js-data="short-link"
-                  >https://shrtco.de/vqKfxk</span
-                ></a
-              >
-              <button js-data="button-copy">Copy</button>
-              <span class="close" onclick="removeLinkFromList(event)">
-                <i class="fas fa-times"></i>
-              </span>
-            </li>
-          </ul>
+          <ul class="list"></ul>
         </div>
         <div class="statistics">
           <h2>Advanced Statistics</h2>
@@ -221,14 +203,14 @@
       ScrollReveal().reveal(".statistics", { reset: true });
       ScrollReveal().reveal("footer", { reset: true });
 
-      /*   function focusHeader() {
+      function focusHeader() {
         window.location.href = "#header";
         document.getElementById("link").focus();
       }
       function focusInput() {
         window.location.href = "#link";
         document.getElementById("link").focus();
-      } */
+      }
     </script>
     <script src="index.js"></script>
   </body>

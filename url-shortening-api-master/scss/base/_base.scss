@@ -9,3 +9,12 @@ body {
 button {
   font-family: inherit;
 }
+
+.disabled {
+  color: white !important;
+  background-color: gray !important;
+  cursor: default !important;
+  &:hover {
+    background-color: gray !important;
+  }
+}

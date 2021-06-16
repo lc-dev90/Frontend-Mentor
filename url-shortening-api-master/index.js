@@ -7,6 +7,7 @@ const navlinks = document.querySelector("nav ul");
 const navaccess = document.querySelector(".nav-access");
 const nav = document.querySelector("nav");
 const hamburger = document.querySelector(".hamburger");
+const buttonInput = document.querySelector(".form-control form button");
 
 const localStorageLinks = JSON.parse(localStorage.getItem("links"));
 
@@ -54,6 +55,7 @@ const appenLinkToTheDom = async ({ original_link, full_short_link }) => {
     </span>
   `;
   removeAnimetedLoader();
+  enableInputs();
   $list.appendChild($liItem);
 };
 
@@ -97,8 +99,22 @@ const copyLinkHandler = (event) => {
     event.target.textContent = "Copied!";
   }
 };
+
+const disableInputs = () => {
+  $inputLink.disabled = true;
+  buttonInput.disabled = true;
+  buttonInput.classList.add("disabled");
+};
+
+const enableInputs = () => {
+  $inputLink.disabled = false;
+  buttonInput.disabled = false;
+  buttonInput.classList.remove("disabled");
+};
+
 const createShortLink = async (link) => {
   displayAnimatedLoader();
+  disableInputs();
   const response = await fetch(`https://api.shrtco.de/v2/shorten?url=${link}`);
   const data = await response.json();
   const linkShortened = {

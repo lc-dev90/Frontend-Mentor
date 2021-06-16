@@ -37,6 +37,16 @@ button {
   font-family: inherit;
 }
 
+.disabled {
+  color: white !important;
+  background-color: gray !important;
+  cursor: default !important;
+}
+
+.disabled:hover {
+  background-color: gray !important;
+}
+
 /* ## Colors */
 /* ### Primary */
 /* ### Secondary */
@@ -668,6 +678,26 @@ nav button:last-child:hover {
     position: absolute;
     top: 370px;
     z-index: 10;
+    -webkit-animation-name: delay;
+            animation-name: delay;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+  }
+  @-webkit-keyframes delay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes delay {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   nav.mobile ul.mobile {
     display: -webkit-box;
@@ -717,6 +747,12 @@ nav button:last-child:hover {
   nav.mobile ul.mobile li a {
     color: #fff;
     font-size: 1.2rem;
+  }
+  nav.mobile ul.mobile li a:hover {
+    color: #b8b8b8;
+  }
+  nav.mobile ul.mobile li a:focus {
+    color: #b8b8b8;
   }
   nav.mobile .nav-access.mobile {
     position: absolute;
@@ -768,6 +804,12 @@ nav button:last-child:hover {
     margin-right: 0;
     margin-bottom: 40px;
   }
+  nav.mobile .nav-access.mobile button:nth-of-type(1):hover {
+    color: #b8b8b8;
+  }
+  nav.mobile .nav-access.mobile button:nth-of-type(1):focus {
+    color: #b8b8b8;
+  }
   nav.mobile .nav-access.mobile button:nth-of-type(2) {
     background-color: #2acfcf;
     border-radius: 50px;
@@ -804,6 +846,8 @@ nav button:last-child:hover {
     border: 0;
     margin: 0;
     overflow: visible;
+    -webkit-transform: translateX(-2px);
+            transform: translateX(-2px);
   }
   .hamburger:hover {
     opacity: 0.7;
@@ -814,7 +858,7 @@ nav button:last-child:hover {
   .hamburger.is-active .hamburger-inner,
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
-    background-color: #000;
+    background-color: #9e9fa5;
   }
   .hamburger.hamburger.is-active nav ul {
     display: -webkit-box !important;
@@ -837,7 +881,7 @@ nav button:last-child:hover {
   .hamburger-inner::after {
     width: 40px;
     height: 4px;
-    background-color: #000;
+    background-color: #9e9fa5;
     border-radius: 4px;
     position: absolute;
     -webkit-transition-property: -webkit-transform;
