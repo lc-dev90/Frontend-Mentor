@@ -999,7 +999,7 @@ nav button:last-child:hover {
 }
 
 .truncate {
-  width: 100% !important;
+  max-width: 100% !important;
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
