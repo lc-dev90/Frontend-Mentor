@@ -22,6 +22,9 @@
   &:hover {
     color: $clr-neutral-violet-dark;
   }
+  &:focus {
+    color: $clr-neutral-violet-dark;
+  }
 }
 
 @mixin button($border-radius) {
@@ -31,6 +34,10 @@
   font-weight: $fw-bold;
   color: white;
   cursor: pointer;
+
+  &:focus {
+    background-color: $clr-primary-cyan-hover;
+  }
 
   &:hover {
     background-color: $clr-primary-cyan-hover;

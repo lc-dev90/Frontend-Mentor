@@ -72,6 +72,9 @@
       border-radius: 10px;
       height: 59px;
       border: 1px solid transparent;
+      &:focus {
+        box-shadow: 1px 1px 15px 10px #00000091;
+      }
 
       &::placeholder {
         color: $clr-neutral-violet-gray;

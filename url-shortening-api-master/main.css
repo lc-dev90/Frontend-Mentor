@@ -101,29 +101,25 @@ header div::after {
   right: -23%;
   -webkit-animation-name: header-div-after;
           animation-name: header-div-after;
-  -webkit-animation-duration: .7s;
-          animation-duration: .7s;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
 }
 
 @-webkit-keyframes header-div-after {
   0% {
-    -webkit-transform: translateX(500px);
-            transform: translateX(500px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes header-div-after {
   0% {
-    -webkit-transform: translateX(500px);
-            transform: translateX(500px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -177,6 +173,10 @@ header div button {
   color: white;
   cursor: pointer;
   font-size: 18px;
+}
+
+header div button:focus {
+  background-color: #a8e1e1;
 }
 
 header div button:hover {
@@ -348,6 +348,16 @@ footer .container-footer div:nth-of-type(1) {
           flex: 1;
 }
 
+footer .container-footer div:nth-of-type(1):focus-within a img {
+  -webkit-filter: invert(68%) sepia(98%) saturate(337%) hue-rotate(124deg) brightness(256%) contrast(66%);
+          filter: invert(68%) sepia(98%) saturate(337%) hue-rotate(124deg) brightness(256%) contrast(66%);
+}
+
+footer .container-footer div:nth-of-type(1):hover a img {
+  -webkit-filter: invert(68%) sepia(98%) saturate(337%) hue-rotate(124deg) brightness(256%) contrast(66%);
+          filter: invert(68%) sepia(98%) saturate(337%) hue-rotate(124deg) brightness(256%) contrast(66%);
+}
+
 footer .container-footer div:nth-of-type(2) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,6 +390,10 @@ footer .container-footer div:nth-of-type(2) ul li a:hover {
   color: #2acfcf;
 }
 
+footer .container-footer div:nth-of-type(2) ul li a:focus {
+  color: #2acfcf;
+}
+
 footer .container-footer div:nth-of-type(2) ul li:nth-of-type(1) {
   margin-bottom: 20px;
 }
@@ -390,6 +404,10 @@ footer .container-footer div:nth-of-type(2) ul li:nth-of-type(1) a {
 }
 
 footer .container-footer div:nth-of-type(2) ul li:nth-of-type(1) a:hover {
+  color: #2acfcf;
+}
+
+footer .container-footer div:nth-of-type(2) ul li:nth-of-type(1) a:focus {
   color: #2acfcf;
 }
 
@@ -414,6 +432,11 @@ footer .container-footer div:nth-of-type(3) ul li a img {
 }
 
 footer .container-footer div:nth-of-type(3) ul li:hover a img {
+  -webkit-filter: invert(68%) sepia(98%) saturate(337%) hue-rotate(124deg) brightness(256%) contrast(66%);
+          filter: invert(68%) sepia(98%) saturate(337%) hue-rotate(124deg) brightness(256%) contrast(66%);
+}
+
+footer .container-footer div:nth-of-type(3) ul li:focus-within a img {
   -webkit-filter: invert(68%) sepia(98%) saturate(337%) hue-rotate(124deg) brightness(256%) contrast(66%);
           filter: invert(68%) sepia(98%) saturate(337%) hue-rotate(124deg) brightness(256%) contrast(66%);
 }
@@ -505,6 +528,16 @@ nav .nav-logo {
   margin-right: 44px;
 }
 
+nav .nav-logo:focus-within {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+nav .nav-logo:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -539,6 +572,10 @@ nav ul li a:hover {
   color: #35323e;
 }
 
+nav ul li a:focus {
+  color: #35323e;
+}
+
 nav button:first-child {
   color: #9e9aa7;
   font-weight: 700;
@@ -554,6 +591,10 @@ nav button:first-child:hover {
   color: #35323e;
 }
 
+nav button:first-child:focus {
+  color: #35323e;
+}
+
 nav button:last-child {
   background-color: #2acfcf;
   border-radius: 50px;
@@ -562,6 +603,10 @@ nav button:last-child {
   color: white;
   cursor: pointer;
   font-size: 16px;
+}
+
+nav button:last-child:focus {
+  background-color: #a8e1e1;
 }
 
 nav button:last-child:hover {
@@ -732,6 +777,9 @@ nav button:last-child:hover {
     cursor: pointer;
     padding: 14px 35px;
     width: 100%;
+  }
+  nav.mobile .nav-access.mobile button:nth-of-type(2):focus {
+    background-color: #a8e1e1;
   }
   nav.mobile .nav-access.mobile button:nth-of-type(2):hover {
     background-color: #a8e1e1;
@@ -985,6 +1033,10 @@ nav button:last-child:hover {
   margin-left: 24px;
 }
 
+.form-control form button:focus {
+  background-color: #a8e1e1;
+}
+
 .form-control form button:hover {
   background-color: #a8e1e1;
 }
@@ -997,6 +1049,11 @@ nav button:last-child:hover {
   border-radius: 10px;
   height: 59px;
   border: 1px solid transparent;
+}
+
+.form-control form input:focus {
+  -webkit-box-shadow: 1px 1px 15px 10px #00000091;
+          box-shadow: 1px 1px 15px 10px #00000091;
 }
 
 .form-control form input::-webkit-input-placeholder {
@@ -1129,6 +1186,14 @@ nav button:last-child:hover {
   cursor: pointer;
 }
 
+.list li a:focus {
+  opacity: 0.6;
+}
+
+.list li a:hover {
+  opacity: 0.6;
+}
+
 .list li a span {
   font-size: 19.5px;
 }
@@ -1161,6 +1226,10 @@ nav button:last-child:hover {
   cursor: pointer;
   cursor: pointer;
   font-size: 1rem;
+}
+
+.list li button:focus {
+  background-color: #a8e1e1;
 }
 
 .list li button:hover {
@@ -1795,6 +1864,10 @@ nav button:last-child:hover {
   padding: 14px 38px;
   font-size: 19px;
   margin-bottom: 54px;
+}
+
+.boost button:focus {
+  background-color: #a8e1e1;
 }
 
 .boost button:hover {

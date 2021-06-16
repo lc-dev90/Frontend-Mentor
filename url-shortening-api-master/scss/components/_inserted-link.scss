@@ -46,6 +46,15 @@
   cursor: pointer;
 }
 
+.list li a {
+  &:focus {
+    opacity: 0.6;
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
 .list li a span {
   font-size: 19.5px;
 }

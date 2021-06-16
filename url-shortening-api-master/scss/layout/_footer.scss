@@ -13,6 +13,22 @@ footer {
     div {
       &:nth-of-type(1) {
         flex: 1;
+        &:focus-within {
+          a {
+            img {
+              filter: invert(68%) sepia(98%) saturate(337%) hue-rotate(124deg)
+                brightness(256%) contrast(66%);
+            }
+          }
+        }
+        &:hover {
+          a {
+            img {
+              filter: invert(68%) sepia(98%) saturate(337%) hue-rotate(124deg)
+                brightness(256%) contrast(66%);
+            }
+          }
+        }
       }
       &:nth-of-type(2) {
         @include flexContainer(row, flex-start, space-between);
@@ -25,6 +41,9 @@ footer {
               &:hover {
                 color: $clr-primary-cyan;
               }
+              &:focus {
+                color: $clr-primary-cyan;
+              }
             }
             &:nth-of-type(1) {
               margin-bottom: 20px;
@@ -32,6 +51,9 @@ footer {
                 color: white;
                 font-weight: 700;
                 &:hover {
+                  color: $clr-primary-cyan;
+                }
+                &:focus {
                   color: $clr-primary-cyan;
                 }
               }
@@ -49,6 +71,14 @@ footer {
               }
             }
             &:hover {
+              a {
+                img {
+                  filter: invert(68%) sepia(98%) saturate(337%)
+                    hue-rotate(124deg) brightness(256%) contrast(66%);
+                }
+              }
+            }
+            &:focus-within {
               a {
                 img {
                   filter: invert(68%) sepia(98%) saturate(337%)

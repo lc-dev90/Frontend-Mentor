@@ -17,6 +17,12 @@ nav {
 
 nav .nav-logo {
   margin-right: 44px;
+  &:focus-within {
+    transform: scale(1.1);
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 nav ul {

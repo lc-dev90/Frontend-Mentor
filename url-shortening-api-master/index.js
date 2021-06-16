@@ -97,7 +97,6 @@ const copyLinkHandler = (event) => {
     event.target.textContent = "Copied!";
   }
 };
-
 const createShortLink = async (link) => {
   displayAnimatedLoader();
   const response = await fetch(`https://api.shrtco.de/v2/shorten?url=${link}`);
