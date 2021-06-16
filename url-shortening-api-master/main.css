@@ -214,10 +214,10 @@ header div button:hover {
     padding-top: calc(min(460px, 120vw));
   }
   header div h1 {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
   }
   header div p {
-    font-size: 19px;
+    font-size: 17px;
   }
   header div::after {
     top: 81px;
@@ -657,6 +657,7 @@ nav button:last-child:hover {
   }
   .hamburger {
     padding: 15px 15px;
+    padding-right: 0;
     display: inline-block;
     cursor: pointer;
     -webkit-transition-property: opacity, -webkit-filter;
@@ -966,6 +967,12 @@ nav button:last-child:hover {
   }
 }
 
+@media screen and (max-width: 470px) {
+  .form-control form button {
+    padding: 16px 5px;
+  }
+}
+
 /* ## Colors */
 /* ### Primary */
 /* ### Secondary */
@@ -983,6 +990,13 @@ nav button:last-child:hover {
 .links {
   -webkit-transform: translateY(-93px);
           transform: translateY(-93px);
+}
+
+.truncate {
+  width: 100% !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 .list {

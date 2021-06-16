@@ -118,3 +118,13 @@
     }
   }
 }
+
+@media screen and (max-width: 470px) {
+  .form-control {
+    form {
+      button {
+        padding: 16px 5px;
+      }
+    }
+  }
+}

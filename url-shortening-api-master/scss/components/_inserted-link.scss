@@ -5,6 +5,12 @@
   transform: translateY(-93px);
 }
 
+.truncate {
+  width: 100% !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
 .list {
   @include container;
 }

@@ -46,10 +46,10 @@ const appenLinkToTheDom = async ({ original_link, full_short_link }) => {
   const $liItem = document.createElement("li");
   $liItem.classList.add("list-item");
   $liItem.innerHTML = `
-    <span js-data="original-link">${original_link}</span>  
-    <a href="${full_short_link}" target="_blank"><span js-data="short-link">${full_short_link}</span></a>
+    <span class="truncate" js-data="original-link">${original_link}</span>  
+    <a class="truncate"  href="${full_short_link}" target="_blank"><span class="truncate" js-data="short-link">${full_short_link}</span></a>
     <button js-data="button-copy">Copy</button>
-    <span class="close" onclick="removeLinkFromList(event)">
+    <span  class="close" onclick="removeLinkFromList(event)">
       <i class="fas fa-times"></i>
     </span>
   `;
