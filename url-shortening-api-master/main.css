@@ -445,6 +445,167 @@ nav button:last-child:hover {
   nav .nav-access {
     display: none;
   }
+  nav.mobile {
+    position: relative;
+  }
+  nav.mobile::after {
+    content: "";
+    position: absolute;
+    background-color: #3b3054;
+    width: 90%;
+    height: 480px;
+    z-index: 1;
+    top: 110%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin: 0 auto;
+    border-radius: 10px;
+    -webkit-animation-name: menu;
+            animation-name: menu;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+  }
+  @-webkit-keyframes menu {
+    0% {
+      height: 1px;
+    }
+    100% {
+      height: 480px;
+    }
+  }
+  @keyframes menu {
+    0% {
+      height: 1px;
+    }
+    100% {
+      height: 480px;
+    }
+  }
+  nav.mobile::before {
+    content: "";
+    height: 1px;
+    width: 65%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: #ffffff2e;
+    position: absolute;
+    top: 370px;
+    z-index: 10;
+  }
+  nav.mobile ul.mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 160%;
+    left: 50%;
+    z-index: 5;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-animation-name: menu-links;
+            animation-name: menu-links;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+  }
+  @-webkit-keyframes menu-links {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes menu-links {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  nav.mobile ul.mobile li {
+    margin-right: 0;
+    margin-bottom: 36px;
+  }
+  nav.mobile ul.mobile li a {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  nav.mobile .nav-access.mobile {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 330%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 5;
+    width: 65%;
+    margin-top: 40px;
+    -webkit-animation-name: menu-access;
+            animation-name: menu-access;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+  }
+  @-webkit-keyframes menu-access {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes menu-access {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  nav.mobile .nav-access.mobile button {
+    background-color: #3b3054;
+    color: #fff;
+    font-size: 1.2rem;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  nav.mobile .nav-access.mobile button:nth-of-type(2) {
+    background-color: #2acfcf;
+    border-radius: 50px;
+    padding: 10px 27px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    padding: 14px 35px;
+    width: 100%;
+  }
+  nav.mobile .nav-access.mobile button:nth-of-type(2):hover {
+    background-color: #a8e1e1;
+  }
   .hamburger {
     padding: 15px 15px;
     display: inline-block;
@@ -475,6 +636,11 @@ nav button:last-child:hover {
   .hamburger.is-active .hamburger-inner::before,
   .hamburger.is-active .hamburger-inner::after {
     background-color: #000;
+  }
+  .hamburger.hamburger.is-active nav ul {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
   .hamburger-box {
     width: 40px;

@@ -3,6 +3,9 @@ const $inputLink = document.querySelector("#link");
 const $formControl = document.querySelector(".form-control");
 const $list = document.querySelector(".list");
 const loader = document.querySelector(".loader");
+const navlinks = document.querySelector("nav ul");
+const navaccess = document.querySelector(".nav-access");
+const nav = document.querySelector("nav");
 
 const localStorageLinks = JSON.parse(localStorage.getItem("links"));
 
@@ -127,4 +130,7 @@ window.addEventListener("resize", () => {
 const hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener("click", function () {
   this.classList.toggle("is-active");
+  navlinks.classList.toggle("mobile");
+  navaccess.classList.toggle("mobile");
+  nav.classList.toggle("mobile");
 });
