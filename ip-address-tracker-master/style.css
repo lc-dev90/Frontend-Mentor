@@ -10,8 +10,57 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.container-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 90%;
+}
+
+form {
+  width: 100%;
+}
+
+label {
+  display: flex;
+}
+
+label button {
+  background-color: green;
+  color: white;
+  padding: 10px 40px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  border: none;
+}
+
+label button:hover {
+  background-color: rgb(10, 151, 10);
+}
+
+label button:active {
+  transform: scale(0.95);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.445);
+}
+
+.form-control {
+  width: 100%;
+}
+
+input {
+  padding: 10px;
+  font-size: 20px;
+  width: 100%;
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.507);
+}
+
 .container {
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
