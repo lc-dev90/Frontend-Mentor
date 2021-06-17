@@ -9,10 +9,50 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | IP Address Tracker</title>
   </head>
   <body>
-    IP Address Tracker Search for any IP address or domain IP Address Location
-    Timezone UTC ISP
+    <!--     IP Address Tracker Search for any IP address or domain IP Address Location
+    Timezone UTC ISP -->
+    <main>
+      <div class="container">
+        <div>
+          <span>ip adress</span>
+          <span id="ip"></span>
+        </div>
+        <div>
+          <span>location</span>
+          <span id="location"></span>
+        </div>
+        <div>
+          <span>timezone</span>
+          <span id="timezone"></span>
+        </div>
+        <div>
+          <span>isp</span>
+          <span id="isp"></span>
+        </div>
+      </div>
+      <div id="mapid"></div>
+    </main>
+
+    <script src="index.js"></script>
   </body>
 </html>
