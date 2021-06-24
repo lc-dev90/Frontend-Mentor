@@ -3,12 +3,18 @@ import styled from "styled-components";
 
 const Search = () => {
   return (
-    <SearchCountry>
-      <i className="fas fa-search"></i>
-      <label htmlFor="country">
-        <input type="text" id="country" placeholder="Search for a country..." />
-      </label>
-    </SearchCountry>
+    <div>
+      <SearchCountry>
+        <i className="fas fa-search"></i>
+        <label htmlFor="country">
+          <input
+            type="text"
+            id="country"
+            placeholder="Search for a country..."
+          />
+        </label>
+      </SearchCountry>
+    </div>
   );
 };
 

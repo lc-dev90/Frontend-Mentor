@@ -1,14 +1,16 @@
 import Header from "./components/Header";
 import Search from "./components/Search";
+import Select from "./components/Select";
 import styled from "styled-components";
 
 function App() {
   return (
     <Container>
       <Header />
-      <SearchContainer>
+      <FilterContainer>
         <Search />
-      </SearchContainer>
+        <Select />
+      </FilterContainer>
     </Container>
   );
 }
@@ -20,10 +22,12 @@ const Container = styled.main`
   min-height: 100vh;
 `;
 
-const SearchContainer = styled.div`
+const FilterContainer = styled.div`
   width: 1280px;
   max-width: 95%;
   margin: 0 auto;
   margin-top: 48px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
