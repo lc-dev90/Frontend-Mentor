@@ -22,12 +22,17 @@ const CountrieCard = ({ name, population, region, capital, flag }) => {
 export default CountrieCard;
 
 const Card = styled.div`
-  background-color: white;
+  background-color: #283640;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
 `;
 
 const FlagBox = styled.div`
+  border-radius: 5px;
   height: 160px;
   img {
+    border-radius: 5px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -36,8 +41,15 @@ const FlagBox = styled.div`
 `;
 
 const Details = styled.div`
-  color: black;
+  padding: 30px 26px;
+  color: white;
+  h3 {
+    margin-bottom: 1rem;
+  }
   ul {
     list-style: none;
+    li {
+      margin-bottom: 5px;
+    }
   }
 `;

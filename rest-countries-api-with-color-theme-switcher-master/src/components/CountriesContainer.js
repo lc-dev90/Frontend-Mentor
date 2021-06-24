@@ -33,11 +33,12 @@ const CountriesContainer = () => {
 export default CountriesContainer;
 
 const Container = styled.div`
-  width: 100vw;
-  max-width: 1280px;
+  width: 1280px;
+  max-width: 95%;
   margin: 0 auto;
   margin-top: 48px;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, 266px);
+  justify-content: space-between;
 `;

@@ -21,7 +21,6 @@ export default Header;
 
 const Container = styled.div`
   height: 80px;
-  width: 100vw;
   background-color: #283640;
   color: white;
   box-shadow: 2px 2px 10px #1e272dab;
