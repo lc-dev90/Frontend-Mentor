@@ -24,11 +24,12 @@ const Container = styled.div`
   width: 100vw;
   background-color: #283640;
   color: white;
+  box-shadow: 2px 2px 10px #1e272dab;
   nav {
     width: 1280px;
     max-width: 95%;
-    height: 100%;
     margin: 0 auto;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
