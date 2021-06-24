@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Search from "./components/Search";
 import Select from "./components/Select";
+import CountriesContainer from "./components/CountriesContainer";
 import styled from "styled-components";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <Search />
         <Select />
       </FilterContainer>
+      <CountriesContainer></CountriesContainer>
     </Container>
   );
 }
