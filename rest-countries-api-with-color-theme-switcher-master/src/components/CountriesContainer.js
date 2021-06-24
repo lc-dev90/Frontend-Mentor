@@ -1,9 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import styled from "styled-components";
 import CountrieCard from "./CountrieCard";
 
+import { SearchContext } from "./SearchContext";
+
 const CountriesContainer = () => {
   const [countries, setCountries] = useState([]);
+  const [searchTerm] = useContext(SearchContext);
+
+  const formatCountrie = (countrie) => {
+    let formattedCountrie = countrie.toLowerCase();
+    return (
+      formattedCountrie.charAt(0).toUpperCase() + formattedCountrie.slice(1)
+    );
+  };
+
+  let filteredCountries = [];
+  const filterCountries = () => {
+    if (searchTerm) {
+      filteredCountries = countries.filter((countrie) =>
+        countrie.name.includes(formatCountrie(searchTerm))
+      );
+      return;
+    }
+    filteredCountries = countries;
+  };
+  filterCountries();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,7 +38,7 @@ const CountriesContainer = () => {
 
   return (
     <Container>
-      {countries.map((countrie) => (
+      {filteredCountries.map((countrie) => (
         <CountrieCard
           key={countrie.numericCode}
           name={countrie.name}

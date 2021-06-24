@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { SearchContext } from "./SearchContext";
 
 const Search = () => {
-  const [value, setValue] = useState("");
+  const [countries, setCountries] = useContext(SearchContext);
   return (
     <div>
       <SearchCountry>
@@ -12,8 +13,8 @@ const Search = () => {
             type="text"
             id="country"
             placeholder="Search for a country..."
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
+            value={countries}
+            onChange={(e) => setCountries(e.target.value)}
           />
         </label>
       </SearchCountry>

@@ -4,16 +4,20 @@ import Select from "./components/Select";
 import CountriesContainer from "./components/CountriesContainer";
 import styled from "styled-components";
 
+import { SearchProvider } from "./components/SearchContext";
+
 function App() {
   return (
-    <Container>
-      <Header />
-      <FilterContainer>
-        <Search />
-        <Select />
-      </FilterContainer>
-      <CountriesContainer></CountriesContainer>
-    </Container>
+    <SearchProvider>
+      <Container>
+        <Header />
+        <FilterContainer>
+          <Search />
+          <Select />
+        </FilterContainer>
+        <CountriesContainer></CountriesContainer>
+      </Container>
+    </SearchProvider>
   );
 }
 
