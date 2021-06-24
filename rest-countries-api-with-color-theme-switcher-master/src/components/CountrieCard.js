@@ -10,9 +10,15 @@ const CountrieCard = ({ name, population, region, capital, flag }) => {
       <Details>
         <h3>{name}</h3>
         <ul>
-          <li>Population: {population}</li>
-          <li>Region: {region}</li>
-          <li>Capital: {capital}</li>
+          <li>
+            Population: <span>{population}</span>
+          </li>
+          <li>
+            Region: <span>{region}</span>
+          </li>
+          <li>
+            Capital: <span>{capital}</span>
+          </li>
         </ul>
       </Details>
     </Card>
@@ -50,6 +56,10 @@ const Details = styled.div`
     list-style: none;
     li {
       margin-bottom: 5px;
+      font-weight: 600;
+      span {
+        font-weight: 400;
+      }
     }
   }
 `;
