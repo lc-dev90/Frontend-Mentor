@@ -26,8 +26,12 @@ const Card = styled.div`
 `;
 
 const FlagBox = styled.div`
+  height: 160px;
   img {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 `;
 
