@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const CountrieCard = ({ name, population, region, capital, flag }) => {
+  const numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <Card>
       <FlagBox>
@@ -11,7 +15,7 @@ const CountrieCard = ({ name, population, region, capital, flag }) => {
         <h3>{name}</h3>
         <ul>
           <li>
-            Population: <span>{population}</span>
+            Population: <span>{numberWithCommas(population)}</span>
           </li>
           <li>
             Region: <span>{region}</span>
@@ -51,6 +55,7 @@ const Details = styled.div`
   color: white;
   h3 {
     margin-bottom: 1rem;
+    font-size: 18px;
   }
   ul {
     list-style: none;
