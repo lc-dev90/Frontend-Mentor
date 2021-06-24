@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const Search = () => {
+  const [value, setValue] = useState("");
   return (
     <div>
       <SearchCountry>
@@ -11,6 +12,8 @@ const Search = () => {
             type="text"
             id="country"
             placeholder="Search for a country..."
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
           />
         </label>
       </SearchCountry>

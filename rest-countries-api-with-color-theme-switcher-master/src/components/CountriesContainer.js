@@ -14,11 +14,11 @@ const CountriesContainer = () => {
     fetchData();
   }, []);
 
-  console.log(countries);
   return (
     <Container>
       {countries.map((countrie) => (
         <CountrieCard
+          key={countrie.numericCode}
           name={countrie.name}
           population={countrie.population}
           region={countrie.region}
