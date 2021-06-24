@@ -6,7 +6,6 @@ const Select = () => {
 
   const handleSelector = () => {
     setToggleSelect((prevToggleSelector) => !prevToggleSelector);
-    console.log(toggleSelect);
   };
   return (
     <SelectContainer onClick={handleSelector}>
@@ -60,7 +59,7 @@ const ContentSelect = styled.div`
   border-radius: 5px;
   height: ${(props) => (props.toggle ? "187px" : "0px")};
   opacity: ${(props) => (props.toggle ? "1" : "0")};
-  transition: height 250ms linear, opacity 200ms linear;
+  transition: height 250ms ease-out, opacity 200ms ease-in-out;
 
   span {
     padding: 0 25px;
