@@ -9,3 +9,8 @@
 body {
   font-family: "Nunito Sans", sans-serif;
 }
+
+a {
+  color: initial;
+  text-decoration: none;
+}
