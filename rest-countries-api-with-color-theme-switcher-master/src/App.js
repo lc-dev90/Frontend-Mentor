@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Search from "./components/Search";
-import Select from "./components/Select";
+import SelectTest from "./components/SelectTest";
 import CountriesContainer from "./components/CountriesContainer";
 import styled from "styled-components";
 
@@ -13,7 +13,7 @@ function App() {
         <Header />
         <FilterContainer>
           <Search />
-          <Select />
+          <SelectTest />
         </FilterContainer>
         <CountriesContainer></CountriesContainer>
       </Container>
