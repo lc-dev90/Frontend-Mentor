@@ -175,6 +175,7 @@ const FlagContainer = styled.div`
 const InformationContainer = styled.div`
   width: 47%;
   justify-content: flex-end;
+  margin-bottom: 1rem;
   h2 {
     font-size: 2rem;
     margin-bottom: 34px;
@@ -203,7 +204,10 @@ const List = styled.ul`
 `;
 
 const BordersContent = styled.div`
-  margin-top: 68px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   span {
     margin-right: 10px;
   }
@@ -215,7 +219,7 @@ const BordersContent = styled.div`
     font-size: 14px;
     border-radius: 3px;
     cursor: pointer;
-    margin-right: 10px;
+    margin: 5px 10px;
     &:hover {
       background-color: #272f34;
     box-shadow: 0px 0px 2px 2px #0000002b;
