@@ -8,7 +8,7 @@ import { SelectContext } from "./SelectContext";
 const CountriesContainer = () => {
   const [countries, setCountries] = useState([]);
   const [searchTerm] = useContext(SearchContext);
-  const [selectedItem] = useContext(SelectContext);
+  const [selectedItem, setSelectedItem] = useContext(SelectContext);
 
   let filteredCountries = [];
   const filterCountries = () => {
@@ -73,6 +73,7 @@ const Container = styled.div`
   max-width: 95%;
   margin: 0 auto;
   margin-top: 48px;
+  padding-bottom: 80px;
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(auto-fit, 266px);

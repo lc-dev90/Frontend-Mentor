@@ -3,11 +3,13 @@ import styled from "styled-components";
 import countries from "i18n-iso-countries";
 import { CountrieContext } from "./CountrieContext";
 import { Link } from "react-router-dom";
+import { SelectContext } from "./SelectContext";
 countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 
 const Details = () => {
   const [countrie, setCountrie] = useState({});
   const [countrieC, setCountrieC] = useContext(CountrieContext);
+  const [selectedItem, setSelectedItem] = useContext(SelectContext);
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
@@ -28,7 +30,7 @@ const Details = () => {
   return (
     <Container>
       <ButtonContainer>
-        <Link to="/">
+        <Link to="/" onClick={() => setSelectedItem("")}>
           <button>
             <i className="fas fa-long-arrow-alt-left"></i>
             <span>Back</span>
