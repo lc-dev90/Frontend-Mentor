@@ -5,18 +5,21 @@ import CountriesContainer from "./components/CountriesContainer";
 import styled from "styled-components";
 
 import { SearchProvider } from "./components/SearchContext";
+import { SelectProvider } from "./components/SelectContext";
 
 function App() {
   return (
     <SearchProvider>
-      <Container>
-        <Header />
-        <FilterContainer>
-          <Search />
-          <SelectInput />
-        </FilterContainer>
-        <CountriesContainer></CountriesContainer>
-      </Container>
+      <SelectProvider>
+        <Container>
+          <Header />
+          <FilterContainer>
+            <Search />
+            <SelectInput />
+          </FilterContainer>
+          <CountriesContainer></CountriesContainer>
+        </Container>
+      </SelectProvider>
     </SearchProvider>
   );
 }

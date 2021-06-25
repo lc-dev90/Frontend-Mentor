@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SelectContext } from "./SelectContext";
 import Select from "react-select";
 import styled from "styled-components";
 
@@ -63,6 +64,7 @@ const selectStyles = {
 };
 
 const SelectInput = () => {
+  const [selectedItem, setSelectedItem] = useContext(SelectContext);
   return (
     <SelectContainer>
       <Select
@@ -74,6 +76,7 @@ const SelectInput = () => {
         components={{
           IndicatorSeparator: () => null,
         }}
+        onChange={(e) => setSelectedItem(e.value)}
       />
     </SelectContainer>
   );

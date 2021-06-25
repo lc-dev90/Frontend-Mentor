@@ -3,14 +3,53 @@ import styled from "styled-components";
 import CountrieCard from "./CountrieCard";
 
 import { SearchContext } from "./SearchContext";
+import { SelectContext } from "./SelectContext";
 
 const CountriesContainer = () => {
   const [countries, setCountries] = useState([]);
   const [searchTerm] = useContext(SearchContext);
+  const [selectedItem] = useContext(SelectContext);
+
+  /*   let filteredSelectedCountries = [];
+  const filterSelected = () => {
+    if (selectedItem) {
+      filteredSelectedCountries = countries.filter((countrie) =>
+        countrie.region.toLowerCase().includes(selectedItem.toLowerCase())
+      );
+      return;
+    }
+    filteredSelectedCountries = countries;
+  };
+  filterSelected();
+  
+  if (searchTerm) {
+      filteredCountries = countries.filter((countrie) =>
+        countrie.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      return;
+    }
+    filteredCountries = countries;
+
+  */
 
   let filteredCountries = [];
   const filterCountries = () => {
-    if (searchTerm) {
+    if (selectedItem && searchTerm) {
+      filteredCountries = countries
+        .filter((countrie) =>
+          countrie.region.toLowerCase().includes(selectedItem.toLowerCase())
+        )
+        .filter((countrie) =>
+          countrie.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+      return;
+    } else if (selectedItem) {
+      filteredCountries = countries.filter((countrie) =>
+        countrie.region.toLowerCase().includes(selectedItem.toLowerCase())
+      );
+      return;
+    } else if (searchTerm) {
       filteredCountries = countries.filter((countrie) =>
         countrie.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
