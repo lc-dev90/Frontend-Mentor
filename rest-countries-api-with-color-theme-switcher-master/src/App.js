@@ -6,21 +6,24 @@ import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { SearchProvider } from "./components/SearchContext";
 import { SelectProvider } from "./components/SelectContext";
+import { CountrieProvider } from "./components/CountrieContext";
 
 function App() {
   return (
     <SearchProvider>
       <SelectProvider>
-        <Router>
-          <Container>
-            <Header />
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/details" exact component={Details} />
-              <Route component={NotFoundPage} />
-            </Switch>
-          </Container>
-        </Router>
+        <CountrieProvider>
+          <Router>
+            <Container>
+              <Header />
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/details" exact component={Details} />
+                <Route component={NotFoundPage} />
+              </Switch>
+            </Container>
+          </Router>
+        </CountrieProvider>
       </SelectProvider>
     </SearchProvider>
   );

@@ -1,35 +1,41 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { CountrieContext } from "./CountrieContext";
+import { Link } from "react-router-dom";
 
 const CountrieCard = ({ name, population, region, capital, flag }) => {
+  const [countrie, setCountrie] = useContext(CountrieContext);
+
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
 
   return (
-    <Card>
-      <i className="fas fa-search">
-        <p>DETAILS</p>
-      </i>
+    <Link to={"/details"}>
+      <Card onClick={() => setCountrie(name)}>
+        <i className="fas fa-search">
+          <p>DETAILS</p>
+        </i>
 
-      <FlagBox>
-        <img src={`${flag}`} alt="" />
-      </FlagBox>
-      <Details>
-        <h3>{name}</h3>
-        <ul>
-          <li>
-            Population: <span>{numberWithCommas(population)}</span>
-          </li>
-          <li>
-            Region: <span>{region}</span>
-          </li>
-          <li>
-            Capital: <span>{capital}</span>
-          </li>
-        </ul>
-      </Details>
-    </Card>
+        <FlagBox>
+          <img src={`${flag}`} alt="" />
+        </FlagBox>
+        <Details>
+          <h3>{name}</h3>
+          <ul>
+            <li>
+              Population: <span>{numberWithCommas(population)}</span>
+            </li>
+            <li>
+              Region: <span>{region}</span>
+            </li>
+            <li>
+              Capital: <span>{capital}</span>
+            </li>
+          </ul>
+        </Details>
+      </Card>
+    </Link>
   );
 };
 

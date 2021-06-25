@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import styled from "styled-components";
 import countries from "i18n-iso-countries";
+import { CountrieContext } from "./CountrieContext";
+import { Link } from "react-router-dom";
 countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 
 const Details = () => {
   const [countrie, setCountrie] = useState({});
+  const [countrieC, setCountrieC] = useContext(CountrieContext);
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
         /* `https://restcountries.eu/rest/v2/name/${countrie}` */
-        `https://restcountries.eu/rest/v2/name/Belgium`
+        `https://restcountries.eu/rest/v2/name/${countrieC}`
       );
 
       const [data] = await response.json();
       setCountrie(data);
     };
     fetchData();
-  }, []);
+  }, [countrieC]);
 
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -25,10 +28,12 @@ const Details = () => {
   return (
     <Container>
       <ButtonContainer>
-        <button>
-          <i className="fas fa-long-arrow-alt-left"></i>
-          <span>Back</span>
-        </button>
+        <Link to="/">
+          <button>
+            <i className="fas fa-long-arrow-alt-left"></i>
+            <span>Back</span>
+          </button>
+        </Link>
       </ButtonContainer>
       <ContentContainer>
         <FlagContainer>
@@ -98,7 +103,13 @@ const Details = () => {
             <span>Border Countries: </span>
             {countrie.borders
               ? countrie.borders.map((border) => (
-                  <a>
+                  <a
+                    onClick={(e) =>
+                      setCountrieC(
+                        countries.getName(border, "en", { select: "official" })
+                      )
+                    }
+                  >
                     {countries.getName(border, "en", { select: "official" })}
                   </a>
                 ))
