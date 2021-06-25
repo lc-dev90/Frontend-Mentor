@@ -48,16 +48,20 @@ const CountriesContainer = () => {
 
   return (
     <Container>
-      {filteredCountries.map((countrie) => (
-        <CountrieCard
-          key={countrie.numericCode}
-          name={countrie.name}
-          population={countrie.population}
-          region={countrie.region}
-          capital={countrie.capital}
-          flag={countrie.flag}
-        />
-      ))}
+      {filteredCountries.length === 0 ? (
+        <p>Sorry, no results for your search.</p>
+      ) : (
+        filteredCountries.map((countrie) => (
+          <CountrieCard
+            key={countrie.numericCode}
+            name={countrie.name}
+            population={countrie.population}
+            region={countrie.region}
+            capital={countrie.capital}
+            flag={countrie.flag}
+          />
+        ))
+      )}
     </Container>
   );
 };
@@ -73,4 +77,11 @@ const Container = styled.div`
   gap: 3rem;
   grid-template-columns: repeat(auto-fit, 266px);
   justify-content: space-between;
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    width: 500px;
+  }
 `;
