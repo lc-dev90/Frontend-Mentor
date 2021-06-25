@@ -17,26 +17,31 @@ const selectStyles = {
     backgroundColor: state.isFocused ? "#1c2a32" : "#283640",
     borderColor: "#283640",
     color: "white",
-
     cursor: "pointer",
     display: "flex",
     padding: "16px 32px",
     alignItems: "center",
+    "&:active": {
+      backgroundColor: "#1c2a32",
+    },
   }),
+
   menuList: () => ({
     border: "0",
     borderRadius: "5px",
+    backgroundColor: "transparent",
   }),
   dropdownIndicator: () => ({
     color: "white",
   }),
-  singleValue: (base) => ({ ...base, color: "white" }),
-  valueContainer: (base) => ({
+  singleValue: (base) => ({
     ...base,
-
     color: "white",
   }),
-
+  valueContainer: (base) => ({
+    ...base,
+    color: "white",
+  }),
   control: (styles, state) => ({
     ...styles,
     width: 210,
@@ -57,7 +62,7 @@ const selectStyles = {
   }),
 };
 
-const SelectTest = () => {
+const SelectInput = () => {
   return (
     <SelectContainer>
       <Select
@@ -74,6 +79,6 @@ const SelectTest = () => {
   );
 };
 
-export default SelectTest;
+export default SelectInput;
 
 const SelectContainer = styled.div``;

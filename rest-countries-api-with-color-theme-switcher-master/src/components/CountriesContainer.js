@@ -8,18 +8,11 @@ const CountriesContainer = () => {
   const [countries, setCountries] = useState([]);
   const [searchTerm] = useContext(SearchContext);
 
-  const formatCountrie = (countrie) => {
-    let formattedCountrie = countrie.toLowerCase();
-    return (
-      formattedCountrie.charAt(0).toUpperCase() + formattedCountrie.slice(1)
-    );
-  };
-
   let filteredCountries = [];
   const filterCountries = () => {
     if (searchTerm) {
       filteredCountries = countries.filter((countrie) =>
-        countrie.name.includes(formatCountrie(searchTerm))
+        countrie.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
       return;
     }
