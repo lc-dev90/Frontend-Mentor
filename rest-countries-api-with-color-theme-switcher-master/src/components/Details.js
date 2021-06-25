@@ -13,7 +13,6 @@ const Details = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        /* `https://restcountries.eu/rest/v2/name/${countrie}` */
         `https://restcountries.eu/rest/v2/name/${countrieC}`
       );
 
@@ -106,6 +105,7 @@ const Details = () => {
             {countrie.borders
               ? countrie.borders.map((border) => (
                   <a
+                    aria-label="Countrie"
                     onClick={(e) =>
                       setCountrieC(
                         countries.getName(border, "en", { select: "official" })
@@ -115,6 +115,11 @@ const Details = () => {
                     {countries.getName(border, "en", { select: "official" })}
                   </a>
                 ))
+              : ""}
+            {countrie.borders
+              ? countrie.borders.length < 1
+                ? "None"
+                : ""
               : ""}
           </BordersContent>
         </InformationContainer>
