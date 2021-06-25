@@ -4566,6 +4566,11 @@
     "address" "^1.0.1"
     "debug" "^2.6.0"
 
+"diacritics@1.3.0":
+  "integrity" "sha1-PvqHMj67hj5mls67AILUj/PW96E="
+  "resolved" "https://registry.npmjs.org/diacritics/-/diacritics-1.3.0.tgz"
+  "version" "1.3.0"
+
 "diff-sequences@^26.6.2":
   "integrity" "sha512-Mv/TDa3nZ9sbc5soK+OoA74BsS3mL37yixCvUAQkiuA4Wz6YtwP/K47n2rv2ovzHZvoiQeA5FTQOschKkEwB0Q=="
   "resolved" "https://registry.npmjs.org/diff-sequences/-/diff-sequences-26.6.2.tgz"
@@ -6162,6 +6167,13 @@
   "integrity" "sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw=="
   "resolved" "https://registry.npmjs.org/human-signals/-/human-signals-1.1.1.tgz"
   "version" "1.1.1"
+
+"i18n-iso-countries@^6.8.0":
+  "integrity" "sha512-jJs/+CA6+VUICFxqGcB0vFMERGfhfvyNk+8Vb9EagSZkl7kSpm/kT0VyhvzM/zixDWEV/+oN9L7v/GT9BwzoGg=="
+  "resolved" "https://registry.npmjs.org/i18n-iso-countries/-/i18n-iso-countries-6.8.0.tgz"
+  "version" "6.8.0"
+  dependencies:
+    "diacritics" "1.3.0"
 
 "iconv-lite@0.4.24":
   "integrity" "sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA=="
