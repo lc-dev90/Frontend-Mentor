@@ -10,28 +10,6 @@ const CountriesContainer = () => {
   const [searchTerm] = useContext(SearchContext);
   const [selectedItem] = useContext(SelectContext);
 
-  /*   let filteredSelectedCountries = [];
-  const filterSelected = () => {
-    if (selectedItem) {
-      filteredSelectedCountries = countries.filter((countrie) =>
-        countrie.region.toLowerCase().includes(selectedItem.toLowerCase())
-      );
-      return;
-    }
-    filteredSelectedCountries = countries;
-  };
-  filterSelected();
-  
-  if (searchTerm) {
-      filteredCountries = countries.filter((countrie) =>
-        countrie.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      return;
-    }
-    filteredCountries = countries;
-
-  */
-
   let filteredCountries = [];
   const filterCountries = () => {
     if (selectedItem && searchTerm) {
@@ -40,7 +18,7 @@ const CountriesContainer = () => {
           countrie.region.toLowerCase().includes(selectedItem.toLowerCase())
         )
         .filter((countrie) =>
-          countrie.name.toLowerCase().includes(searchTerm.toLowerCase())
+          countrie.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
         );
 
       return;
@@ -51,7 +29,7 @@ const CountriesContainer = () => {
       return;
     } else if (searchTerm) {
       filteredCountries = countries.filter((countrie) =>
-        countrie.name.toLowerCase().includes(searchTerm.toLowerCase())
+        countrie.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
       );
       return;
     }
