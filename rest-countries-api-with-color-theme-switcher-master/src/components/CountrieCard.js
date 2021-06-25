@@ -8,6 +8,10 @@ const CountrieCard = ({ name, population, region, capital, flag }) => {
 
   return (
     <Card>
+      <i className="fas fa-search">
+        <p>DETAILS</p>
+      </i>
+
       <FlagBox>
         <img src={`${flag}`} alt="" />
       </FlagBox>
@@ -36,13 +40,60 @@ const Card = styled.div`
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000d1;
+    position: absolute;
+  }
+  i {
+    position: absolute;
+    font-size: 2.5rem;
+    color: #e3dede;
+    z-index: 2;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 300ms ease-in-out;
+    p {
+      font-size: 13px;
+      display: block;
+      text-align: center;
+      font-weight: 800;
+      font-family: "Nunito Sans", sans-serif;
+      position: absolute;
+      width: 180%;
+      transform: translateX(-20%);
+      margin-top: 13px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+  &:hover {
+    &::after {
+      height: 100%;
+    }
+    i {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 `;
 
 const FlagBox = styled.div`
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   height: 160px;
   img {
-    border-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     width: 100%;
     height: 100%;
     object-fit: cover;
