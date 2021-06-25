@@ -7,10 +7,54 @@ const Details = () => {
       <Container>
         <ButtonContainer>
           <button>
-            <i class="fas fa-long-arrow-alt-left"></i>
+            <i className="fas fa-long-arrow-alt-left"></i>
             <span>Back</span>
           </button>
         </ButtonContainer>
+        <ContentContainer>
+          <FlagContainer>
+            <img src="#" alt="flag" />
+          </FlagContainer>
+          <InformationContainer>
+            <h2>Belgium</h2>
+            <Content>
+              <List>
+                <li>
+                  Native Name: <span>Belgie</span>
+                </li>
+                <li>
+                  Population: <span>11,456,334</span>
+                </li>
+                <li>
+                  Region: <span>Europe</span>
+                </li>
+                <li>
+                  Sub Region: <span>Western Europe</span>
+                </li>
+                <li>
+                  Capital: <span>Brussels</span>
+                </li>
+              </List>
+              <List>
+                <li>
+                  Top Level Domain: <span>.be</span>
+                </li>
+                <li>
+                  Currencies: <span>Euro</span>
+                </li>
+                <li>
+                  Language: <span>Dutch, French, German</span>
+                </li>
+              </List>
+            </Content>
+            <BordersContent>
+              <span>Border Countries: </span>
+              <a>France</a>
+              <a>Germany</a>
+              <a>Netherlands</a>
+            </BordersContent>
+          </InformationContainer>
+        </ContentContainer>
       </Container>
     </div>
   );
@@ -59,3 +103,18 @@ const ButtonContainer = styled.div`
     }
   }
 `;
+
+const ContentContainer = styled.div`
+  display: flex;
+  margin-top: 80px;
+`;
+
+const FlagContainer = styled.div``;
+
+const InformationContainer = styled.div``;
+
+const Content = styled.div``;
+
+const List = styled.ul``;
+
+const BordersContent = styled.div``;
