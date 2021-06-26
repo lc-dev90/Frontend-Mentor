@@ -84,7 +84,7 @@ projects.forEach(({ name }, i) => {
   listItem.innerHTML = `
 		<a href="/${name}/index.html">
 			<img src="/${name}/design/desktop-design.jpg" alt="${name}" />
-			<p>${i + 1}. ${formatProjectName(name)}</p>
+			<p>${i + 2}. ${formatProjectName(name)}</p>
 		</a>
 		<div class="links-container">
 			<a href="/${name}/index.html" class="blue">
