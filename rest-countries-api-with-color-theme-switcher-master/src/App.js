@@ -11,7 +11,6 @@ import { CountrieProvider } from "./components/CountrieContext";
 
 function App() {
   const [toggleDarkTheme, setToggleDarkTheme] = useState("true");
-  console.log(toggleDarkTheme);
   return (
     <SearchProvider>
       <SelectProvider>
@@ -28,7 +27,13 @@ function App() {
                   exact
                   component={() => <Home toggleDarkTheme={toggleDarkTheme} />}
                 />
-                <Route path="/details" exact component={Details} />
+                <Route
+                  path="/details"
+                  exact
+                  component={() => (
+                    <Details toggleDarkTheme={toggleDarkTheme} />
+                  )}
+                />
                 <Route component={NotFoundPage} />
               </Switch>
             </Container>

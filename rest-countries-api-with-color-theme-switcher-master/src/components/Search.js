@@ -44,7 +44,7 @@ const SearchCountry = styled.form`
       background-color: transparent;
       width: 100%;
       height: 100%;
-      color: white;
+      color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
       border: none;
       outline: none;
       font-size: 14px;

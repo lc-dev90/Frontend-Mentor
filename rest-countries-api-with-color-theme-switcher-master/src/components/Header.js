@@ -2,16 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 const Header = ({ toggleDarkTheme, setToggleDarkTheme }) => {
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleClick = () => {
     setToggleDarkTheme((prevToggleDarkTheme) => !prevToggleDarkTheme);
   };
   return (
     <Container toggleDarkTheme={toggleDarkTheme}>
       <nav>
         <h1>Where in the world?</h1>
-        <div>
-          <a href="/" onClick={handleClick}>
+        <div onClick={handleClick}>
+          <a>
             {toggleDarkTheme ? (
               <i className="fas fa-moon"></i>
             ) : (
@@ -31,7 +30,10 @@ const Container = styled.div`
   height: 80px;
   background-color: ${(props) => (props.toggleDarkTheme ? "#283640" : "white")};
   color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
-  box-shadow: 2px 2px 10px #1e272dab;
+  box-shadow: ${(props) =>
+    props.toggleDarkTheme
+      ? "2px 2px 10px #1e272dab"
+      : "0px 0px 10px 0px #1e272d2e"};
 
   nav {
     width: 1280px;
@@ -43,6 +45,7 @@ const Container = styled.div`
     justify-content: space-between;
     div {
       display: flex;
+      cursor: pointer;
       a {
         color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
         font-weight: 600;

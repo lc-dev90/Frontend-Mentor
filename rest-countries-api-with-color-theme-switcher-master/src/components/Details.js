@@ -7,7 +7,7 @@ import { SelectContext } from "./SelectContext";
 import { Redirect } from "react-router";
 countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 
-const Details = () => {
+const Details = ({ toggleDarkTheme }) => {
   const [countrie, setCountrie] = useState({});
   const [countrieC, setCountrieC] = useContext(CountrieContext);
   const [selectedItem, setSelectedItem] = useContext(SelectContext);
@@ -25,8 +25,8 @@ const Details = () => {
   };
 
   return (
-    <Container>
-      <ButtonContainer>
+    <Container toggleDarkTheme={toggleDarkTheme}>
+      <ButtonContainer toggleDarkTheme={toggleDarkTheme}>
         <Link to="/" onClick={() => setSelectedItem("")}>
           <button>
             <i className="fas fa-long-arrow-alt-left"></i>
@@ -63,7 +63,7 @@ const Details = () => {
                 Capital: <span>{countrie.capital}</span>
               </li>
             </List>
-            <List>
+            <List toggleDarkTheme={toggleDarkTheme}>
               <li>
                 Top Level Domain: <span>{countrie.topLevelDomain}</span>
               </li>
@@ -98,7 +98,7 @@ const Details = () => {
               </li>
             </List>
           </Content>
-          <BordersContent>
+          <BordersContent toggleDarkTheme={toggleDarkTheme}>
             <span>Border Countries: </span>
             {countrie.borders
               ? countrie.borders.map((border) =>
@@ -137,16 +137,16 @@ const Container = styled.div`
   margin: 0 auto;
   margin-top: 60px;
   padding-bottom: 60px;
-  color: white;
-  height: calc(100vh-80px);
+  color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
 `;
 
 const ButtonContainer = styled.div`
   display: block;
   button {
-    background-color: #283640;
+    background-color: ${(props) =>
+      props.toggleDarkTheme ? "#283640" : "white"};
     border: none;
-    color: white;
+    color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
     padding: 0.7rem 2rem;
     border-radius: 5px;
     display: flex;
@@ -154,7 +154,10 @@ const ButtonContainer = styled.div`
     cursor: pointer;
     outline: none;
     border: 1px solid transparent;
-    box-shadow: 0px 0px 3px 5px #00000021;
+    box-shadow: ${(props) =>
+      props.toggleDarkTheme
+        ? "0px 0px 3px 5px #00000021"
+        : "0px 0px 7px 5px #0000000d"};
     &:active {
       box-shadow: 0px 0px 3px 1px #00000021;
       transform: translateY(1px);
@@ -163,10 +166,11 @@ const ButtonContainer = styled.div`
       border: 1px solid #ffffff24;
     }
     &:hover {
-      background-color: #232c32;
+      background-color: ${(props) =>
+        props.toggleDarkTheme ? "#232c32" : "white"};
     }
     i {
-      color: white;
+      color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
       font-size: 1.4rem;
       margin-right: 15px;
     }
@@ -184,16 +188,21 @@ const ContentContainer = styled.div`
 `;
 
 const FlagContainer = styled.div`
-  width: 43%;
+  width: 50%;
   img {
     width: 100%;
-    height: 400px;
+    min-height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 14px 3px #0000001a;
+}
+
+
   }
 `;
 
 const InformationContainer = styled.div`
-  width: 47%;
-  justify-content: flex-end;
+  width: 42%;
+
   margin-bottom: 1rem;
   h2 {
     font-size: 2rem;
@@ -216,7 +225,7 @@ const List = styled.ul`
     span {
       font-weight: 400;
       a {
-        color: white;
+        color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
       }
     }
   }
@@ -231,16 +240,19 @@ const BordersContent = styled.div`
     margin-right: 10px;
   }
   a {
-    color: white;
+    color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};;
     margin-right: 4px;
-    background-color: #283640;
+    background-color:  ${(props) =>
+      props.toggleDarkTheme ? "#283640" : "white"};
     padding: 5px 20px;
     font-size: 14px;
     border-radius: 3px;
     cursor: pointer;
-    margin: 5px 10px;
+    margin: 5px;
+    box-shadow: 0px 0px 4px 4px#0000000f;
     &:hover {
-      background-color: #272f34;
+      background-color:   ${(props) =>
+        props.toggleDarkTheme ? "#272f34" : "#f0f0f0f0"};;
     box-shadow: 0px 0px 2px 2px #0000002b;
 }
 
