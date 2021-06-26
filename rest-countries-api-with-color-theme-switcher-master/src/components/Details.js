@@ -28,7 +28,10 @@ const Details = ({ toggleDarkTheme }) => {
   return (
     <Container toggleDarkTheme={toggleDarkTheme}>
       <ButtonContainer toggleDarkTheme={toggleDarkTheme}>
-        <Link to="/" onClick={() => setSelectedItem("")}>
+        <Link
+          to="/rest-countries-api-with-color-theme-switcher-master/build/"
+          onClick={() => setSelectedItem("")}
+        >
           <button>
             <i className="fas fa-long-arrow-alt-left"></i>
             <span>Back</span>

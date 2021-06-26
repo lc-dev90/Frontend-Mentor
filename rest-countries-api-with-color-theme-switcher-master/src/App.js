@@ -35,12 +35,12 @@ function App() {
               />
               <Switch>
                 <Route
-                  path="/"
+                  path="/rest-countries-api-with-color-theme-switcher-master/build/"
                   exact
                   component={() => <Home toggleDarkTheme={toggleDarkTheme} />}
                 />
                 <Route
-                  path="/details"
+                  path="/rest-countries-api-with-color-theme-switcher-master/build/details"
                   exact
                   component={() => (
                     <Details toggleDarkTheme={toggleDarkTheme} />

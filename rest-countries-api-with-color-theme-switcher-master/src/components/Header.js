@@ -8,7 +8,7 @@ const Header = ({ toggleDarkTheme, setToggleDarkTheme }) => {
   return (
     <Container toggleDarkTheme={toggleDarkTheme}>
       <nav>
-        <a href="/">
+        <a href="/rest-countries-api-with-color-theme-switcher-master/build/">
           <h1>Where in the world?</h1>
         </a>
         <div onClick={handleClick}>
