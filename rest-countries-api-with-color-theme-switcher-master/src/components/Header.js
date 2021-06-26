@@ -51,6 +51,22 @@ const Container = styled.div`
     }
     a {
       color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
+      outline: none;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        background: #f0f0f0;
+        width: 0px;
+        height: 2px;
+        transition: width 250ms linear;
+      }
+      &:hover,
+      &:focus {
+        &::after {
+          width: 100%;
+        }
+      }
       h1 {
         @media (max-width: 600px) {
           font-size: 1.3rem;
@@ -74,6 +90,23 @@ const Container = styled.div`
         border: none;
         font-size: 17px;
         outline: none;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          background: #f0f0f0;
+          width: 0px;
+          height: 2px;
+          left: 0;
+          bottom: -10px;
+          transition: width 250ms linear;
+        }
+        &:hover,
+        &:focus {
+          &::after {
+            width: 100%;
+          }
+        }
         @media (max-width: 400px) {
           font-size: 14px;
         }

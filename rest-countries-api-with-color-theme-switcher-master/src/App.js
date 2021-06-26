@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Details from "./components/Details";
 import Home from "./components/Home";
@@ -11,9 +11,18 @@ import { CountrieProvider } from "./components/CountrieContext";
 
 function App() {
   const [toggleDarkTheme, setToggleDarkTheme] = useState("true");
-  window.addEventListener("resize", (e) => {
-    console.log(window.innerWidth);
-  });
+
+  const LOCAL_STORAGE_KEY = "dark-mode";
+
+  useEffect(() => {
+    const darkMode = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    setToggleDarkTheme(darkMode);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(toggleDarkTheme));
+  }, [toggleDarkTheme]);
+
   return (
     <SearchProvider>
       <SelectProvider>

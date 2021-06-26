@@ -31,4 +31,9 @@ const FilterContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
+  @media (max-width: 900px) {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 48px;
+  }
 `;
