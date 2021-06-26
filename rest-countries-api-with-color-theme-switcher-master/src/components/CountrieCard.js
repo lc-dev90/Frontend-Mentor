@@ -19,7 +19,9 @@ const CountrieCard = ({
   };
 
   return (
-    <Link to={"/details"}>
+    <Link
+      to={"/rest-countries-api-with-color-theme-switcher-master/build/details"}
+    >
       <Card onClick={() => setCountrie(code)} toggleDarkTheme={toggleDarkTheme}>
         <i className="fas fa-search">
           <p>DETAILS</p>
