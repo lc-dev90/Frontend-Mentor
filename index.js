@@ -10,7 +10,7 @@ reactProjects.forEach(({ name }, i) => {
 
   listItem.innerHTML = `
 		<a href="/${name}/build/index.html">
-			<img src="/${name}/build/helper/design/desktop-design.jpg" alt="${name}" />
+			<img src="/${name}/build/helper/design/desktop-design-home-dark.jpg" alt="${name}" />
 			<p>${i + 1}. ${formatProjectName(name)}</p>
 		</a>
 		<div class="links-container">
