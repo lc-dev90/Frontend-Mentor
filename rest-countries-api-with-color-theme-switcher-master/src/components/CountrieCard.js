@@ -3,7 +3,15 @@ import styled from "styled-components";
 import { CountrieContext } from "./CountrieContext";
 import { Link } from "react-router-dom";
 
-const CountrieCard = ({ name, population, region, capital, flag, code }) => {
+const CountrieCard = ({
+  name,
+  population,
+  region,
+  capital,
+  flag,
+  code,
+  toggleDarkTheme,
+}) => {
   const [countrie, setCountrie] = useContext(CountrieContext);
 
   const numberWithCommas = (x) => {
@@ -12,7 +20,7 @@ const CountrieCard = ({ name, population, region, capital, flag, code }) => {
 
   return (
     <Link to={"/details"}>
-      <Card onClick={() => setCountrie(code)}>
+      <Card onClick={() => setCountrie(code)} toggleDarkTheme={toggleDarkTheme}>
         <i className="fas fa-search">
           <p>DETAILS</p>
         </i>
@@ -20,7 +28,7 @@ const CountrieCard = ({ name, population, region, capital, flag, code }) => {
         <FlagBox>
           <img src={`${flag}`} alt="" />
         </FlagBox>
-        <Details>
+        <Details toggleDarkTheme={toggleDarkTheme}>
           <h3>{name}</h3>
           <ul>
             <li>
@@ -42,11 +50,15 @@ const CountrieCard = ({ name, population, region, capital, flag, code }) => {
 export default CountrieCard;
 
 const Card = styled.div`
-  background-color: #283640;
+  background-color: ${(props) => (props.toggleDarkTheme ? "#283640" : "white")};
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
   position: relative;
+  box-shadow: ${(props) =>
+    props.toggleDarkTheme
+      ? "0px 0px 11px 5px #00000029"
+      : "0px 0px 11px 5px #0000003d"};
   &::after {
     content: "";
     width: 100%;
@@ -61,7 +73,7 @@ const Card = styled.div`
   i {
     position: absolute;
     font-size: 2.5rem;
-    color: #e3dede;
+    color: white;
     z-index: 2;
     top: 120%;
     left: 50%;
@@ -79,6 +91,7 @@ const Card = styled.div`
       margin-top: 13px;
       text-transform: uppercase;
       letter-spacing: 3px;
+      color: white;
     }
   }
   &:hover {
@@ -109,7 +122,7 @@ const FlagBox = styled.div`
 
 const Details = styled.div`
   padding: 30px 26px;
-  color: white;
+  color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
   h3 {
     margin-bottom: 1rem;
     font-size: 18px;

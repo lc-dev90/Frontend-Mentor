@@ -5,14 +5,14 @@ import Search from "./Search";
 import SelectInput from "./SelectInput";
 import CountriesContainer from "./CountriesContainer";
 
-const Home = () => {
+const Home = ({ toggleDarkTheme }) => {
   return (
     <div>
       <FilterContainer>
-        <Search />
-        <SelectInput />
+        <Search toggleDarkTheme={toggleDarkTheme} />
+        <SelectInput toggleDarkTheme={toggleDarkTheme} />
       </FilterContainer>
-      <CountriesContainer />
+      <CountriesContainer toggleDarkTheme={toggleDarkTheme} />
     </div>
   );
 };

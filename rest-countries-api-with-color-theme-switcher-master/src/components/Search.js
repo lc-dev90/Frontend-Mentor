@@ -2,11 +2,11 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { SearchContext } from "./SearchContext";
 
-const Search = () => {
+const Search = ({ toggleDarkTheme }) => {
   const [countries, setCountries] = useContext(SearchContext);
   return (
     <div>
-      <SearchCountry>
+      <SearchCountry toggleDarkTheme={toggleDarkTheme}>
         <i className="fas fa-search"></i>
         <label htmlFor="country">
           <input
@@ -25,8 +25,8 @@ const Search = () => {
 export default Search;
 
 const SearchCountry = styled.form`
-  background-color: #283640;
-  color: white;
+  background-color: ${(props) => (props.toggleDarkTheme ? "#283640" : "white")};
+  color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
   border-radius: 5px;
   width: 480px;
   box-shadow: 2px 2px 10px #1e272dab;
@@ -54,7 +54,7 @@ const SearchCountry = styled.form`
         box-shadow: inset 0 0 4px #000000b3;
       }
       &::placeholder {
-        color: white;
+        color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
       }
     }
   }

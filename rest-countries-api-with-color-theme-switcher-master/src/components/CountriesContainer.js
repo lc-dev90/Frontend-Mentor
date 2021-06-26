@@ -5,7 +5,7 @@ import CountrieCard from "./CountrieCard";
 import { SearchContext } from "./SearchContext";
 import { SelectContext } from "./SelectContext";
 
-const CountriesContainer = () => {
+const CountriesContainer = ({ toggleDarkTheme }) => {
   const [countries, setCountries] = useState([]);
   const [searchTerm] = useContext(SearchContext);
   const [selectedItem, setSelectedItem] = useContext(SelectContext);
@@ -47,12 +47,13 @@ const CountriesContainer = () => {
   }, []);
 
   return (
-    <Container>
+    <Container toggleDarkTheme={toggleDarkTheme}>
       {filteredCountries.length === 0 ? (
         <p>Sorry, no results for your search.</p>
       ) : (
         filteredCountries.map((countrie) => (
           <CountrieCard
+            toggleDarkTheme={toggleDarkTheme}
             key={countrie.numericCode}
             name={countrie.name}
             population={countrie.population}
@@ -83,7 +84,7 @@ const Container = styled.div`
   p {
     font-size: 18px;
     font-weight: 600;
-    color: white;
+    color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
     width: 500px;
   }
 `;

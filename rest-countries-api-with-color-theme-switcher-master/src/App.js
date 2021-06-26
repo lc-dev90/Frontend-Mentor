@@ -17,13 +17,17 @@ function App() {
       <SelectProvider>
         <CountrieProvider>
           <Router>
-            <Container>
+            <Container toggleDarkTheme={toggleDarkTheme}>
               <Header
                 toggleDarkTheme={toggleDarkTheme}
                 setToggleDarkTheme={setToggleDarkTheme}
               />
               <Switch>
-                <Route path="/" exact component={Home} />
+                <Route
+                  path="/"
+                  exact
+                  component={() => <Home toggleDarkTheme={toggleDarkTheme} />}
+                />
                 <Route path="/details" exact component={Details} />
                 <Route component={NotFoundPage} />
               </Switch>
@@ -38,6 +42,7 @@ function App() {
 export default App;
 
 const Container = styled.main`
-  background-color: #1c2a32;
+  background-color: ${(props) =>
+    props.toggleDarkTheme ? "#1c2a32" : "#fafafa"};
   min-height: 100vh;
 `;
