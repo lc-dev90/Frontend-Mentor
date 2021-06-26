@@ -4,22 +4,21 @@ import countries from "i18n-iso-countries";
 import { CountrieContext } from "./CountrieContext";
 import { Link } from "react-router-dom";
 import { SelectContext } from "./SelectContext";
+import { Redirect } from "react-router";
 countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 
 const Details = () => {
   const [countrie, setCountrie] = useState({});
   const [countrieC, setCountrieC] = useContext(CountrieContext);
   const [selectedItem, setSelectedItem] = useContext(SelectContext);
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetch(
-        `https://restcountries.eu/rest/v2/name/${countrieC}`
-      );
 
-      const [data] = await response.json();
-      setCountrie(data);
-    };
-    fetchData();
+  useEffect(() => {
+    if (countrieC) {
+      console.log(`https://restcountries.eu/rest/v2/name/${countrieC}`);
+      fetch(`https://restcountries.eu/rest/v2/name/${countrieC}`)
+        .then((response) => response.json())
+        .then(([data]) => setCountrie(data));
+    }
   }, [countrieC]);
 
   const numberWithCommas = (x) => {
@@ -103,18 +102,21 @@ const Details = () => {
           <BordersContent>
             <span>Border Countries: </span>
             {countrie.borders
-              ? countrie.borders.map((border) => (
-                  <a
-                    aria-label="Countrie"
-                    onClick={(e) =>
-                      setCountrieC(
-                        countries.getName(border, "en", { select: "official" })
-                      )
-                    }
-                  >
-                    {countries.getName(border, "en", { select: "official" })}
-                  </a>
-                ))
+              ? countrie.borders.map((border) =>
+                  countries.getName(border, "en", { select: "official" }) ? (
+                    // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                    <a
+                      aria-label="Countrie"
+                      onClick={() =>
+                        setCountrieC(countries.alpha3ToAlpha2(border))
+                      }
+                    >
+                      {countries.getName(border, "en", { select: "official" })}
+                    </a>
+                  ) : (
+                    ""
+                  )
+                )
               : ""}
             {countrie.borders
               ? countrie.borders.length < 1
