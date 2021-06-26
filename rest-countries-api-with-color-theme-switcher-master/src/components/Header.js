@@ -8,16 +8,18 @@ const Header = ({ toggleDarkTheme, setToggleDarkTheme }) => {
   return (
     <Container toggleDarkTheme={toggleDarkTheme}>
       <nav>
-        <h1>Where in the world?</h1>
+        <a href="/">
+          <h1>Where in the world?</h1>
+        </a>
         <div onClick={handleClick}>
-          <a>
+          <button>
             {toggleDarkTheme ? (
               <i className="fas fa-moon"></i>
             ) : (
               <i className="far fa-moon"></i>
             )}
             Dark Mode
-          </a>
+          </button>
         </div>
       </nav>
     </Container>
@@ -43,12 +45,22 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    a {
+      color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
+    }
     div {
       display: flex;
       cursor: pointer;
-      a {
+      button {
         color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
-        font-weight: 600;
+        background-color: ${(props) =>
+          props.toggleDarkTheme ? "#283640" : "white"};
+        font-weight: 400;
+        border: none;
+        font-size: 17px;
+        outline: none;
+
+        cursor: pointer;
         i {
           margin-right: 6px;
         }
