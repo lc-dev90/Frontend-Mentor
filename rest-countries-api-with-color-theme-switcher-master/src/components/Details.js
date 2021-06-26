@@ -5,6 +5,7 @@ import { CountrieContext } from "./CountrieContext";
 import { Link } from "react-router-dom";
 import { SelectContext } from "./SelectContext";
 import { Redirect } from "react-router";
+import { v4 as uuidv4 } from "uuid";
 countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 
 const Details = ({ toggleDarkTheme }) => {
@@ -84,7 +85,7 @@ const Details = ({ toggleDarkTheme }) => {
                 <span>
                   {countrie.languages
                     ? countrie.languages.map((language) => (
-                        <a>
+                        <a key={uuidv4()}>
                           {" "}
                           {language.name}
                           {countrie.languages[countrie.languages.length - 1] ===
@@ -105,6 +106,7 @@ const Details = ({ toggleDarkTheme }) => {
                   countries.getName(border, "en", { select: "official" }) ? (
                     // eslint-disable-next-line jsx-a11y/anchor-is-valid
                     <a
+                      key={uuidv4()}
                       aria-label="Countrie"
                       onClick={() =>
                         setCountrieC(countries.alpha3ToAlpha2(border))
@@ -193,7 +195,7 @@ const FlagContainer = styled.div`
     width: 100%;
     min-height: 100%;
     object-fit: cover;
-    box-shadow: 0px 0px 14px 3px #0000001a;
+    box-shadow: 0px 0px 14px 3px #00000033;
 }
 
 
