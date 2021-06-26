@@ -1,15 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const Header = () => {
+const Header = ({ toggleDarkTheme, setToggleDarkTheme }) => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    setToggleDarkTheme((prevToggleDarkTheme) => !prevToggleDarkTheme);
+  };
   return (
     <Container>
       <nav>
         <h1>Where in the world?</h1>
-
         <div>
-          <a href="/">
-            <i className="fas fa-moon"></i>Dark Mode
+          <a href="/" onClick={handleClick}>
+            {toggleDarkTheme ? (
+              <i className="fas fa-moon"></i>
+            ) : (
+              <i className="far fa-moon"></i>
+            )}
+            Dark Mode
           </a>
         </div>
       </nav>

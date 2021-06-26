@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { CountrieContext } from "./CountrieContext";
 import { Link } from "react-router-dom";
 
-const CountrieCard = ({ name, population, region, capital, flag }) => {
+const CountrieCard = ({ name, population, region, capital, flag, code }) => {
   const [countrie, setCountrie] = useContext(CountrieContext);
 
   const numberWithCommas = (x) => {
@@ -12,7 +12,7 @@ const CountrieCard = ({ name, population, region, capital, flag }) => {
 
   return (
     <Link to={"/details"}>
-      <Card onClick={() => setCountrie(name)}>
+      <Card onClick={() => setCountrie(code)}>
         <i className="fas fa-search">
           <p>DETAILS</p>
         </i>

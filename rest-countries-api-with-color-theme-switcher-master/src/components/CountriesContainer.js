@@ -58,6 +58,7 @@ const CountriesContainer = () => {
             population={countrie.population}
             region={countrie.region}
             capital={countrie.capital}
+            code={countrie.alpha2Code}
             flag={countrie.flag}
           />
         ))

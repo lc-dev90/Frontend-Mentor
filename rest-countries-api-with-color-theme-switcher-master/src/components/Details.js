@@ -14,10 +14,9 @@ const Details = () => {
 
   useEffect(() => {
     if (countrieC) {
-      console.log(`https://restcountries.eu/rest/v2/name/${countrieC}`);
-      fetch(`https://restcountries.eu/rest/v2/name/${countrieC}`)
+      fetch(`https://restcountries.eu/rest/v2/alpha/${countrieC}`)
         .then((response) => response.json())
-        .then(([data]) => setCountrie(data));
+        .then((data) => setCountrie(data));
     }
   }, [countrieC]);
 

@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Details from "./components/Details";
 import Home from "./components/Home";
@@ -9,13 +10,18 @@ import { SelectProvider } from "./components/SelectContext";
 import { CountrieProvider } from "./components/CountrieContext";
 
 function App() {
+  const [toggleDarkTheme, setToggleDarkTheme] = useState("true");
+  console.log(toggleDarkTheme);
   return (
     <SearchProvider>
       <SelectProvider>
         <CountrieProvider>
           <Router>
             <Container>
-              <Header />
+              <Header
+                toggleDarkTheme={toggleDarkTheme}
+                setToggleDarkTheme={setToggleDarkTheme}
+              />
               <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/details" exact component={Details} />
