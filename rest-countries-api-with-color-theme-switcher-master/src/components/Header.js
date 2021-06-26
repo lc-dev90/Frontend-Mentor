@@ -7,7 +7,7 @@ const Header = ({ toggleDarkTheme, setToggleDarkTheme }) => {
     setToggleDarkTheme((prevToggleDarkTheme) => !prevToggleDarkTheme);
   };
   return (
-    <Container>
+    <Container toggleDarkTheme={toggleDarkTheme}>
       <nav>
         <h1>Where in the world?</h1>
         <div>
@@ -29,8 +29,8 @@ export default Header;
 
 const Container = styled.div`
   height: 80px;
-  background-color: #283640;
-  color: white;
+  background-color: ${(props) => (props.toggleDarkTheme ? "#283640" : "white")};
+  color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
   box-shadow: 2px 2px 10px #1e272dab;
 
   nav {
@@ -44,7 +44,7 @@ const Container = styled.div`
     div {
       display: flex;
       a {
-        color: white;
+        color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
         font-weight: 600;
         i {
           margin-right: 6px;
