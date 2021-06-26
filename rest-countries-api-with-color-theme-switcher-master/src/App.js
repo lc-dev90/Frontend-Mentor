@@ -46,7 +46,11 @@ function App() {
                     <Details toggleDarkTheme={toggleDarkTheme} />
                   )}
                 />
-                <Route component={NotFoundPage} />
+                <Route
+                  component={() => (
+                    <NotFoundPage toggleDarkTheme={toggleDarkTheme} />
+                  )}
+                />
               </Switch>
             </Container>
           </Router>
