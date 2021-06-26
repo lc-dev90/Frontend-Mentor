@@ -1,3 +1,29 @@
+const reactProjects = [
+  {
+    name: "rest-countries-api-with-color-theme-switcher-master",
+  },
+];
+
+reactProjects.forEach(({ name }, i) => {
+  const listItem = document.createElement("li");
+
+  listItem.innerHTML = `
+		<a href="/${name}/build/index.html">
+			<img src="/${name}/build/helper/design/desktop-design.jpg" alt="${name}" />
+			<p>${i + 1}. ${formatProjectName(name)}</p>
+		</a>
+		<div class="links-container">
+			<a href="/${name}/build/index.html" class="blue">
+				<i class="fas fa-eye"></i>
+			</a>
+		</div>
+	`;
+
+  list.appendChild(listItem);
+});
+
+const list = document.getElementById("list");
+
 const projects = [
   {
     name: "url-shortening-api-master",
@@ -52,7 +78,6 @@ const projects = [
     name: "single-price-grid-component-master",
   },
 ];
-const list = document.getElementById("list");
 
 projects.forEach(({ name }, i) => {
   const listItem = document.createElement("li");
