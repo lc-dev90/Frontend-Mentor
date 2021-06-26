@@ -45,8 +45,23 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: 1024px) {
+      width: 80%;
+      margin: 0 auto;
+    }
     a {
       color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
+      h1 {
+        @media (max-width: 600px) {
+          font-size: 1.3rem;
+        }
+        @media (max-width: 450px) {
+          font-size: 1.2rem;
+        }
+        @media (max-width: 400px) {
+          font-size: 1rem;
+        }
+      }
     }
     div {
       display: flex;
@@ -59,10 +74,18 @@ const Container = styled.div`
         border: none;
         font-size: 17px;
         outline: none;
-
+        @media (max-width: 400px) {
+          font-size: 14px;
+        }
+        @media (max-width: 400px) {
+          font-size: 1rem;
+        }
         cursor: pointer;
         i {
-          margin-right: 6px;
+          margin-right: 10px;
+          @media (max-width: 400px) {
+            margin-right: 5px;
+          }
         }
       }
     }

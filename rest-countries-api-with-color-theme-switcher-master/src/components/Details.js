@@ -140,10 +140,18 @@ const Container = styled.div`
   margin-top: 60px;
   padding-bottom: 60px;
   color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const ButtonContainer = styled.div`
   display: block;
+  @media (max-width: 1024px) {
+    width: 80%;
+    margin: 0 auto;
+  }
   button {
     background-color: ${(props) =>
       props.toggleDarkTheme ? "#283640" : "white"};
@@ -187,10 +195,18 @@ const ContentContainer = styled.div`
   justify-content: space-between;
   margin-top: 60px;
   align-items: center;
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const FlagContainer = styled.div`
   width: 50%;
+  @media (max-width: 1024px) {
+    width: 80%;
+    margin-bottom: 40px;
+  }
   img {
     width: 100%;
     min-height: 100%;
@@ -204,6 +220,10 @@ const FlagContainer = styled.div`
 
 const InformationContainer = styled.div`
   width: 42%;
+  @media (max-width: 1024px) {
+    width: 80%;
+    margin-bottom: 40px;
+  }
 
   margin-bottom: 1rem;
   h2 {
@@ -215,9 +235,16 @@ const InformationContainer = styled.div`
 const Content = styled.div`
   display: flex;
   font-size: 14px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 const List = styled.ul`
+  @media (max-width: 600px) {
+    flex-direction: column;
+    margin-right: 0px !important;
+  }
   list-style: none;
 
   li {

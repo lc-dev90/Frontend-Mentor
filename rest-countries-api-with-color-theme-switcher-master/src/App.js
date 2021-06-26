@@ -11,6 +11,9 @@ import { CountrieProvider } from "./components/CountrieContext";
 
 function App() {
   const [toggleDarkTheme, setToggleDarkTheme] = useState("true");
+  window.addEventListener("resize", (e) => {
+    console.log(window.innerWidth);
+  });
   return (
     <SearchProvider>
       <SelectProvider>
