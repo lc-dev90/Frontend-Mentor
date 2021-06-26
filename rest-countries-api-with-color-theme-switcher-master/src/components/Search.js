@@ -5,7 +5,7 @@ import { SearchContext } from "./SearchContext";
 const Search = ({ toggleDarkTheme }) => {
   const [countries, setCountries] = useContext(SearchContext);
   return (
-    <div>
+    <div style={{ maxWidth: "100%" }}>
       <SearchCountry toggleDarkTheme={toggleDarkTheme}>
         <i className="fas fa-search"></i>
         <label htmlFor="country">
@@ -28,11 +28,16 @@ const SearchCountry = styled.form`
   background-color: ${(props) => (props.toggleDarkTheme ? "#283640" : "white")};
   color: ${(props) => (props.toggleDarkTheme ? "white" : "black")};
   border-radius: 5px;
+  max-width: 100%;
   width: 480px;
   box-shadow: 2px 2px 10px #1e272dab;
   display: flex;
   align-items: center;
   position: relative;
+  @media (max-width: 900px) {
+    margin-bottom: 30px;
+  }
+
   i {
     position: absolute;
     left: 30px;

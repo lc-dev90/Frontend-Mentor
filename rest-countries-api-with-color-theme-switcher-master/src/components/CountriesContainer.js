@@ -80,6 +80,9 @@ const Container = styled.div`
   gap: 3rem;
   grid-template-columns: repeat(auto-fit, 266px);
   justify-content: space-between;
+  @media (max-width: 1120px) {
+    justify-content: space-evenly;
+  }
 
   p {
     font-size: 18px;
