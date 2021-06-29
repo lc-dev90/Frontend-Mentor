@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import countries from "i18n-iso-countries";
+import { Link } from "react-router-dom";
+import { LongArrowAltLeft } from "@styled-icons/fa-solid/LongArrowAltLeft";
 
 //Context
 import CountriesContext from "../contexts/countries/countriesContext";
@@ -16,11 +18,17 @@ const DetailsPage = ({ match }) => {
 
   useEffect(() => {
     getCountrieDetail(match.params.id);
-  }, []);
+  }, [match]);
 
   return (
     <DetailsCountainer>
-      <button>Back</button>
+      <div className="btn-container">
+        <Arrow style={{ position: "absolute" }} />
+        <Link className="btn-back" to="/">
+          Back
+        </Link>
+      </div>
+
       {countrieDetail ? (
         <div className="details">
           <div className="details-flag">
@@ -36,7 +44,11 @@ const DetailsPage = ({ match }) => {
                 </div>
                 <div>
                   <span>Population: </span>
-                  <span>{numberWithCommas(countrieDetail.population)}</span>
+                  <span>
+                    {countrieDetail.population
+                      ? numberWithCommas(countrieDetail.population)
+                      : ""}
+                  </span>
                 </div>
                 <div>
                   <span>Region: </span>
@@ -89,11 +101,15 @@ const DetailsPage = ({ match }) => {
                     countries.getName(border, "en", {
                       select: "official",
                     }) ? (
-                      <a aria-label="Countrie" key={border}>
+                      <Link
+                        to={`/detail/${border}`}
+                        aria-label="Countrie"
+                        key={border}
+                      >
                         {countries.getName(border, "en", {
                           select: "official",
                         })}
-                      </a>
+                      </Link>
                     ) : (
                       ""
                     )
@@ -118,37 +134,27 @@ const DetailsPage = ({ match }) => {
 export default DetailsPage;
 
 const DetailsCountainer = styled.div`
-  a {
-    margin-right: 4px;
-    background-color: #283640;
-    padding: 4px 20px;
-    font-size: 14px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin: 5px;
-    box-shadow: 0px 0px 4px 4px #0000000d;
-    display: inline-block;
-    &:hover {
-      background-color: #272f34;
-      box-shadow: 0px 0px 2px 2px #0000002b;
-    }
+  .btn-container {
+    width: 100px;
+    position: relative;
   }
-  button {
+  .btn-back {
     margin: 8vh 0;
     background-color: #283640;
     border: none;
     color: white;
-    padding: 0.5rem 2rem;
+    text-align: center;
+    display: inline;
+    padding: 0.4rem 5rem;
+    padding-left: 4rem;
     border-radius: 5px;
     display: flex;
     align-items: center;
     cursor: pointer;
     outline: none;
+    text-decoration: none;
     border: 1px solid transparent;
-    box-shadow: ${(props) =>
-      props.toggleDarkTheme
-        ? "0px 0px 3px 5px #00000021"
-        : "0px 0px 7px 5px #0000000d"};
+    box-shadow: "0px 0px 3px 5px #00000021";
     &:active {
       box-shadow: 0px 0px 3px 1px #00000021;
       transform: translateY(1px);
@@ -179,6 +185,23 @@ const DetailsCountainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    a {
+      margin-right: 4px;
+      background-color: #283640;
+      padding: 4px 20px;
+      font-size: 14px;
+      border-radius: 3px;
+      cursor: pointer;
+      margin: 5px;
+      box-shadow: 0px 0px 4px 4px #0000000d;
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      &:hover {
+        background-color: #272f34;
+        box-shadow: 0px 0px 2px 2px #0000002b;
+      }
+    }
     h2 {
       color: white;
       margin-bottom: 22px;
@@ -203,4 +226,14 @@ const DetailsCountainer = styled.div`
       }
     }
   }
+`;
+
+const Arrow = styled(LongArrowAltLeft)`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 22px;
+  color: white;
+  pointer-events: none;
 `;
