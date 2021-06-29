@@ -12,8 +12,8 @@ import AboutPage from "./pages/AboutPage";
 
 const App = () => {
   return (
-    <div className="App">
-      <Router>
+    <Router>
+      <div className="App">
         <Navbar />
         <Container>
           <Route path="/" exact component={HomePage} />
@@ -21,11 +21,13 @@ const App = () => {
           <Route path="/about" component={AboutPage} />
         </Container>
         <Footer />
-      </Router>
-    </div>
+      </div>
+    </Router>
   );
 };
 
 export default App;
 
-const Container = styled.main``;
+const Container = styled.main`
+  min-height: calc(100vh - 110px);
+`;

@@ -17,7 +17,7 @@ const Navbar = () => {
         </div>
         <div>
           <Link to="/">
-            <MoonLightFill width="14" />
+            <MoonLightFill />
             <p>Dark Mode</p>
           </Link>
         </div>
@@ -29,7 +29,8 @@ const Navbar = () => {
 export default Navbar;
 
 const Header = styled.header`
-  padding: 20px 0;
+  height: 80px;
+  display: flex;
   background-color: #283640;
   .container {
     max-width: 90%;
@@ -58,7 +59,9 @@ const Header = styled.header`
 
 const MoonLight = styled(Moon)`
   color: white;
+  width: 14px;
 `;
 const MoonLightFill = styled(MoonFill)`
   color: white;
+  width: 14px;
 `;
