@@ -20,8 +20,8 @@ const SearchBar = () => {
 export default SearchBar;
 
 const SearchContainer = styled.div`
-  margin: 48px 0;
   width: 480px;
+  margin-right: 20px;
   form {
     position: relative;
     width: 100%;
