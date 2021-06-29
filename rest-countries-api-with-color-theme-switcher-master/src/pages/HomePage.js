@@ -4,6 +4,7 @@ import styled from "styled-components";
 // Components
 import SearchBar from "../components/SearchBar";
 import SelectBar from "../components/SelectBar";
+import CountrieList from "../components/CountrieList";
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
         <SearchBar />
         <SelectBar />
       </BarsContainer>
+      <CountrieList />
     </div>
   );
 };
@@ -20,6 +22,6 @@ export default HomePage;
 
 const BarsContainer = styled.div`
   display: flex;
-  margin: 48px 0;
+  padding: 48px 0;
   justify-content: space-between;
 `;

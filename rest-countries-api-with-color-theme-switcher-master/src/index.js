@@ -3,9 +3,12 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
+//Context
+import CountriesState from "./contexts/countries/CountriesState";
+
 ReactDOM.render(
-  <React.StrictMode>
+  <CountriesState>
     <App />
-  </React.StrictMode>,
+  </CountriesState>,
   document.getElementById("root")
 );

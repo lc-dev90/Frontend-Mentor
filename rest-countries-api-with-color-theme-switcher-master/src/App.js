@@ -13,7 +13,7 @@ import AboutPage from "./pages/AboutPage";
 const App = () => {
   return (
     <Router>
-      <div className="App">
+      <>
         <Navbar />
         <Container>
           <Route path="/" exact component={HomePage} />
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/about" component={AboutPage} />
         </Container>
         <Footer />
-      </div>
+      </>
     </Router>
   );
 };
@@ -33,4 +33,5 @@ const Container = styled.main`
   max-width: 90%;
   width: 1280px;
   margin: 0 auto;
+}
 `;
