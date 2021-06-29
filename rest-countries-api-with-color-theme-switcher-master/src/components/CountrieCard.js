@@ -1,31 +1,34 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const CountrieCard = ({ name, population, region, capital, flag }) => {
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
   return (
-    <Card>
-      <div className="flag-container">
-        <img src={flag} alt={name} />
-      </div>
-      <div className="details">
-        <h3>{name}</h3>
-        <div>
-          <span>Population: </span>
-          <span className="info">{numberWithCommas(population)}</span>
+    <Link to={`/detail/${name}`} style={{ textDecoration: "none" }}>
+      <Card>
+        <div className="flag-container">
+          <img src={flag} alt={name} />
         </div>
-        <div>
-          <span>Region: </span>
-          <span className="info">{region}</span>
+        <div className="details">
+          <h3>{name}</h3>
+          <div>
+            <span>Population: </span>
+            <span className="info">{numberWithCommas(population)}</span>
+          </div>
+          <div>
+            <span>Region: </span>
+            <span className="info">{region}</span>
+          </div>
+          <div>
+            <span>Capital: </span>
+            <span className="info">{capital}</span>
+          </div>
         </div>
-        <div>
-          <span>Capital: </span>
-          <span className="info">{capital}</span>
-        </div>
-      </div>
-    </Card>
+      </Card>
+    </Link>
   );
 };
 
