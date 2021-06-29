@@ -13,7 +13,7 @@ import {
 const CountriesState = (props) => {
   const initialState = {
     countries: [],
-    singleCountrie: {},
+    countrieDetail: {},
     loading: false,
   };
 
@@ -31,12 +31,34 @@ const CountriesState = (props) => {
     });
   };
 
+  const getCountrieDetail = async (code) => {
+    dispatch({
+      type: SET_LOADING,
+    });
+    const { data } = await axios.get(
+      `https://restcountries.eu/rest/v2/alpha/${code}`
+    );
+    dispatch({
+      type: GET_COUNTRIE_DETAIL,
+      payload: data,
+    });
+  };
+
+  const clearCountrieDetail = () => {
+    dispatch({
+      type: CLEAR_COUNTRIE_DETAIL,
+    });
+  };
+
   return (
     <CountriesContext.Provider
       value={{
         countries: state.countries,
+        countrieDetail: state.countrieDetail,
         loading: state.loading,
         getCountries,
+        getCountrieDetail,
+        clearCountrieDetail,
       }}
     >
       {props.children}

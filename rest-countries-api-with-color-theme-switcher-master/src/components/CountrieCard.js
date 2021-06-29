@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-const CountrieCard = ({ name, population, region, capital, flag }) => {
+const CountrieCard = ({ name, population, region, capital, flag, code }) => {
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
   return (
-    <Link to={`/detail/${name}`} style={{ textDecoration: "none" }}>
+    <Link to={`/detail/${code}`} style={{ textDecoration: "none" }}>
       <Card>
         <div className="flag-container">
           <img src={flag} alt={name} />

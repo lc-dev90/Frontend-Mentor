@@ -18,6 +18,17 @@ const countriesReducer = (state, action) => {
         countries: action.payload,
         loading: false,
       };
+    case GET_COUNTRIE_DETAIL:
+      return {
+        ...state,
+        countrieDetail: action.payload,
+        loading: false,
+      };
+    case CLEAR_COUNTRIE_DETAIL:
+      return {
+        ...state,
+        countrieDetail: {},
+      };
 
     default:
       return state;

@@ -9,10 +9,12 @@ import CountrieCard from "../components/CountrieCard";
 
 const CountrieList = ({ searchTerm, selectValue }) => {
   const countriesContext = useContext(CountriesContext);
-  const { loading, countries, getCountries } = countriesContext;
+  const { loading, countries, getCountries, clearCountrieDetail } =
+    countriesContext;
 
   useEffect(() => {
     getCountries();
+    clearCountrieDetail();
   }, []);
 
   let filteredCountries = countries;
@@ -46,6 +48,7 @@ const CountrieList = ({ searchTerm, selectValue }) => {
                 region={countrie.region}
                 capital={countrie.capital}
                 flag={countrie.flag}
+                code={countrie.alpha3Code}
               />
             ))
           : ""}
