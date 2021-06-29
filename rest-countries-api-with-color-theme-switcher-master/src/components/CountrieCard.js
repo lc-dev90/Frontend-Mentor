@@ -8,7 +8,7 @@ const CountrieCard = ({ name, population, region, capital, flag }) => {
   return (
     <Card>
       <div className="flag-container">
-        <img src={flag} />
+        <img src={flag} alt={name} />
       </div>
       <div className="details">
         <h3>{name}</h3>
@@ -36,6 +36,8 @@ const Card = styled.div`
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
+  transition: transform 0.5s ease;
+  position: relative;
 
   .details {
     height: 176px;

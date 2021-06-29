@@ -7,7 +7,7 @@ import CountriesContext from "../contexts/countries/countriesContext";
 //Components
 import CountrieCard from "../components/CountrieCard";
 
-const CountrieList = () => {
+const CountrieList = ({ searchTerm, selectValue }) => {
   const countriesContext = useContext(CountriesContext);
   const { loading, countries, getCountries } = countriesContext;
 
@@ -15,12 +15,32 @@ const CountrieList = () => {
     getCountries();
   }, []);
 
+  let filteredCountries = countries;
+  if (searchTerm && selectValue) {
+    filteredCountries = countries
+      .filter((countrie) =>
+        countrie.region.toLowerCase().includes(selectValue.toLowerCase())
+      )
+      .filter((countrie) =>
+        countrie.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
+      );
+  } else if (searchTerm) {
+    filteredCountries = countries.filter((countrie) =>
+      countrie.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
+    );
+  } else if (selectValue) {
+    filteredCountries = countries.filter((countrie) =>
+      countrie.region.toLowerCase().includes(selectValue.toLowerCase())
+    );
+  }
+
   return (
     <div>
       <ListContainer>
-        {countries
-          ? countries.map((countrie) => (
+        {filteredCountries
+          ? filteredCountries.map((countrie) => (
               <CountrieCard
+                key={countrie.alpha2Code}
                 name={countrie.name}
                 population={countrie.population}
                 region={countrie.region}

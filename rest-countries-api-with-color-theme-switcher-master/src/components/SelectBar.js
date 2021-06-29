@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Select from "react-select";
 
-const SelectBar = () => {
+const SelectBar = ({ handleSelectChange }) => {
   let toggleDarkTheme = true;
   const options = [
     { value: "africa", label: "Africa" },
@@ -113,6 +113,7 @@ const SelectBar = () => {
         components={{
           IndicatorSeparator: () => null,
         }}
+        onChange={(e) => handleSelectChange(e.value)}
       />
     </SelectContainer>
   );

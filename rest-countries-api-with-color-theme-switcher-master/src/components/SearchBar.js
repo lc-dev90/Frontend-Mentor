@@ -2,16 +2,19 @@ import React from "react";
 import styled from "styled-components";
 
 // Components
-/* import { Search } from "@styled-icons/bootstrap/Search"; */
-/* import { Search } from "@styled-icons/fa-solid/Search"; */
+
 import { Search } from "@styled-icons/fluentui-system-filled/Search";
 
-const SearchBar = () => {
+const SearchBar = ({ handleSearch }) => {
   return (
     <SearchContainer>
-      <form>
+      <form onSubmit={(e) => e.preventDefault()}>
         <SearchIcon />
-        <input type="text" placeholder="Search for a country..." />
+        <input
+          type="text"
+          placeholder="Search for a country..."
+          onChange={(e) => handleSearch(e.target.value)}
+        />
       </form>
     </SearchContainer>
   );

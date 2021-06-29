@@ -18,6 +18,7 @@ const countriesReducer = (state, action) => {
         countries: action.payload,
         loading: false,
       };
+
     default:
       return state;
   }

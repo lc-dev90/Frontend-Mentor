@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 // Components
@@ -7,13 +7,24 @@ import SelectBar from "../components/SelectBar";
 import CountrieList from "../components/CountrieList";
 
 const HomePage = () => {
+  const [inputSearch, setInputSearch] = useState("");
+  const [inputSelect, setInputSelect] = useState("");
+
+  const handleSearch = (searchTerm) => {
+    setInputSearch(searchTerm);
+  };
+
+  const handleSelectChange = (value) => {
+    setInputSelect(value);
+  };
+
   return (
     <div>
       <BarsContainer>
-        <SearchBar />
-        <SelectBar />
+        <SearchBar handleSearch={handleSearch} />
+        <SelectBar handleSelectChange={handleSelectChange} />
       </BarsContainer>
-      <CountrieList />
+      <CountrieList searchTerm={inputSearch} selectValue={inputSelect} />
     </div>
   );
 };
