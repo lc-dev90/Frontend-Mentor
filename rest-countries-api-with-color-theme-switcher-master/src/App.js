@@ -30,4 +30,7 @@ export default App;
 
 const Container = styled.main`
   min-height: calc(100vh - 110px);
+  max-width: 90%;
+  width: 1280px;
+  margin: 0 auto;
 `;
