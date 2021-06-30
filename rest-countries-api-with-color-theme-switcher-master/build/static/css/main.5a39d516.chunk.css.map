@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,iBAGE,SAAU,CACV,QAAS,CACT,qBACF,CAEA,KACE,oCACF","file":"main.5a39d516.chunk.css","sourcesContent":["*,\n*::after,\n*::before {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box;\n}\n\nbody {\n  font-family: \"Nunito Sans\", sans-serif;\n}\n"]}
