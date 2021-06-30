@@ -20,19 +20,21 @@ const App = () => {
       <Main darkTheme={darkTheme}>
         <Navbar />
         <Container>
-          <Route
-            path="/rest-countries-api-with-color-theme-switcher-master/build"
-            exact
-            component={HomePage}
-          />
-          <Route
-            path="/rest-countries-api-with-color-theme-switcher-master/build/detail/:id"
-            component={DetailsPage}
-          />
-          <Route
-            path="/rest-countries-api-with-color-theme-switcher-master/build/about"
-            component={AboutPage}
-          />
+          <Switch>
+            <Route
+              path="/rest-countries-api-with-color-theme-switcher-master/build"
+              exact
+              component={HomePage}
+            />
+            <Route
+              path="/rest-countries-api-with-color-theme-switcher-master/build/detail/:id"
+              component={DetailsPage}
+            />
+            <Route
+              path="/rest-countries-api-with-color-theme-switcher-master/build/about"
+              component={AboutPage}
+            />
+          </Switch>
         </Container>
       </Main>
     </Router>
