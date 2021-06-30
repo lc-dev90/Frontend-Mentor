@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Select from "react-select";
+import themeContext from "../contexts/themes/themeContext";
 
 const SelectBar = ({ handleSelectChange }) => {
-  let toggleDarkTheme = true;
+  const { darkTheme } = useContext(themeContext);
   const options = [
     { value: "africa", label: "Africa" },
     { value: "america", label: "America" },
@@ -16,7 +17,7 @@ const SelectBar = ({ handleSelectChange }) => {
   let backgroundColor = "";
   let backgroundHover = "";
 
-  if (toggleDarkTheme) {
+  if (darkTheme) {
     color = "white";
     backgroundColor = "#283640";
     backgroundHover = "#1c2a32";

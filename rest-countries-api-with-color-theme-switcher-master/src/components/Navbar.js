@@ -21,11 +21,11 @@ const Navbar = () => {
           </Link>
         </div>
         <div>
-          <Link to="/" onClick={toggleDarkTheme}>
+          <span onClick={toggleDarkTheme}>
             {darkTheme ? <MoonLightFill /> : <MoonLight />}
 
             <p>Dark Mode</p>
-          </Link>
+          </span>
         </div>
       </div>
     </Header>
@@ -38,6 +38,10 @@ const Header = styled.header`
   height: 80px;
   display: flex;
   background-color: ${(props) => (props.darkTheme ? "#283640" : "white")};
+  box-shadow: ${(props) =>
+    props.darkTheme
+      ? "inset 0 0 4px #000000b3, 2px 2px 10px #1e272d63"
+      : "2px 2px 10px #1e272d63"};
   .container {
     max-width: 90%;
     width: 1280px;
@@ -52,6 +56,10 @@ const Header = styled.header`
     a {
       text-decoration: none;
       color: ${(props) => (props.darkTheme ? "white" : "black")};
+    }
+    span {
+      color: ${(props) => (props.darkTheme ? "white" : "black")};
+      cursor: pointer;
     }
     p {
       font-size: 1rem;

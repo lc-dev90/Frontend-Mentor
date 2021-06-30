@@ -6,10 +6,12 @@ import { LongArrowAltLeft } from "@styled-icons/fa-solid/LongArrowAltLeft";
 
 //Context
 import CountriesContext from "../contexts/countries/countriesContext";
+import themeContext from "../contexts/themes/themeContext";
 countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 
 const DetailsPage = ({ match }) => {
   const countriesContext = useContext(CountriesContext);
+  const { darkTheme } = useContext(themeContext);
   const { loading, getCountrieDetail, countrieDetail } = countriesContext;
 
   const numberWithCommas = (x) => {
@@ -21,9 +23,9 @@ const DetailsPage = ({ match }) => {
   }, [match]);
 
   return (
-    <DetailsCountainer>
+    <DetailsCountainer darkTheme={darkTheme}>
       <div className="btn-container">
-        <Arrow style={{ position: "absolute" }} />
+        <Arrow style={{ position: "absolute" }} darkTheme={darkTheme} />
         <Link className="btn-back" to="/">
           Back
         </Link>
@@ -143,9 +145,9 @@ const DetailsCountainer = styled.div`
   }
   .btn-back {
     margin: 8vh 0;
-    background-color: #283640;
+    background-color: ${(props) => (props.darkTheme ? "#283640" : "white")};
     border: none;
-    color: white;
+    color: ${(props) => (props.darkTheme ? "white" : "#283640")};
     text-align: center;
     display: inline;
     padding: 0.4rem 5rem;
@@ -157,10 +159,14 @@ const DetailsCountainer = styled.div`
     outline: none;
     text-decoration: none;
     border: 1px solid transparent;
-    box-shadow: 0px 0px 3px 5px #00000005;
+    box-shadow: ${(props) =>
+      props.darkTheme
+        ? "inset 0 0 4px #000000b3, 2px 2px 10px #1e272d63"
+        : "2px 2px 10px #1e272d63"};
 
     &:hover {
-      background-color: #2b3339;
+      background-color: ${(props) => (props.darkTheme ? "#272f34" : "white")};
+      box-shadow: 0px 0px 2px 2px #0000002b;
     }
   }
   .details {
@@ -178,29 +184,33 @@ const DetailsCountainer = styled.div`
   .information {
     width: 45%;
     margin-left: auto;
-    color: #ece3e3eb;
+    color: ${(props) => (props.darkTheme ? "#ece3e3eb" : "black")};
     display: flex;
     flex-direction: column;
     justify-content: center;
     a {
       margin-right: 4px;
-      background-color: #283640;
+      background-color: ${(props) => (props.darkTheme ? "#283640" : "white")};
       padding: 4px 20px;
       font-size: 14px;
       border-radius: 3px;
       cursor: pointer;
       margin: 5px;
-      box-shadow: 0px 0px 4px 4px #0000000d;
+      box-shadow: ${(props) =>
+        props.darkTheme
+          ? "inset 0 0 4px #000000b3, 2px 2px 10px #1e272d63"
+          : "2px 2px 10px #1e272d63"};
+
       display: inline-block;
       text-decoration: none;
-      color: white;
+      color: ${(props) => (props.darkTheme ? "white" : "black")};
       &:hover {
-        background-color: #272f34;
+        background-color: ${(props) => (props.darkTheme ? "#272f34" : "white")};
         box-shadow: 0px 0px 2px 2px #0000002b;
       }
     }
     h2 {
-      color: white;
+      color: ${(props) => (props.darkTheme ? "white" : "black")};
       margin-bottom: 22px;
     }
     div {
@@ -209,7 +219,7 @@ const DetailsCountainer = styled.div`
         font-size: 14px;
         &:nth-of-type(1) {
           font-weight: 800;
-          color: #ffffffeb;
+          color: ${(props) => (props.darkTheme ? "#ffffffeb" : "black")};
         }
       }
     }
@@ -231,6 +241,6 @@ const Arrow = styled(LongArrowAltLeft)`
   transform: translateY(-50%);
   left: 31px;
   width: 22px;
-  color: white;
+  color: ${(props) => (props.darkTheme ? "white" : "black")};
   pointer-events: none;
 `;

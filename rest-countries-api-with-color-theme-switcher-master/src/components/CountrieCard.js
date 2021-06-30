@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import themeContext from "../contexts/themes/themeContext";
 
 const CountrieCard = ({ name, population, region, capital, flag, code }) => {
+  const { darkTheme } = useContext(themeContext);
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
   return (
     <Link to={`/detail/${code}`} style={{ textDecoration: "none" }}>
-      <Card>
+      <Card darkTheme={darkTheme}>
         <div className="flag-container">
           <img src={flag} alt={name} />
         </div>
@@ -35,17 +37,20 @@ const CountrieCard = ({ name, population, region, capital, flag, code }) => {
 export default CountrieCard;
 
 const Card = styled.div`
-  background-color: #283640;
+  background-color: ${(props) => (props.darkTheme ? "#283640" : "white")};
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.5s ease;
   position: relative;
-
+  box-shadow: ${(props) =>
+    props.darkTheme
+      ? "inset 0 0 4px #000000b3, 2px 2px 10px #1e272d63"
+      : "2px 2px 10px #1e272d63"};
   .details {
     height: 176px;
     padding: 0 25px;
-    color: white;
+    color: ${(props) => (props.darkTheme ? "white" : "black")};
     font-size: 14px;
     div {
       margin-bottom: 5px;
