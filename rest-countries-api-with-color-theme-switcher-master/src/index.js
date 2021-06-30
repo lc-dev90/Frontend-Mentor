@@ -5,10 +5,13 @@ import App from "./App";
 
 //Context
 import CountriesState from "./contexts/countries/CountriesState";
+import ThemeState from "./contexts/themes/ThemeState";
 
 ReactDOM.render(
   <CountriesState>
-    <App />
+    <ThemeState>
+      <App />
+    </ThemeState>
   </CountriesState>,
   document.getElementById("root")
 );

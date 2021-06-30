@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -6,9 +6,14 @@ import styled from "styled-components";
 import { Moon } from "@styled-icons/bootstrap/Moon";
 import { MoonFill } from "@styled-icons/bootstrap/MoonFill";
 
+// Context
+import themeContext from "../contexts/themes/themeContext";
+
 const Navbar = () => {
+  const { toggleDarkTheme, darkTheme } = useContext(themeContext);
+
   return (
-    <Header>
+    <Header darkTheme={darkTheme}>
       <div className="container">
         <div>
           <Link to="/">
@@ -16,7 +21,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div>
-          <Link to="/">
+          <Link to="/" onClick={toggleDarkTheme}>
             <MoonLightFill />
             <p>Dark Mode</p>
           </Link>
@@ -31,7 +36,7 @@ export default Navbar;
 const Header = styled.header`
   height: 80px;
   display: flex;
-  background-color: #283640;
+  background-color: ${(props) => (props.darkTheme ? "#283640" : "white")};
   .container {
     max-width: 90%;
     width: 1280px;
@@ -45,7 +50,7 @@ const Header = styled.header`
     align-items: center;
     a {
       text-decoration: none;
-      color: white;
+      color: ${(props) => (props.darkTheme ? "white" : "black")};
     }
     p {
       font-size: 1rem;
