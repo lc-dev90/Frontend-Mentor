@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 
 import ThemeContext from "./themeContext";
 import ThemeReducer from "./themeReducer";
@@ -8,7 +8,14 @@ const ThemeState = (props) => {
   const initialState = {
     darkTheme: true,
   };
-  const [state, dispatch] = useReducer(ThemeReducer, initialState);
+  const [state, dispatch] = useReducer(ThemeReducer, initialState, () => {
+    const localData = localStorage.getItem("darkTheme");
+    return localData ? JSON.parse(localData) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("darkTheme", JSON.stringify(state));
+  }, [state]);
 
   const toggleDarkTheme = () => {
     dispatch({
