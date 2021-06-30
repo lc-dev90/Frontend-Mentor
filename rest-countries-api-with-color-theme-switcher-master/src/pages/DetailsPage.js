@@ -19,6 +19,11 @@ const DetailsPage = ({ match }) => {
     clearCountrieDetail,
   } = countriesContext;
 
+  const handleClickBackButton = () => {
+    clearFilteredCountries();
+    clearCountrieDetail();
+  };
+
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
@@ -34,7 +39,7 @@ const DetailsPage = ({ match }) => {
         <Link
           className="btn-back"
           to="/rest-countries-api-with-color-theme-switcher-master/build"
-          onClick={(clearFilteredCountries, clearCountrieDetail)}
+          onClick={handleClickBackButton}
         >
           Back
         </Link>

@@ -16,7 +16,7 @@ const Navbar = () => {
     <Header darkTheme={darkTheme}>
       <div className="container">
         <div>
-          <Link to="/">
+          <Link to="/rest-countries-api-with-color-theme-switcher-master/build">
             <h2>Where in the world?</h2>
           </Link>
         </div>
