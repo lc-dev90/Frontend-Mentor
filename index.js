@@ -9,12 +9,12 @@ reactProjects.forEach(({ name }, i) => {
   const listItem = document.createElement("li");
 
   listItem.innerHTML = `
-		<a href="/${name}/public/index.html">
+		<a href="/${name}/build">
 			<img src="/${name}/helper/design/desktop-design-home-dark.jpg" alt="${name}" />
 			<p>${i + 1}. ${formatProjectName(name)}</p>
 		</a>
 		<div class="links-container">
-			<a href="/${name}/public/index.html" class="blue">
+			<a href="/${name}/build" class="blue">
 				<i class="fas fa-eye"></i>
 			</a>
 		</div>
