@@ -26,7 +26,7 @@ const CountrieList = () => {
                 code={countrie.alpha3Code}
               />
             ))
-          : ""}
+          : "Sorry, no results."}
       </ListContainer>
     </div>
   );

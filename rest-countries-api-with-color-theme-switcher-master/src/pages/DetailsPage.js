@@ -4,6 +4,9 @@ import countries from "i18n-iso-countries";
 import { Link } from "react-router-dom";
 import { LongArrowAltLeft } from "@styled-icons/fa-solid/LongArrowAltLeft";
 
+// Components
+import Loading from "../components/Loading";
+
 //Context
 import CountriesContext from "../contexts/countries/countriesContext";
 import themeContext from "../contexts/themes/themeContext";
@@ -144,7 +147,7 @@ const DetailsPage = ({ match }) => {
           <div />
         </div>
       ) : (
-        ""
+        <Loading />
       )}
     </DetailsCountainer>
   );
