@@ -21,7 +21,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div>
-          <span onClick={toggleDarkTheme}>
+          <span onClick={toggleDarkTheme} tabIndex="0">
             {darkTheme ? <MoonLightFill /> : <MoonLight />}
 
             <p>Dark Mode</p>
@@ -56,10 +56,26 @@ const Header = styled.header`
     a {
       text-decoration: none;
       color: ${(props) => (props.darkTheme ? "white" : "black")};
+      outline: none;
+      &:focus {
+        transform: scale(1.02);
+        filter: brightness(0.9);
+      }
+      &:hover {
+        filter: brightness(0.85);
+      }
     }
     span {
       color: ${(props) => (props.darkTheme ? "white" : "black")};
       cursor: pointer;
+      outline: none;
+      &:focus {
+        transform: scale(1.02);
+        filter: brightness(0.9);
+      }
+      &:hover {
+        filter: brightness(0.85);
+      }
     }
     p {
       font-size: 1rem;

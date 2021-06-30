@@ -53,6 +53,10 @@ const SearchContainer = styled.div`
         background-color: ${(props) => (props.darkTheme ? "#272f34" : "white")};
         box-shadow: 0px 0px 2px 2px #0000002b;
       }
+      &:focus {
+        background-color: ${(props) => (props.darkTheme ? "#272f34" : "white")};
+        box-shadow: 0px 0px 2px 2px #0000002b;
+      }
     }
   }
 `;
