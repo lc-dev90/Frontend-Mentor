@@ -6,6 +6,7 @@ import {
   FILTER_COUNTRIES,
   FILTER_SEARCH_COUNTRIES,
   FILTER_SELECT_COUNTRIES,
+  CLEAR_FILTERED_COUNTRIES,
 } from "../types";
 
 const countriesReducer = (state, action) => {
@@ -67,6 +68,11 @@ const countriesReducer = (state, action) => {
         filteredCountries: state.countries.filter((countrie) =>
           countrie.region.toLowerCase().includes(action.payload.toLowerCase())
         ),
+      };
+    case CLEAR_FILTERED_COUNTRIES:
+      return {
+        ...state,
+        filteredCountries: state.countries,
       };
     default:
       return state;

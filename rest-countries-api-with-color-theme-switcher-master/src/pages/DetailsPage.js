@@ -12,7 +12,8 @@ countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 const DetailsPage = ({ match }) => {
   const countriesContext = useContext(CountriesContext);
   const { darkTheme } = useContext(themeContext);
-  const { loading, getCountrieDetail, countrieDetail } = countriesContext;
+  const { getCountrieDetail, countrieDetail, clearFilteredCountries } =
+    countriesContext;
 
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -26,7 +27,7 @@ const DetailsPage = ({ match }) => {
     <DetailsCountainer darkTheme={darkTheme}>
       <div className="btn-container">
         <Arrow style={{ position: "absolute" }} darkTheme={darkTheme} />
-        <Link className="btn-back" to="/">
+        <Link className="btn-back" to="/" onClick={clearFilteredCountries}>
           Back
         </Link>
       </div>

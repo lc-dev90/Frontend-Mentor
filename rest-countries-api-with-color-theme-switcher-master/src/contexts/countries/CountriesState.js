@@ -11,6 +11,7 @@ import {
   FILTER_SEARCH_COUNTRIES,
   FILTER_SELECT_COUNTRIES,
   FILTER_COUNTRIES,
+  CLEAR_FILTERED_COUNTRIES,
 } from "../types";
 
 const CountriesState = (props) => {
@@ -82,6 +83,12 @@ const CountriesState = (props) => {
     });
   };
 
+  const clearFilteredCountries = () => {
+    dispatch({
+      type: CLEAR_FILTERED_COUNTRIES,
+    });
+  };
+
   return (
     <CountriesContext.Provider
       value={{
@@ -97,6 +104,7 @@ const CountriesState = (props) => {
         filterSelectCountries,
         filterSearchCountries,
         filterCountries,
+        clearFilteredCountries,
       }}
     >
       {props.children}
