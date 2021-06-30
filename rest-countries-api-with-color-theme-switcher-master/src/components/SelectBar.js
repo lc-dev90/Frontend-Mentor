@@ -6,7 +6,7 @@ import countriesContext from "../contexts/countries/countriesContext";
 
 const SelectBar = ({ handleSelectChange }) => {
   const { darkTheme } = useContext(themeContext);
-  const { filterSelectCountries, selectValue, searchTerm, filterCountries } =
+  const { filterSelectCountries, searchTerm, filterCountries } =
     useContext(countriesContext);
   const options = [
     { value: "africa", label: "Africa" },
