@@ -79,7 +79,10 @@ const DetailsPage = ({ match }) => {
                   <span>
                     {countrieDetail.languages
                       ? countrieDetail.languages.map((language) => (
-                          <span key={language.nativeName}>
+                          <span
+                            style={{ fontWeight: "400" }}
+                            key={language.nativeName}
+                          >
                             {" "}
                             {language.name}
                             {countrieDetail.languages[
@@ -135,7 +138,7 @@ export default DetailsPage;
 
 const DetailsCountainer = styled.div`
   .btn-container {
-    width: 100px;
+    width: 160px;
     position: relative;
   }
   .btn-back {
@@ -146,7 +149,7 @@ const DetailsCountainer = styled.div`
     text-align: center;
     display: inline;
     padding: 0.4rem 5rem;
-    padding-left: 4rem;
+    padding-left: 4.5rem;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -154,16 +157,10 @@ const DetailsCountainer = styled.div`
     outline: none;
     text-decoration: none;
     border: 1px solid transparent;
-    box-shadow: "0px 0px 3px 5px #00000021";
-    &:active {
-      box-shadow: 0px 0px 3px 1px #00000021;
-      transform: translateY(1px);
-    }
-    &:focus {
-      border: 1px solid #ffffff24;
-    }
+    box-shadow: 0px 0px 3px 5px #00000005;
+
     &:hover {
-      background-color: "#232c32";
+      background-color: #2b3339;
     }
   }
   .details {
@@ -232,7 +229,7 @@ const Arrow = styled(LongArrowAltLeft)`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 0;
+  left: 31px;
   width: 22px;
   color: white;
   pointer-events: none;
