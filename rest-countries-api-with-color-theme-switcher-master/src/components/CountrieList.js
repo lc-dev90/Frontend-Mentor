@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 
 //Context
@@ -7,34 +7,9 @@ import CountriesContext from "../contexts/countries/countriesContext";
 //Components
 import CountrieCard from "../components/CountrieCard";
 
-const CountrieList = ({ searchTerm, selectValue }) => {
+const CountrieList = () => {
   const countriesContext = useContext(CountriesContext);
-  const { loading, countries, getCountries, clearCountrieDetail } =
-    countriesContext;
-
-  useEffect(() => {
-    getCountries();
-    clearCountrieDetail();
-  }, []);
-
-  let filteredCountries = countries;
-  if (searchTerm && selectValue) {
-    filteredCountries = countries
-      .filter((countrie) =>
-        countrie.region.toLowerCase().includes(selectValue.toLowerCase())
-      )
-      .filter((countrie) =>
-        countrie.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
-      );
-  } else if (searchTerm) {
-    filteredCountries = countries.filter((countrie) =>
-      countrie.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
-    );
-  } else if (selectValue) {
-    filteredCountries = countries.filter((countrie) =>
-      countrie.region.toLowerCase().includes(selectValue.toLowerCase())
-    );
-  }
+  const { filteredCountries } = countriesContext;
 
   return (
     <div>

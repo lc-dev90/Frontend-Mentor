@@ -6,17 +6,25 @@ import { Search } from "@styled-icons/fluentui-system-filled/Search";
 
 // Context
 import themeContext from "../contexts/themes/themeContext";
+import countriesContext from "../contexts/countries/countriesContext";
 
 const SearchBar = ({ handleSearch }) => {
   const { darkTheme } = useContext(themeContext);
+  const { searchTerm, selectValue, filterCountries, filterSearchCountries } =
+    useContext(countriesContext);
   return (
     <SearchContainer darkTheme={darkTheme}>
       <form onSubmit={(e) => e.preventDefault()}>
         <SearchIcon darkTheme={darkTheme} />
         <input
           type="text"
+          value={searchTerm}
           placeholder="Search for a country..."
-          onChange={(e) => handleSearch(e.target.value)}
+          onChange={(e) =>
+            selectValue
+              ? filterCountries(selectValue, e.target.value)
+              : filterSearchCountries(e.target.value)
+          }
         />
       </form>
     </SearchContainer>

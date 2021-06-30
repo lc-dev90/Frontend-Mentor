@@ -2,9 +2,12 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import Select from "react-select";
 import themeContext from "../contexts/themes/themeContext";
+import countriesContext from "../contexts/countries/countriesContext";
 
 const SelectBar = ({ handleSelectChange }) => {
   const { darkTheme } = useContext(themeContext);
+  const { filterSelectCountries, selectValue, searchTerm, filterCountries } =
+    useContext(countriesContext);
   const options = [
     { value: "africa", label: "Africa" },
     { value: "america", label: "America" },
@@ -114,7 +117,11 @@ const SelectBar = ({ handleSelectChange }) => {
         components={{
           IndicatorSeparator: () => null,
         }}
-        onChange={(e) => handleSelectChange(e.value)}
+        onChange={(e) =>
+          searchTerm
+            ? filterCountries(e.value, searchTerm)
+            : filterSelectCountries(e.value)
+        }
       />
     </SelectContainer>
   );

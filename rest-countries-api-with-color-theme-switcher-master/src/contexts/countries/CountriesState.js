@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 import axios from "axios";
 
 import CountriesContext from "./countriesContext";
@@ -8,6 +8,9 @@ import {
   GET_COUNTRIES,
   GET_COUNTRIE_DETAIL,
   CLEAR_COUNTRIE_DETAIL,
+  FILTER_SEARCH_COUNTRIES,
+  FILTER_SELECT_COUNTRIES,
+  FILTER_COUNTRIES,
 } from "../types";
 
 const CountriesState = (props) => {
@@ -15,9 +18,33 @@ const CountriesState = (props) => {
     countries: [],
     countrieDetail: {},
     loading: false,
+    filteredCountries: [],
+    searchTerm: "",
+    selectValue: null,
   };
 
   const [state, dispatch] = useReducer(CountriesReducer, initialState);
+
+  const filterCountries = (selectValue, searchTerm) => {
+    console.log("selectValue: ", selectValue, "searchTerm: ", searchTerm);
+    dispatch({
+      type: FILTER_COUNTRIES,
+      payload: { selectValue, searchTerm },
+    });
+  };
+
+  const filterSearchCountries = (searchTerm) => {
+    dispatch({
+      type: FILTER_SEARCH_COUNTRIES,
+      payload: searchTerm,
+    });
+  };
+  const filterSelectCountries = (selectValue) => {
+    dispatch({
+      type: FILTER_SELECT_COUNTRIES,
+      payload: selectValue,
+    });
+  };
 
   const getCountries = async () => {
     dispatch({
@@ -30,6 +57,11 @@ const CountriesState = (props) => {
       payload: data,
     });
   };
+
+  useEffect(() => {
+    getCountries();
+    clearCountrieDetail();
+  }, []);
 
   const getCountrieDetail = async (code) => {
     dispatch({
@@ -56,9 +88,15 @@ const CountriesState = (props) => {
         countries: state.countries,
         countrieDetail: state.countrieDetail,
         loading: state.loading,
+        searchTerm: state.searchTerm,
+        selectValue: state.selectValue,
+        filteredCountries: state.filteredCountries,
         getCountries,
         getCountrieDetail,
         clearCountrieDetail,
+        filterSelectCountries,
+        filterSearchCountries,
+        filterCountries,
       }}
     >
       {props.children}
