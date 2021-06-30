@@ -27,7 +27,11 @@ const DetailsPage = ({ match }) => {
     <DetailsCountainer darkTheme={darkTheme}>
       <div className="btn-container">
         <Arrow style={{ position: "absolute" }} darkTheme={darkTheme} />
-        <Link className="btn-back" to="/" onClick={clearFilteredCountries}>
+        <Link
+          className="btn-back"
+          to="/rest-countries-api-with-color-theme-switcher-master/build"
+          onClick={clearFilteredCountries}
+        >
           Back
         </Link>
       </div>
@@ -108,7 +112,7 @@ const DetailsPage = ({ match }) => {
                       select: "official",
                     }) ? (
                       <Link
-                        to={`/detail/${border}`}
+                        to={`/rest-countries-api-with-color-theme-switcher-master/build/detail/${border}`}
                         aria-label="Countrie"
                         key={border}
                       >
