@@ -18,7 +18,10 @@ const CountrieCard = ({ name, population, region, capital, flag, code }) => {
         <p>details</p>
       </div>
 
-      <Link to={`/detail/${code}`} className="link">
+      <Link
+        to={`/rest-countries-api-with-color-theme-switcher-master/build/detail/${code}`}
+        className="link"
+      >
         <div className="flag-container">
           <img src={flag} alt={name} />
         </div>
