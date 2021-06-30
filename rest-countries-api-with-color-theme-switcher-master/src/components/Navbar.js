@@ -22,7 +22,8 @@ const Navbar = () => {
         </div>
         <div>
           <Link to="/" onClick={toggleDarkTheme}>
-            <MoonLightFill />
+            {darkTheme ? <MoonLightFill /> : <MoonLight />}
+
             <p>Dark Mode</p>
           </Link>
         </div>
@@ -63,7 +64,7 @@ const Header = styled.header`
 `;
 
 const MoonLight = styled(Moon)`
-  color: white;
+  color: black;
   width: 14px;
 `;
 const MoonLightFill = styled(MoonFill)`
