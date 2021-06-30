@@ -2,6 +2,7 @@ const list = document.getElementById("list");
 const reactProjects = [
   {
     name: "rest-countries-api-with-color-theme-switcher-master",
+    link: "https://infallible-tereshkova-20a968.netlify.app/",
   },
 ];
 
@@ -9,12 +10,12 @@ reactProjects.forEach(({ name }, i) => {
   const listItem = document.createElement("li");
 
   listItem.innerHTML = `
-		<a href="/${name}/build">
+		<a href="${link}">
 			<img src="/${name}/helper/design/desktop-design-home-dark.jpg" alt="${name}" />
 			<p>${i + 1}. ${formatProjectName(name)}</p>
 		</a>
 		<div class="links-container">
-			<a href="/${name}/build" class="blue">
+    <a href="${link}" class="blue">
 				<i class="fas fa-eye"></i>
 			</a>
 		</div>
