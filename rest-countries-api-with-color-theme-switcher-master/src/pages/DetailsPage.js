@@ -33,7 +33,8 @@ const DetailsPage = ({ match }) => {
 
   useEffect(() => {
     getCountrieDetail(match.params.id);
-  }, [getCountrieDetail, match.params.id]);
+    console.log(match.params.id);
+  }, [match.params.id]);
 
   return (
     <DetailsCountainer darkTheme={darkTheme}>
