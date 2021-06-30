@@ -6,7 +6,7 @@ const reactProjects = [
   },
 ];
 
-reactProjects.forEach(({ name }, i) => {
+reactProjects.forEach(({ name, link }, i) => {
   const listItem = document.createElement("li");
 
   listItem.innerHTML = `
