@@ -2,6 +2,7 @@
   "name": "rest-countries-api-with-color-theme-switcher-master",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://quizzical-golick-db2910.netlify.app/rest-countries-api-with-color-theme-switcher-master/build",
   "dependencies": {
     "@styled-icons/bootstrap": "^10.34.0",
     "@styled-icons/fa-solid": "^10.34.0",

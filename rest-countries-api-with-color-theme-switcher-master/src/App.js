@@ -22,16 +22,19 @@ const App = () => {
         <Container>
           <Switch>
             <Route
+              /* path="/" */
               path="/rest-countries-api-with-color-theme-switcher-master/build"
               exact
               component={HomePage}
             />
             <Route
               path="/rest-countries-api-with-color-theme-switcher-master/build/detail/:id"
+              /* path="/detail/:id" */
               component={DetailsPage}
             />
             <Route
               path="/rest-countries-api-with-color-theme-switcher-master/build/about"
+              /* path="/about" */
               component={AboutPage}
             />
           </Switch>
