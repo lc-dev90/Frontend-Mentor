@@ -21,22 +21,9 @@ const App = () => {
         <Navbar />
         <Container>
           <Switch>
-            <Route
-              /* path="/" */
-              path="/"
-              exact
-              component={HomePage}
-            />
-            <Route
-              path="/detail/:id"
-              /* path="/detail/:id" */
-              component={DetailsPage}
-            />
-            <Route
-              path="/about"
-              /* path="/about" */
-              component={AboutPage}
-            />
+            <Route path="/" exact component={HomePage} />
+            <Route path="/detail/:id" component={DetailsPage} />
+            <Route path="/about" component={AboutPage} />
           </Switch>
         </Container>
       </Main>

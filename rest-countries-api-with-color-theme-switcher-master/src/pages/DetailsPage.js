@@ -16,6 +16,7 @@ const DetailsPage = ({ match }) => {
   const countriesContext = useContext(CountriesContext);
   const { darkTheme } = useContext(themeContext);
   const {
+    loading,
     getCountrieDetail,
     countrieDetail,
     clearFilteredCountries,
@@ -48,8 +49,9 @@ const DetailsPage = ({ match }) => {
           Back
         </Link>
       </div>
-
-      {countrieDetail ? (
+      {loading ? (
+        <Loading />
+      ) : (
         <div className="details">
           <div className="details-flag">
             <img src={countrieDetail.flag} alt={countrieDetail.name} />
@@ -147,8 +149,6 @@ const DetailsPage = ({ match }) => {
           </div>
           <div />
         </div>
-      ) : (
-        <Loading />
       )}
     </DetailsCountainer>
   );

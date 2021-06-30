@@ -6,27 +6,32 @@ import CountriesContext from "../contexts/countries/countriesContext";
 
 //Components
 import CountrieCard from "../components/CountrieCard";
+import Loading from "../components/Loading";
 
 const CountrieList = () => {
   const countriesContext = useContext(CountriesContext);
-  const { filteredCountries } = countriesContext;
+  const { filteredCountries, loading } = countriesContext;
 
   return (
     <div>
       <ListContainer>
-        {filteredCountries
-          ? filteredCountries.map((countrie) => (
-              <CountrieCard
-                key={countrie.alpha2Code}
-                name={countrie.name}
-                population={countrie.population}
-                region={countrie.region}
-                capital={countrie.capital}
-                flag={countrie.flag}
-                code={countrie.alpha3Code}
-              />
-            ))
-          : "Sorry, no results."}
+        {loading ? (
+          <Loading />
+        ) : filteredCountries ? (
+          filteredCountries.map((countrie) => (
+            <CountrieCard
+              key={countrie.alpha2Code}
+              name={countrie.name}
+              population={countrie.population}
+              region={countrie.region}
+              capital={countrie.capital}
+              flag={countrie.flag}
+              code={countrie.alpha3Code}
+            />
+          ))
+        ) : (
+          "Sorry, no results."
+        )}
       </ListContainer>
     </div>
   );
