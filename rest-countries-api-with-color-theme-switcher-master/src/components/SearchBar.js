@@ -28,6 +28,10 @@ export default SearchBar;
 const SearchContainer = styled.div`
   width: 480px;
   margin-right: 20px;
+  @media (max-width: 690px) {
+    width: 100%;
+    margin-right: 0;
+  }
   form {
     position: relative;
     width: 100%;
@@ -45,6 +49,10 @@ const SearchContainer = styled.div`
         props.darkTheme
           ? "inset 0 0 4px #000000b3, 2px 2px 10px #1e272d63"
           : "2px 2px 10px #1e272d63"};
+      @media (max-width: 690px) {
+        width: 100%;
+        margin-right: 0;
+      }
       ::placeholder {
         color: ${(props) => (props.darkTheme ? "white" : "black")};
         font-size: 13px;

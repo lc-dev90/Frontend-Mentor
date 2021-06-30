@@ -57,6 +57,14 @@ const Header = styled.header`
       text-decoration: none;
       color: ${(props) => (props.darkTheme ? "white" : "black")};
       outline: none;
+      h2 {
+        @media (max-width: 450px) {
+          font-size: 1.2rem !important;
+        }
+        @media (max-width: 370px) {
+          font-size: 1rem !important;
+        }
+      }
       &:focus {
         transform: scale(1.02);
         filter: brightness(0.9);
@@ -69,6 +77,7 @@ const Header = styled.header`
       color: ${(props) => (props.darkTheme ? "white" : "black")};
       cursor: pointer;
       outline: none;
+
       &:focus {
         transform: scale(1.02);
         filter: brightness(0.9);
@@ -83,6 +92,9 @@ const Header = styled.header`
       margin-left: 0.5rem;
       display: inline-block;
       transform: translateY(1px);
+      @media (max-width: 370px) {
+        font-size: 13px !important;
+      }
     }
   }
 `;

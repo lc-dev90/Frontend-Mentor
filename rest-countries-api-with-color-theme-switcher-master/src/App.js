@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 //Components
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 
 //Pages
 import HomePage from "./pages/HomePage";
@@ -25,7 +24,6 @@ const App = () => {
           <Route path="/detail/:id" component={DetailsPage} />
           <Route path="/about" component={AboutPage} />
         </Container>
-        <Footer />
       </Main>
     </Router>
   );
@@ -38,7 +36,7 @@ const Main = styled.main`
 `;
 
 const Container = styled.div`
-  min-height: calc(100vh - 110px);
+  min-height: calc(100vh - 80px);
   max-width: 90%;
   width: 1280px;
   margin: 0 auto;

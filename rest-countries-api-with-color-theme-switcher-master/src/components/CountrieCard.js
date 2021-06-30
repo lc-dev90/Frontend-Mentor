@@ -82,6 +82,7 @@ const Card = styled.div`
     bottom: 0;
     background: #000000d1;
     position: absolute;
+    pointer-events: none;
   }
   a {
     text-decoration: none;
@@ -154,4 +155,5 @@ const SearchIcon = styled(Search)`
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 300ms ease-in-out;
+  pointer-events: none;
 `;

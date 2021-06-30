@@ -35,4 +35,7 @@ const BarsContainer = styled.div`
   display: flex;
   padding: 48px 0;
   justify-content: space-between;
+  @media (max-width: 690px) {
+    flex-direction: column;
+  }
 `;

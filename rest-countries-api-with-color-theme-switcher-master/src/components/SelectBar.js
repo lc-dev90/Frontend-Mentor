@@ -122,4 +122,8 @@ const SelectBar = ({ handleSelectChange }) => {
 
 export default SelectBar;
 
-const SelectContainer = styled.div``;
+const SelectContainer = styled.div`
+  @media (max-width: 690px) {
+    margin-top: 30px;
+  }
+`;

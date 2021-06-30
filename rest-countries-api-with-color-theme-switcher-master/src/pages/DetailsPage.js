@@ -172,10 +172,25 @@ const DetailsCountainer = styled.div`
   .details {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      padding-bottom: 100px;
+    }
   }
 
   .details-flag {
     width: 45%;
+    @media (max-width: 1170px) {
+      width: 48%;
+    }
+    @media (max-width: 1024px) {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 640px) {
+      width: 100%;
+    }
     img {
       width: 100%;
     }
@@ -183,6 +198,16 @@ const DetailsCountainer = styled.div`
 
   .information {
     width: 45%;
+    @media (max-width: 1170px) {
+      width: 48%;
+    }
+    @media (max-width: 1024px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @media (max-width: 640px) {
+      width: 100%;
+    }
     margin-left: auto;
     color: ${(props) => (props.darkTheme ? "#ece3e3eb" : "black")};
     display: flex;
@@ -227,6 +252,9 @@ const DetailsCountainer = styled.div`
   .flex {
     display: flex;
     margin-bottom: 30px !important;
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
     div {
       &:nth-of-type(1) {
         flex: 1;
