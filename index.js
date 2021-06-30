@@ -1,3 +1,4 @@
+const list = document.getElementById("list");
 const reactProjects = [
   {
     name: "rest-countries-api-with-color-theme-switcher-master",
@@ -21,7 +22,7 @@ reactProjects.forEach(({ name }, i) => {
 
   list.appendChild(listItem);
 });
-const list = document.getElementById("list");
+
 const projects = [
   {
     name: "url-shortening-api-master",
