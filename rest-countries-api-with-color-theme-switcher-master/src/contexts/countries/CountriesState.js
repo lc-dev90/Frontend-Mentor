@@ -61,7 +61,6 @@ const CountriesState = (props) => {
 
   useEffect(() => {
     getCountries();
-    clearCountrieDetail();
   }, []);
 
   const getCountrieDetail = async (code) => {

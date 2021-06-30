@@ -12,8 +12,12 @@ countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
 const DetailsPage = ({ match }) => {
   const countriesContext = useContext(CountriesContext);
   const { darkTheme } = useContext(themeContext);
-  const { getCountrieDetail, countrieDetail, clearFilteredCountries } =
-    countriesContext;
+  const {
+    getCountrieDetail,
+    countrieDetail,
+    clearFilteredCountries,
+    clearCountrieDetail,
+  } = countriesContext;
 
   const numberWithCommas = (x) => {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -30,7 +34,7 @@ const DetailsPage = ({ match }) => {
         <Link
           className="btn-back"
           to="/rest-countries-api-with-color-theme-switcher-master/build"
-          onClick={clearFilteredCountries}
+          onClick={(clearFilteredCountries, clearCountrieDetail)}
         >
           Back
         </Link>
