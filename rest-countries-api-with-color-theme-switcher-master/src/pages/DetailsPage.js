@@ -34,6 +34,10 @@ const DetailsPage = ({ match }) => {
   useEffect(() => {
     getCountrieDetail(match.params.id);
     console.log(match.params.id);
+  }, []);
+
+  useEffect(() => {
+    getCountrieDetail(match.params.id);
   }, [match.params.id]);
 
   return (
